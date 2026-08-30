@@ -2,9 +2,9 @@
 
 | Product | Canonical implementation | Lifecycle | Owner-side status | Primary output |
 | --- | --- | --- | --- | --- |
-| Proof & State | [AyobamiH/proof-and-state](https://github.com/AyobamiH/proof-and-state) | Governance active | Canonical repository established | Policies, contracts, roadmap, evidence indexes |
-| DoneState | [AyobamiH/donestate](https://github.com/AyobamiH/donestate) | Hosted 0.2.0 in OpenAI Review | Private GitHub App installed on one selected repository; review version submitted | Bounded objectives, branches, PRs, durable event chain |
-| OpsTruth | Independent verifier service | Integrated | Pinned verifier fingerprint and signed retryable decisions in use | Verification attestation and report digest |
+| Proof & State | [AyobamiH/proof-and-state](https://github.com/AyobamiH/proof-and-state) | Governance active | Canonical repository established; apex website runtime still unbound | Policies, contracts, roadmap, evidence indexes |
+| DoneState | [AyobamiH/donestate](https://github.com/AyobamiH/donestate) | Hosted 0.2.0 in OpenAI Review | Private GitHub App installed on one selected repository; canonical service live at `donestate.proofandstate.com`; submitted review transport retained | Bounded objectives, branches, PRs, durable event chain |
+| OpsTruth | [AyobamiH/opstruth](https://github.com/AyobamiH/opstruth) and [MCP source](https://github.com/AyobamiH/opstruth-chatgpt-plugin) | Integrated and deployed | Website live at `opstruth.io`; MCP live at `mcp.opstruth.io/mcp`; pinned verifier fingerprint and signed retryable decisions in use | Verification attestation and report digest |
 | AgentProof | Evidence and receipt layer | Contract defined | Downstream release-proof work remains | Merge, deploy, release, and package receipts |
 | CrabBox / ClawPatch | Optional isolation or recovery capabilities | Deferred | Not required for the one-repository canary | Sandboxed or recovery execution evidence |
 | Fleet maintenance | Multi-repository scheduling | Deferred | Starts only after governance sign-off | Repository-scoped findings and PR-only repairs |

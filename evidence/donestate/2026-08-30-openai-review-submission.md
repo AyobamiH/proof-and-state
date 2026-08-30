@@ -18,7 +18,8 @@ This record indexes the owner-side OpenAI directory submission for DoneState ver
 
 ## Submitted assets and review coverage
 
-- MCP endpoint: `https://donestate-mcp.woeinvests.workers.dev/mcp`
+- submitted MCP endpoint: `https://donestate-mcp.woeinvests.workers.dev/mcp` (retained as the immutable version 0.2.0 review transport)
+- canonical MCP endpoint for new configuration: `https://donestate.proofandstate.com/mcp`
 - Demo recording: `AyobamiH/donestate/assets/donestate-plugin-demo.mp4`
 - Directory and composer icon: `AyobamiH/donestate/assets/donestate-icon.png`
 - Positive review cases: five
@@ -53,11 +54,18 @@ The reviewer identity:
 | [#34](https://github.com/AyobamiH/donestate/pull/34) | Correct discovery annotation | `ac1ea6…` | Main CI 86 passed; deploy 31 exposed a nondeterministic test |
 | [#35](https://github.com/AyobamiH/donestate/pull/35) | Deterministic tamper regression | `45a35b…` | Main CI 88; deploy 32 passed |
 | [#36](https://github.com/AyobamiH/donestate/pull/36) | OpenAI Platform OAuth callback CSP | `1588c0…` | Main CI 90; deploy 33 passed |
+| [#38](https://github.com/AyobamiH/donestate/pull/38) | Canonical owned service domain with submitted transport compatibility | `c69896…` | PR CI 93; main CI 94; deploy 34 passed |
 
 Final deployed source: `1588c0588dfcbfcefc70cda71e8197c1b14b7fed`
 
 - Post-merge CI: [33297909263](https://github.com/AyobamiH/donestate/actions/runs/33297909263)
 - Hosted Worker deployment: [33297909318](https://github.com/AyobamiH/donestate/actions/runs/33297909318)
+
+The final source for the immutable review-path repair remains `1588c0588dfcbfcefc70cda71e8197c1b14b7fed`. The current Worker deployment is `c69896d06f1a490ab1f67606fd0d406ab826191b`, which adds `https://donestate.proofandstate.com/mcp` as the canonical service while retaining the submitted Worker transport.
+
+- Canonical-domain post-merge CI: [33300648343](https://github.com/AyobamiH/donestate/actions/runs/33300648343)
+- Canonical-domain deployment: [33300648341](https://github.com/AyobamiH/donestate/actions/runs/33300648341)
+- Cloudflare version: `11018054-685f-4e7e-ab6b-f30817b2d89f`
 
 Every source branch remains preserved.
 
