@@ -30,17 +30,17 @@ No secret value or personal billing data belongs in this evidence.
 
 - GitHub signed ping delivery: `13cd1ca8-a4b8-11f1-888d-aba6875c1ba2`.
 - GitHub signed `marketplace_purchase.purchased` delivery: `90c3e110-a4b8-11f1-8357-8b375ae56683`.
-- Publisher report: the zero-cost test subscription was cancelled.
+- Publisher-supplied `marketplace_purchase.cancelled` delivery: `90b920c0-a4ba-11f1-852b-f37103c46ff2`.
 - Post-recovery development probes: root HTTP 200, `/mcp` HTTP 404, unsigned Marketplace webhook HTTP 401; the workflow also proved OAuth start HTTP 302 with the development callback.
 - Post-restoration production probes: root HTTP 200 and unsigned Marketplace webhook HTTP 401.
 
-The publisher report is not upgraded into signed-delivery evidence. Authenticated browser control failed before the exact `marketplace_purchase.cancelled` delivery ID and resulting isolated entitlement state were retrieved.
+The exact cancellation delivery ID is recorded from the publisher's GitHub delivery view. Its response result and resulting isolated entitlement state were not retrieved, so the ID is not upgraded into proof that the handler applied the final state.
 
 ## Remaining gate
 
 The DoneState and portfolio work items remain active. The next authenticated GitHub Marketplace session must:
 
-1. record the exact signed cancelled delivery and isolated final entitlement;
+1. verify the recorded cancelled delivery response and isolated final entitlement;
 2. exercise and record live `changed`, `pending_change`, and `pending_change_cancelled` deliveries;
 3. keep the listing owner-only and draft;
 4. leave the submitted production listing, production OAuth App configuration, and private maintenance GitHub App unchanged.
