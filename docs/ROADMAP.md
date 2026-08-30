@@ -18,6 +18,7 @@
 - Obtain and index the final fresh OpsTruth decision for the exact maintenance-canary PR head.
 - Keep the canonical maintenance PR open and unmerged until its independent decision is conclusive.
 - Preserve every source branch in the evidence chain.
+- Complete the DoneState Marketplace contact record and binding legal text, then stop for the human final-review submission.
 
 ## Next
 
