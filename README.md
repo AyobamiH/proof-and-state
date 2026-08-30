@@ -19,6 +19,7 @@ Proof & State is the governance layer for a family of narrowly separated product
 - [Current status](docs/STATUS.md)
 - [Roadmap](docs/ROADMAP.md)
 - [DoneState owner-side completion evidence](evidence/donestate/2026-08-29-owner-side-completion.md)
+- [DoneState OpenAI review submission evidence](evidence/donestate/2026-08-30-openai-review-submission.md)
 
 ## Governance rules
 
