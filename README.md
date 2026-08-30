@@ -15,11 +15,13 @@ Proof & State is the governance layer for a family of narrowly separated product
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Product registry](docs/PRODUCT-REGISTRY.md)
+- [Domain registry](docs/DOMAIN-REGISTRY.md)
 - [Integration contracts](docs/INTEGRATION-CONTRACTS.md)
 - [Current status](docs/STATUS.md)
 - [Roadmap](docs/ROADMAP.md)
 - [DoneState owner-side completion evidence](evidence/donestate/2026-08-29-owner-side-completion.md)
 - [DoneState OpenAI review submission evidence](evidence/donestate/2026-08-30-openai-review-submission.md)
+- [Owned-domain cutover evidence](evidence/domains/2026-08-30-owned-domain-cutover.md)
 
 ## Governance rules
 
