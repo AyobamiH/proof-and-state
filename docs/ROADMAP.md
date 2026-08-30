@@ -8,13 +8,16 @@
 - Install it with Only select repositories and select only `AyobamiH/donestate`.
 - Prove App-authored branch, commit, PR, and required-CI operation.
 - Make pending-CI `uncertain` attestations retryable.
+- Add repository-hosted directory assets and a server-enforced read-only reviewer identity.
+- Import 19 MCP tools, justify all 57 annotations, and submit DoneState 0.2.0 for OpenAI review.
 
 ## Current closeout
 
-- Obtain and index the final fresh OpsTruth decision for the exact canary PR head.
-- Merge governance and product records.
-- Close superseded issues and PRs without deleting their source branches.
-- Update DoneState current-status documentation with exact evidence identifiers.
+- Monitor the OpenAI review decision; treat `Review` as neither approval nor publication.
+- Publish the directory version only after OpenAI approval and a separate owner-authorised publication action.
+- Obtain and index the final fresh OpsTruth decision for the exact maintenance-canary PR head.
+- Keep the canonical maintenance PR open and unmerged until its independent decision is conclusive.
+- Preserve every source branch in the evidence chain.
 
 ## Next
 
