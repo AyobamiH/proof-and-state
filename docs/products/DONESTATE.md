@@ -44,10 +44,10 @@ Review hardening merged in DoneState PR #47 as `ac54dcaa2df2b4211814a076036cc2b3
 
 ## GitHub Marketplace development
 
-The separate development OAuth App `3826463` and owner-only draft listing `donestate-marketplace-development` recorded a signed ping and purchase without changing the submitted production listing or private maintenance App. A secret-target defect was then exposed by a live HTTP 503 and recovered in PR #52: development version `69e76740-b9b6-48ea-a979-34e04acbc47b` passed 200/404/401/302 assertions, while production version `fd8fe1b0-81bd-4ba6-aa84-b288ea9bc583` independently restored production credentials. PR #53 returned development deploys to manual-only. Publisher-supplied cancellation delivery `90b920c0-a4ba-11f1-852b-f37103c46ff2` is recorded through DoneState PR #54; its response, final entitlement, and live changed and pending-change transitions remain open.
+The separate development OAuth App `3826463` and owner-only draft listing `donestate-marketplace-development` recorded a signed ping and purchase without changing the submitted production listing or private maintenance App. A secret-target defect was exposed by a live HTTP 503 and recovered in PR #52. Receipt PR #55 then passed PR and post-merge CI, deployed production version `774f0298-062f-4442-96d4-e2d52d7b1f94`, and separately deployed development version `b09b3849-eab3-4be4-a405-b61449e4801b` through the manual-only workflow. Cancellation `90b920c0-a4ba-11f1-852b-f37103c46ff2` returned HTTP 202 with a non-personal final `CANCELLED` receipt. Live `changed`, `pending_change`, and `pending_change_cancelled` transitions remain open.
 
 See the [development lifecycle and recovery evidence](../../evidence/marketplaces/2026-08-30-donestate-marketplace-development.md).
 
 ## Project-state source
 
-DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned commit `13b3bf36244e8dbb674a21bf88881a3cfb3a72c5`. It tracks the complete recovered backlog and generates `docs/PROJECT-STATE.md`; Proof & State references that exact source rather than duplicating product-level status as portfolio authority.
+DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned commit `895efab0cdd2ce18682dfec9f2b9361dcc3a2987`. It tracks the complete recovered backlog and generates `docs/PROJECT-STATE.md`; Proof & State references that exact source rather than duplicating product-level status as portfolio authority.
