@@ -3,7 +3,7 @@
 | Product | Canonical implementation | Lifecycle | Owner-side status | Primary output |
 | --- | --- | --- | --- | --- |
 | Proof & State | [AyobamiH/proof-and-state](https://github.com/AyobamiH/proof-and-state) | Governance active | Canonical repository established | Policies, contracts, roadmap, evidence indexes |
-| DoneState | [AyobamiH/donestate](https://github.com/AyobamiH/donestate) | Owner canary complete pending final index merge | Private GitHub App installed on one selected repository | Bounded objectives, branches, PRs, durable event chain |
+| DoneState | [AyobamiH/donestate](https://github.com/AyobamiH/donestate) | Hosted 0.2.0 in OpenAI Review | Private GitHub App installed on one selected repository; review version submitted | Bounded objectives, branches, PRs, durable event chain |
 | OpsTruth | Independent verifier service | Integrated | Pinned verifier fingerprint and signed retryable decisions in use | Verification attestation and report digest |
 | AgentProof | Evidence and receipt layer | Contract defined | Downstream release-proof work remains | Merge, deploy, release, and package receipts |
 | CrabBox / ClawPatch | Optional isolation or recovery capabilities | Deferred | Not required for the one-repository canary | Sandboxed or recovery execution evidence |
