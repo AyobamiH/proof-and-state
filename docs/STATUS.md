@@ -22,15 +22,21 @@ Observed 2026-08-30.
 | OpsTruth owned MCP domain | Deployed and live | Plugin PR #7; source `915ab911…`; deployment `33300000143`; Cloudflare version `4a5ef5ed-fad8-48a4-9d2b-5eaeb4ad4bfe` |
 | Proof & State apex website | Deployed and live | Website PR #2; source `46f01c8b…`; CI `33303293557`; deployment `33303293558`; job `99240836047`; Cloudflare version `64778fc0-88b3-4aee-877d-ac69407757a8` |
 | Proof & State website verification | Healthy with bounded warnings | OpsTruth signed handoff, deployment-preflight and four-path health receipts; no failures; branch protection, PR template, security policy and licence remain follow-ups |
+| OpsTruth MCP identity design | Aligned and deployed | `opstruth-chatgpt-plugin` PR #9; merge `6a4a01a1…`; post-merge CI `33306940776`; deployment `33306940759`; Cloudflare version `e2e0efcb-377d-4b79-8cb9-7039b3341e11` |
+| OpsTruth GitHub Action | Merged and release-ready, not listed | `opstruth` PR #15; merge `45f4debb…`; post-merge CI `33308062407`; deployment `33308062381`; Marketplace release is blocked by the owner-only GitHub Developer Agreement |
+| DoneState Marketplace integration | Merged and deployed, not listed | `donestate` PR #40; merge `50804e66…`; CI `33308320467`; deployment `33308320475`; job `99248712153`; Cloudflare version `043f87d0-52be-4114-a1be-0c016c064097` |
+| DoneState Marketplace routes | Live with fail-closed defaults | Missing-plan install request returns HTTP 400; webhook GET returns HTTP 405; webhook POST remains unavailable until `GITHUB_MARKETPLACE_WEBHOOK_SECRET` is configured |
 | AI Work Accountability website | Runtime not bound | `https://aiworkaccountability.com` was observed at HTTP 502; no site runtime source was identified |
 | OpenAI MCP scan | Complete | 19 tools imported; 57 annotation justifications saved |
-| OpenAI directory version | In external review | DoneState `0.2.0`; OpenAI status `Review`; not yet approved or published |
+| OpenAI directory version | In external review on retained transport | DoneState `0.2.0`; status `Review`; submitted MCP URL remains exactly `https://donestate-mcp.woeinvests.workers.dev/mcp`; the owned-domain cutover did not mutate the locked review snapshot |
 
 ## Overall
 
 Owner-side GitHub configuration, App credential use, bounded execution, App-authored publication, local validation, exact-head CI, directory assets, reviewer access, MCP scanning, the OpenAI review submission, the DoneState/OpsTruth service-domain cutovers, and the independently owned Proof & State website deployment are complete.
 
-The directory version is in `Review`; that is not approval or publication. Separately, the fresh maintenance canary still requires a corrected independent OpsTruth decision for its existing sealed handoff. DoneState correctly remains `AWAITING_VERIFICATION` and has not promoted an uncertain observation to completion.
+The directory version is in `Review`; that is not approval or publication. Its submitted MCP URL still uses the retained Worker transport. The canonical URL for new integrations is `https://donestate.proofandstate.com/mcp`, but changing the origin in OpenAI requires a new plugin version and review rather than an automatic DNS substitution. Separately, the fresh maintenance canary still requires a corrected independent OpsTruth decision for its existing sealed handoff. DoneState correctly remains `AWAITING_VERIFICATION` and has not promoted an uncertain observation to completion.
+
+GitHub Marketplace exposure is technically prepared but not published. OpsTruth still needs an owner-accepted Marketplace Developer Agreement and a tagged Action release. DoneState still needs binding owner legal text, a webhook secret, saved listing details and owner submission. No legal acceptance or marketplace publication is inferred from merged code or a staged browser form.
 
 No source branch in the evidence chain has been deleted.
 
