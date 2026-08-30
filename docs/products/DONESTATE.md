@@ -35,3 +35,13 @@ DoneState version `0.2.0` was submitted on 2026-08-30 and the OpenAI Platform re
 Final review-path source is `1588c0588dfcbfcefc70cda71e8197c1b14b7fed`; post-merge CI `33297909263` and deployment `33297909318` succeeded. See the [submission evidence](../../evidence/donestate/2026-08-30-openai-review-submission.md).
 
 `Review` is not approval or publication and does not change the fresh maintenance canary's `AWAITING_VERIFICATION` state.
+
+## GitHub Marketplace review
+
+The separate public-repository OAuth listing attached to OAuth App `3822030` was submitted on 30 August 2026. GitHub reports `Pending for publish` and under review; this is not approval or publication. The private maintenance GitHub App remains outside the listing and selected only for `AyobamiH/donestate`.
+
+Review hardening merged in DoneState PR #47 as `ac54dcaa2df2b4211814a076036cc2b3f3ace8a6`. Post-merge CI `33330067769` passed, deployment `33330067776` published Cloudflare version `c3c3dd14-512d-4ee5-a25a-f44914c00654`, and live routing probes returned the expected HTTP 200 root and HTTP 405 webhook GET. Marketplace entitlement time is monotonic, all five lifecycle actions are tested, and the incident runbook is public. See the [submission and hardening evidence](../../evidence/marketplaces/2026-08-30-donestate-marketplace-submission-and-hardening.md).
+
+## Project-state source
+
+DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned commit `b8caff89d3be82f3367e3a3ba039f0ce264045df`. It tracks the complete recovered backlog and generates `docs/PROJECT-STATE.md`; Proof & State references that exact source rather than duplicating product-level status as portfolio authority.

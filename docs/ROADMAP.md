@@ -10,6 +10,7 @@
 - Make pending-CI `uncertain` attestations retryable.
 - Add repository-hosted directory assets and a server-enforced read-only reviewer identity.
 - Import 19 MCP tools, justify all 57 annotations, and submit DoneState 0.2.0 for OpenAI review.
+- Submit the DoneState GitHub Marketplace listing, install self-documenting project governance, harden lifecycle ordering and operations, and record the exact deployment.
 
 ## Current closeout
 
@@ -18,12 +19,13 @@
 - Obtain and index the final fresh OpsTruth decision for the exact maintenance-canary PR head.
 - Keep the canonical maintenance PR open and unmerged until its independent decision is conclusive.
 - Preserve every source branch in the evidence chain.
-- Complete the DoneState Marketplace contact record and binding legal text, then stop for the human final-review submission.
+- Monitor the DoneState GitHub Marketplace review decision; treat `Pending for publish` as neither approval nor publication.
+- Complete the genuine public operator alias, service-address, ICO assessment and offered-territory decisions without exposing private contact data.
 
 ## Next
 
 - Define AgentProof merge, deploy, package, and release receipt profiles.
-- Add governance checks that validate evidence-index schema and non-secret content.
+- Keep the generated portfolio ledger and stale-state CI green; add non-secret evidence-content checks after the initial closure gate.
 - Exercise one owner-approved merge-to-deploy receipt chain.
 
 ## Later, gated by evidence

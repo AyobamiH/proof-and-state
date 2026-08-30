@@ -1,5 +1,7 @@
 # DoneState Marketplace webhook live evidence — 2026-08-30
 
+> Historical signed-ping record. Submission and later lifecycle-ordering hardening are indexed in [DoneState Marketplace submission and hardening](2026-08-30-donestate-marketplace-submission-and-hardening.md). The original ping evidence and its then-open gates remain preserved below.
+
 ## Outcome
 
 The DoneState GitHub Marketplace webhook is configured, deployed on the canonical owned domain, and accepting GitHub's signed listing ping.

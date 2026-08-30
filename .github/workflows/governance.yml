@@ -1,0 +1,28 @@
+name: Governance
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "23 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portfolio-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/render-portfolio-state.mjs --check
+      - if: ${{ github.event_name == 'pull_request' || github.event_name == 'push' }}
+        env:
+          GOVERNANCE_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/check-governance-impact.mjs "$GOVERNANCE_BASE_SHA"

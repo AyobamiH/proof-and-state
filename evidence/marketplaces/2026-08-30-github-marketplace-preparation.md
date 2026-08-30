@@ -1,5 +1,7 @@
 # GitHub Marketplace preparation evidence — 2026-08-30
 
+> Historical preparation record. DoneState later completed the owner gates and submitted the listing. The superseding state is indexed in [DoneState Marketplace submission and hardening](2026-08-30-donestate-marketplace-submission-and-hardening.md). The preparation evidence below is preserved unchanged as the earlier lifecycle state.
+
 ## Outcome
 
 Marketplace exposure has reached different lifecycle states: OpsTruth is published and publicly listed; DoneState is technically deployed but not yet listed:
