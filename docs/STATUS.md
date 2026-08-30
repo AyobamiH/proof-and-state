@@ -1,6 +1,6 @@
 # Current Status
 
-Observed 2026-08-29.
+Observed 2026-08-30.
 
 | Area | Status | Evidence |
 | --- | --- | --- |
@@ -14,9 +14,16 @@ Observed 2026-08-29.
 | Independent signed decision | Blocked by verifier decision defect | OpsTruth observes the exact jobs and head but signs `uncertain`; OpsTruth issue #12 |
 | Canary merge | Intentionally not performed | PR #22 remains open; automatic maintenance has no merge authority |
 | Historical hosted canary | Previously verified | Not rechecked during this owner-side completion |
+| Directory release assets | Merged | Demo PR #26 and icon PR #27; source branches preserved |
+| OAuth and reviewer hardening | Merged and deployed | DoneState PRs #28–#36 |
+| Final review-path deployment | Verified from GitHub | Source `1588c058…`; CI `33297909263`; deployment `33297909318` |
+| OpenAI MCP scan | Complete | 19 tools imported; 57 annotation justifications saved |
+| OpenAI directory version | In external review | DoneState `0.2.0`; OpenAI status `Review`; not yet approved or published |
 
 ## Overall
 
-Owner-side GitHub configuration, App credential use, bounded execution, App-authored publication, local validation, and exact-head CI are complete. The remaining completion gate is a corrected independent OpsTruth decision for the existing sealed canary handoff. DoneState correctly remains `AWAITING_VERIFICATION` and has not promoted an uncertain observation to completion.
+Owner-side GitHub configuration, App credential use, bounded execution, App-authored publication, local validation, exact-head CI, directory assets, reviewer access, MCP scanning, and the OpenAI review submission are complete.
+
+The directory version is in `Review`; that is not approval or publication. Separately, the fresh maintenance canary still requires a corrected independent OpsTruth decision for its existing sealed handoff. DoneState correctly remains `AWAITING_VERIFICATION` and has not promoted an uncertain observation to completion.
 
 No source branch in the evidence chain has been deleted.
