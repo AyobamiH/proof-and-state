@@ -20,17 +20,18 @@ Observed 2026-08-30.
 | DoneState owned service domain | Deployed and live | PR #38; source `c69896d…`; CI `33300648343`; deployment `33300648341`; Cloudflare version `11018054-685f-4e7e-ab6b-f30817b2d89f` |
 | OpsTruth owned website domain | Deployed and live | PR #13; source `43c9029…`; deployment `33300001348`; Cloudflare version `111ebf9e-fd06-48fd-b162-3f976877f39e` |
 | OpsTruth owned MCP domain | Deployed and live | Plugin PR #7; source `915ab911…`; deployment `33300000143`; Cloudflare version `4a5ef5ed-fad8-48a4-9d2b-5eaeb4ad4bfe` |
-| Proof & State apex website | Runtime not bound | `https://proofandstate.com` was observed at HTTP 502; no site runtime source was identified |
+| Proof & State apex website | Deployed and live | Website PR #2; source `46f01c8b…`; CI `33303293557`; deployment `33303293558`; job `99240836047`; Cloudflare version `64778fc0-88b3-4aee-877d-ac69407757a8` |
+| Proof & State website verification | Healthy with bounded warnings | OpsTruth signed handoff, deployment-preflight and four-path health receipts; no failures; branch protection, PR template, security policy and licence remain follow-ups |
 | AI Work Accountability website | Runtime not bound | `https://aiworkaccountability.com` was observed at HTTP 502; no site runtime source was identified |
 | OpenAI MCP scan | Complete | 19 tools imported; 57 annotation justifications saved |
 | OpenAI directory version | In external review | DoneState `0.2.0`; OpenAI status `Review`; not yet approved or published |
 
 ## Overall
 
-Owner-side GitHub configuration, App credential use, bounded execution, App-authored publication, local validation, exact-head CI, directory assets, reviewer access, MCP scanning, the OpenAI review submission, and the DoneState/OpsTruth service-domain cutovers are complete.
+Owner-side GitHub configuration, App credential use, bounded execution, App-authored publication, local validation, exact-head CI, directory assets, reviewer access, MCP scanning, the OpenAI review submission, the DoneState/OpsTruth service-domain cutovers, and the independently owned Proof & State website deployment are complete.
 
 The directory version is in `Review`; that is not approval or publication. Separately, the fresh maintenance canary still requires a corrected independent OpsTruth decision for its existing sealed handoff. DoneState correctly remains `AWAITING_VERIFICATION` and has not promoted an uncertain observation to completion.
 
 No source branch in the evidence chain has been deleted.
 
-The service cutovers do not prove that every purchased apex domain has an application behind it. The Proof & State and AI Work Accountability apexes still need actual site source and Cloudflare runtime bindings; they are recorded as infrastructure gaps rather than presented as completed URL replacements. See the [domain registry](DOMAIN-REGISTRY.md).
+The service cutovers do not prove that every purchased apex domain has an application behind it. Proof & State now has an identified source, exact-commit CI, a Cloudflare deployment receipt, canonical-domain bindings and independent live observations. The AI Work Accountability apex still needs an identified application source and runtime binding and remains an explicit infrastructure gap. See the [domain registry](DOMAIN-REGISTRY.md).
