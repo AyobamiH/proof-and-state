@@ -19,7 +19,7 @@ The canonical ordered portfolio backlog, source-ledger commit, owners, wait cond
 | Directory release assets | Merged | Demo PR #26 and icon PR #27; source branches preserved |
 | OAuth and reviewer hardening | Merged and deployed | DoneState PRs #28–#36 |
 | Final review-path deployment | Verified from GitHub | Source `1588c058…`; CI `33297909263`; deployment `33297909318` |
-| DoneState owned service domain | Deployed and live | PR #38; source `c69896d…`; CI `33300648343`; deployment `33300648341`; Cloudflare version `11018054-685f-4e7e-ab6b-f30817b2d89f` |
+| DoneState owned service domain | Deployed and live | Current source `1d6f214…`; CI `33339639434`; deployment `33339639417`; Cloudflare version `774f0298-062f-4442-96d4-e2d52d7b1f94` |
 | OpsTruth owned website domain | Deployed and live | PR #13; source `43c9029…`; deployment `33300001348`; Cloudflare version `111ebf9e-fd06-48fd-b162-3f976877f39e` |
 | OpsTruth owned MCP domain | Deployed and live | Plugin PR #7; source `915ab911…`; deployment `33300000143`; Cloudflare version `4a5ef5ed-fad8-48a4-9d2b-5eaeb4ad4bfe` |
 | Proof & State apex website | Deployed and live | Website PR #2; source `46f01c8b…`; CI `33303293557`; deployment `33303293558`; job `99240836047`; Cloudflare version `64778fc0-88b3-4aee-877d-ac69407757a8` |
@@ -28,8 +28,8 @@ The canonical ordered portfolio backlog, source-ledger commit, owners, wait cond
 | OpsTruth GitHub Action | Published and publicly listed | Marketplace `opstruth-evidence`; releases `v1.0.0` and `v1`; source `45f4debb…`; categories Code quality and AI Assisted; implementation PR #15; post-merge CI `33308062407` |
 | DoneState self-documenting governance | Merged and green | PR #46; merge `364cf86e…`; PR CI `33329584126`; post-merge CI `33329629870`; exact DoneState ledger now pinned from this portfolio ledger |
 | DoneState Marketplace listing | Submitted, under review, hardened and deployed | Submission PR #45 and merge `37e049b9…`; GitHub reports `Pending for publish`; hardening PR #47 and merge `ac54dcaa…`; post-merge CI `33330067769`; deployment `33330067776`; Cloudflare version `c3c3dd14-512d-4ee5-a25a-f44914c00654`; closure PR #48 and merge `b8caff89…` |
-| DoneState Marketplace webhook | Live and signed-ping compatible | GitHub delivery `7e964cd0-a495-11f1-9c22-dc3366715a90` reached the canonical owned-domain endpoint and returned HTTP 200 in 0.29 seconds |
-| DoneState Marketplace development | Isolated and recovered; lifecycle proof active | OAuth App `3826463`; owner-only draft `donestate-marketplace-development`; ping, purchase, and cancellation delivery `90b920c0-a4ba-11f1-852b-f37103c46ff2` recorded; recovery PR #52; development version `69e76740…`; production restoration version `fd8fe1b0…`; cancellation response/final entitlement and changed/pending-change results remain open |
+| DoneState Marketplace webhook | Live, signed and receipt-enabled | Receipt PR #55; 98 Worker tests; production version `774f0298…`; versioned responses exclude account and plan identity |
+| DoneState Marketplace development | Isolated and recovered; lifecycle proof active | OAuth App `3826463`; owner-only draft `donestate-marketplace-development`; development version `b09b3849…`; cancellation `90b920c0-a4ba-11f1-852b-f37103c46ff2` returned HTTP 202 with final `CANCELLED` state; changed/pending-change results remain open |
 | AI Work Accountability website | Runtime not bound | `https://aiworkaccountability.com` was observed at HTTP 502; no site runtime source was identified |
 | OpenAI MCP scan | Complete | 19 tools imported; 57 annotation justifications saved |
 | OpenAI directory version | In external review on retained transport | DoneState `0.2.0`; status `Review`; submitted MCP URL remains exactly `https://donestate-mcp.woeinvests.workers.dev/mcp`; the owned-domain cutover did not mutate the locked review snapshot |
@@ -42,7 +42,7 @@ The directory version is in `Review`; that is not approval or publication. Its s
 
 OpsTruth is now published at `https://github.com/marketplace/actions/opstruth-evidence`; its immutable `v1.0.0` and stable `v1` references resolve to the verified PR #15 source commit. DoneState's separate OAuth listing was submitted on 30 August 2026 and GitHub reports `Pending for publish` and under review. Binding privacy and terms, the private publisher contact record, account prerequisites and the final review request are complete. Public contact aliases, a legitimate operator service address, the ICO fee self-assessment and offered-territory choices remain a separate blocked operator decision. OpsTruth publication and DoneState submission do not imply DoneState Marketplace approval or publication.
 
-The owner-only development listing is a different external state from the submitted production listing. Its app, Worker, state, and credential target are isolated and recovered; exact ping, purchase, and publisher-supplied cancellation delivery identities are recorded. The cancellation response, resulting isolated entitlement, and live changed and pending-change transitions remain unrecorded. Those gaps keep development lifecycle work active without changing production review state.
+The owner-only development listing is a different external state from the submitted production listing. Its app, Worker, state, and credential target are isolated and recovered; exact ping and purchase identities are recorded, and the cancellation returned HTTP 202 with final isolated `CANCELLED` state. Live `changed`, `pending_change`, and `pending_change_cancelled` transitions remain unrecorded. Those three gaps keep development lifecycle work active without changing production review state.
 
 No source branch in the evidence chain has been deleted.
 

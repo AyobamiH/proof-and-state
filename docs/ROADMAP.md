@@ -20,7 +20,7 @@
 - Keep the canonical maintenance PR open and unmerged until its independent decision is conclusive.
 - Preserve every source branch in the evidence chain.
 - Monitor the DoneState GitHub Marketplace review decision; treat `Pending for publish` as neither approval nor publication.
-- Finish the isolated Marketplace draft lifecycle by recording the signed cancellation and final entitlement, then exercising the live changed and pending-change transitions; do not use the production listing for tests.
+- Finish the isolated Marketplace draft lifecycle by exercising the live `changed`, `pending_change`, and `pending_change_cancelled` transitions; the signed cancellation and final `CANCELLED` entitlement are recorded, and the production listing must not be used for tests.
 - Complete the genuine public operator alias, service-address, ICO assessment and offered-territory decisions without exposing private contact data.
 
 ## Next
