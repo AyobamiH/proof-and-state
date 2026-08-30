@@ -10,7 +10,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | Project | Repository | Commit | Ledger |
 |---|---|---|---|
-| DoneState | AyobamiH/donestate | [`ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3`](https://github.com/AyobamiH/donestate/commit/ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3) | [governance/project-ledger.json](https://github.com/AyobamiH/donestate/blob/ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3/governance/project-ledger.json) |
+| DoneState | AyobamiH/donestate | [`13b3bf36244e8dbb674a21bf88881a3cfb3a72c5`](https://github.com/AyobamiH/donestate/commit/13b3bf36244e8dbb674a21bf88881a3cfb3a72c5) | [governance/project-ledger.json](https://github.com/AyobamiH/donestate/blob/13b3bf36244e8dbb674a21bf88881a3cfb3a72c5/governance/project-ledger.json) |
 
 ## Recovery order
 
@@ -26,7 +26,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| PF-GOV-001 — Enforce the portfolio Evidence Story Bank | complete | Proof & State maintainers | Keep the generated portfolio state, impact gate, and scheduled freshness check green. | Wait: None. Re-entry: Reopen if a consequential portfolio change can bypass the ledger or generated state. | 2026-12-01 |
+| PF-GOV-001 — Enforce the portfolio Evidence Story Bank | complete | Proof & State maintainers | Keep the portfolio ledger pinned to exact product ledgers and record every later transition in the same change. | Wait: None. Re-entry: Reopen if a consequential portfolio change can bypass the ledger, generated state, impact gate, or freshness check. | 2026-12-01 |
 
 ### P1 — Close remaining review and operator gates
 
@@ -39,7 +39,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Record the exact signed cancelled delivery and isolated final entitlement, then exercise changed, pending_change, and pending_change_cancelled in the owner-only draft. | Wait: The publisher reports the zero-cost test subscription cancelled, but authenticated browser control failed before the signed cancelled delivery and final isolated state could be recorded. Re-entry: Resume in authenticated GitHub Marketplace controls without altering either production app or the private maintenance App. | 2026-09-12 |
+| DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Record the signed cancelled delivery and isolated final entitlement, then exercise live changed, pending_change, and pending_change_cancelled deliveries. | Wait: The isolated app, draft listing, ping, purchase, credential targets, and runtime probes are recorded; authenticated GitHub delivery controls remain unavailable to this session. Re-entry: Resume in the owner-only draft listing without altering the submitted production listing or the private maintenance App. | 2026-09-12 |
 | DS-CUSTOMER-001 — Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
 | DS-GTM-001 — Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
 
@@ -66,11 +66,11 @@ Every consequential portfolio event must update this ledger and its generated st
 
 - **Date:** 2026-08-30
 - **Situation:** Marketplace actions had outpaced manual product and portfolio records.
-- **Verification:** DoneState PR 46 merged as 364cf86e48cc9715c149867cbe0a5f5ac3899753; PR CI 33329584126 and post-merge CI 33329629870 passed all three jobs. Proof & State PR 8 merged as 911949934fc9c6cb40cd24ffa4d594aa5ca0d44a; PR CI 33330727848 and post-merge Governance 33330807325 passed.
-- **Accountability:** owner=Proof & State maintainers; status=complete; next=Keep both generated-state and impact gates green.; wait=None.; stale=2026-12-01
-- **Outcome:** Both repositories now have canonical ledgers, generated state, CI impact gates, and scheduled freshness checks.
-- **Content:** Recovered backlog, accountability fields, evidence stories, exact source-ledger pinning, and separate-state rules.
-- **Measurement:** Two governance PRs merged and four exact CI runs passed.
+- **Verification:** DoneState PR 46 merged as 364cf86e48cc9715c149867cbe0a5f5ac3899753; PR CI 33329584126 and post-merge CI 33329629870 passed all three jobs. Proof & State PR 8 merged as 911949934fc9c6cb40cd24ffa4d594aa5ca0d44a from exact tree ccaf4931ac1c9dfa4fa3b8882b37c1b1e3f0cc85; PR CI 33330727848 and post-merge Governance run 33330807325 passed.
+- **Accountability:** owner=Proof & State maintainers; status=complete; next=Keep exact product-ledger pins and portfolio evidence current.; wait=None.; stale=2026-12-01
+- **Outcome:** Both repositories now have canonical ledgers, generated state, impact gates, and scheduled freshness checks.
+- **Content:** Recovered backlog, accountability fields, evidence stories, exact cross-project pins, and separate-state rules.
+- **Measurement:** Two governance merges and four exact workflow runs passed.
 
 ### PF-E-002 — DoneState GitHub Marketplace review request
 
@@ -122,12 +122,12 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Governance-repository controls and AI Work Accountability source/runtime identification.
 - **Measurement:** Four repository follow-ups and one unbound apex recorded.
 
-### PF-E-007 — DoneState Marketplace development OAuth App 3826463 and draft listing donestate-marketplace-development
+### PF-E-007 — DoneState Marketplace development isolation and recovery
 
 - **Date:** 2026-08-30
-- **Situation:** Real Marketplace lifecycle testing needed an owner-only app, listing, runtime, state, and credentials isolated from production and the private maintenance App.
-- **Verification:** DoneState PR 49 merged as 34145185aa8703fd60d76049ce4e87475a78c132; post-merge CI 33331882626 passed; development deployment 33331882593 attempt 2, job 99322486219, published Cloudflare version be499906-19d4-4340-a968-e62aa5dc28d7. Signed ping 13cd1ca8-a4b8-11f1-888d-aba6875c1ba2 and purchased delivery 90c3e110-a4b8-11f1-8357-8b375ae56683 were recorded. The publisher reported cancelling the zero-cost subscription, but the signed cancelled delivery ID was not independently retrieved. DoneState PR 51 merged as ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3 after PR CI 33337319451; post-merge CI 33337369603 passed.
-- **Accountability:** owner=Publisher owner; status=active; next=Record the signed cancelled delivery and isolated final entitlement, then complete live changed and pending-change coverage.; wait=Authenticated GitHub Marketplace delivery controls are temporarily unavailable to this session.; stale=2026-09-12
-- **Outcome:** The isolated development lane is operational and production remained unchanged, but the live lifecycle exit criterion remains open.
-- **Content:** Exact app, draft listing, source, CI, deployment, route isolation, signed ping and purchase, publisher-reported cancellation, and remaining proof gaps; no secret values or personal billing data.
-- **Measurement:** Ninety-seven Worker tests, one development deployment, one signed ping and one signed purchase were recorded; zero signed cancelled delivery IDs and zero live changed or pending-change deliveries are recorded.
+- **Situation:** Real lifecycle evidence required a development app, listing, runtime, state, and credential target isolated from the submitted production listing and private maintenance App.
+- **Verification:** DoneState PR 49 merged as 34145185aa8703fd60d76049ce4e87475a78c132 and created the development boundary. OAuth App 3826463, draft listing donestate-marketplace-development, signed ping 13cd1ca8-a4b8-11f1-888d-aba6875c1ba2, and signed purchase 90c3e110-a4b8-11f1-8357-8b375ae56683 were recorded; cancellation was publisher-reported but its delivery remains unrecorded. A live HTTP 503 exposed a secret-target defect. Recovery PR 52 merged as f10fabc7501e8ed86b5136c465f00a3560d62f7a; CI 33337515371 and 33337554919 passed. Development run 33337554945 explicitly targeted donestate-mcp-development, deployed version 69e76740-b9b6-48ea-a979-34e04acbc47b, and passed 200/404/401/302 assertions. Production run 33337555133 restored donestate-mcp and deployed version fd8fe1b0-81bd-4ba6-aa84-b288ea9bc583. Closure PR 53 merged as 13b3bf36244e8dbb674a21bf88881a3cfb3a72c5 from tree a0cd3c11b41c6f6e0e8ced1c9c1375390cd836c9; post-merge CI 33337799892 passed all three jobs.
+- **Accountability:** owner=Publisher owner; status=active; next=Record exact cancellation and remaining live plan transitions.; wait=Authenticated GitHub Marketplace delivery controls are unavailable to this session.; stale=2026-09-12
+- **Outcome:** Development and production credential targets are recovered and development deployment is manual-only; R3 stays active for exact cancellation and remaining transitions.
+- **Content:** Exact source, app, listing, delivery, incident, CI, deployment, version, target-name, and live-route evidence without secret values or personal billing data.
+- **Measurement:** One app, one draft listing, one ping, one purchase, one detected and recovered isolation incident, two recovery deployments, and five post-recovery direct route probes; zero signed cancellation or live changed and pending-change deliveries recorded.

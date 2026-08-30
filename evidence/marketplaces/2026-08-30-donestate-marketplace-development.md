@@ -1,6 +1,6 @@
 # DoneState Marketplace development evidence — 2026-08-30
 
-DoneState now has a Marketplace development lane that is structurally and operationally separate from both production apps. This record distinguishes exact external evidence from publisher report and keeps the remaining lifecycle proof gap open.
+DoneState has a Marketplace development lane structurally separated from the submitted production listing and private maintenance App. This record distinguishes exact external evidence, publisher report, and the recovered credential-target incident while keeping the remaining lifecycle proof gap open.
 
 ## Exact identities
 
@@ -10,15 +10,19 @@ DoneState now has a Marketplace development lane that is structurally and operat
 | Owner-only listing | Draft `donestate-marketplace-development`; never submitted for publication |
 | Test plan | `Development Test`; zero cost |
 | Runtime | `https://donestate-mcp-development.woeinvests.workers.dev` |
-| Worker version | `be499906-19d4-4340-a968-e62aa5dc28d7` |
-| Production OAuth App | `3822030`; unchanged |
+| Recovered development version | `69e76740-b9b6-48ea-a979-34e04acbc47b` |
+| Production OAuth App and submitted listing | App `3822030`; configuration unchanged |
+| Restored production Worker version | `fd8fe1b0-81bd-4ba6-aa84-b288ea9bc583` |
 
 ## Repository, CI and deployment
 
-- DoneState PR #49 merged as `34145185aa8703fd60d76049ce4e87475a78c132` from exact tree `d6ae69a4d3b2a62407475316aa20df46ab7907a6`.
-- Post-merge CI `33331882626` passed all three required jobs.
-- Development deployment `33331882593`, attempt 2, successful job `99322486219`, validated the isolated secret names and published the Worker version above.
-- DoneState PR #51 recorded the external evidence and merged as `ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3`; PR CI `33337319451` and post-merge CI `33337369603` passed all three jobs.
+- DoneState PR #49 merged as `34145185aa8703fd60d76049ce4e87475a78c132` from tree `d6ae69a4d3b2a62407475316aa20df46ab7907a6` and deployed initial development version `be499906-19d4-4340-a968-e62aa5dc28d7` in run `33331882593` attempt 2.
+- DoneState PR #51 recorded App, listing, ping, and purchase evidence and merged as `ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3`; PR CI `33337319451` and post-merge CI `33337369603` passed.
+- A later unsigned development webhook probe returned HTTP 503. Run `33331882593` logged its generic secret uploader processing `donestate-mcp`, so the development target was missing its webhook secret and production Worker credentials required restoration.
+- Recovery PR #52 merged as `f10fabc7501e8ed86b5136c465f00a3560d62f7a` from tree `83299fb9d55c7f2487a644d932eaf1b9d10c35ea`; PR CI `33337515371` and post-merge CI `33337554919` passed.
+- Development run `33337554945`, job `99327095747`, explicitly processed secrets for `donestate-mcp-development`, published the recovered development version above, and passed root 200, MCP 404, unsigned-webhook 401, and OAuth-start 302 assertions.
+- Production run `33337555133`, job `99327096294`, restored the production secret set to `donestate-mcp` and published the restored production version above.
+- Closure PR #53 merged as `13b3bf36244e8dbb674a21bf88881a3cfb3a72c5` from tree `a0cd3c11b41c6f6e0e8ced1c9c1375390cd836c9`; post-merge CI `33337799892` passed and development deployment returned to manual-only.
 
 No secret value or personal billing data belongs in this evidence.
 
@@ -26,9 +30,9 @@ No secret value or personal billing data belongs in this evidence.
 
 - GitHub signed ping delivery: `13cd1ca8-a4b8-11f1-888d-aba6875c1ba2`.
 - GitHub signed `marketplace_purchase.purchased` delivery: `90c3e110-a4b8-11f1-8357-8b375ae56683`.
-- Public development root: HTTP 200 with the explicit isolated-environment notice.
-- MCP, OAuth-provider, OpenAI-review, GitHub-App settings, and webhook GET routes: HTTP 404.
 - Publisher report: the zero-cost test subscription was cancelled.
+- Post-recovery development probes: root HTTP 200, `/mcp` HTTP 404, unsigned Marketplace webhook HTTP 401; the workflow also proved OAuth start HTTP 302 with the development callback.
+- Post-restoration production probes: root HTTP 200 and unsigned Marketplace webhook HTTP 401.
 
 The publisher report is not upgraded into signed-delivery evidence. Authenticated browser control failed before the exact `marketplace_purchase.cancelled` delivery ID and resulting isolated entitlement state were retrieved.
 
@@ -39,6 +43,6 @@ The DoneState and portfolio work items remain active. The next authenticated Git
 1. record the exact signed cancelled delivery and isolated final entitlement;
 2. exercise and record live `changed`, `pending_change`, and `pending_change_cancelled` deliveries;
 3. keep the listing owner-only and draft;
-4. leave the submitted production listing, production OAuth App and secrets, and private maintenance GitHub App unchanged.
+4. leave the submitted production listing, production OAuth App configuration, and private maintenance GitHub App unchanged.
 
 The 97 passing Worker tests prove deterministic handling of all five actions, duplicates, and out-of-order deliveries. They do not prove that GitHub emitted the missing live transitions.
