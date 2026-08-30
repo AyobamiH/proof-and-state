@@ -2,6 +2,8 @@
 
 Observed 2026-08-30.
 
+The canonical ordered portfolio backlog, source-ledger commit, owners, wait conditions, stale dates, and Evidence Story Bank are generated from `governance/portfolio-ledger.json` into [Portfolio state](PORTFOLIO-STATE.md).
+
 | Area | Status | Evidence |
 | --- | --- | --- |
 | Canonical governance repository | Implemented | `AyobamiH/proof-and-state`, initial commit `70216ea38037ace3891b048d7bd5df03013d9913` |
@@ -24,7 +26,8 @@ Observed 2026-08-30.
 | Proof & State website verification | Healthy with bounded warnings | OpsTruth signed handoff, deployment-preflight and four-path health receipts; no failures; branch protection, PR template, security policy and licence remain follow-ups |
 | OpsTruth MCP identity design | Aligned and deployed | `opstruth-chatgpt-plugin` PR #9; merge `6a4a01a1…`; post-merge CI `33306940776`; deployment `33306940759`; Cloudflare version `e2e0efcb-377d-4b79-8cb9-7039b3341e11` |
 | OpsTruth GitHub Action | Published and publicly listed | Marketplace `opstruth-evidence`; releases `v1.0.0` and `v1`; source `45f4debb…`; categories Code quality and AI Assisted; implementation PR #15; post-merge CI `33308062407` |
-| DoneState Marketplace integration | Merged and deployed, not listed | Base integration PR #40; secret deployment PR #41 and run `33324111015`; signed ping repair PR #42 and run `33324975105` |
+| DoneState self-documenting governance | Merged and green | PR #46; merge `364cf86e…`; PR CI `33329584126`; post-merge CI `33329629870`; exact DoneState ledger now pinned from this portfolio ledger |
+| DoneState Marketplace listing | Submitted, under review, hardened and deployed | Submission PR #45 and merge `37e049b9…`; GitHub reports `Pending for publish`; hardening PR #47 and merge `ac54dcaa…`; post-merge CI `33330067769`; deployment `33330067776`; Cloudflare version `c3c3dd14-512d-4ee5-a25a-f44914c00654`; closure PR #48 and merge `b8caff89…` |
 | DoneState Marketplace webhook | Live and signed-ping compatible | GitHub delivery `7e964cd0-a495-11f1-9c22-dc3366715a90` reached the canonical owned-domain endpoint and returned HTTP 200 in 0.29 seconds |
 | AI Work Accountability website | Runtime not bound | `https://aiworkaccountability.com` was observed at HTTP 502; no site runtime source was identified |
 | OpenAI MCP scan | Complete | 19 tools imported; 57 annotation justifications saved |
@@ -36,7 +39,7 @@ Owner-side GitHub configuration, App credential use, bounded execution, App-auth
 
 The directory version is in `Review`; that is not approval or publication. Its submitted MCP URL still uses the retained Worker transport. The canonical URL for new integrations is `https://donestate.proofandstate.com/mcp`, but changing the origin in OpenAI requires a new plugin version and review rather than an automatic DNS substitution. Separately, the fresh maintenance canary still requires a corrected independent OpsTruth decision for its existing sealed handoff. DoneState correctly remains `AWAITING_VERIFICATION` and has not promoted an uncertain observation to completion.
 
-OpsTruth is now published at `https://github.com/marketplace/actions/opstruth-evidence`; its immutable `v1.0.0` and stable `v1` references resolve to the verified PR #15 source commit. DoneState's draft, secret deployment and signed webhook ping are complete. It still needs a completed contact record, binding owner legal text and the human final-review submission. OpsTruth publication does not imply DoneState Marketplace approval.
+OpsTruth is now published at `https://github.com/marketplace/actions/opstruth-evidence`; its immutable `v1.0.0` and stable `v1` references resolve to the verified PR #15 source commit. DoneState's separate OAuth listing was submitted on 30 August 2026 and GitHub reports `Pending for publish` and under review. Binding privacy and terms, the private publisher contact record, account prerequisites and the final review request are complete. Public contact aliases, a legitimate operator service address, the ICO fee self-assessment and offered-territory choices remain a separate blocked operator decision. OpsTruth publication and DoneState submission do not imply DoneState Marketplace approval or publication.
 
 No source branch in the evidence chain has been deleted.
 

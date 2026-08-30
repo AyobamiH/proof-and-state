@@ -18,12 +18,14 @@ Proof & State is the governance layer for a family of narrowly separated product
 - [Domain registry](docs/DOMAIN-REGISTRY.md)
 - [Integration contracts](docs/INTEGRATION-CONTRACTS.md)
 - [Current status](docs/STATUS.md)
+- [Generated portfolio state](docs/PORTFOLIO-STATE.md)
 - [Roadmap](docs/ROADMAP.md)
 - [DoneState owner-side completion evidence](evidence/donestate/2026-08-29-owner-side-completion.md)
 - [DoneState OpenAI review submission evidence](evidence/donestate/2026-08-30-openai-review-submission.md)
 - [Owned-domain cutover evidence](evidence/domains/2026-08-30-owned-domain-cutover.md)
 - [GitHub Marketplace preparation evidence](evidence/marketplaces/2026-08-30-github-marketplace-preparation.md)
 - [DoneState Marketplace webhook live evidence](evidence/marketplaces/2026-08-30-donestate-webhook-live.md)
+- [DoneState Marketplace submission and hardening evidence](evidence/marketplaces/2026-08-30-donestate-marketplace-submission-and-hardening.md)
 
 ## Governance rules
 
@@ -33,5 +35,6 @@ Proof & State is the governance layer for a family of narrowly separated product
 4. AgentProof records evidence; it does not infer effects from signatures alone.
 5. Exact commits, pull-request heads, check contexts, installation scope, and hash-chain digests are the units of evidence.
 6. Source branches and superseded attempts remain available when they are part of the audit trail.
+7. Every consequential portfolio event updates `governance/portfolio-ledger.json`; `docs/PORTFOLIO-STATE.md` is generated, and CI rejects drift or stale accountability.
 
 This repository is the canonical governance source. Product repositories remain the canonical implementation sources.
