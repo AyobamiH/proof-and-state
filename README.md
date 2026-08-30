@@ -23,6 +23,7 @@ Proof & State is the governance layer for a family of narrowly separated product
 - [DoneState OpenAI review submission evidence](evidence/donestate/2026-08-30-openai-review-submission.md)
 - [Owned-domain cutover evidence](evidence/domains/2026-08-30-owned-domain-cutover.md)
 - [GitHub Marketplace preparation evidence](evidence/marketplaces/2026-08-30-github-marketplace-preparation.md)
+- [DoneState Marketplace webhook live evidence](evidence/marketplaces/2026-08-30-donestate-webhook-live.md)
 
 ## Governance rules
 
