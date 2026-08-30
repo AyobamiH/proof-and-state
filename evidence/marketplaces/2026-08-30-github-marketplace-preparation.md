@@ -2,9 +2,9 @@
 
 ## Outcome
 
-Marketplace exposure is implemented to the last safe technical boundary for both products, but neither product is claimed listed or published:
+Marketplace exposure has reached different lifecycle states: OpsTruth is published and publicly listed; DoneState is technically deployed but not yet listed:
 
-- OpsTruth has a root GitHub Action that runs the bundled read-only verifier without downloading executable code at runtime.
+- OpsTruth has a publicly listed root GitHub Action that runs the bundled read-only verifier without downloading executable code at runtime.
 - DoneState has a separate GitHub Marketplace OAuth entitlement flow and purchase webhook on its owned domain.
 - The private DoneState maintenance GitHub App remains private and installed only on `AyobamiH/donestate`; Marketplace discovery does not widen its repository authority.
 - GitHub legal agreements and irreversible listing submissions remain owner actions.
@@ -52,7 +52,7 @@ This is visual and content alignment only. It does not alter OpsTruth's read-onl
 
 The Action rejects absolute, traversal, empty and multiline output paths; accepts strict boolean inputs only; requires a one-line HTTPS base URL; and exposes no publish, deploy or target-mutation capability.
 
-The GitHub release form is staged for Action version `v1.0.0`. It has not created the tag, accepted the Marketplace Developer Agreement or published the release. The GitHub Marketplace checkbox remains unavailable until the owner accepts that legal agreement.
+The owner accepted GitHub Marketplace Developer Agreement v2.4. GitHub then published Action release `v1.0.0` from verified source commit `45f4debbd3fbe8217599ab697b8f6c855b372e0b` and listed OpsTruth at `https://github.com/marketplace/actions/opstruth-evidence`. The immutable `v1.0.0` release is marked Latest, while stable major reference `v1` resolves to the same commit. Marketplace categories are **Code quality** and **AI Assisted**.
 
 ## DoneState Marketplace integration
 
@@ -91,13 +91,11 @@ The listing uses the separate OAuth App draft `3822030`. The private maintenance
 
 The following are explicitly incomplete:
 
-1. Accept the GitHub Marketplace Developer Agreement for the OpsTruth Action.
-2. Create the `v1.0.0` Action tag, enable the Marketplace checkbox and publish the OpsTruth release.
-3. Publish binding DoneState privacy and terms text with owner contact and retention commitments; the repository documents are still preview/operator templates.
-4. Configure a new `GITHUB_MARKETPLACE_WEBHOOK_SECRET` in both the DoneState Worker and GitHub Marketplace listing.
-5. Save and finish the DoneState listing details, pricing and assets, then submit it for GitHub review.
+1. Publish binding DoneState privacy and terms text with owner contact and retention commitments; the repository documents are still preview/operator templates.
+2. Configure a new `GITHUB_MARKETPLACE_WEBHOOK_SECRET` in both the DoneState Worker and GitHub Marketplace listing.
+3. Save and finish the DoneState listing details, pricing and assets, then submit it for GitHub review.
 
-Until those gates are crossed, the correct lifecycle words are **merged**, **deployed**, **live routes**, **release-ready** and **draft prepared**—not **listed**, **published**, **approved** or **available in GitHub Marketplace**.
+OpsTruth can now be described as **published** and **available in GitHub Marketplace**. DoneState remains **merged**, **deployed**, **live routes** and **draft prepared**—not yet **listed**, **approved** or **available in GitHub Marketplace**.
 
 ## Preserved trust boundaries
 
