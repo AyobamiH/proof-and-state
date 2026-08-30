@@ -42,6 +42,12 @@ The separate public-repository OAuth listing attached to OAuth App `3822030` was
 
 Review hardening merged in DoneState PR #47 as `ac54dcaa2df2b4211814a076036cc2b3f3ace8a6`. Post-merge CI `33330067769` passed, deployment `33330067776` published Cloudflare version `c3c3dd14-512d-4ee5-a25a-f44914c00654`, and live routing probes returned the expected HTTP 200 root and HTTP 405 webhook GET. Marketplace entitlement time is monotonic, all five lifecycle actions are tested, and the incident runbook is public. See the [submission and hardening evidence](../../evidence/marketplaces/2026-08-30-donestate-marketplace-submission-and-hardening.md).
 
+## GitHub Marketplace development
+
+The owner-only draft listing `donestate-marketplace-development` is attached to separate OAuth App `3826463` and the isolated `donestate-mcp-development` Worker. Development deployment `33331882593` attempt 2 published Cloudflare version `be499906-19d4-4340-a968-e62aa5dc28d7`. GitHub recorded signed ping `13cd1ca8-a4b8-11f1-888d-aba6875c1ba2` and signed purchase `90c3e110-a4b8-11f1-8357-8b375ae56683`. The publisher reports that the zero-cost test subscription was cancelled, but the exact signed cancellation delivery was not retrieved before authenticated browser control failed.
+
+This development surface exposes no MCP, repository, maintenance, OpenAI-review, private-App, or production authority. It remains active until the cancellation delivery, isolated final entitlement, and live changed and pending-change transitions are recorded. See the [development lifecycle evidence](../../evidence/marketplaces/2026-08-30-donestate-marketplace-development.md).
+
 ## Project-state source
 
-DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned commit `b8caff89d3be82f3367e3a3ba039f0ce264045df`. It tracks the complete recovered backlog and generates `docs/PROJECT-STATE.md`; Proof & State references that exact source rather than duplicating product-level status as portfolio authority.
+DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned commit `ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3`. It tracks the complete recovered backlog and generates `docs/PROJECT-STATE.md`; Proof & State references that exact source rather than duplicating product-level status as portfolio authority.

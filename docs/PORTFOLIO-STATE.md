@@ -10,13 +10,13 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | Project | Repository | Commit | Ledger |
 |---|---|---|---|
-| DoneState | AyobamiH/donestate | [`b8caff89d3be82f3367e3a3ba039f0ce264045df`](https://github.com/AyobamiH/donestate/commit/b8caff89d3be82f3367e3a3ba039f0ce264045df) | [governance/project-ledger.json](https://github.com/AyobamiH/donestate/blob/b8caff89d3be82f3367e3a3ba039f0ce264045df/governance/project-ledger.json) |
+| DoneState | AyobamiH/donestate | [`ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3`](https://github.com/AyobamiH/donestate/commit/ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3) | [governance/project-ledger.json](https://github.com/AyobamiH/donestate/blob/ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3/governance/project-ledger.json) |
 
 ## Recovery order
 
-1. **P0 — Keep portfolio governance self-documenting.** Portfolio state is generated, stale work fails, and consequential changes require the ledger. (1 active)
+1. **P0 — Keep portfolio governance self-documenting.** Portfolio state is generated, stale work fails, and consequential changes require the ledger. (1 complete)
 2. **P1 — Close remaining review and operator gates.** Review decisions and genuine operator contact, address, regulatory, and territory choices are recorded without exposing private data. (2 blocked)
-3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (3 planned)
+3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (1 active, 2 planned)
 4. **P3 — Close independent-verification gaps.** OpsTruth decides the exact maintenance head and AgentProof receipts remain consequence evidence rather than completion authority. (2 blocked, 1 planned)
 5. **P4 — Advance releases and infrastructure through gates.** Release, governance-repository, domain-runtime, and fleet work advances only from exact authority and evidence. (2 deferred, 1 planned, 1 blocked)
 
@@ -26,7 +26,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| PF-GOV-001 — Enforce the portfolio Evidence Story Bank | active | Proof & State maintainers | Merge the portfolio ledger, generated state, impact gate, and scheduled freshness check. | Wait: None. Re-entry: Already active. | 2026-09-03 |
+| PF-GOV-001 — Enforce the portfolio Evidence Story Bank | complete | Proof & State maintainers | Keep the generated portfolio state, impact gate, and scheduled freshness check green. | Wait: None. Re-entry: Reopen if a consequential portfolio change can bypass the ledger or generated state. | 2026-12-01 |
 
 ### P1 — Close remaining review and operator gates
 
@@ -39,7 +39,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| DS-MKTDEV-001 — Create a separate Marketplace development listing | planned | Publisher owner | Create a development OAuth App and draft listing for real lifecycle tests. | Wait: Do not alter the submitted production OAuth listing or reuse the private maintenance App. Re-entry: Begin after portfolio synchronization. | 2026-09-12 |
+| DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Record the exact signed cancelled delivery and isolated final entitlement, then exercise changed, pending_change, and pending_change_cancelled in the owner-only draft. | Wait: The publisher reports the zero-cost test subscription cancelled, but authenticated browser control failed before the signed cancelled delivery and final isolated state could be recorded. Re-entry: Resume in authenticated GitHub Marketplace controls without altering either production app or the private maintenance App. | 2026-09-12 |
 | DS-CUSTOMER-001 — Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
 | DS-GTM-001 — Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
 
@@ -62,15 +62,15 @@ Every consequential portfolio event must update this ledger and its generated st
 
 ## Evidence Story Bank
 
-### PF-E-001 — DoneState self-documenting governance
+### PF-E-001 — DoneState and Proof & State self-documenting governance
 
 - **Date:** 2026-08-30
-- **Situation:** Marketplace actions had outpaced manual product records.
-- **Verification:** DoneState PR 46 merged as 364cf86e48cc9715c149867cbe0a5f5ac3899753; PR CI 33329584126 and post-merge CI 33329629870 passed all three jobs.
-- **Accountability:** owner=Proof & State maintainers; status=active; next=Install equivalent portfolio closure and reference the exact DoneState ledger.; wait=None.; stale=2026-09-03
-- **Outcome:** DoneState now has one canonical project ledger, generated state, CI impact gate, and scheduled freshness check.
-- **Content:** Recovered backlog, accountability fields, evidence stories, and separate-state rules.
-- **Measurement:** One project ledger covering seven recovery stages and thirty-two work items.
+- **Situation:** Marketplace actions had outpaced manual product and portfolio records.
+- **Verification:** DoneState PR 46 merged as 364cf86e48cc9715c149867cbe0a5f5ac3899753; PR CI 33329584126 and post-merge CI 33329629870 passed all three jobs. Proof & State PR 8 merged as 911949934fc9c6cb40cd24ffa4d594aa5ca0d44a; PR CI 33330727848 and post-merge Governance 33330807325 passed.
+- **Accountability:** owner=Proof & State maintainers; status=complete; next=Keep both generated-state and impact gates green.; wait=None.; stale=2026-12-01
+- **Outcome:** Both repositories now have canonical ledgers, generated state, CI impact gates, and scheduled freshness checks.
+- **Content:** Recovered backlog, accountability fields, evidence stories, exact source-ledger pinning, and separate-state rules.
+- **Measurement:** Two governance PRs merged and four exact CI runs passed.
 
 ### PF-E-002 — DoneState GitHub Marketplace review request
 
@@ -121,3 +121,13 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Outcome:** The gaps remain explicit and are not treated as website or runtime success.
 - **Content:** Governance-repository controls and AI Work Accountability source/runtime identification.
 - **Measurement:** Four repository follow-ups and one unbound apex recorded.
+
+### PF-E-007 — DoneState Marketplace development OAuth App 3826463 and draft listing donestate-marketplace-development
+
+- **Date:** 2026-08-30
+- **Situation:** Real Marketplace lifecycle testing needed an owner-only app, listing, runtime, state, and credentials isolated from production and the private maintenance App.
+- **Verification:** DoneState PR 49 merged as 34145185aa8703fd60d76049ce4e87475a78c132; post-merge CI 33331882626 passed; development deployment 33331882593 attempt 2, job 99322486219, published Cloudflare version be499906-19d4-4340-a968-e62aa5dc28d7. Signed ping 13cd1ca8-a4b8-11f1-888d-aba6875c1ba2 and purchased delivery 90c3e110-a4b8-11f1-8357-8b375ae56683 were recorded. The publisher reported cancelling the zero-cost subscription, but the signed cancelled delivery ID was not independently retrieved. DoneState PR 51 merged as ecf2cb753ee9ccaaa0fe63ffb301d2633978cbe3 after PR CI 33337319451; post-merge CI 33337369603 passed.
+- **Accountability:** owner=Publisher owner; status=active; next=Record the signed cancelled delivery and isolated final entitlement, then complete live changed and pending-change coverage.; wait=Authenticated GitHub Marketplace delivery controls are temporarily unavailable to this session.; stale=2026-09-12
+- **Outcome:** The isolated development lane is operational and production remained unchanged, but the live lifecycle exit criterion remains open.
+- **Content:** Exact app, draft listing, source, CI, deployment, route isolation, signed ping and purchase, publisher-reported cancellation, and remaining proof gaps; no secret values or personal billing data.
+- **Measurement:** Ninety-seven Worker tests, one development deployment, one signed ping and one signed purchase were recorded; zero signed cancelled delivery IDs and zero live changed or pending-change deliveries are recorded.
