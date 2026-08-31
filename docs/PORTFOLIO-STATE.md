@@ -2,7 +2,7 @@
 
 <!-- Generated from governance/portfolio-ledger.json. Do not edit by hand. -->
 
-Canonical state date: **2026-08-30**
+Canonical state date: **2026-08-31**
 
 Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.
 
@@ -16,7 +16,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 1. **P0 — Keep portfolio governance self-documenting.** Portfolio state is generated, stale work fails, and consequential changes require the ledger. (1 complete)
 2. **P1 — Close remaining review and operator gates.** Review decisions and genuine operator contact, address, regulatory, and territory choices are recorded without exposing private data. (2 blocked)
-3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (1 active, 2 planned)
+3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (2 active, 2 planned)
 4. **P3 — Close independent-verification gaps.** OpsTruth decides the exact maintenance head and AgentProof receipts remain consequence evidence rather than completion authority. (2 blocked, 1 planned)
 5. **P4 — Advance releases and infrastructure through gates.** Release, governance-repository, domain-runtime, and fleet work advances only from exact authority and evidence. (2 deferred, 1 planned, 1 blocked)
 
@@ -42,6 +42,7 @@ Every consequential portfolio event must update this ledger and its generated st
 | DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Exercise and record live changed, pending_change, and pending_change_cancelled deliveries through the owner-only draft listing. | Wait: The isolated app, draft listing, ping, purchase, accepted cancellation receipt, final CANCELLED state, credential targets, and runtime probes are recorded; three live transition results remain. Re-entry: Resume in the owner-only draft listing without altering the submitted production listing or the private maintenance App. | 2026-09-12 |
 | DS-CUSTOMER-001 — Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
 | DS-GTM-001 — Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
+| GTM-ORCH-001 — Prove the API-only GTM orchestrator | active | Proof & State maintainers | Provision the Cloudflare runtime, obtain direct provider access, run read-only identity probes, and exercise one explicitly authorised Google Business Profile canary with exact read-back. | Wait: Google, LinkedIn, and Meta provider access and OAuth permissions are not yet proven; no live publication is authorised by the contract-test baseline. Re-entry: Resume as each provider credential is saved through approved secret custody and its permission probe becomes available. | 2026-09-15 |
 
 ### P3 — Close independent-verification gaps
 
@@ -131,3 +132,13 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Outcome:** Development and production credential targets are recovered, the cancellation is accepted with final isolated CANCELLED state, and R3 stays active only for the remaining three live transitions.
 - **Content:** Exact source, app, listing, delivery, incident, CI, deployment, version, target-name, live-route, and privacy-minimal response evidence without secret values or personal billing data.
 - **Measurement:** One app, one draft listing, one ping, one purchase, one accepted cancellation receipt, one recovered isolation incident, four development/production deployments across recovery and receipt delivery, 98 passing Worker tests, and four current development route assertions; changed and pending-change results remain unrecorded.
+
+### PF-E-008 — API-only GTM orchestrator contract baseline
+
+- **Date:** 2026-08-31
+- **Situation:** Browser publication required repeated operator intervention and produced ambiguous image-only or unverified states; an unapproved intermediary was rejected.
+- **Verification:** The governed application was implemented under apps/gtm-orchestrator with direct Google, LinkedIn, Facebook, Instagram, Threads and Cloudinary boundaries. Sixteen synthetic validation, provider-contract, orchestration, fail-closed, ambiguous-mutation, submitted/read-back retry, and reconciliation tests passed locally on 2026-08-31.
+- **Accountability:** owner=Proof & State maintainers; status=active; next=Provision Cloudflare resources, obtain direct provider permissions, run identity probes, and exercise one authorised Google canary.; wait=Provider OAuth, production permissions, runtime resources, live publication and read-back remain unproven.; stale=2026-09-15
+- **Outcome:** The architecture, code boundary, state machine, credential custody, provider gates and recovery semantics are versioned without claiming live publication.
+- **Content:** Direct API publishing, Cloudinary asset validation, durable queueing, idempotency, provider read-back, evidence receipts and explicit no-browser/no-intermediary failure policy.
+- **Measurement:** Sixteen local tests passed; zero live provider credentials used; zero posts created.

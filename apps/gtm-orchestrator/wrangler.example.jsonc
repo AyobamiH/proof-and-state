@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "proof-state-gtm-orchestrator",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-08-31",
+  "observability": { "enabled": true },
+  "vars": {
+    "PUBLISHING_ENABLED": "false",
+    "GOOGLE_LANGUAGE_CODE": "en-GB",
+    "LINKEDIN_API_VERSION": "REPLACE_WITH_CURRENT_APPROVED_VERSION",
+    "META_GRAPH_VERSION": "REPLACE_WITH_CURRENT_APPROVED_VERSION",
+    "THREADS_API_VERSION": "REPLACE_WITH_CURRENT_APPROVED_VERSION"
+  },
+  "d1_databases": [
+    { "binding": "GTM_DB", "database_name": "proof-state-gtm", "database_id": "REPLACE_AFTER_PROVISIONING" }
+  ],
+  "queues": {
+    "producers": [{ "binding": "GTM_QUEUE", "queue": "proof-state-gtm" }],
+    "consumers": [{ "queue": "proof-state-gtm", "max_batch_size": 10, "max_retries": 5, "dead_letter_queue": "proof-state-gtm-dead-letter" }]
+  },
+  "triggers": { "crons": ["*/5 * * * *"] }
+}

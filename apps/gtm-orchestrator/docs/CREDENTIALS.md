@@ -1,0 +1,84 @@
+# Credential custody and setup
+
+Never paste credentials into chat, issues, pull requests, repository files, D1, logs, or evidence records.
+
+## Custody model
+
+| Credential class | Runtime custody | Repository-visible record |
+|---|---|---|
+| Provider client secrets and access/refresh tokens | Cloudflare Worker encrypted secrets | Secret name, owner, purpose, rotation date, and non-secret fingerprint only |
+| Provider account, Page, organisation, user, and location IDs | Cloudflare Worker variables | May be documented after direct API verification |
+| Cloudflare deployment token and account ID | GitHub `gtm-production` environment secrets | Secret names only |
+| API versions and publishing feature flag | Cloudflare Worker variables | Version values and change history |
+
+## Required values
+
+### Cloudflare and orchestrator
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+- `ORCHESTRATOR_ADMIN_TOKEN`
+
+Create a Cloudflare token limited to Workers Scripts, D1, Queues, and the relevant account. Do not use a Global API Key.
+
+### Cloudinary
+
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+
+Use a dedicated key named `proof-state-gtm-production`; do not reuse a general account key when a dedicated key is available.
+
+### Google Business Profile
+
+- `GOOGLE_CLIENT_ID`
+- `GOOGLE_CLIENT_SECRET`
+- `GOOGLE_REFRESH_TOKEN` — produced by the orchestrator OAuth callback, not manually copied from a browser
+- `GOOGLE_BUSINESS_ACCOUNT_ID`
+- `GOOGLE_BUSINESS_LOCATION_ID`
+
+Google must first approve the selected Cloud project for Business Profile APIs. The OAuth client must be a Web application with the final Worker callback URL.
+
+### LinkedIn
+
+- `LINKEDIN_CLIENT_ID`
+- `LINKEDIN_CLIENT_SECRET`
+- `LINKEDIN_ACCESS_TOKEN`
+- `LINKEDIN_ORGANIZATION_URN`
+- `LINKEDIN_API_VERSION`
+
+The Proof & State Page is currently identified as organisation `146195259`; the API must independently confirm the authenticated member's permitted organisation role before this value is trusted for publishing.
+
+### Meta: Facebook and Instagram
+
+- `META_APP_ID`
+- `META_APP_SECRET`
+- `META_GRAPH_VERSION`
+- `META_FACEBOOK_PAGE_ID`
+- `META_PAGE_ACCESS_TOKEN`
+- `META_INSTAGRAM_USER_ID`
+- `META_INSTAGRAM_ACCESS_TOKEN`
+
+### Threads
+
+- `THREADS_API_VERSION`
+- `META_THREADS_USER_ID`
+- `META_THREADS_ACCESS_TOKEN`
+
+## Direct setup pages
+
+| Purpose | Page |
+|---|---|
+| GitHub Actions and deployment secrets | https://github.com/AyobamiH/proof-and-state/settings/secrets/actions |
+| GitHub production environment | https://github.com/AyobamiH/proof-and-state/settings/environments |
+| Cloudflare API tokens | https://dash.cloudflare.com/profile/api-tokens |
+| Cloudflare Workers | https://dash.cloudflare.com/?to=/:account/workers-and-pages |
+| Google Cloud project selector | https://console.cloud.google.com/projectselector2/home/dashboard |
+| Google OAuth clients | https://console.cloud.google.com/auth/clients |
+| Google OAuth consent branding | https://console.cloud.google.com/auth/branding |
+| Google Business Profile API prerequisites and access request | https://developers.google.com/my-business/content/prereqs |
+| LinkedIn developer applications | https://www.linkedin.com/developers/apps |
+| Meta developer applications | https://developers.facebook.com/apps/ |
+| Cloudinary API keys | https://console.cloudinary.com/settings/api-keys |
+
+The exact Cloudflare Worker secret-management URL cannot be recorded until the Worker exists and its account/worker identifiers are known. After provisioning, record the provider-generated URL here rather than constructing or guessing it.

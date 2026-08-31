@@ -11,6 +11,10 @@ Proof & State is the governance layer for a family of narrowly separated product
 | [AgentProof](docs/products/AGENTPROOF.md) | Index merge, deploy, release, and receipt evidence | Treat signatures alone as proof that an action occurred |
 | Proof & State | Own portfolio governance, contracts, evidence indexes, and sequencing | Collapse execution and verification into one trust domain |
 
+## Governed applications
+
+- [GTM Orchestrator](apps/gtm-orchestrator/README.md) — API-only publishing, scheduling, provider read-back, retries, and evidence records for approved Proof & State portfolio brands.
+
 ## Canonical records
 
 - [Architecture](docs/ARCHITECTURE.md)
@@ -26,6 +30,7 @@ Proof & State is the governance layer for a family of narrowly separated product
 - [GitHub Marketplace preparation evidence](evidence/marketplaces/2026-08-30-github-marketplace-preparation.md)
 - [DoneState Marketplace webhook live evidence](evidence/marketplaces/2026-08-30-donestate-webhook-live.md)
 - [DoneState Marketplace submission and hardening evidence](evidence/marketplaces/2026-08-30-donestate-marketplace-submission-and-hardening.md)
+- [API-only GTM orchestrator baseline](evidence/gtm/2026-08-31-api-orchestrator-baseline.md)
 
 ## Governance rules
 
