@@ -48,8 +48,8 @@ async function main() {
   const deployLog = await readFile(process.argv[2], "utf8");
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
   const apiToken = process.env.CLOUDFLARE_API_TOKEN;
-  const expectedCommit = process.env.GITHUB_SHA;
-  if (!accountId || !apiToken || !expectedCommit) throw new Error("Cloudflare credentials and GITHUB_SHA are required");
+  const expectedCommit = process.env.DEPLOYMENT_SHA || process.env.GITHUB_SHA;
+  if (!accountId || !apiToken || !expectedCommit) throw new Error("Cloudflare credentials and deployment commit are required");
   let healthUrl = findHealthUrl(deployLog);
   if (!healthUrl) {
     const subdomain = await accountSubdomain({ accountId, apiToken });

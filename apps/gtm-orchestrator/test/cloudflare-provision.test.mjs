@@ -11,9 +11,9 @@ const response = (result, result_info) => ({ ok: true, status: 200, json: async 
 
 test("environment validation rejects malformed identifiers and accepts exact secret shapes", () => {
   assert.deepEqual(validateEnvironment({
-    CLOUDFLARE_API_TOKEN: credentials.apiToken,
-    CLOUDFLARE_ACCOUNT_ID: credentials.accountId,
-    ORCHESTRATOR_ADMIN_TOKEN: credentials.adminToken,
+    CLOUDFLARE_API_TOKEN: ` ${credentials.apiToken}\n`,
+    CLOUDFLARE_ACCOUNT_ID: `${credentials.accountId}\n`,
+    ORCHESTRATOR_ADMIN_TOKEN: ` ${credentials.adminToken} `,
   }), credentials);
   assert.throws(() => validateEnvironment({ CLOUDFLARE_API_TOKEN: "short", CLOUDFLARE_ACCOUNT_ID: "bad", ORCHESTRATOR_ADMIN_TOKEN: "bad" }));
 });

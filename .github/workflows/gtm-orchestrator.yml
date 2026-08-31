@@ -50,8 +50,11 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       ORCHESTRATOR_ADMIN_TOKEN: ${{ secrets.ORCHESTRATOR_ADMIN_TOKEN }}
       WRANGLER_CONFIG: apps/gtm-orchestrator/wrangler.runtime.jsonc
+      DEPLOYMENT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.DEPLOYMENT_SHA }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -73,7 +76,7 @@ jobs:
           --config "$WRANGLER_CONFIG"
           --secrets-file "$RUNNER_TEMP/gtm-secrets.json"
           --strict
-          --message "Publishing-disabled canary $GITHUB_SHA"
+          --message "Publishing-disabled canary $DEPLOYMENT_SHA"
           2>&1 | tee "$RUNNER_TEMP/cloudflare-deploy.log"
       - name: Verify exact deployment health
         id: health

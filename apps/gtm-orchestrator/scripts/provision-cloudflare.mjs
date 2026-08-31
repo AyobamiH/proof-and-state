@@ -8,7 +8,7 @@ const DEFAULT_CONFIG_PATH = fileURLToPath(new URL("../wrangler.runtime.jsonc", i
 function required(name, env) {
   const value = env[name];
   if (!value) throw new Error(`${name} is required`);
-  return value;
+  return value.trim();
 }
 
 export function validateEnvironment(env) {
@@ -95,7 +95,7 @@ export async function provision({ env = process.env, fetchImpl = fetch, configPa
   const deadLetterQueue = await ensureQueue("proof-state-gtm-dead-letter", credentials, fetchImpl);
 
   const template = JSON.parse(await readFile(`${APP_ROOT}wrangler.example.jsonc`, "utf8"));
-  template.vars.DEPLOYMENT_SHA = env.GITHUB_SHA || "local-canary";
+  template.vars.DEPLOYMENT_SHA = env.DEPLOYMENT_SHA || env.GITHUB_SHA || "local-canary";
   template.d1_databases[0].database_id = database.id;
   await writeFile(configPath, `${JSON.stringify(template, null, 2)}\n`, { mode: 0o600 });
 
