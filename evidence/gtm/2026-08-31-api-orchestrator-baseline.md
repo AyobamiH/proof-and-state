@@ -20,6 +20,7 @@ The only approved operating components are direct Google Business Profile, Linke
 - Submission plus exact provider read-back reconciliation.
 - Retryable, blocked, and terminal failure semantics.
 - Credential custody, provider feasibility, threat model, test strategy, and runbook documentation.
+- Staged credential handoff that provisions the stable Worker callback before creating provider OAuth clients.
 - Sixteen synthetic contract and orchestration tests passed locally, including submitted/read-back retry and ambiguous-mutation protection.
 
 ## Explicitly unproven

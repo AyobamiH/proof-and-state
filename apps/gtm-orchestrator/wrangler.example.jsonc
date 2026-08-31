@@ -4,6 +4,9 @@
   "main": "src/index.mjs",
   "compatibility_date": "2026-08-31",
   "observability": { "enabled": true },
+  "secrets": {
+    "required": ["ORCHESTRATOR_ADMIN_TOKEN"]
+  },
   "vars": {
     "PUBLISHING_ENABLED": "false",
     "GOOGLE_LANGUAGE_CODE": "en-GB",
