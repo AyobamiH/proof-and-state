@@ -22,3 +22,16 @@
 ## Activation
 
 Keep `PUBLISHING_ENABLED=false` through provisioning, provider review, permission probes, contract tests, and the canary preparation. Set it to `true` only for an exact deployed version after consequence authority is recorded.
+
+## Cloudflare canary
+
+The `gtm-production` GitHub environment owns `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `ORCHESTRATOR_ADMIN_TOKEN`. The deployment workflow:
+
+1. verifies the token is active and validates secret shapes without printing their values;
+2. creates or reuses the `proof-state-gtm` D1 database and primary/dead-letter Queues;
+3. writes an ignored runtime Wrangler configuration and ephemeral secrets file;
+4. applies committed D1 migrations;
+5. deploys the Worker with `PUBLISHING_ENABLED=false`; and
+6. reads `/health` until the exact Git commit is returned with publishing still disabled.
+
+Resource discovery happens before creation, so a retry reuses named resources instead of duplicating them. Any ambiguous or failed control-plane response stops the workflow.

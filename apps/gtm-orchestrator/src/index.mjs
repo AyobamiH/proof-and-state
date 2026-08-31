@@ -9,7 +9,13 @@ import { validateJob } from "./core/job.mjs";
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/health") return json({ ok: true, service: "proof-state-gtm-orchestrator", publishingEnabled: env.PUBLISHING_ENABLED === "true" });
+    if (url.pathname === "/health") return json({
+      ok: true,
+      service: "proof-state-gtm-orchestrator",
+      version: env.APP_VERSION ?? "unknown",
+      commit: env.DEPLOYMENT_SHA ?? "unknown",
+      publishingEnabled: env.PUBLISHING_ENABLED === "true",
+    });
     if (url.pathname === "/v1/jobs" && request.method === "POST") {
       if (!authorised(request, env)) return json({ error: "unauthorised" }, 401);
       const job = validateJob(await request.json());

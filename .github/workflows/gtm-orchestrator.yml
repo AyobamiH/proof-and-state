@@ -19,6 +19,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: gtm-orchestrator-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
 jobs:
   contract-tests:
     runs-on: ubuntu-latest
@@ -31,3 +35,46 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: node --check apps/gtm-orchestrator/src/index.mjs
+
+  deploy-cloudflare-canary:
+    needs: contract-tests
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' &&
+      github.head_ref == 'feat/api-gtm-orchestrator' &&
+      github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-latest
+    environment: gtm-production
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      ORCHESTRATOR_ADMIN_TOKEN: ${{ secrets.ORCHESTRATOR_ADMIN_TOKEN }}
+      WRANGLER_CONFIG: apps/gtm-orchestrator/wrangler.runtime.jsonc
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Provision or reuse Cloudflare resources
+        run: >-
+          node apps/gtm-orchestrator/scripts/provision-cloudflare.mjs
+          "$WRANGLER_CONFIG"
+          "$RUNNER_TEMP/gtm-secrets.json"
+      - name: Apply D1 migrations
+        run: >-
+          npx wrangler d1 migrations apply proof-state-gtm
+          --remote
+          --config "$WRANGLER_CONFIG"
+      - name: Deploy publishing-disabled canary
+        run: >-
+          npx wrangler deploy
+          --config "$WRANGLER_CONFIG"
+          --secrets-file "$RUNNER_TEMP/gtm-secrets.json"
+          --strict
+          --message "Publishing-disabled canary $GITHUB_SHA"
+          2>&1 | tee "$RUNNER_TEMP/cloudflare-deploy.log"
+      - name: Verify exact deployment health
+        id: health
+        run: node apps/gtm-orchestrator/scripts/verify-cloudflare-health.mjs "$RUNNER_TEMP/cloudflare-deploy.log"

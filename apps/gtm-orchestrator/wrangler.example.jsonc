@@ -3,12 +3,16 @@
   "name": "proof-state-gtm-orchestrator",
   "main": "src/index.mjs",
   "compatibility_date": "2026-08-31",
+  "workers_dev": true,
+  "preview_urls": false,
   "observability": { "enabled": true },
   "secrets": {
     "required": ["ORCHESTRATOR_ADMIN_TOKEN"]
   },
   "vars": {
     "PUBLISHING_ENABLED": "false",
+    "APP_VERSION": "0.1.0",
+    "DEPLOYMENT_SHA": "REPLACE_AT_DEPLOYMENT",
     "GOOGLE_LANGUAGE_CODE": "en-GB",
     "LINKEDIN_API_VERSION": "REPLACE_WITH_CURRENT_APPROVED_VERSION",
     "META_GRAPH_VERSION": "REPLACE_WITH_CURRENT_APPROVED_VERSION",
