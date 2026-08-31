@@ -16,7 +16,7 @@ Every consequential portfolio event must update this ledger and its generated st
 
 1. **P0 — Keep portfolio governance self-documenting.** Portfolio state is generated, stale work fails, and consequential changes require the ledger. (1 complete)
 2. **P1 — Close remaining review and operator gates.** Review decisions and genuine operator contact, address, regulatory, and territory choices are recorded without exposing private data. (2 blocked)
-3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (2 active, 2 planned)
+3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (1 active, 2 planned, 1 blocked)
 4. **P3 — Close independent-verification gaps.** OpsTruth decides the exact maintenance head and AgentProof receipts remain consequence evidence rather than completion authority. (2 blocked, 1 planned)
 5. **P4 — Advance releases and infrastructure through gates.** Release, governance-repository, domain-runtime, and fleet work advances only from exact authority and evidence. (2 deferred, 1 planned, 1 blocked)
 
@@ -42,7 +42,7 @@ Every consequential portfolio event must update this ledger and its generated st
 | DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Exercise and record live changed, pending_change, and pending_change_cancelled deliveries through the owner-only draft listing. | Wait: The isolated app, draft listing, ping, purchase, accepted cancellation receipt, final CANCELLED state, credential targets, and runtime probes are recorded; three live transition results remain. Re-entry: Resume in the owner-only draft listing without altering the submitted production listing or the private maintenance App. | 2026-09-12 |
 | DS-CUSTOMER-001 — Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
 | DS-GTM-001 — Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
-| GTM-ORCH-001 — Prove the API-only GTM orchestrator | active | Proof & State maintainers | Run the account-scope diagnostic canary, then either continue provisioning or correct only the denied Cloudflare token scope. | Wait: The active token reached Cloudflare after whitespace normalisation but D1 list returned HTTP 401; resource and runtime state remain unproven. Google, LinkedIn, and Meta OAuth access is still absent. Re-entry: Resume automatically from the account-scope probe on the next PR-head workflow; if the probe proves a credential permission mismatch, update only CLOUDFLARE_API_TOKEN in gtm-production. | 2026-09-15 |
+| GTM-ORCH-001 — Prove the API-only GTM orchestrator | blocked | Proof & State maintainers | Replace only CLOUDFLARE_API_TOKEN in the gtm-production GitHub environment with a token that includes D1: Edit for the already verified account, then rerun failed workflow 33384717078. | Wait: The token is active and can read the saved account, but Cloudflare denies D1 list with HTTP 401 code 10000. Cloudflare resources, deployment and runtime health remain unproven. Re-entry: Resume immediately after CLOUDFLARE_API_TOKEN is replaced; rerun only the failed canary job because contract-tests already passed for exact head 38c225e33bd4fb2524c4a505e56990c00b2ffc41. | 2026-09-15 |
 
 ### P3 — Close independent-verification gaps
 
@@ -172,3 +172,13 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Outcome:** The provider rejected D1 access and the workflow stopped before creating resources. No deployment or post is claimed.
 - **Content:** An active credential is not proof of resource authority; each product permission must pass its own provider probe.
 - **Measurement:** One active-token result, one D1 HTTP 401, one successful contract-test job, zero migrations, zero deployments and zero posts.
+
+### PF-E-012 — Cloudflare D1 permission diagnosis
+
+- **Date:** 2026-08-31
+- **Situation:** A third canary separated account scope from product-level D1 authority.
+- **Verification:** GTM Orchestrator workflow 33384717078 checked out exact PR head 38c225e33bd4fb2524c4a505e56990c00b2ffc41. Contract-tests passed; job 99464696850 verified the token as active and successfully read the exact saved account before D1 list returned HTTP 401 code 10000 Authentication error. The workflow emitted the bounded diagnosis that D1: Edit is missing or ineffective for this account. Migration, deployment and health were skipped.
+- **Accountability:** owner=Proof & State maintainers; status=blocked; next=Replace only CLOUDFLARE_API_TOKEN with one granting D1: Edit on the verified account, then rerun the failed job.; wait=A credential change in the gtm-production GitHub environment is required; code cannot grant provider authority.; stale=2026-09-15
+- **Outcome:** Account identity is verified and the exact missing authority is isolated without exposing identifiers or creating resources. No deployment or post is claimed.
+- **Content:** Account access and product permission are separate evidence: an active token that sees an account can still be correctly denied D1.
+- **Measurement:** One account-scope success, one D1 HTTP 401, twenty-one local tests passing, zero migrations, zero deployments and zero posts.
