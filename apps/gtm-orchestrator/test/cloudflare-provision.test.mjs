@@ -3,7 +3,7 @@ import { mkdtemp, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { ensureD1, ensureQueue, provision, validateEnvironment } from "../scripts/provision-cloudflare.mjs";
+import { ensureD1, ensureQueue, provision, validateEnvironment, verifyAccountAccess } from "../scripts/provision-cloudflare.mjs";
 import { findHealthUrl, validateHealth } from "../scripts/verify-cloudflare-health.mjs";
 
 const credentials = { apiToken: "a".repeat(40), accountId: "b".repeat(32), adminToken: "c".repeat(64) };
@@ -27,6 +27,14 @@ test("resource ensure operations reuse matching Cloudflare resources", async () 
   assert.deepEqual(await ensureQueue("proof-state-gtm", credentials, fetchImpl), { id: "queue-1", created: false });
 });
 
+test("account probe distinguishes token scope from product permission failure", async () => {
+  await verifyAccountAccess(credentials, async () => response({ id: credentials.accountId }));
+  await assert.rejects(
+    () => verifyAccountAccess(credentials, async () => ({ ok: false, status: 401, json: async () => ({ success: false, errors: [{ code: 10000, message: "Authentication error" }] }) })),
+    /token resource scope and saved account ID refer to the same account/,
+  );
+});
+
 test("provisioning creates missing resources and writes no plaintext token to runtime config", async () => {
   const directory = await mkdtemp(join(tmpdir(), "gtm-provision-"));
   const configPath = join(directory, "wrangler.jsonc");
@@ -34,6 +42,7 @@ test("provisioning creates missing resources and writes no plaintext token to ru
   const created = new Map();
   const fetchImpl = async (url, options = {}) => {
     if (url.endsWith("/user/tokens/verify")) return response({ status: "active" });
+    if (url.endsWith(`/accounts/${credentials.accountId}`)) return response({ id: credentials.accountId });
     if (options.method === "POST" && url.endsWith("/d1/database")) { created.set("db", true); return response({ uuid: "db-created" }); }
     if (options.method === "POST" && url.endsWith("/queues")) {
       const name = JSON.parse(options.body).queue_name;

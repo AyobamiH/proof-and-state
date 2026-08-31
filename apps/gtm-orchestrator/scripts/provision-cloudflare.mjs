@@ -57,6 +57,15 @@ export async function verifyApiToken(credentials, fetchImpl = fetch) {
   if (payload.result?.status !== "active") throw new Error("CLOUDFLARE_API_TOKEN is not active");
 }
 
+export async function verifyAccountAccess(credentials, fetchImpl = fetch) {
+  try {
+    const payload = await apiRequest(`/accounts/${credentials.accountId}`, { ...credentials, fetchImpl });
+    if (payload.result?.id !== credentials.accountId) throw new Error("Cloudflare returned a different account identifier");
+  } catch (error) {
+    throw new Error(`The token is active but cannot read CLOUDFLARE_ACCOUNT_ID. Check that the token resource scope and saved account ID refer to the same account. ${error.message}`);
+  }
+}
+
 export async function ensureD1(credentials, fetchImpl = fetch) {
   const databases = await listAll(`/accounts/${credentials.accountId}/d1/database`, credentials, fetchImpl);
   const matches = databases.filter((database) => database.name === "proof-state-gtm");
@@ -90,7 +99,16 @@ export async function ensureQueue(name, credentials, fetchImpl = fetch) {
 export async function provision({ env = process.env, fetchImpl = fetch, configPath = DEFAULT_CONFIG_PATH, secretsPath } = {}) {
   const credentials = validateEnvironment(env);
   await verifyApiToken(credentials, fetchImpl);
-  const database = await ensureD1(credentials, fetchImpl);
+  await verifyAccountAccess(credentials, fetchImpl);
+  let database;
+  try {
+    database = await ensureD1(credentials, fetchImpl);
+  } catch (error) {
+    if (/\(401\)|\(403\)/.test(error.message)) {
+      throw new Error(`The token is active and its account scope is valid, but D1 access was denied. Recreate the token with D1: Edit for this exact account. ${error.message}`);
+    }
+    throw error;
+  }
   const primaryQueue = await ensureQueue("proof-state-gtm", credentials, fetchImpl);
   const deadLetterQueue = await ensureQueue("proof-state-gtm-dead-letter", credentials, fetchImpl);
 
