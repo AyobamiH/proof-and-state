@@ -3,7 +3,7 @@ import { mkdtemp, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { ensureD1, ensureQueue, provision, validateEnvironment, verifyAccountAccess } from "../scripts/provision-cloudflare.mjs";
+import { classifyApiToken, ensureD1, ensureQueue, provision, validateEnvironment, verifyAccountAccess } from "../scripts/provision-cloudflare.mjs";
 import { findHealthUrl, validateHealth } from "../scripts/verify-cloudflare-health.mjs";
 
 const credentials = { apiToken: "a".repeat(40), accountId: "b".repeat(32), adminToken: "c".repeat(64) };
@@ -16,6 +16,11 @@ test("environment validation rejects malformed identifiers and accepts exact sec
     ORCHESTRATOR_ADMIN_TOKEN: ` ${credentials.adminToken} `,
   }), credentials);
   assert.throws(() => validateEnvironment({ CLOUDFLARE_API_TOKEN: "short", CLOUDFLARE_ACCOUNT_ID: "bad", ORCHESTRATOR_ADMIN_TOKEN: "bad" }));
+});
+
+test("token classification exposes only the credential family", () => {
+  assert.equal(classifyApiToken("cfat_example-secret-value"), "account-owned");
+  assert.equal(classifyApiToken("legacy-secret-value"), "user-or-legacy");
 });
 
 test("resource ensure operations reuse matching Cloudflare resources", async () => {

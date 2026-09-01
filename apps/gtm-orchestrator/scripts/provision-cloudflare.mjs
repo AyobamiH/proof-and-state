@@ -21,6 +21,10 @@ export function validateEnvironment(env) {
   return { apiToken, accountId, adminToken };
 }
 
+export function classifyApiToken(apiToken) {
+  return String(apiToken || "").startsWith("cfat_") ? "account-owned" : "user-or-legacy";
+}
+
 async function apiRequest(path, { apiToken, fetchImpl = fetch, method = "GET", body } = {}) {
   const response = await fetchImpl(`${API_ROOT}${path}`, {
     method,
@@ -55,6 +59,10 @@ async function listAll(path, credentials, fetchImpl) {
 export async function verifyApiToken(credentials, fetchImpl = fetch) {
   const payload = await apiRequest("/user/tokens/verify", { ...credentials, fetchImpl });
   if (payload.result?.status !== "active") throw new Error("CLOUDFLARE_API_TOKEN is not active");
+  return {
+    status: payload.result.status,
+    credentialType: classifyApiToken(credentials.apiToken),
+  };
 }
 
 export async function verifyAccountAccess(credentials, fetchImpl = fetch) {
@@ -98,14 +106,14 @@ export async function ensureQueue(name, credentials, fetchImpl = fetch) {
 
 export async function provision({ env = process.env, fetchImpl = fetch, configPath = DEFAULT_CONFIG_PATH, secretsPath } = {}) {
   const credentials = validateEnvironment(env);
-  await verifyApiToken(credentials, fetchImpl);
+  const tokenEvidence = await verifyApiToken(credentials, fetchImpl);
   await verifyAccountAccess(credentials, fetchImpl);
   let database;
   try {
     database = await ensureD1(credentials, fetchImpl);
   } catch (error) {
     if (/\(401\)|\(403\)/.test(error.message)) {
-      throw new Error(`The token is active and its account scope is valid, but D1 access was denied. Recreate the token with D1: Edit for this exact account. ${error.message}`);
+      throw new Error(`The token is active and its account scope is valid, but D1 access was denied. Non-secret credential type: ${tokenEvidence.credentialType}. Confirm that this exact token object has D1 Read and Edit for the saved account; if it does, treat the response as a provider-side authorization failure. ${error.message}`);
     }
     throw error;
   }

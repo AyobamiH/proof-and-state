@@ -2,7 +2,7 @@
 
 <!-- Generated from governance/portfolio-ledger.json. Do not edit by hand. -->
 
-Canonical state date: **2026-08-31**
+Canonical state date: **2026-09-01**
 
 Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.
 
@@ -42,7 +42,7 @@ Every consequential portfolio event must update this ledger and its generated st
 | DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Exercise and record live changed, pending_change, and pending_change_cancelled deliveries through the owner-only draft listing. | Wait: The isolated app, draft listing, ping, purchase, accepted cancellation receipt, final CANCELLED state, credential targets, and runtime probes are recorded; three live transition results remain. Re-entry: Resume in the owner-only draft listing without altering the submitted production listing or the private maintenance App. | 2026-09-12 |
 | DS-CUSTOMER-001 — Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
 | DS-GTM-001 — Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
-| GTM-ORCH-001 — Prove the API-only GTM orchestrator | blocked | Proof & State maintainers | Replace only CLOUDFLARE_API_TOKEN in the gtm-production GitHub environment with a token that includes D1: Edit for the already verified account, then rerun failed workflow 33384717078. | Wait: The token is active and can read the saved account, but Cloudflare denies D1 list with HTTP 401 code 10000. Cloudflare resources, deployment and runtime health remain unproven. Re-entry: Resume immediately after CLOUDFLARE_API_TOKEN is replaced; rerun only the failed canary job because contract-tests already passed for exact head 38c225e33bd4fb2524c4a505e56990c00b2ffc41. | 2026-09-15 |
+| GTM-ORCH-001 — Prove the API-only GTM orchestrator | blocked | Proof & State maintainers | Run the non-secret credential-family diagnostic on the exact PR head. If CI observes an account-owned token matching the Cloudflare policy, escalate the persistent D1 401 as a provider-side authorization failure; otherwise reconcile the GitHub environment secret with the edited token object. | Wait: The token is active and can read the saved account. Cloudflare policy evidence shows D1 Read and Edit for the entire account, but attempts 8 and 9 of workflow 33384932882 still received D1 list HTTP 401 code 10000. Cloudflare resources, deployment and runtime health remain unproven. Re-entry: Resume from the failed canary after the diagnostic identifies the credential family; do not repeat blind permission edits or claim deployment. | 2026-09-15 |
 
 ### P3 — Close independent-verification gaps
 
@@ -182,3 +182,13 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Outcome:** Account identity is verified and the exact missing authority is isolated without exposing identifiers or creating resources. No deployment or post is claimed.
 - **Content:** Account access and product permission are separate evidence: an active token that sees an account can still be correctly denied D1.
 - **Measurement:** One account-scope success, one D1 HTTP 401, twenty-one local tests passing, zero migrations, zero deployments and zero posts.
+
+### PF-E-013 — Cloudflare token-policy mismatch diagnosis
+
+- **Date:** 2026-09-01
+- **Situation:** The owner restored the valid credential and supplied dashboard evidence showing D1 Read and Edit on an account-owned token for the entire account, yet repeated canaries still failed at the first D1 read.
+- **Verification:** Workflow 33384932882 attempt 8 job 99737053436 and delayed attempt 9 job 99737335992 both verified the token as active and read the saved account before GET /accounts/[masked]/d1/database returned HTTP 401 code 10000. Contract tests remained green. Migration, deployment and health were skipped in both attempts.
+- **Accountability:** owner=Proof & State maintainers; status=blocked; next=Expose only the token credential family in CI, then distinguish a GitHub secret/token-object mismatch from a provider-side D1 authorization defect.; wait=The dashboard policy and provider response conflict; secret values and identifiers must remain undisclosed.; stale=2026-09-15
+- **Outcome:** Blind retries and repeated permission edits are stopped. The next probe is bounded to non-secret credential identity before any further owner action.
+- **Content:** A settings screenshot is policy evidence, not proof that CI presents the same credential object; provider read-back remains authoritative.
+- **Measurement:** Two account-scope successes, two D1 HTTP 401 responses, zero migrations, zero deployments and zero posts.
