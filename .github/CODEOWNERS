@@ -1,0 +1,9 @@
+# Current accountable repository owner. A second trusted human reviewer is not
+# yet named, so the proposed ruleset remains disabled. Do not activate it by
+# treating automated review as the missing human approval.
+* @AyobamiH
+
+/.github/ @AyobamiH
+/governance/ @AyobamiH
+/scripts/ @AyobamiH
+/apps/gtm-orchestrator/ @AyobamiH
