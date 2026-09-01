@@ -39,16 +39,13 @@ jobs:
   deploy-cloudflare-canary:
     needs: contract-tests
     if: >-
-      github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-      (github.event_name == 'pull_request' &&
-      github.head_ref == 'feat/api-gtm-orchestrator' &&
-      github.event.pull_request.head.repo.full_name == github.repository)
+      github.event_name == 'workflow_dispatch' &&
+      github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: gtm-production
     env:
       WRANGLER_CONFIG: apps/gtm-orchestrator/wrangler.runtime.jsonc
-      DEPLOYMENT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      DEPLOYMENT_SHA: ${{ github.sha }}
     steps:
       - uses: actions/checkout@v4
         with:

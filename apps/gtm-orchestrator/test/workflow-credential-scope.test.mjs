@@ -69,3 +69,18 @@ test("production credential environment remains scoped to the exact deployment p
   assert.match(cleanup, /rm -f -- "\$RUNNER_TEMP\/cloudflare-runtime\.env"/);
   assert.doesNotMatch(cleanup, /\. "\$RUNNER_TEMP\/cloudflare-runtime\.env"|\$\{\{ secrets\./);
 });
+
+test("deployment authority exists only for a manual exact-main dispatch", async () => {
+  const workflow = await readFile(workflowUrl, "utf8");
+  const jobStart = workflow.indexOf("  deploy-cloudflare-canary:\n");
+  assert.notEqual(jobStart, -1);
+  const job = workflow.slice(jobStart);
+  const condition = job.slice(0, job.indexOf("    runs-on:"));
+
+  assert.match(condition, /needs: contract-tests/);
+  assert.match(condition, /github\.event_name == 'workflow_dispatch'/);
+  assert.match(condition, /github\.ref == 'refs\/heads\/main'/);
+  assert.doesNotMatch(condition, /github\.event_name == 'push'|github\.event_name == 'pull_request'/);
+  assert.match(job, /environment: gtm-production/);
+  assert.match(job, /DEPLOYMENT_SHA: \$\{\{ github\.sha \}\}/);
+});
