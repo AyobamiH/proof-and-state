@@ -31,7 +31,11 @@ The `gtm-production` GitHub environment owns `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE
 2. creates or reuses the `proof-state-gtm` D1 database and primary/dead-letter Queues;
 3. writes an ignored runtime Wrangler configuration and ephemeral secrets file;
 4. applies committed D1 migrations;
-5. deploys the Worker with `PUBLISHING_ENABLED=false`; and
-6. reads `/health` until the exact Git commit is returned with publishing still disabled.
+5. deploys the Worker with `PUBLISHING_ENABLED=false`;
+6. calls `wrangler deployments status --json` and requires exactly one active version at 100 percent traffic;
+7. calls `wrangler versions view <deployed-version> --json` and requires the exact version ID, deployment message, `DEPLOYMENT_SHA`, and `PUBLISHING_ENABLED=false`; and
+8. independently reads `/health` until the exact Git commit is returned with publishing still disabled.
 
 Resource discovery happens before creation, so a retry reuses named resources instead of duplicating them. Any ambiguous or failed control-plane response stops the workflow.
+
+The publishing-disabled canary may run after contract tests for a push to `main`, an environment-reviewed `workflow_dispatch`, or the same-repository authorised canary PR. The `gtm-production` environment remains the review and credential boundary. A workflow or local candidate is implementation evidence only. Exact-main deployment stays unproven until Cloudflare reports one 100-percent active version, that version's bindings and message identify the exact commit with publishing disabled, and the independent health read-back agrees.

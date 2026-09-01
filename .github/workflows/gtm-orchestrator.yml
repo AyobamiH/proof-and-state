@@ -40,6 +40,7 @@ jobs:
     needs: contract-tests
     if: >-
       github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
       (github.event_name == 'pull_request' &&
       github.head_ref == 'feat/api-gtm-orchestrator' &&
       github.event.pull_request.head.repo.full_name == github.repository)
@@ -78,6 +79,22 @@ jobs:
           --strict
           --message "Publishing-disabled canary $DEPLOYMENT_SHA"
           2>&1 | tee "$RUNNER_TEMP/cloudflare-deploy.log"
+      - name: Read active Cloudflare deployment
+        id: deployment
+        run: |
+          npx wrangler deployments status --config "$WRANGLER_CONFIG" --json > "$RUNNER_TEMP/cloudflare-deployment-status.json"
+          node apps/gtm-orchestrator/scripts/verify-cloudflare-deployment.mjs active-version "$RUNNER_TEMP/cloudflare-deployment-status.json"
+      - name: Read exact active Cloudflare version
+        run: >-
+          npx wrangler versions view "${{ steps.deployment.outputs.version_id }}"
+          --config "$WRANGLER_CONFIG"
+          --json
+          > "$RUNNER_TEMP/cloudflare-version.json"
+      - name: Verify exact Cloudflare provider state
+        run: >-
+          node apps/gtm-orchestrator/scripts/verify-cloudflare-deployment.mjs validate
+          "$RUNNER_TEMP/cloudflare-deployment-status.json"
+          "$RUNNER_TEMP/cloudflare-version.json"
       - name: Verify exact deployment health
         id: health
         run: node apps/gtm-orchestrator/scripts/verify-cloudflare-health.mjs "$RUNNER_TEMP/cloudflare-deploy.log"
