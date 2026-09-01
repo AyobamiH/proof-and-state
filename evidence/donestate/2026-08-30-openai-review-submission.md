@@ -1,4 +1,6 @@
-# DoneState OpenAI review submission evidence — 2026-08-30
+# DoneState OpenAI review submission evidence: 2026-08-30
+
+> Supersession note, 2026-09-01: This file preserves the submission-day snapshot. The owner later merged maintenance PR #22 as `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`; post-merge run `33474288066` failed the governance impact gate. Repair PR #58 is open at `30e90e9ef0db64ffcb96134e15ca15acf1b5d65d` with green PR-head run `33479525695`, but main remains red and the canary remains independently unproven. The branch-preservation statement below is scoped to the DoneState submission chain observed on 2026-08-30 and does not describe the later deletion and restoration of Proof & State branch `feat/api-gtm-orchestrator`.
 
 ## Scope
 

@@ -10,60 +10,72 @@ Every consequential portfolio event must update this ledger and its generated st
 
 | Project | Repository | Commit | Ledger |
 |---|---|---|---|
-| DoneState | AyobamiH/donestate | [`895efab0cdd2ce18682dfec9f2b9361dcc3a2987`](https://github.com/AyobamiH/donestate/commit/895efab0cdd2ce18682dfec9f2b9361dcc3a2987) | [governance/project-ledger.json](https://github.com/AyobamiH/donestate/blob/895efab0cdd2ce18682dfec9f2b9361dcc3a2987/governance/project-ledger.json) |
+| DoneState | AyobamiH/donestate | [`4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`](https://github.com/AyobamiH/donestate/commit/4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a) | [governance/project-ledger.json](https://github.com/AyobamiH/donestate/blob/4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a/governance/project-ledger.json) |
+
+## Reconciled repository and deployment state
+
+| Subject | Main | Pull request | Deployed subject | Exact-main deployment | Checks | Verification and next action |
+|---|---|---|---|---|---|---|
+| Proof & State GTM orchestrator | AyobamiH/proof-and-state@`2ad721357993a92dfc4d26b2b3ea4a9239ab95d6` (tree `98896963e2a8e51ea49f5eab533105ec9c924168`) | #13 merged; branch `feat/api-gtm-orchestrator`; branch state restored at `0cc6f72014b75adb422d82b73179e56039913cc4`; head `0cc6f72014b75adb422d82b73179e56039913cc4`; merge `2ad721357993a92dfc4d26b2b3ea4a9239ab95d6` | verified: `0cc6f72014b75adb422d82b73179e56039913cc4`, version `5641712a-cfc4-4ce6-b94f-f0975de76c1b`, run `33471910108`, publishingEnabled=`false` | unproven: The post-merge contract job succeeded, but the deployment job was skipped. No runtime observation identifies the merge commit. | PR-head Governance `33471910113`: success; PR-head GTM contract and canary `33471910108`: success; Post-merge Governance `33472305338`: success; Post-merge GTM contract `33472305391`: success; Post-merge GTM deployment `33472305391`: skipped | unproven for Exact-main runtime deployment: The deployed PR head and merge commit share a tree, but deployment identity is commit-bound and the merge commit was not deployed or observed. Next: Run the existing publishing-disabled canary at the exact main commit and record external health read-back before any provider or publication gate. |
+| DoneState maintenance canary | AyobamiH/donestate@`4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a` (tree `fde5857da5d16b8cfa24daacddd84db384380d9a`) | #22 merged; branch `donestate/b4242932-0bc1-4876-a202-634d9c12d72a`; head `ffec48e6c5abd9cef840ab591896613769d3e779`; merge `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a` | Not recorded in this reconciliation. | Not applicable to this reconciliation. | Post-merge CI `33474288066`: failure | unproven for Independent maintenance outcome: PR 22 merged after an uncertain OpsTruth decision, and the post-merge governance check failed. Merge state is not independent verification. Next: Repair the red governance state, correct the independent verifier path, and re-observe the exact subjects without treating the merge as verification. |
+| DoneState governance truth repair | AyobamiH/donestate@`4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a` (tree `fde5857da5d16b8cfa24daacddd84db384380d9a`) | #58 open; branch `repair/governance-truth-57`; head `30e90e9ef0db64ffcb96134e15ca15acf1b5d65d` | Not recorded in this reconciliation. | Not applicable to this reconciliation. | PR CI `33479525695`: success | unproven for Default-branch governance repair: PR-head CI is green, but PR 58 is unmerged and DoneState main remains red at workflow 33474288066. Next: Review and merge PR 58 under owner authority, then require and record exact post-merge CI before closing the governance repair. |
+| OpsTruth scoped graph and semantic delta repair | AyobamiH/opstruth-chatgpt-plugin@`186ac58c7f76da942bb1b6bfc8c9b18bd2b812d5` (tree `b2778bd60e634b4e8f2f3291f537e7aabe68e70c`) | #19 open; branch `repair/scoped-semantic-graphs`; head `37696a819fa1f17c37136369187449db89d7adee` | Not recorded in this reconciliation. | Not applicable to this reconciliation. | CI `33479905045`: success; Automated maintainer review `33479905072`: success | unproven for Default-branch graph repair: Exact-head CI and automated policy review are green, but PR 19 has no human approval, merge, deployment, or post-merge evidence. Next: Obtain independent human review, merge only under owner authority, and record exact post-merge CI and deployment separately. |
+| OpsTruth incomplete repository evidence repair | AyobamiH/opstruth-chatgpt-plugin@`186ac58c7f76da942bb1b6bfc8c9b18bd2b812d5` (tree `b2778bd60e634b4e8f2f3291f537e7aabe68e70c`) | #20 open; branch `repair/repository-evidence-truth`; head `6ea2b45055ac258e0c249bb5a53c06840717b870` | Not recorded in this reconciliation. | Not applicable to this reconciliation. | CI `33479907043`: success; Automated maintainer review `33479907078`: success | unproven for Default-branch repository evidence repair: Exact-head CI and automated policy review are green, but PR 20 has no human approval, merge, deployment, or post-merge evidence. Next: Obtain independent human review, merge only under owner authority, and record exact post-merge CI and deployment separately. |
+| OpsTruth release and public-channel reconciliation | AyobamiH/opstruth-chatgpt-plugin@`186ac58c7f76da942bb1b6bfc8c9b18bd2b812d5` (tree `b2778bd60e634b4e8f2f3291f537e7aabe68e70c`) | #21 open; branch `docs/reconcile-release-state`; head `074f3f064b7e023fb1a85530a84f6092656a37bb` | Not recorded in this reconciliation. | Not applicable to this reconciliation. | CI `33479910167`: success; Automated maintainer review `33479910111`: success | unproven for Default-branch release and channel reconciliation: Exact-head CI and automated policy review are green, but PR 21 is unmerged and creates no release, deployment, review, approval, or publication evidence. Next: Obtain independent human review, merge only under owner authority, and continue treating clean-account plugin installation and real tool outcome as unproven. |
+| OpsTruth Cloudflare self-probe repair | AyobamiH/opstruth-chatgpt-plugin@`186ac58c7f76da942bb1b6bfc8c9b18bd2b812d5` (tree `b2778bd60e634b4e8f2f3291f537e7aabe68e70c`) | #22 open; branch `repair/cloudflare-self-probe`; head `67471fbe8a27aafa15d38ed50f8421c103f50c3b` | Not recorded in this reconciliation. | Not applicable to this reconciliation. | CI `33479910134`: success; Automated maintainer review `33479910193`: success | unproven for Default-branch deployment self-probe repair: Exact-head CI and automated policy review are green, but PR 22 is unmerged and no corrected Worker deployment or internal-versus-external production probe has run. Next: Obtain independent human review, merge only under owner authority, then require exact deployment and protocol-aware internal-versus-external smoke evidence. |
 
 ## Recovery order
 
-1. **P0 — Keep portfolio governance self-documenting.** Portfolio state is generated, stale work fails, and consequential changes require the ledger. (1 complete)
-2. **P1 — Close remaining review and operator gates.** Review decisions and genuine operator contact, address, regulatory, and territory choices are recorded without exposing private data. (2 blocked)
-3. **P2 — Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (2 active, 2 planned)
-4. **P3 — Close independent-verification gaps.** OpsTruth decides the exact maintenance head and AgentProof receipts remain consequence evidence rather than completion authority. (2 blocked, 1 planned)
-5. **P4 — Advance releases and infrastructure through gates.** Release, governance-repository, domain-runtime, and fleet work advances only from exact authority and evidence. (2 deferred, 1 planned, 1 blocked)
+1. **P0: Keep portfolio governance self-documenting.** Portfolio state is generated, stale work fails, and consequential changes require the ledger. (1 active)
+2. **P1: Close remaining review and operator gates.** Review decisions and genuine operator contact, address, regulatory, and territory choices are recorded without exposing private data. (2 blocked)
+3. **P2: Separate development and prepare customers.** Development lifecycle tests are isolated from production and the first external-customer loop is supportable and measurable. (2 active, 2 planned)
+4. **P3: Close independent-verification gaps.** OpsTruth decides the exact maintenance head and AgentProof receipts remain consequence evidence rather than completion authority. (2 blocked, 1 planned)
+5. **P4: Advance releases and infrastructure through gates.** Release, governance-repository, domain-runtime, and fleet work advances only from exact authority and evidence. (2 deferred, 1 planned, 1 blocked)
 
 ## Work ledger
 
-### P0 — Keep portfolio governance self-documenting
+### P0: Keep portfolio governance self-documenting
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| PF-GOV-001 — Enforce the portfolio Evidence Story Bank | complete | Proof & State maintainers | Keep the portfolio ledger pinned to exact product ledgers and record every later transition in the same change. | Wait: None. Re-entry: Reopen if a consequential portfolio change can bypass the ledger, generated state, impact gate, or freshness check. | 2026-12-01 |
+| PF-GOV-001: Enforce the portfolio Evidence Story Bank | active | Proof & State maintainers | Complete the issue 14 repair PR under owner review and merge authority, then record the exact merge commit and successful post-merge Governance run. | Wait: Local checks and PR-head CI cannot close portfolio governance; the canonical default branch remains unchanged until the repair merges and exact post-merge Governance is green. Re-entry: Close only when the ledger, generated state, live repository subjects, merge evidence, and exact post-merge Governance run agree. | 2026-09-08 |
 
-### P1 — Close remaining review and operator gates
-
-| ID | Status | Owner | Next action | Wait and re-entry | Stale |
-|---|---|---|---|---|---|
-| DS-LEGAL-001 — Complete DoneState public operator details | blocked | Publisher owner | Choose public support/privacy aliases, a legitimate service address, complete the ICO fee self-assessment, and record offered territories. | Wait: Requires genuine publisher decisions; do not publish the private contact inbox or invent an address. Re-entry: Resume when the publisher provides those decisions. | 2026-09-06 |
-| OPENAI-REVIEW-001 — Close the DoneState OpenAI 0.2.0 review | blocked | Publisher owner | Record and respond to the reviewer decision, then retire legacy transport only when safe. | Wait: OpenAI status remains Review. Re-entry: Resume when OpenAI sends a decision. | 2026-09-15 |
-
-### P2 — Separate development and prepare customers
+### P1: Close remaining review and operator gates
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| DS-MKTDEV-001 — Create a separate Marketplace development listing | active | Publisher owner | Exercise and record live changed, pending_change, and pending_change_cancelled deliveries through the owner-only draft listing. | Wait: The isolated app, draft listing, ping, purchase, accepted cancellation receipt, final CANCELLED state, credential targets, and runtime probes are recorded; three live transition results remain. Re-entry: Resume in the owner-only draft listing without altering the submitted production listing or the private maintenance App. | 2026-09-12 |
-| DS-CUSTOMER-001 — Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
-| DS-GTM-001 — Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
-| GTM-ORCH-001 — Prove the API-only GTM orchestrator | active | Proof & State maintainers | Review and merge PR 13 under owner merge authority, then configure Cloudinary and direct social-provider credentials through the versioned onboarding path before exercising one explicitly authorised provider canary. | Wait: Cloudflare infrastructure is exact-head verified with publishing disabled. PR 13 remains open; Cloudinary tenant identity, Google OAuth, social-provider permissions, live publication and provider read-back remain unproven. Re-entry: Resume after the owner merges PR 13 or when the first direct provider credential set is available; keep publishing disabled until identity and permission preflights pass. | 2026-09-15 |
+| DS-LEGAL-001: Complete DoneState public operator details | blocked | Publisher owner | Choose public support/privacy aliases, a legitimate service address, complete the ICO fee self-assessment, and record offered territories. | Wait: Requires genuine publisher decisions; do not publish the private contact inbox or invent an address. Re-entry: Resume when the publisher provides those decisions. | 2026-09-06 |
+| OPENAI-REVIEW-001: Close the DoneState OpenAI 0.2.0 review | blocked | Publisher owner | Record and respond to the reviewer decision, then retire legacy transport only when safe. | Wait: OpenAI status remains Review. Re-entry: Resume when OpenAI sends a decision. | 2026-09-15 |
 
-### P3 — Close independent-verification gaps
+### P2: Separate development and prepare customers
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| OT-EXACTHEAD-001 — Resolve OpsTruth exact-head issue 12 | blocked | OpsTruth maintainers | Correct and test the exact-head decision path in AyobamiH/opstruth#12. | Wait: DoneState cannot weaken or replace the independent verifier decision. Re-entry: Resume when the fix has exact public CI evidence. | 2026-09-07 |
-| DS-CANARY-001 — Independently decide the open maintenance canary | blocked | OpsTruth maintainers | Re-evaluate DoneState PR 22 at ffec48e6c5abd9cef840ab591896613769d3e779. | Wait: Blocked on OT-EXACTHEAD-001; DoneState remains AWAITING_VERIFICATION. Re-entry: Resume after the verifier fix. | 2026-09-08 |
-| AP-INTEGRATION-001 — Complete AgentProof consequence receipts | planned | AgentProof and DoneState maintainers | Define and prove the receipt boundary without converting a signature into completion authority. | Wait: The DoneState-to-OpsTruth live loop must close first. Re-entry: Begin after DS-CANARY-001. | 2026-09-25 |
+| DS-MKTDEV-001: Create a separate Marketplace development listing | active | Publisher owner | Exercise and record live changed, pending_change, and pending_change_cancelled deliveries through the owner-only draft listing. | Wait: The isolated app, draft listing, ping, purchase, accepted cancellation receipt, final CANCELLED state, credential targets, and runtime probes are recorded; three live transition results remain. Re-entry: Resume in the owner-only draft listing without altering the submitted production listing or the private maintenance App. | 2026-09-12 |
+| DS-CUSTOMER-001: Complete first-customer account, deletion, alerts, and support | planned | DoneState maintainers | Add entitlement visibility, whole-account deletion, webhook alerts, and an exercised support path. | Wait: Lifecycle ordering is deployed; public legal details remain blocked. Re-entry: Begin after DS-MKTDEV-001 and DS-LEGAL-001. | 2026-09-20 |
+| DS-GTM-001: Measure the useful-result funnel | planned | Proof & State maintainers | Measure non-founder activation, PR creation, independent decision, repeat use, support load, and conversion without unnecessary personal data. | Wait: Customer account and deletion semantics must be stable. Re-entry: Begin before the first external cohort. | 2026-09-25 |
+| GTM-ORCH-001: Prove the API-only GTM orchestrator | active | Proof & State maintainers | Run the existing publishing-disabled canary at exact main commit 2ad721357993a92dfc4d26b2b3ea4a9239ab95d6 and require commit-bound external health read-back before provider identity and permission preflights. | Wait: PR 13 is merged. Its final head is deployed with publishing disabled, but the post-merge deployment job was skipped, so exact-main runtime identity remains unproven. Cloudinary identity, provider OAuth, live publication, and provider read-back also remain unproven. Re-entry: Resume from the publishing-disabled exact-main canary; keep publishing disabled through all identity, permission, content-control, read-back, rate-limit, incident, and rollback gates. | 2026-09-15 |
 
-### P4 — Advance releases and infrastructure through gates
+### P3: Close independent-verification gaps
 
 | ID | Status | Owner | Next action | Wait and re-entry | Stale |
 |---|---|---|---|---|---|
-| DS-RELEASE-001 — Gate DoneState 0.2 release and publication | deferred | Publisher owner | Run exact package, secret, asset, CI, and verification gates before seeking publication authority. | Wait: No autonomous merge, deploy, release, or publication is authorised. Re-entry: Resume after live verification closes and explicit publication authority is granted. | 2026-10-01 |
-| PF-REPO-001 — Close governance-repository hardening follow-ups | planned | Proof & State maintainers | Add the missing security policy and licence, then evaluate branch protection after CI exists. | Wait: The self-documenting CI workflow and PR template are being added first. Re-entry: Begin after PF-GOV-001. | 2026-10-01 |
-| AIWA-RUNTIME-001 — Bind AI Work Accountability to an identified runtime | blocked | Proof & State maintainers | Identify canonical application source, bind the apex to its runtime, then collect deployment and live evidence. | Wait: The apex was observed at HTTP 502 and no application source was identified. Re-entry: Resume when the source repository and hosting target are known. | 2026-09-30 |
-| PF-FLEET-001 — Keep multi-repository fleet authority last | deferred | Proof & State maintainers | Define policy inheritance, isolation, observability, and rollout only after single-repository customer and verifier gates. | Wait: Single-repository authority and verification remain the product invariant. Re-entry: Resume after private-repository, queue, managed-verifier, and customer-value evidence exists. | 2027-01-15 |
+| OT-EXACTHEAD-001: Restore the authenticated OpsTruth exact-head read lane | blocked | OpsTruth maintainers | Complete opstruth-chatgpt-plugin issue 11 with short-lived least-privilege GitHub App installation reads, then rerun the DoneState handoff against exact current subjects. | Wait: OpsTruth PRs 19 through 22 are green but unmerged, and none implements the authenticated GitHub read lane; anonymous verification remains rate-limit blocked. Re-entry: Resume after issue 11 has reviewed exact-head CI and a deployed authenticated canary; DoneState cannot weaken or replace the independent verifier decision. | 2026-09-08 |
+| DS-CANARY-001: Independently decide the merged maintenance canary | blocked | OpsTruth maintainers | After DoneState PR 58 merges with green post-merge CI and OpsTruth issue 11 restores authenticated reads, independently re-observe PR 22 head ffec48e6c5abd9cef840ab591896613769d3e779 and merge 4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a. | Wait: PR 58 head 30e90e9ef0db64ffcb96134e15ca15acf1b5d65d is green in run 33479525695 but unmerged, current DoneState main remains red, and independent verification remains unproven. Re-entry: Resume after the governance repair and authenticated verifier lane are deployed; do not treat PR-head CI or merge state as verification. | 2026-09-08 |
+| AP-INTEGRATION-001: Complete AgentProof consequence receipts | planned | AgentProof and DoneState maintainers | Define and prove the receipt boundary without converting a signature into completion authority. | Wait: The DoneState-to-OpsTruth live loop must close first. Re-entry: Begin after DS-CANARY-001. | 2026-09-25 |
+
+### P4: Advance releases and infrastructure through gates
+
+| ID | Status | Owner | Next action | Wait and re-entry | Stale |
+|---|---|---|---|---|---|
+| DS-RELEASE-001: Gate DoneState 0.2 release and publication | deferred | Publisher owner | Run exact package, secret, asset, CI, and verification gates before seeking publication authority. | Wait: No autonomous merge, deploy, release, or publication is authorised. Re-entry: Resume after live verification closes and explicit publication authority is granted. | 2026-10-01 |
+| PF-REPO-001: Close governance-repository hardening follow-ups | planned | Proof & State maintainers | Add the missing security policy and licence, then evaluate branch protection after CI exists. | Wait: The self-documenting CI workflow and PR template are being added first. Re-entry: Begin after PF-GOV-001. | 2026-10-01 |
+| AIWA-RUNTIME-001: Bind AI Work Accountability to an identified runtime | blocked | Proof & State maintainers | Identify canonical application source, bind the apex to its runtime, then collect deployment and live evidence. | Wait: The apex was observed at HTTP 502 and no application source was identified. Re-entry: Resume when the source repository and hosting target are known. | 2026-09-30 |
+| PF-FLEET-001: Keep multi-repository fleet authority last | deferred | Proof & State maintainers | Define policy inheritance, isolation, observability, and rollout only after single-repository customer and verifier gates. | Wait: Single-repository authority and verification remain the product invariant. Re-entry: Resume after private-repository, queue, managed-verifier, and customer-value evidence exists. | 2027-01-15 |
 
 ## Evidence Story Bank
 
-### PF-E-001 — DoneState and Proof & State self-documenting governance
+### PF-E-001: DoneState and Proof & State self-documenting governance
 
 - **Date:** 2026-08-30
 - **Situation:** Marketplace actions had outpaced manual product and portfolio records.
@@ -73,7 +85,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Recovered backlog, accountability fields, evidence stories, exact cross-project pins, and separate-state rules.
 - **Measurement:** Two governance merges and four exact workflow runs passed.
 
-### PF-E-002 — DoneState GitHub Marketplace review request
+### PF-E-002: DoneState GitHub Marketplace review request
 
 - **Date:** 2026-08-30
 - **Situation:** The free public-repository OAuth listing completed submission prerequisites.
@@ -83,7 +95,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** OAuth App 3822030, free plan, legal policies, media, private contact record, agreement acceptance, and signed ping.
 - **Measurement:** One review request accepted; no live purchased or cancelled event observed.
 
-### PF-E-003 — DoneState Marketplace review hardening
+### PF-E-003: DoneState Marketplace review hardening
 
 - **Date:** 2026-08-30
 - **Situation:** The submitted listing needed monotonic entitlements, complete lifecycle tests, accurate public state, and incident operations.
@@ -93,7 +105,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Atomic effectiveAt guard, 80 Worker tests, documentation closure, incident/support runbook, and exact ledger closure.
 - **Measurement:** One deployment, two live routing probes, 80 passing Worker tests, and three exact CI runs across hardening and closure.
 
-### PF-E-004 — DoneState OpenAI version 0.2.0
+### PF-E-004: DoneState OpenAI version 0.2.0
 
 - **Date:** 2026-08-30
 - **Situation:** The plugin was submitted under AYOBAMI JOHN HAASTRUP.
@@ -103,17 +115,17 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Review transport, assets, prompts, cases, annotations, and read-only reviewer account.
 - **Measurement:** One version submitted; zero publication decisions.
 
-### PF-E-005 — Owner-side maintenance canary
+### PF-E-005: Owner-side maintenance canary
 
 - **Date:** 2026-08-30
 - **Situation:** The private App opened DoneState PR 22 at exact head ffec48e6c5abd9cef840ab591896613769d3e779.
 - **Verification:** Workflow 33260424569 passed all three checks; OpsTruth returned uncertain and issue 12 tracks the defect.
-- **Accountability:** owner=OpsTruth maintainers; status=blocked; next=Fix issue 12 and independently re-evaluate the head.; wait=Corrected exact-head decision path.; stale=2026-09-08
-- **Outcome:** The run remains AWAITING_VERIFICATION and PR 22 remains open.
+- **Accountability:** owner=OpsTruth maintainers; status=blocked; next=Fix the verifier path and independently re-observe both the PR head and later merge subject.; wait=Corrected exact-head decision path and repaired DoneState post-merge governance.; stale=2026-09-08
+- **Outcome:** At this observation the run remained AWAITING_VERIFICATION and PR 22 was open. The later merge without conclusive verification is recorded separately in PF-E-019.
 - **Content:** PR-only publication, exact-head evidence, and signed uncertain decisions.
 - **Measurement:** Three checks passed; zero conclusive decisions.
 
-### PF-E-006 — Portfolio infrastructure follow-ups
+### PF-E-006: Portfolio infrastructure follow-ups
 
 - **Date:** 2026-08-30
 - **Situation:** Proof & State website verification and domain review exposed bounded governance and runtime gaps.
@@ -123,7 +135,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Governance-repository controls and AI Work Accountability source/runtime identification.
 - **Measurement:** Four repository follow-ups and one unbound apex recorded.
 
-### PF-E-007 — DoneState Marketplace development isolation, recovery, and lifecycle receipt
+### PF-E-007: DoneState Marketplace development isolation, recovery, and lifecycle receipt
 
 - **Date:** 2026-08-30
 - **Situation:** Real lifecycle evidence required a development app, listing, runtime, state, and credential target isolated from the submitted production listing and private maintenance App.
@@ -133,7 +145,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Exact source, app, listing, delivery, incident, CI, deployment, version, target-name, live-route, and privacy-minimal response evidence without secret values or personal billing data.
 - **Measurement:** One app, one draft listing, one ping, one purchase, one accepted cancellation receipt, one recovered isolation incident, four development/production deployments across recovery and receipt delivery, 98 passing Worker tests, and four current development route assertions; changed and pending-change results remain unrecorded.
 
-### PF-E-008 — API-only GTM orchestrator contract baseline
+### PF-E-008: API-only GTM orchestrator contract baseline
 
 - **Date:** 2026-08-31
 - **Situation:** Browser publication required repeated operator intervention and produced ambiguous image-only or unverified states; an unapproved intermediary was rejected.
@@ -143,7 +155,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Direct API publishing, Cloudinary asset validation, durable queueing, idempotency, provider read-back, evidence receipts and explicit no-browser/no-intermediary failure policy.
 - **Measurement:** Sixteen local tests passed; zero live provider credentials used; zero posts created.
 
-### PF-E-009 — Cloudflare canary deployment gate
+### PF-E-009: Cloudflare canary deployment gate
 
 - **Date:** 2026-08-31
 - **Situation:** The operator reported saving the Cloudflare API token, account identifier and orchestrator admin token in the gtm-production GitHub environment; their values cannot be treated as valid until used by CI.
@@ -153,7 +165,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Idempotent Cloudflare provisioning, pinned Wrangler, secret-safe runtime config, D1 migration, exact-commit health read-back and a publishing-disabled deployment gate.
 - **Measurement:** Twenty local tests passed; zero Cloudflare runtime claims; zero provider credentials used; zero posts created.
 
-### PF-E-010 — First Cloudflare canary attempt
+### PF-E-010: First Cloudflare canary attempt
 
 - **Date:** 2026-08-31
 - **Situation:** The gtm-production workflow exercised the saved environment secrets for the first time.
@@ -163,7 +175,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** A useful accountability incident: secrets existed, but a shape check prevented an invalid deployment claim before the provider was contacted.
 - **Measurement:** One failed canary workflow; one successful contract-test job; zero Cloudflare requests from provisioning; zero posts created.
 
-### PF-E-011 — Cloudflare credential permission boundary
+### PF-E-011: Cloudflare credential permission boundary
 
 - **Date:** 2026-08-31
 - **Situation:** Whitespace normalisation allowed the canary to test the saved Cloudflare credential against the provider.
@@ -173,7 +185,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** An active credential is not proof of resource authority; each product permission must pass its own provider probe.
 - **Measurement:** One active-token result, one D1 HTTP 401, one successful contract-test job, zero migrations, zero deployments and zero posts.
 
-### PF-E-012 — Cloudflare D1 permission diagnosis
+### PF-E-012: Cloudflare D1 permission diagnosis
 
 - **Date:** 2026-08-31
 - **Situation:** A third canary separated account scope from product-level D1 authority.
@@ -183,7 +195,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Account access and product permission are separate evidence: an active token that sees an account can still be correctly denied D1.
 - **Measurement:** One account-scope success, one D1 HTTP 401, twenty-one local tests passing, zero migrations, zero deployments and zero posts.
 
-### PF-E-013 — Cloudflare token-policy mismatch diagnosis
+### PF-E-013: Cloudflare token-policy mismatch diagnosis
 
 - **Date:** 2026-09-01
 - **Situation:** The owner restored the valid credential and supplied dashboard evidence showing D1 Read and Edit on an account-owned token for the entire account, yet repeated canaries still failed at the first D1 read.
@@ -193,7 +205,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** A settings screenshot is policy evidence, not proof that CI presents the same credential object; provider read-back remains authoritative.
 - **Measurement:** Two account-scope successes, two D1 HTTP 401 responses, zero migrations, zero deployments and zero posts.
 
-### PF-E-014 — Cloudflare credential-object reconciliation
+### PF-E-014: Cloudflare credential-object reconciliation
 
 - **Date:** 2026-09-01
 - **Situation:** Dashboard policy evidence and provider read-back conflicted after D1 Read and Edit were visibly enabled for an account-owned token.
@@ -203,7 +215,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Editing one credential cannot expand the authority of a different credential stored in CI; credential identity must be reconciled before provider permission claims.
 - **Measurement:** Twenty-two local tests and exact-head contract CI passed; one credential family mismatch was proven; zero migrations, zero deployments and zero posts.
 
-### PF-E-015 — Cloudflare account-token verification route
+### PF-E-015: Cloudflare account-token verification route
 
 - **Date:** 2026-09-01
 - **Situation:** After the owner reported saving the correct account-owned credential, the next canary stopped before D1 because the provisioner still sent every credential to Cloudflare's user-token verification endpoint.
@@ -213,7 +225,7 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** A provider can expose different verification routes for different credential families; calling the wrong identity endpoint can make a valid credential look invalid.
 - **Measurement:** Twenty-three local tests passed; one exact-head contract job passed; one account-token routing defect isolated; zero migrations, zero deployments and zero posts.
 
-### PF-E-016 — Cloudflare resource provisioning and Wrangler handoff
+### PF-E-016: Cloudflare resource provisioning and Wrangler handoff
 
 - **Date:** 2026-09-01
 - **Situation:** The corrected account-token route reached Cloudflare and advanced the canary beyond every prior credential failure.
@@ -223,12 +235,42 @@ Every consequential portfolio event must update this ledger and its generated st
 - **Content:** Validation must cross process boundaries: trimming a secret in one script does not normalise the environment seen by the next deployment tool.
 - **Measurement:** One account token accepted; one EU D1 database and two Queues created; twenty-four local tests passed; zero migrations, zero deployments and zero posts.
 
-### PF-E-017 — Publishing-disabled GTM infrastructure canary
+### PF-E-017: Publishing-disabled GTM infrastructure canary
 
 - **Date:** 2026-09-01
-- **Situation:** The account-owned credential and the normalised CI handoff were exercised together against the final Cloudflare provisioning, migration, deployment and health gates.
+- **Situation:** The account-owned credential and the normalised CI handoff were exercised together against the Cloudflare provisioning, migration, deployment and health gates.
 - **Verification:** GTM Orchestrator run 33471753870 checked out exact app head f95b28ad844b4d996906c785047919ea549b8e89. Contract job 99742752389 passed all twenty-four tests. Deployment job 99742798479 reused the named EU D1 database and both named Queues, applied 0001_initial.sql with five remote commands, deployed Worker version 65837c3d-0fee-47d0-95c4-4b5dfd8a03c2, and read https://proof-state-gtm-orchestrator.woeinvests.workers.dev/health. The health response reported ok true, service proof-state-gtm-orchestrator, version 0.1.0, exact commit f95b28ad844b4d996906c785047919ea549b8e89 and publishingEnabled false at 2026-09-01T04:57:53.817Z.
-- **Accountability:** owner=Proof & State maintainers; status=active; next=Merge PR 13 under owner authority, then begin direct-provider identity and permission preflights without enabling publishing.; wait=No Cloudinary or social-provider credential has been verified; no live post or provider read-back exists.; stale=2026-09-15
-- **Outcome:** The API-only orchestrator's Cloudflare infrastructure is exact-head verified and fail-closed. Publishing remains disabled, so this evidence does not claim a connected Google, LinkedIn, Meta or Threads account.
-- **Content:** Infrastructure readiness is not publication readiness: the queue, database, migration, Worker and exact health can all be proven while mutation authority remains deliberately off.
+- **Accountability:** owner=Proof & State maintainers; status=complete; next=Use the superseding final PR-head and merge evidence in PF-E-018.; wait=None.; stale=2026-12-01
+- **Outcome:** This earlier PR-head revision's Cloudflare infrastructure was exact-head verified and fail-closed. Publishing remained disabled, so this evidence did not claim a connected Google, LinkedIn, Meta, or Threads account.
+- **Content:** Infrastructure readiness is not publication readiness: the queue, database, migration, Worker, and exact health can all be proven while mutation authority remains deliberately off.
 - **Measurement:** Twenty-four exact-head tests passed; one D1 migration applied; one Worker version deployed; one exact health read-back passed; publishing disabled; zero posts created.
+
+### PF-E-018: Final PR-head GTM canary and merge reconciliation
+
+- **Date:** 2026-09-01
+- **Situation:** PR 13's final head canary and later merge needed separate commit-bound deployment states even though the head and merge share an identical tree.
+- **Verification:** PR-head Governance run 33471910113 and GTM run 33471910108 succeeded at 0cc6f72014b75adb422d82b73179e56039913cc4. The canary deployed Worker version 5641712a-cfc4-4ce6-b94f-f0975de76c1b and external health identified that exact commit with publishingEnabled false. PR 13 then merged as 2ad721357993a92dfc4d26b2b3ea4a9239ab95d6; both commits have tree 98896963e2a8e51ea49f5eab533105ec9c924168. Post-merge Governance run 33472305338 succeeded. GTM run 33472305391 passed its contract job but skipped deployment. Source branch feat/api-gtm-orchestrator was deleted after merge and later restored at exact head 0cc6f72014b75adb422d82b73179e56039913cc4.
+- **Accountability:** owner=Proof & State maintainers; status=active; next=Run the existing publishing-disabled canary at exact main commit 2ad721357993a92dfc4d26b2b3ea4a9239ab95d6 and record commit-bound external health.; wait=The PR head is deployed, but exact-main deployment remains unproven; provider credentials, live publication, and provider read-back remain outside this gate.; stale=2026-09-15
+- **Outcome:** PR 13 is merged, its source branch is restored at the exact final head, and that head has a verified publishing-disabled deployment. The identical tree does not convert that evidence into an exact-main deployment claim.
+- **Content:** Separate repository, PR, branch-lifecycle, tree, workflow, deployment, runtime, and publication-gate states with a fail-closed exact-main conclusion.
+- **Measurement:** Two PR-head workflows succeeded; one Worker version and exact health subject were observed; one deleted source branch was restored at the exact head; two post-merge workflows ran, with governance and contracts successful and deployment skipped; publishing disabled; zero posts created.
+
+### PF-E-019: DoneState source-ledger and maintenance merge reconciliation
+
+- **Date:** 2026-09-01
+- **Situation:** DoneState PR 22 was merged after the portfolio had recorded it as open and awaiting an independent decision.
+- **Verification:** PR 22 head ffec48e6c5abd9cef840ab591896613769d3e779 merged to main as 4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a with tree fde5857da5d16b8cfa24daacddd84db384380d9a. Post-merge workflow 33474288066 failed its governance impact check. Repair PR 58 is open at 30e90e9ef0db64ffcb96134e15ca15acf1b5d65d and exact-head run 33479525695 succeeded. No conclusive independent verification of the canary or merge was observed.
+- **Accountability:** owner=DoneState and OpsTruth maintainers; status=blocked; next=Merge PR 58 only under owner authority, require green post-merge CI, restore authenticated OpsTruth reads through plugin issue 11, and independently observe the exact PR-head and merge subjects.; wait=Current DoneState main is red; the green repair PR is unmerged and the signed independent outcome remains unproven.; stale=2026-09-08
+- **Outcome:** The portfolio pin follows current DoneState main while explicitly recording that merge is not verification, the post-merge repository is red, and green unmerged repair CI is not default-branch closure.
+- **Content:** Current source-ledger commit, PR merge, open repair PR, exact workflow states, verification limitation, and non-circular next action.
+- **Measurement:** One merge commit observed; one failed post-merge workflow observed; one green unmerged repair workflow observed; zero conclusive independent decisions.
+
+### PF-E-020: Open DoneState and OpsTruth production repair set
+
+- **Date:** 2026-09-01
+- **Situation:** Truth repairs were prepared as review-only pull requests after live audits found stale governance and false-evidence risks.
+- **Verification:** DoneState PR 58 is open at 30e90e9ef0db64ffcb96134e15ca15acf1b5d65d with successful CI run 33479525695. OpsTruth PR 19 is open at 37696a819fa1f17c37136369187449db89d7adee with CI 33479905045 and automated maintainer review 33479905072 successful; PR 20 is open at 6ea2b45055ac258e0c249bb5a53c06840717b870 with CI 33479907043 and automated review 33479907078 successful; PR 21 is open at 074f3f064b7e023fb1a85530a84f6092656a37bb with CI 33479910167 and automated review 33479910111 successful; PR 22 is open at 67471fbe8a27aafa15d38ed50f8421c103f50c3b with CI 33479910134 and automated review 33479910193 successful. Automated maintainer review is not human approval. No listed repair is merged or deployed, and opstruth-chatgpt-plugin issue 11 remains the authenticated-read blocker.
+- **Accountability:** owner=DoneState, OpsTruth, and Proof & State maintainers; status=active; next=Obtain independent human review and owner-authorised merges in a conflict-aware order, record exact post-merge CI and deployments, and implement OpsTruth issue 11 separately.; wait=Green PR-head checks do not change red or defective default branches; no agent has merge authority and the authenticated verifier lane is still absent.; stale=2026-09-08
+- **Outcome:** The repair set has exact green PR-head evidence without inflating automated review into approval or unmerged code into production state.
+- **Content:** Exact PR numbers, heads, source branches, CI runs, automated review runs, merge states, deployment limits, and remaining authentication blocker.
+- **Measurement:** Five pull requests are open and unmerged; nine exact-head workflows are green; zero human approvals, merges, repair deployments, or fresh authenticated DoneState decisions are claimed.

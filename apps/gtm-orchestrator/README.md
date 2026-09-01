@@ -23,7 +23,7 @@ No social-media intermediary and no browser publishing fallback is part of the a
 
 ## Current maturity
 
-`0.1.0` is an architecture and contract-test baseline. It does not claim live provider access. Each adapter remains gated until its OAuth connection, account/page identity, permission probe, sandbox canary, production canary, and read-back are recorded.
+`0.1.0` is an architecture and contract-test baseline. Final PR head `0cc6f72014b75adb422d82b73179e56039913cc4` passed 24 tests and deployed as Worker version `5641712a-cfc4-4ce6-b94f-f0975de76c1b` with `publishingEnabled=false`. PR #13 merged as `2ad721357993a92dfc4d26b2b3ea4a9239ab95d6` from the same tree, but its post-merge deployment job was skipped, so exact-main deployment remains unproven. This does not claim live provider access. Each adapter remains gated until its OAuth connection, account/page identity, permission probe, sandbox canary, production canary, and read-back are recorded.
 
 ## Local checks
 

@@ -6,7 +6,8 @@
     "apps/gtm-orchestrator"
   ],
   "scripts": {
-    "test": "npm run test --workspace=@proof-and-state/gtm-orchestrator",
+    "test": "npm run test:governance && npm run test:gtm",
+    "test:governance": "node --test scripts/portfolio-state.test.mjs",
     "test:gtm": "npm run test --workspace=@proof-and-state/gtm-orchestrator",
     "governance:render": "node scripts/render-portfolio-state.mjs",
     "governance:check": "node scripts/render-portfolio-state.mjs --check"

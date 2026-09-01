@@ -26,7 +26,7 @@ A successful local implementation and green CI are execution evidence, not compl
 
 ## Maintenance canary
 
-The canonical fresh owner-side canary is run `b4242932-0bc1-4876-a202-634d9c12d72a`, branch `donestate/b4242932-0bc1-4876-a202-634d9c12d72a`, head `ffec48e6c5abd9cef840ab591896613769d3e779`, and [PR #22](https://github.com/AyobamiH/donestate/pull/22). It is intentionally unmerged and preserves the PR-only authority boundary.
+The canonical owner-side canary is run `b4242932-0bc1-4876-a202-634d9c12d72a`, branch `donestate/b4242932-0bc1-4876-a202-634d9c12d72a`, head `ffec48e6c5abd9cef840ab591896613769d3e779`, and [PR #22](https://github.com/AyobamiH/donestate/pull/22). The PR was later merged by the owner as `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`; the automatic maintenance executor did not gain merge authority. The OpsTruth outcome was `uncertain`, and post-merge workflow `33474288066` failed its governance impact gate, so neither the PR head nor merge is independently verified.
 
 ## OpenAI directory review
 
@@ -50,4 +50,4 @@ See the [development lifecycle and recovery evidence](../../evidence/marketplace
 
 ## Project-state source
 
-DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned commit `895efab0cdd2ce18682dfec9f2b9361dcc3a2987`. It tracks the complete recovered backlog and generates `docs/PROJECT-STATE.md`; Proof & State references that exact source rather than duplicating product-level status as portfolio authority.
+DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned current-main commit `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`. That source is currently red because workflow `33474288066` failed the governance impact gate. Proof & State records both the exact pin and its failed check rather than converting repository state into unsupported proof.
