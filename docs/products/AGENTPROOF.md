@@ -24,4 +24,4 @@ AgentProof may verify receipt integrity, signer trust, subject identity, and fre
 
 ## Sequencing
 
-DoneState owner-side PR-only maintenance and OpsTruth verification are the first completed integration. AgentProof merge, deploy, and release receipts are the next independent evidence layer; fleet automation remains later.
+DoneState owner-side PR-only maintenance and OpsTruth verification are the first target integration. The latest canary was merged after an `uncertain` verifier decision and is not a completed round trip. AgentProof merge, deploy, and release receipts remain the next independent evidence layer; fleet automation remains later.
