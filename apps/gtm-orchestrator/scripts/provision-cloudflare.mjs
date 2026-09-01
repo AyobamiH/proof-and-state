@@ -1,4 +1,4 @@
-import { chmod, readFile, writeFile } from "node:fs/promises";
+import { appendFile, chmod, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
 const API_ROOT = "https://api.cloudflare.com/client/v4";
@@ -16,6 +16,7 @@ export function validateEnvironment(env) {
   const accountId = required("CLOUDFLARE_ACCOUNT_ID", env);
   const adminToken = required("ORCHESTRATOR_ADMIN_TOKEN", env);
   if (apiToken.length < 20) throw new Error("CLOUDFLARE_API_TOKEN appears malformed");
+  if (/\s/.test(apiToken)) throw new Error("CLOUDFLARE_API_TOKEN appears malformed");
   if (!/^[a-f0-9]{32}$/i.test(accountId)) throw new Error("CLOUDFLARE_ACCOUNT_ID must be a 32-character hexadecimal identifier");
   if (adminToken.length !== 64) throw new Error("ORCHESTRATOR_ADMIN_TOKEN must be exactly 64 characters");
   return { apiToken, accountId, adminToken };
@@ -23,6 +24,17 @@ export function validateEnvironment(env) {
 
 export function classifyApiToken(apiToken) {
   return String(apiToken || "").startsWith("cfat_") ? "account-owned" : "user-or-legacy";
+}
+
+export async function exportRuntimeEnvironment(credentials, environmentPath) {
+  if (!environmentPath) return false;
+  await appendFile(
+    environmentPath,
+    `CLOUDFLARE_API_TOKEN=${credentials.apiToken}\nCLOUDFLARE_ACCOUNT_ID=${credentials.accountId}\n`,
+    { encoding: "utf8", mode: 0o600 },
+  );
+  await chmod(environmentPath, 0o600);
+  return true;
 }
 
 async function apiRequest(path, { apiToken, fetchImpl = fetch, method = "GET", body } = {}) {
@@ -110,6 +122,7 @@ export async function ensureQueue(name, credentials, fetchImpl = fetch) {
 
 export async function provision({ env = process.env, fetchImpl = fetch, configPath = DEFAULT_CONFIG_PATH, secretsPath } = {}) {
   const credentials = validateEnvironment(env);
+  await exportRuntimeEnvironment(credentials, env.GITHUB_ENV);
   const tokenEvidence = await verifyApiToken(credentials, fetchImpl);
   await verifyAccountAccess(credentials, fetchImpl);
   let database;

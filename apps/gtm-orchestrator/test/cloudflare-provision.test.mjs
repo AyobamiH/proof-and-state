@@ -3,7 +3,7 @@ import { mkdtemp, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { classifyApiToken, ensureD1, ensureQueue, provision, validateEnvironment, verifyAccountAccess, verifyApiToken } from "../scripts/provision-cloudflare.mjs";
+import { classifyApiToken, ensureD1, ensureQueue, exportRuntimeEnvironment, provision, validateEnvironment, verifyAccountAccess, verifyApiToken } from "../scripts/provision-cloudflare.mjs";
 import { findHealthUrl, validateHealth } from "../scripts/verify-cloudflare-health.mjs";
 
 const credentials = { apiToken: "a".repeat(40), accountId: "b".repeat(32), adminToken: "c".repeat(64) };
@@ -42,6 +42,22 @@ test("token verification uses the endpoint matching the credential family", asyn
     `/client/v4/accounts/${credentials.accountId}/tokens/verify`,
     "/client/v4/user/tokens/verify",
   ]);
+});
+
+test("runtime export removes copied edge whitespace before Wrangler steps", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "gtm-runtime-env-"));
+  const environmentPath = join(directory, "github-env");
+  const normalised = validateEnvironment({
+    CLOUDFLARE_API_TOKEN: ` ${credentials.apiToken}\n`,
+    CLOUDFLARE_ACCOUNT_ID: `${credentials.accountId}\n`,
+    ORCHESTRATOR_ADMIN_TOKEN: credentials.adminToken,
+  });
+
+  assert.equal(await exportRuntimeEnvironment(normalised, environmentPath), true);
+  assert.equal(
+    await readFile(environmentPath, "utf8"),
+    `CLOUDFLARE_API_TOKEN=${credentials.apiToken}\nCLOUDFLARE_ACCOUNT_ID=${credentials.accountId}\n`,
+  );
 });
 
 test("resource ensure operations reuse matching Cloudflare resources", async () => {
