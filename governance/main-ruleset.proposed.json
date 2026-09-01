@@ -1,0 +1,62 @@
+{
+  "schema": "proof-state.main-ruleset-proposal.v1",
+  "repository": "AyobamiH/proof-and-state",
+  "repositoryId": 1350608000,
+  "providerObservation": {
+    "observedAt": "2026-09-01T07:55:00Z",
+    "branch": "main",
+    "headSha": "2ad721357993a92dfc4d26b2b3ea4a9239ab95d6",
+    "protection": "UNPROTECTED",
+    "evidenceUrl": "https://github.com/AyobamiH/proof-and-state/settings/branches"
+  },
+  "activation": {
+    "status": "BLOCKED",
+    "enforcement": "disabled",
+    "ownerApprovalRecorded": false,
+    "secondTrustedHumanReviewer": null,
+    "blockers": [
+      "A second trusted human reviewer is not named",
+      "The final stacked heads have not received independent human approval",
+      "The exact required checks have not been proven after this workflow change",
+      "No provider apply and read-back is authorized"
+    ]
+  },
+  "target": {
+    "include": ["refs/heads/main"],
+    "exclude": []
+  },
+  "bypassActors": [
+    {
+      "actorType": "User",
+      "actorId": 47716486,
+      "bypassMode": "always",
+      "scope": "AyobamiH user 47716486",
+      "purpose": "Auditable emergency recovery only; every use requires a tracked incident and post-event review"
+    }
+  ],
+  "rules": {
+    "deletion": { "blocked": true },
+    "nonFastForward": { "blocked": true },
+    "pullRequest": {
+      "required": true,
+      "requiredApprovingReviewCount": 1,
+      "requireCodeOwnerReview": true,
+      "dismissStaleReviewsOnPush": true,
+      "requireLastPushApproval": true,
+      "requireConversationResolution": true
+    },
+    "requiredStatusChecks": {
+      "strictRequiredStatusChecksPolicy": true,
+      "checks": [
+        { "context": "portfolio-state", "integrationId": 15368 },
+        { "context": "contract-tests", "integrationId": 15368 }
+      ]
+    }
+  },
+  "excludedChecks": [
+    {
+      "context": "deploy-cloudflare-canary",
+      "reason": "Deployment is a separately authorized consequence and remains skipped during pull-request validation"
+    }
+  ]
+}
