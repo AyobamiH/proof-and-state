@@ -36,3 +36,16 @@ Proof & State separates authority, execution, observation, and evidence custody.
 ## Escalation boundary
 
 CrabBox or ClawPatch is introduced only when direct Codex execution and repository-native CI cannot provide the necessary isolation or recovery semantics. Multi-repository fleet automation follows only after one-repository PR-only maintenance is proven and indexed.
+
+## GTM operating plane
+
+The GTM orchestrator is a governed application inside this repository. It has four approved architectural components:
+
+1. Direct Google Business Profile, LinkedIn, Facebook, Instagram, and Threads APIs.
+2. Cloudinary API for durable media and platform transformations.
+3. Direct Google OAuth and Business Profile API access, without a publishing intermediary.
+4. A Cloudflare-hosted orchestrator for queueing, rotation, validation, scheduling, retries, receipts, and measurement.
+
+The browser is not a publishing path or fallback. Provider outages remain queued. Revoked credentials block the affected adapter. No unapproved social-media intermediary may be introduced as a recovery path.
+
+Publishing is a consequence-bearing action. A successful API submission is not sufficient: the same provider must return the created object and its identity, text, media, account, and destination must reconcile with the intended job before the orchestrator records `PUBLISHED_VERIFIED`.

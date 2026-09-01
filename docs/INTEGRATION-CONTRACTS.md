@@ -32,3 +32,20 @@ AgentProof may index a signed verification record and later GitHub, deployment, 
 ## Product repositories to Proof & State
 
 Evidence indexes contain non-secret identifiers and links: repository, commit SHA, PR, workflow run, installation ID, run ID, snapshot digest, handoff digest, report digest, signer fingerprint, and event-chain head. Credentials, private keys, tokens, and webhook secrets are excluded.
+
+## GTM orchestrator to publishing providers
+
+Input: approved brand, direct provider adapter, platform-native copy, durable Cloudinary media identity, validated destination, UTM identity, scheduled time, rotation decision, approval mode, and deterministic idempotency key.
+
+Output: provider account or Page identity, provider post identity, submission response class, read-back payload digest, reconciliation decision, and measurement cursor.
+
+Rules:
+
+- Only direct Google, LinkedIn, Meta, Threads, and Cloudinary APIs are authorised.
+- Provider credentials remain secret references and are never committed or indexed.
+- The browser and social-media intermediaries are not fallback publication paths.
+- A provider outage remains queued and retryable.
+- A revoked or insufficient permission is blocked and requires reauthorisation.
+- An ambiguous mutation is read back before any retry.
+- `PUBLISHED_VERIFIED` requires exact provider read-back.
+- A mismatch, missing post ID, or unavailable read-back never becomes a success claim.

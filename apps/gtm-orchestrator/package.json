@@ -1,0 +1,17 @@
+{
+  "name": "@proof-and-state/gtm-orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "API-only GTM orchestration for Proof & State and approved portfolio brands.",
+  "scripts": {
+    "test": "node --test",
+    "doctor": "node scripts/doctor.mjs",
+    "cloudflare:provision": "node scripts/provision-cloudflare.mjs",
+    "cloudflare:verify": "node scripts/verify-cloudflare-health.mjs",
+    "check": "node --check src/index.mjs && node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

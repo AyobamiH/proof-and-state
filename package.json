@@ -1,0 +1,20 @@
+{
+  "name": "proof-and-state-portfolio",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/gtm-orchestrator"
+  ],
+  "scripts": {
+    "test": "npm run test --workspace=@proof-and-state/gtm-orchestrator",
+    "test:gtm": "npm run test --workspace=@proof-and-state/gtm-orchestrator",
+    "governance:render": "node scripts/render-portfolio-state.mjs",
+    "governance:check": "node scripts/render-portfolio-state.mjs --check"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "wrangler": "4.127.1"
+  }
+}
