@@ -3,7 +3,7 @@ import { mkdtemp, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { classifyApiToken, ensureD1, ensureQueue, provision, validateEnvironment, verifyAccountAccess } from "../scripts/provision-cloudflare.mjs";
+import { classifyApiToken, ensureD1, ensureQueue, provision, validateEnvironment, verifyAccountAccess, verifyApiToken } from "../scripts/provision-cloudflare.mjs";
 import { findHealthUrl, validateHealth } from "../scripts/verify-cloudflare-health.mjs";
 
 const credentials = { apiToken: "a".repeat(40), accountId: "b".repeat(32), adminToken: "c".repeat(64) };
@@ -21,6 +21,27 @@ test("environment validation rejects malformed identifiers and accepts exact sec
 test("token classification exposes only the credential family", () => {
   assert.equal(classifyApiToken("cfat_example-secret-value"), "account-owned");
   assert.equal(classifyApiToken("legacy-secret-value"), "user-or-legacy");
+});
+
+test("token verification uses the endpoint matching the credential family", async () => {
+  const paths = [];
+  const fetchImpl = async (url) => {
+    paths.push(new URL(url).pathname);
+    return response({ status: "active" });
+  };
+
+  assert.deepEqual(
+    await verifyApiToken({ ...credentials, apiToken: "cfat_account-owned-secret" }, fetchImpl),
+    { status: "active", credentialType: "account-owned" },
+  );
+  assert.deepEqual(
+    await verifyApiToken(credentials, fetchImpl),
+    { status: "active", credentialType: "user-or-legacy" },
+  );
+  assert.deepEqual(paths, [
+    `/client/v4/accounts/${credentials.accountId}/tokens/verify`,
+    "/client/v4/user/tokens/verify",
+  ]);
 });
 
 test("resource ensure operations reuse matching Cloudflare resources", async () => {

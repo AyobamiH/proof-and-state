@@ -57,11 +57,15 @@ async function listAll(path, credentials, fetchImpl) {
 }
 
 export async function verifyApiToken(credentials, fetchImpl = fetch) {
-  const payload = await apiRequest("/user/tokens/verify", { ...credentials, fetchImpl });
+  const credentialType = classifyApiToken(credentials.apiToken);
+  const verificationPath = credentialType === "account-owned"
+    ? `/accounts/${credentials.accountId}/tokens/verify`
+    : "/user/tokens/verify";
+  const payload = await apiRequest(verificationPath, { ...credentials, fetchImpl });
   if (payload.result?.status !== "active") throw new Error("CLOUDFLARE_API_TOKEN is not active");
   return {
     status: payload.result.status,
-    credentialType: classifyApiToken(credentials.apiToken),
+    credentialType,
   };
 }
 
