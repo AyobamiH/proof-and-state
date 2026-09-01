@@ -11,7 +11,24 @@ function same(actual, expected, message) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) fail(message);
 }
 
-export function validateGovernanceProposal({ main, environment, ledger, codeowners, governanceWorkflow, gtmWorkflow }) {
+const CHECKOUT = "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683";
+const SETUP_NODE = "actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020";
+
+function actionReferences(workflow) {
+  return [...workflow.matchAll(/^\s*- uses:\s*([^\s#]+)/gm)].map((match) => match[1]);
+}
+
+export function validateGovernanceProposal({
+  main,
+  environment,
+  ledger,
+  codeowners,
+  governanceWorkflow,
+  governanceAuditWorkflow,
+  gtmWorkflow,
+  wranglerExample,
+  provisioner,
+}) {
   if (main.schema !== "proof-state.main-ruleset-proposal.v1"
     || main.repository !== "AyobamiH/proof-and-state"
     || main.repositoryId !== 1350608000) fail("main identity is not exact");
@@ -69,22 +86,48 @@ export function validateGovernanceProposal({ main, environment, ledger, codeowne
   if (!codeowners.includes("* @AyobamiH") || /SECOND|PENDING|TBD/.test(codeowners)) {
     fail("CODEOWNERS must name only the current real owner");
   }
-  for (const workflow of [governanceWorkflow, gtmWorkflow]) {
-    const uses = [...workflow.matchAll(/^\s*- uses:\s*([^\s#]+)/gm)].map((match) => match[1]);
-    if (uses.length < 1 || uses.some((reference) => !/@[a-f0-9]{40}$/.test(reference))) {
-      fail("workflow actions must use immutable commit references");
-    }
+  same(actionReferences(governanceWorkflow), [CHECKOUT, SETUP_NODE], "governance actions are not the exact reviewed dependencies");
+  same(actionReferences(governanceAuditWorkflow), [CHECKOUT, SETUP_NODE], "governance audit actions are not the exact reviewed dependencies");
+  same(actionReferences(gtmWorkflow), [CHECKOUT, SETUP_NODE, CHECKOUT, SETUP_NODE], "GTM actions are not the exact reviewed dependencies");
+  for (const workflow of [governanceWorkflow, governanceAuditWorkflow, gtmWorkflow]) {
+    if (!/\npermissions:\n  contents: read\n/.test(workflow)) fail("workflow permissions are not read-only");
+  }
+  if (/^\s{2}(?:schedule|workflow_dispatch):/m.test(governanceWorkflow)
+    || !/^\s{2}pull_request:\s*$/m.test(governanceWorkflow)
+    || !/^\s{2}push:\s*$/m.test(governanceWorkflow)
+    || !governanceWorkflow.includes('run: node scripts/check-governance-impact.mjs "$GOVERNANCE_BASE_SHA"')
+    || /- if:/.test(governanceWorkflow)) {
+    fail("required portfolio-state producers are not limited to full pull-request and push validation");
+  }
+  if (!/^\s{2}schedule:/m.test(governanceAuditWorkflow)
+    || !/^\s{2}workflow_dispatch:/m.test(governanceAuditWorkflow)
+    || !/^  portfolio-audit:/m.test(governanceAuditWorkflow)
+    || /^  portfolio-state:/m.test(governanceAuditWorkflow)) {
+    fail("manual and scheduled governance audit does not use a distinct context");
   }
   if (/^\s{4}paths:/m.test(gtmWorkflow)) fail("GTM required checks retain a changed-path filter");
   if (!/^\s{2}pull_request:\s*$/m.test(gtmWorkflow) || !/^\s{2}push:\s*$/m.test(gtmWorkflow)) {
     fail("GTM contract checks do not cover every pull request and main push");
   }
   const deployBlock = gtmWorkflow.split("  deploy-cloudflare-canary:")[1]?.split("    runs-on:")[0] ?? "";
-  if (!deployBlock.includes("github.event_name == 'workflow_dispatch'")
+  const deployJob = gtmWorkflow.split("  deploy-cloudflare-canary:")[1] ?? "";
+  if (!deployBlock.includes("needs: contract-tests")
+    || !deployBlock.includes("github.event_name == 'workflow_dispatch'")
     || !deployBlock.includes("github.ref == 'refs/heads/main'")
     || deployBlock.includes("github.event_name == 'push'")
     || deployBlock.includes("github.event_name == 'pull_request'")) {
     fail("deployment is not restricted to a manual main-branch dispatch");
+  }
+  if (!deployJob.includes("environment: gtm-production")
+    || !deployJob.includes("DEPLOYMENT_SHA: ${{ github.sha }}")
+    || !deployJob.includes("ref: ${{ env.DEPLOYMENT_SHA }}")) {
+    fail("deployment identity or environment boundary is not exact");
+  }
+  if (wranglerExample?.vars?.PUBLISHING_ENABLED !== "false"
+    || !provisioner.includes("const template = enforcePublishingDisabledTemplate(")
+    || !provisioner.includes("template.vars.PUBLISHING_ENABLED = \"false\"")
+    || provisioner.indexOf("const template = enforcePublishingDisabledTemplate(") > provisioner.indexOf("await verifyApiToken(credentials, fetchImpl);")) {
+    fail("publishing is not forced disabled before provider access");
   }
   if (!gtmWorkflow.includes("publishing-disabled")
     || !gtmWorkflow.includes("verify-cloudflare-deployment.mjs validate")) {
@@ -98,6 +141,12 @@ export function validateGovernanceProposal({ main, environment, ledger, codeowne
   if (!ledger.products.every(({ main }) => main.protection === "UNPROTECTED")) {
     fail("a portfolio main branch falsely claims protection");
   }
+  const trustAction = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-TRUST-001")?.action ?? "";
+  const controlsAction = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-CONTROLS-001")?.action ?? "";
+  if (!trustAction.includes("write access required for CODEOWNERS")
+    || !controlsAction.includes("add the reviewer to CODEOWNERS")) {
+    fail("reviewer access expansion is not an explicit owner decision");
+  }
 }
 
 export function loadGovernanceProposal() {
@@ -107,7 +156,10 @@ export function loadGovernanceProposal() {
     ledger: JSON.parse(readFileSync(new URL("governance/portfolio-ledger.json", root), "utf8")),
     codeowners: readFileSync(new URL(".github/CODEOWNERS", root), "utf8"),
     governanceWorkflow: readFileSync(new URL(".github/workflows/governance.yml", root), "utf8"),
+    governanceAuditWorkflow: readFileSync(new URL(".github/workflows/governance-audit.yml", root), "utf8"),
     gtmWorkflow: readFileSync(new URL(".github/workflows/gtm-orchestrator.yml", root), "utf8"),
+    wranglerExample: JSON.parse(readFileSync(new URL("apps/gtm-orchestrator/wrangler.example.jsonc", root), "utf8")),
+    provisioner: readFileSync(new URL("apps/gtm-orchestrator/scripts/provision-cloudflare.mjs", root), "utf8"),
   };
 }
 

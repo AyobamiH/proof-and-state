@@ -16,6 +16,7 @@
     "secondTrustedHumanReviewer": null,
     "blockers": [
       "A second trusted human reviewer is not named",
+      "No owner decision grants the reviewer write access or adds that reviewer to CODEOWNERS",
       "The final stacked heads have not received independent human approval",
       "The exact required checks have not been proven after this workflow change",
       "No provider apply and read-back is authorized"
