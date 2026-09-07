@@ -1,0 +1,46 @@
+{
+  "schema": "proof-state.environment-protection-proposal.v1",
+  "repository": "AyobamiH/proof-and-state",
+  "environment": "gtm-production",
+  "providerObservation": {
+    "observedAt": "2026-09-01T08:10:00Z",
+    "status": "UNPROTECTED",
+    "requiredReviewerCount": 0,
+    "waitTimerMinutes": 0,
+    "allowAdministratorsToBypass": true,
+    "deploymentRefs": "NO_RESTRICTION",
+    "secretNames": [
+      "CLOUDFLARE_ACCOUNT_ID",
+      "CLOUDFLARE_API_TOKEN",
+      "ORCHESTRATOR_ADMIN_TOKEN"
+    ],
+    "evidenceUrl": "https://github.com/AyobamiH/proof-and-state/settings/environments/gtm-production/edit"
+  },
+  "activation": {
+    "status": "BLOCKED",
+    "applyAuthorized": false,
+    "secondTrustedHumanReviewer": null,
+    "blockers": [
+      "A second trusted human reviewer is not named",
+      "The main ruleset is not active and provider-verified",
+      "The exact-main publishing-disabled canary is unproven",
+      "Rollback has not been exercised against an exact reviewed release"
+    ]
+  },
+  "proposedProtection": {
+    "requiredReviewerCount": 1,
+    "preventSelfReview": true,
+    "requiredReviewer": null,
+    "waitTimerMinutes": 0,
+    "allowAdministratorsToBypass": false,
+    "deploymentRefs": {
+      "protectedBranchesOnly": true,
+      "customPatterns": []
+    },
+    "secretNames": [
+      "CLOUDFLARE_ACCOUNT_ID",
+      "CLOUDFLARE_API_TOKEN",
+      "ORCHESTRATOR_ADMIN_TOKEN"
+    ]
+  }
+}

@@ -3,7 +3,7 @@ import { mkdtemp, readFile, stat } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { classifyApiToken, ensureD1, ensureQueue, exportRuntimeEnvironment, provision, validateEnvironment, verifyAccountAccess, verifyApiToken } from "../scripts/provision-cloudflare.mjs";
+import { classifyApiToken, enforcePublishingDisabledTemplate, ensureD1, ensureQueue, exportRuntimeEnvironment, provision, validateEnvironment, verifyAccountAccess, verifyApiToken } from "../scripts/provision-cloudflare.mjs";
 import { findHealthUrl, validateHealth } from "../scripts/verify-cloudflare-health.mjs";
 
 const credentials = { apiToken: "a".repeat(40), accountId: "b".repeat(32), adminToken: "c".repeat(64) };
@@ -21,6 +21,15 @@ test("environment validation rejects malformed identifiers and accepts exact sec
 test("token classification exposes only the credential family", () => {
   assert.equal(classifyApiToken("cfat_example-secret-value"), "account-owned");
   assert.equal(classifyApiToken("legacy-secret-value"), "user-or-legacy");
+});
+
+test("the Wrangler template fails closed before provider access if publishing is enabled", () => {
+  const safe = { vars: { PUBLISHING_ENABLED: "false" } };
+  assert.equal(enforcePublishingDisabledTemplate(safe).vars.PUBLISHING_ENABLED, "false");
+  assert.throws(
+    () => enforcePublishingDisabledTemplate({ vars: { PUBLISHING_ENABLED: "true" } }),
+    /must set PUBLISHING_ENABLED to false/,
+  );
 });
 
 test("token verification uses the endpoint matching the credential family", async () => {

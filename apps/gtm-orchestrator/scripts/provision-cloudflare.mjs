@@ -26,6 +26,17 @@ export function classifyApiToken(apiToken) {
   return String(apiToken || "").startsWith("cfat_") ? "account-owned" : "user-or-legacy";
 }
 
+export function enforcePublishingDisabledTemplate(template) {
+  if (!template || typeof template !== "object" || !template.vars || typeof template.vars !== "object") {
+    throw new Error("Wrangler canary template is missing vars");
+  }
+  if (template.vars.PUBLISHING_ENABLED !== "false") {
+    throw new Error("Wrangler canary template must set PUBLISHING_ENABLED to false");
+  }
+  template.vars.PUBLISHING_ENABLED = "false";
+  return template;
+}
+
 function shellQuote(value) {
   return `'${String(value).replaceAll("'", "'\"'\"'")}'`;
 }
@@ -126,6 +137,11 @@ export async function ensureQueue(name, credentials, fetchImpl = fetch) {
 
 export async function provision({ env = process.env, fetchImpl = fetch, configPath = DEFAULT_CONFIG_PATH, secretsPath, runtimeEnvironmentPath } = {}) {
   const credentials = validateEnvironment(env);
+  // Validate the immutable publication guard before the first provider read or
+  // mutation. Provider read-back is a second gate, not the first safety check.
+  const template = enforcePublishingDisabledTemplate(
+    JSON.parse(await readFile(`${APP_ROOT}wrangler.example.jsonc`, "utf8")),
+  );
   await exportRuntimeEnvironment(credentials, runtimeEnvironmentPath);
   const tokenEvidence = await verifyApiToken(credentials, fetchImpl);
   await verifyAccountAccess(credentials, fetchImpl);
@@ -141,7 +157,6 @@ export async function provision({ env = process.env, fetchImpl = fetch, configPa
   const primaryQueue = await ensureQueue("proof-state-gtm", credentials, fetchImpl);
   const deadLetterQueue = await ensureQueue("proof-state-gtm-dead-letter", credentials, fetchImpl);
 
-  const template = JSON.parse(await readFile(`${APP_ROOT}wrangler.example.jsonc`, "utf8"));
   template.vars.DEPLOYMENT_SHA = env.DEPLOYMENT_SHA || env.GITHUB_SHA || "local-canary";
   template.d1_databases[0].database_id = database.id;
   await writeFile(configPath, `${JSON.stringify(template, null, 2)}\n`, { mode: 0o600 });
