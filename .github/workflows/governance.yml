@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - run: node --test scripts/portfolio-state.test.mjs
       - run: node scripts/render-portfolio-state.mjs --check
       - if: ${{ github.event_name == 'pull_request' || github.event_name == 'push' }}
         env:

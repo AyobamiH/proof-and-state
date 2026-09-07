@@ -1,4 +1,6 @@
-# Owned-domain cutover evidence — 2026-08-30
+# Owned-domain cutover evidence: 2026-08-30
+
+> Supersession note, 2026-09-01: This file preserves the cutover-day snapshot. The owner later merged DoneState PR #22 as `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`; post-merge run `33474288066` is red, repair PR #58 is green but unmerged, and independent canary verification remains unproven. The branch-preservation statement below predates the later deletion and exact-head restoration of Proof & State branch `feat/api-gtm-orchestrator`.
 
 ## Outcome
 

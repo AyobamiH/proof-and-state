@@ -1,4 +1,6 @@
-# DoneState Marketplace development evidence — 2026-08-30
+# DoneState Marketplace development evidence: 2026-08-30
+
+> Supersession note, 2026-09-01: This file preserves the Marketplace-development snapshot. Commit `895efab0cdd2ce18682dfec9f2b9361dcc3a2987` was the portfolio pin at that observation. The current DoneState pin is merge `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`, whose post-merge workflow `33474288066` is red. Repair PR #58 is open at `30e90e9ef0db64ffcb96134e15ca15acf1b5d65d` with green PR-head run `33479525695`; that does not yet repair main.
 
 DoneState has a Marketplace development lane structurally separated from the submitted production listing and private maintenance App. This record distinguishes exact external evidence, publisher report, and the recovered credential-target incident while keeping the remaining lifecycle proof gap open.
 

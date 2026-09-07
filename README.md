@@ -13,7 +13,9 @@ Proof & State is the governance layer for a family of narrowly separated product
 
 ## Governed applications
 
-- [GTM Orchestrator](apps/gtm-orchestrator/README.md) — API-only publishing, scheduling, provider read-back, retries, and evidence records for approved Proof & State portfolio brands.
+- [GTM Orchestrator](apps/gtm-orchestrator/README.md): API-only publishing, scheduling, provider read-back, retries, and evidence records for approved Proof & State portfolio brands.
+
+The final PR-head GTM canary is deployed with publishing disabled. Exact-main deployment remains unproven because the post-merge deployment job was skipped. The canonical ledger keeps those commit-bound states separate.
 
 ## Canonical records
 
