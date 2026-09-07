@@ -29,9 +29,17 @@ The `gtm-production` GitHub environment owns `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE
 
 1. verifies the token is active and validates secret shapes without printing their values;
 2. creates or reuses the `proof-state-gtm` D1 database and primary/dead-letter Queues;
-3. writes an ignored runtime Wrangler configuration and ephemeral secrets file;
+3. writes an ignored runtime Wrangler configuration, an ephemeral Worker secrets file, and a mode-0600 normalized Cloudflare credential file;
 4. applies committed D1 migrations;
-5. deploys the Worker with `PUBLISHING_ENABLED=false`; and
-6. reads `/health` until the exact Git commit is returned with publishing still disabled.
+5. deploys the Worker with `PUBLISHING_ENABLED=false`;
+6. calls `wrangler deployments status --json` and requires exactly one active version at 100 percent traffic;
+7. calls `wrangler versions view <deployed-version> --json` and requires the exact version ID, deployment message, `DEPLOYMENT_SHA`, and `PUBLISHING_ENABLED=false`; and
+8. independently reads `/health` until the exact Git commit is returned with publishing still disabled.
 
 Resource discovery happens before creation, so a retry reuses named resources instead of duplicating them. Any ambiguous or failed control-plane response stops the workflow.
+
+The publishing-disabled canary may run only after contract tests for a manual `workflow_dispatch` whose exact ref is `refs/heads/main`. Pull requests and ordinary pushes cannot create a deployment job. This path is environment-bound, not environment-reviewed. Authenticated GitHub control-plane read-back on 2026-09-01 showed exactly the three expected secret names, Required reviewers off, Wait timer off, administrator bypass on, and deployment branches and tags set to No restriction. The environment is a credential namespace, not a reviewed, owner-approved, or protected consequence boundary.
+
+Checkout, setup, dependency installation, and local provider-state verification do not receive production credentials in their process environment. Credentialed steps source the normalized runner-temp file only immediately before commands that require provider access, and the active-deployment step unsets those credentials before local parsing. This is process-environment scoping, not operating-system capability isolation: later steps use the same runner identity and can read runner-temp files until cleanup. Early traps minimize file lifetime, and a final `always()` step removes both exact credential files before Action post-hooks even when an earlier step fails. Use separate jobs and runners if hard capability isolation becomes required.
+
+A workflow or local candidate is implementation evidence only. Exact-main deployment stays unproven until Cloudflare reports one 100-percent active version, that version's bindings and message identify the exact commit with publishing disabled, and the independent health read-back agrees. `actions/checkout@v4` and `actions/setup-node@v4` remain existing mutable major tags because the repository does not record reviewed immutable SHAs; pinning them is a separate supply-chain follow-up rather than a guessed change.

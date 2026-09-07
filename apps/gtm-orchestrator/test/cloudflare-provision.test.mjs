@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile } from "node:fs/promises";
+import { mkdtemp, readFile, stat } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -44,9 +44,9 @@ test("token verification uses the endpoint matching the credential family", asyn
   ]);
 });
 
-test("runtime export removes copied edge whitespace before Wrangler steps", async () => {
+test("runtime export writes mode-0600 shell-safe normalized credentials for Wrangler steps", async () => {
   const directory = await mkdtemp(join(tmpdir(), "gtm-runtime-env-"));
-  const environmentPath = join(directory, "github-env");
+  const environmentPath = join(directory, "cloudflare-runtime.env");
   const normalised = validateEnvironment({
     CLOUDFLARE_API_TOKEN: ` ${credentials.apiToken}\n`,
     CLOUDFLARE_ACCOUNT_ID: `${credentials.accountId}\n`,
@@ -56,7 +56,16 @@ test("runtime export removes copied edge whitespace before Wrangler steps", asyn
   assert.equal(await exportRuntimeEnvironment(normalised, environmentPath), true);
   assert.equal(
     await readFile(environmentPath, "utf8"),
-    `CLOUDFLARE_API_TOKEN=${credentials.apiToken}\nCLOUDFLARE_ACCOUNT_ID=${credentials.accountId}\n`,
+    `CLOUDFLARE_API_TOKEN='${credentials.apiToken}'\nCLOUDFLARE_ACCOUNT_ID='${credentials.accountId}'\n`,
+  );
+  assert.equal((await stat(environmentPath)).mode & 0o777, 0o600);
+
+  const quotedPath = join(directory, "cloudflare-runtime-quoted.env");
+  const tokenWithShellCharacters = `${"d".repeat(24)}'$(must-not-run);#`;
+  await exportRuntimeEnvironment({ ...normalised, apiToken: tokenWithShellCharacters }, quotedPath);
+  assert.equal(
+    await readFile(quotedPath, "utf8"),
+    `CLOUDFLARE_API_TOKEN='${"d".repeat(24)}'"'"'$(must-not-run);#'\nCLOUDFLARE_ACCOUNT_ID='${credentials.accountId}'\n`,
   );
 });
 
@@ -81,6 +90,7 @@ test("provisioning creates missing resources and writes no plaintext token to ru
   const directory = await mkdtemp(join(tmpdir(), "gtm-provision-"));
   const configPath = join(directory, "wrangler.jsonc");
   const secretsPath = join(directory, "secrets.json");
+  const runtimeEnvironmentPath = join(directory, "cloudflare-runtime.env");
   const created = new Map();
   const fetchImpl = async (url, options = {}) => {
     if (url.endsWith("/user/tokens/verify")) return response({ status: "active" });
@@ -102,15 +112,19 @@ test("provisioning creates missing resources and writes no plaintext token to ru
     fetchImpl,
     configPath,
     secretsPath,
+    runtimeEnvironmentPath,
   });
   const config = await readFile(configPath, "utf8");
   const secretFile = await readFile(secretsPath, "utf8");
+  const runtimeEnvironment = await readFile(runtimeEnvironmentPath, "utf8");
   assert.equal(result.database.created, true);
   assert.equal(created.get("db"), true);
   assert.match(config, /db-created/);
   assert.match(config, /commit-123/);
   assert.doesNotMatch(config, new RegExp(credentials.adminToken));
   assert.equal(JSON.parse(secretFile).ORCHESTRATOR_ADMIN_TOKEN, credentials.adminToken);
+  assert.equal(runtimeEnvironment, `CLOUDFLARE_API_TOKEN='${credentials.apiToken}'\nCLOUDFLARE_ACCOUNT_ID='${credentials.accountId}'\n`);
+  assert.equal((await stat(runtimeEnvironmentPath)).mode & 0o777, 0o600);
 });
 
 test("health evidence requires exact commit and publishing disabled", () => {

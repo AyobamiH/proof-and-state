@@ -1,4 +1,4 @@
-import { appendFile, chmod, readFile, writeFile } from "node:fs/promises";
+import { chmod, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
 const API_ROOT = "https://api.cloudflare.com/client/v4";
@@ -26,11 +26,15 @@ export function classifyApiToken(apiToken) {
   return String(apiToken || "").startsWith("cfat_") ? "account-owned" : "user-or-legacy";
 }
 
+function shellQuote(value) {
+  return `'${String(value).replaceAll("'", "'\"'\"'")}'`;
+}
+
 export async function exportRuntimeEnvironment(credentials, environmentPath) {
   if (!environmentPath) return false;
-  await appendFile(
+  await writeFile(
     environmentPath,
-    `CLOUDFLARE_API_TOKEN=${credentials.apiToken}\nCLOUDFLARE_ACCOUNT_ID=${credentials.accountId}\n`,
+    `CLOUDFLARE_API_TOKEN=${shellQuote(credentials.apiToken)}\nCLOUDFLARE_ACCOUNT_ID=${shellQuote(credentials.accountId)}\n`,
     { encoding: "utf8", mode: 0o600 },
   );
   await chmod(environmentPath, 0o600);
@@ -120,9 +124,9 @@ export async function ensureQueue(name, credentials, fetchImpl = fetch) {
   return { id: payload.result.queue_id, created: true };
 }
 
-export async function provision({ env = process.env, fetchImpl = fetch, configPath = DEFAULT_CONFIG_PATH, secretsPath } = {}) {
+export async function provision({ env = process.env, fetchImpl = fetch, configPath = DEFAULT_CONFIG_PATH, secretsPath, runtimeEnvironmentPath } = {}) {
   const credentials = validateEnvironment(env);
-  await exportRuntimeEnvironment(credentials, env.GITHUB_ENV);
+  await exportRuntimeEnvironment(credentials, runtimeEnvironmentPath);
   const tokenEvidence = await verifyApiToken(credentials, fetchImpl);
   await verifyAccountAccess(credentials, fetchImpl);
   let database;
@@ -156,7 +160,11 @@ export async function provision({ env = process.env, fetchImpl = fetch, configPa
 }
 
 async function main() {
-  const result = await provision({ configPath: process.argv[2] || DEFAULT_CONFIG_PATH, secretsPath: process.argv[3] });
+  const result = await provision({
+    configPath: process.argv[2] || DEFAULT_CONFIG_PATH,
+    secretsPath: process.argv[3],
+    runtimeEnvironmentPath: process.argv[4],
+  });
   console.log(JSON.stringify(result, null, 2));
 }
 
