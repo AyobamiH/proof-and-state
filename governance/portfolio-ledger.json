@@ -94,7 +94,7 @@
           "reason": "The owner preview last showed the free Public repositories plan at $0; this remains provider-review metadata rather than evidence of a public billing consequence."
         },
         "portalReadbackRequired": false,
-        "reason": "The production GitHub App listing is bound here to the deployed DoneState 0.3.0 service source, but GitHub still controls listing publication independently. The owner control plane last showed Pending for publish plus draft/unpublished state. Owner-preview install UI and a displayed count of 1 do not prove public availability, entitlement delivery, onboarding, billing, retention or a customer outcome.",
+        "reason": "The production GitHub App listing is bound here to the deployed DoneState 0.3.0 service source, but GitHub still controls listing publication independently. The owner control plane last showed Pending for publish and explicitly identified the listing as draft and unpublished. Owner-preview install UI and a displayed count of 1 do not prove public availability, entitlement delivery, onboarding, billing, retention or a customer outcome.",
         "evidenceUrls": [
           "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/GITHUB-MARKETPLACE.md",
           "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/GITHUB-MARKETPLACE-DEVELOPMENT.md",
