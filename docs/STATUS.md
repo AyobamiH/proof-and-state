@@ -20,7 +20,7 @@ The canonical ordered portfolio backlog, source-ledger commit, owners, wait cond
 | OpsTruth production verifier | Deployed and used successfully | Repair source `eef00ca4f242cf99d6b39e8c37ae4b84970a86e4`; deploy `33808853917`; final Worker `70759864-063a-465d-a664-b5ee2224507e`; complete v2 response accepted by DoneState |
 | OpsTruth OpenAI channel | Public 0.4.0 release baseline | Repository package is 0.4.1, but the established directory-release evidence remains 0.4.0; clean-account install/use remains separate evidence |
 | OpsTruth GitHub Action | Published | `opstruth-evidence`; immutable `v1.0.0` and stable `v1` references remain tied to source `45f4debbd3fbe8217599ab697b8f6c855b372e0b` |
-| Proof & State parent governance | Repair active | Current parent main `35dc325f425b6cda0f296ac0838979e281c89075` is unprotected; latest scheduled Governance Audit `36445087329` failed because portfolio truth was stale |
+| Proof & State parent governance | Reconciled; protection still open | Reconciliation PR #26 merged as `dc88e4040599add6e8cf11974d11e71a98c8a9bd`; post-merge Governance `37019231111` and GTM contract run `37019231272` passed; parent main remains unprotected pending the second trusted human reviewer and explicit repository-admin decision |
 | Proof & State GTM orchestrator | Publishing disabled; exact-current-main deployment unproven | PR-head deployment `0cc6f72014b75adb422d82b73179e56039913cc4`, Worker `5641712a-cfc4-4ce6-b94f-f0975de76c1b`; publication authority remains disabled |
 | AI Work Accountability | Runtime source still unbound | No new exact application/runtime subject has been established in this reconciliation |
 
@@ -38,5 +38,5 @@ The earlier owner-side DoneState run `b4242932-0bc1-4876-a202-634d9c12d72a` rema
 2. Record a legitimate service address, ICO fee self-assessment, offered territories, and public support/privacy contact choices for unrestricted GA.
 3. Exercise the three outstanding provider-controlled Marketplace development transitions without touching production review state.
 4. Respond to OpenAI 0.3.0 and GitHub Marketplace provider review changes independently.
-5. Merge this parent portfolio reconciliation with green governance checks, then protect Proof & State `main`.
+5. Name the second trusted human reviewer, explicitly decide reviewer repository access/CODEOWNERS, then protect Proof & State `main` using the prepared reviewed proposal.
 6. Run a bounded owned-domain pilot and collect real cohort/support/conversion evidence without making external directory publication a prerequisite.
