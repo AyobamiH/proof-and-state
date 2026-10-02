@@ -300,8 +300,8 @@
       "repository": "AyobamiH/proof-and-state",
       "main": {
         "branch": "main",
-        "sha": "35dc325f425b6cda0f296ac0838979e281c89075",
-        "status": "IMPLEMENTED",
+        "sha": "dc88e4040599add6e8cf11974d11e71a98c8a9bd",
+        "status": "CI_VERIFIED",
         "protection": "UNPROTECTED"
       },
       "deployment": {
@@ -318,10 +318,11 @@
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-02T14:00:00Z",
+      "observedAt": "2026-10-02T14:22:00Z",
       "evidenceUrls": [
-        "https://github.com/AyobamiH/proof-and-state/commit/35dc325f425b6cda0f296ac0838979e281c89075",
-        "https://github.com/AyobamiH/proof-and-state/actions/runs/36445087329",
+        "https://github.com/AyobamiH/proof-and-state/commit/dc88e4040599add6e8cf11974d11e71a98c8a9bd",
+        "https://github.com/AyobamiH/proof-and-state/actions/runs/37019231111",
+        "https://github.com/AyobamiH/proof-and-state/actions/runs/37019231272",
         "https://github.com/AyobamiH/proof-and-state/branches/main"
       ],
       "chatgpt": {
@@ -399,7 +400,7 @@
       "operations": {
         "slo": {
           "status": "UNPROVEN",
-          "objective": "The parent governance repository has no current measured portfolio-state freshness or reconciliation-latency SLO; its scheduled audit is currently failing on stale portfolio truth."
+          "objective": "The current portfolio reconciliation is green on exact post-merge Governance and GTM contract checks. Parent main remains unprotected, so repository protection is the next governance gate rather than portfolio-truth repair."
         },
         "incidentOwner": {
           "name": "AyobamiH",
@@ -410,9 +411,10 @@
         {
           "id": "PF-P0-GOVERNANCE",
           "severity": "P0",
-          "summary": "Proof & State main remains unprotected and the latest scheduled Governance Audit failed because the portfolio ledger was stale; the current reconciliation must merge and return governance checks to green before this parent control plane is treated as current.",
+          "summary": "Proof & State portfolio truth is reconciled and post-merge governed checks are green, but parent main remains unprotected and protection still requires the named second trusted human reviewer plus an explicit repository-admin decision.",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/proof-and-state/actions/runs/36445087329",
+            "https://github.com/AyobamiH/proof-and-state/actions/runs/37019231111",
+            "https://github.com/AyobamiH/proof-and-state/actions/runs/37019231272",
             "https://github.com/AyobamiH/proof-and-state/branches/main"
           ]
         },
@@ -426,7 +428,7 @@
           ]
         }
       ],
-      "nextOwnerAction": "Merge the current portfolio-truth repair only after governance checks pass, then protect parent main and keep the publishing-disabled GTM orchestrator separate from product-channel publication authority."
+      "nextOwnerAction": "Name the second trusted human reviewer and explicitly decide reviewer access/CODEOWNERS before applying the prepared Proof & State main-protection proposal; keep the publishing-disabled GTM orchestrator separate from product publication authority."
     }
   ],
   "ownerActionQueue": [
@@ -1068,13 +1070,13 @@
       "id": "PF-GOV-001",
       "title": "Enforce the portfolio Evidence Story Bank",
       "stream": "governance",
-      "status": "active",
+      "status": "complete",
       "owner": "Proof & State maintainers",
       "lastUpdated": "2026-10-02",
-      "staleDate": "2026-10-09",
-      "nextAction": "Pass exact-head Governance on the current portfolio-truth repair, merge it, then require a successful post-merge Governance Audit before closing the repair.",
-      "waitCondition": "Historical evidence-receipt freshness semantics are repaired on the branch, but canonical main remains stale and its latest scheduled audit is red.",
-      "reentryCondition": "Close after the reconciled ledger is on main and the exact post-merge governance checks are green.",
+      "staleDate": "2026-12-01",
+      "nextAction": "Preserve the 2 October reconciliation as the canonical current portfolio baseline; future changes must update the ledger and generated state together.",
+      "waitCondition": "None. Portfolio reconciliation PR #26 merged through exact-head validation and both post-merge governed checks passed on main.",
+      "reentryCondition": "Reopen only if the canonical ledger/generated state diverge, governance checks regress, or a fresh provider observation contradicts current product/channel truth.",
       "dependencies": [],
       "evidenceIds": [
         "PF-E-001",
@@ -1083,26 +1085,28 @@
         "PF-E-019",
         "PF-E-020",
         "PF-E-021",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-025"
       ]
     },
     {
       "id": "PF-PRODUCT-MATRIX-001",
       "title": "Keep product and channel truth machine-readable",
       "stream": "governance",
-      "status": "active",
+      "status": "complete",
       "owner": "Proof & State maintainers",
       "lastUpdated": "2026-10-02",
-      "staleDate": "2026-10-09",
-      "nextAction": "Merge the reconciled current product matrix after exact-head validation and preserve provider states only at their last explicit readbacks.",
-      "waitCondition": "The branch now carries current repository/deployment facts; canonical main still contains September product truth.",
-      "reentryCondition": "Close after merge and green post-merge Governance confirm the generated matrix matches the canonical ledger.",
+      "staleDate": "2026-12-01",
+      "nextAction": "Preserve channel/provider states as separate evidence dimensions and refresh only from exact repository, deployment or provider readbacks.",
+      "waitCondition": "None. Portfolio reconciliation PR #26 merged through exact-head validation and both post-merge governed checks passed on main.",
+      "reentryCondition": "Reopen only if the canonical ledger/generated state diverge, governance checks regress, or a fresh provider observation contradicts current product/channel truth.",
       "dependencies": [
         "PF-GOV-001"
       ],
       "evidenceIds": [
         "PF-E-022",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-025"
       ]
     },
     {
@@ -1769,6 +1773,23 @@
       "outcome": "The portfolio now treats the owned DoneState service as a first-class channel, recognises the completed verifier repair and fresh VERIFIED successor, and stops making OpenAI or GitHub Marketplace publication a prerequisite for controlled owned-domain use.",
       "content": "Current DoneState/OpsTruth source and deployment identity, branch-protection state, fresh verifier milestone, owned-domain account/operations/measurement controls, provider-state separation, current parent-governance deficit and revised owner-action ordering.",
       "measurement": "Two product main branches mechanically protected; one parent branch still unprotected; one fresh DoneState-to-OpsTruth VERIFIED successor; one owned-domain launch path; two external distribution tracks retained; zero external publication states inferred."
+    },
+    {
+      "id": "PF-E-025",
+      "date": "2026-10-02",
+      "identity": "Portfolio reconciliation merged and verified on parent main",
+      "situation": "The parent portfolio ledger had been stale relative to current DoneState and OpsTruth repository, deployment and channel evidence, and the owned-domain launch ordering still implicitly depended on external publication.",
+      "verification": "Proof & State PR #26 final exact head f9d4284419ef9350eed21c6c02ec5326bf37073e passed Governance run 37018941199 (portfolio-state) and GTM Orchestrator run 37018941131 (contract-tests), with deploy-cloudflare-canary correctly skipped. It merged as dc88e4040599add6e8cf11974d11e71a98c8a9bd. On that exact merge, post-merge Governance run 37019231111 completed successfully and post-merge GTM Orchestrator run 37019231272 completed contract-tests successfully while deployment remained skipped. The merged ledger recognises protected DoneState/OpsTruth main branches, the fresh VERIFIED DoneState-to-OpsTruth successor, owned-domain account/operations/measurement controls, external channel state separation, and owned-domain pilot/GA ordering that does not require external publication.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Preserve this reconciliation as the current portfolio baseline; proceed separately to the human-governed Proof & State main-protection decision and remaining product/customer/provider gates.",
+        "waitCondition": "None.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "Portfolio truth and owner-action ordering are reconciled on parent main with exact post-merge governance evidence. Parent repository protection remains an explicit separate gate.",
+      "content": "Current product matrix, owned-domain-first queue, immutable evidence freshness semantics, current DoneState/OpsTruth protection and verification evidence, parent post-merge governance checks, and preserved publishing-disabled deployment authority.",
+      "measurement": "One reconciliation PR merged; two exact-head required checks passed; two post-merge governed checks passed; deployment consequence remained skipped; two portfolio-repair work items closed; one parent protection gate intentionally remains active."
     }
   ]
 }

@@ -34,7 +34,7 @@ export function validateGovernanceProposal({
     || main.repositoryId !== 1350608000) fail("main identity is not exact");
   if (main.providerObservation.protection !== "UNPROTECTED"
     || main.providerObservation.branch !== "main"
-    || main.providerObservation.headSha !== "35dc325f425b6cda0f296ac0838979e281c89075") {
+    || main.providerObservation.headSha !== "dc88e4040599add6e8cf11974d11e71a98c8a9bd") {
     fail("main provider observation drifted");
   }
   if (main.activation.status !== "BLOCKED" || main.activation.enforcement !== "disabled"
