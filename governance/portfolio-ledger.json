@@ -552,9 +552,11 @@
       "owner": "Repository owner",
       "authorityRequired": "REPOSITORY_ADMIN",
       "agentExecutable": false,
-      "action": "After the current portfolio repair merges with green governance checks, enable main protection for Proof & State using the exact checks that reliably report on governed changes and preserve an explicit emergency path.",
-      "prerequisites": [],
-      "waitCondition": "Current provider readback shows Proof & State main unprotected.",
+      "action": "After the current portfolio repair merges with green governance checks, explicitly decide whether to grant the named second reviewer repository write access, add that approved reviewer to CODEOWNERS, then enable main protection for Proof & State using the exact reviewed checks and preserve an explicit emergency path.",
+      "prerequisites": [
+        "OWNER-TRUST-001"
+      ],
+      "waitCondition": "Current provider readback shows Proof & State main unprotected, and the second trusted human reviewer is not yet named or granted any repository authority.",
       "evidenceIds": [
         "PF-E-023",
         "PF-E-024"
