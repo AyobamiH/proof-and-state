@@ -175,17 +175,17 @@ test("main-branch protection observations match the current provider state", () 
 test("the owner action queue is single, ordered, deduplicated, and owner-only", () => {
   const required = [
     "OWNER-TRUST-001",
-    "OWNER-APP-001",
-    "OWNER-REVIEW-001",
-    "OWNER-CONTROLS-001",
-    "OWNER-MERGE-001",
-    "OWNER-CANARY-001",
+    "OWNER-ACCEPTANCE-001",
     "OWNER-PRIVACY-001",
-    "OWNER-TERMS-001",
-    "OWNER-SUBMISSION-001",
-    "OWNER-PUBLICATION-001",
     "OWNER-PILOT-001",
-    "OWNER-RELEASE-001",
+    "OWNER-MKTDEV-001",
+    "OWNER-OPENAI-001",
+    "OWNER-MARKETPLACE-001",
+    "OWNER-PF-GOV-001",
+    "OWNER-TERMS-001",
+    "OWNER-PUBLICATION-001",
+    "OWNER-GA-001",
+    "OWNER-FUTURE-001",
   ];
   assert.deepEqual(ledger.ownerActionQueue.map(({ id }) => id), required);
   assert.ok(ledger.ownerActionQueue.every(({ agentExecutable }) => agentExecutable === false));
@@ -199,12 +199,16 @@ test("the owner action queue is single, ordered, deduplicated, and owner-only", 
   assert.throws(() => validate(outOfOrder), /order must be contiguous and match queue position/);
 
   const forwardDependency = structuredClone(ledger);
-  forwardDependency.ownerActionQueue[0].prerequisites = ["OWNER-RELEASE-001"];
+  forwardDependency.ownerActionQueue[0].prerequisites = ["OWNER-FUTURE-001"];
   assert.throws(() => validate(forwardDependency), /must appear earlier in the queue/);
 
   const duplicated = structuredClone(ledger);
   duplicated.ownerActionQueue[1].action = duplicated.ownerActionQueue[0].action;
   assert.throws(() => validate(duplicated), /action duplicates another owner action/);
+
+  const pilot = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-PILOT-001");
+  assert.deepEqual(pilot.prerequisites, ["OWNER-ACCEPTANCE-001", "OWNER-PRIVACY-001"]);
+  assert.ok(!pilot.prerequisites.includes("OWNER-PUBLICATION-001"));
 });
 
 test("the exact-main repair reconciliation follows the hardened remote head", () => {
