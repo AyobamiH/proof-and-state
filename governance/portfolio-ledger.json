@@ -7,9 +7,9 @@
     {
       "project": "DoneState",
       "repository": "AyobamiH/donestate",
-      "commit": "4083524b57800d196e2c82690d2d349f1fa3cc2d",
+      "commit": "af620d2ab05bafc89c927ff030be28c3732b0adf",
       "path": "governance/project-ledger.json",
-      "url": "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/governance/project-ledger.json"
+      "url": "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/governance/project-ledger.json"
     }
   ],
   "products": [
@@ -20,29 +20,30 @@
       "repository": "AyobamiH/donestate",
       "main": {
         "branch": "main",
-        "sha": "4083524b57800d196e2c82690d2d349f1fa3cc2d",
+        "sha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
         "status": "CI_VERIFIED",
         "protection": "PROTECTED"
       },
       "deployment": {
         "status": "DEPLOYED",
-        "sha": "7b25b6ae288d02ab9a6354a740ec06681d3ffc49",
+        "sha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
         "version": "0.3.0",
-        "providerVersion": "31789414-8495-479b-9950-80f890cf29b4",
-        "exactMainStatus": "UNPROVEN",
+        "providerVersion": "2a570090-b8e5-4edc-97a2-0adc35fce92d",
+        "exactMainStatus": "DEPLOYED",
         "rollback": {
           "status": "DEPLOYED",
-          "sha": "6964e2118c77d35e1e2abdbc69bcdaa05fe0c997",
+          "sha": "7b25b6ae288d02ab9a6354a740ec06681d3ffc49",
           "version": "0.3.0",
-          "providerVersion": "0f43dffa-b5e5-48fe-8d3f-b86fd83ff5dc"
+          "providerVersion": "31789414-8495-479b-9950-80f890cf29b4"
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-02T14:00:00Z",
+      "observedAt": "2026-10-02T15:31:00Z",
       "evidenceUrls": [
-        "https://github.com/AyobamiH/donestate/commit/4083524b57800d196e2c82690d2d349f1fa3cc2d",
-        "https://github.com/AyobamiH/donestate/actions/runs/37013514877",
-        "https://github.com/AyobamiH/donestate/actions/runs/37012973974",
+        "https://github.com/AyobamiH/donestate/commit/af620d2ab05bafc89c927ff030be28c3732b0adf",
+        "https://github.com/AyobamiH/donestate/actions/runs/37027143899",
+        "https://github.com/AyobamiH/donestate/actions/runs/37027143173",
+        "https://github.com/AyobamiH/donestate/pull/131",
         "https://github.com/AyobamiH/donestate/pull/115"
       ],
       "chatgpt": {
@@ -63,7 +64,7 @@
         "portalReadbackRequired": false,
         "reason": "DoneState 0.3.0 was last explicitly observed in OpenAI Review on 8 September 2026. That provider state is preserved as a separate distribution fact and does not block controlled owned-domain service access; approval, publication, discovery, installation and a directory-originated useful outcome remain unproven.",
         "evidenceUrls": [
-          "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/DIRECTORY-SUBMISSION.md",
+          "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/DIRECTORY-SUBMISSION.md",
           "https://platform.openai.com/plugins"
         ]
       },
@@ -71,7 +72,7 @@
         "artifactType": "GITHUB_APP",
         "artifactTypeStatus": "IMPLEMENTED",
         "sourceRepository": "AyobamiH/donestate",
-        "sourceSha": "7b25b6ae288d02ab9a6354a740ec06681d3ffc49",
+        "sourceSha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
         "sourceStatus": "CI_VERIFIED",
         "version": "0.3.0",
         "versionStatus": "IN_REVIEW",
@@ -96,8 +97,8 @@
         "portalReadbackRequired": false,
         "reason": "The production GitHub App listing is bound here to the deployed DoneState 0.3.0 service source, but GitHub still controls listing publication independently. The owner control plane last showed Pending for publish and explicitly identified the listing as draft and unpublished. Owner-preview install UI and a displayed count of 1 do not prove public availability, entitlement delivery, onboarding, billing, retention or a customer outcome.",
         "evidenceUrls": [
-          "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/GITHUB-MARKETPLACE.md",
-          "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/GITHUB-MARKETPLACE-DEVELOPMENT.md",
+          "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/GITHUB-MARKETPLACE.md",
+          "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/GITHUB-MARKETPLACE-DEVELOPMENT.md",
           "https://github.com/marketplace/donestate"
         ]
       },
@@ -117,7 +118,7 @@
           "id": "c4a07fa6-90b2-4597-a4c6-eae66de5a3e8",
           "status": "LIVE_OUTCOME_VERIFIED",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/CURRENT-STATUS.md"
+            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/CURRENT-STATUS.md"
           ]
         }
       },
@@ -137,8 +138,8 @@
           "severity": "P0",
           "summary": "Unrestricted self-serve GA still lacks browser readback of the account console, disposable-account deletion acceptance and genuine publisher legal decisions; these owned-channel gates are separate from external directory review.",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/CURRENT-STATUS.md",
-            "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/PRIVACY.md"
+            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/CURRENT-STATUS.md",
+            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/PRIVACY.md"
           ]
         },
         {
@@ -146,8 +147,8 @@
           "severity": "P1",
           "summary": "OpenAI 0.3.0 remains in Review as last observed and GitHub Marketplace remains Pending for publish and unpublished; those external states do not block controlled owned-domain access.",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/DIRECTORY-SUBMISSION.md",
-            "https://github.com/AyobamiH/donestate/blob/4083524b57800d196e2c82690d2d349f1fa3cc2d/docs/GITHUB-MARKETPLACE.md"
+            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/DIRECTORY-SUBMISSION.md",
+            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/GITHUB-MARKETPLACE.md"
           ]
         }
       ],
@@ -1305,7 +1306,8 @@
         "DS-CANARY-001"
       ],
       "evidenceIds": [
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-026"
       ]
     },
     {
@@ -1790,6 +1792,23 @@
       "outcome": "Portfolio truth and owner-action ordering are reconciled on parent main with exact post-merge governance evidence. Parent repository protection remains an explicit separate gate.",
       "content": "Current product matrix, owned-domain-first queue, immutable evidence freshness semantics, current DoneState/OpsTruth protection and verification evidence, parent post-merge governance checks, and preserved publishing-disabled deployment authority.",
       "measurement": "One reconciliation PR merged; two exact-head required checks passed; two post-merge governed checks passed; deployment consequence remained skipped; two portfolio-repair work items closed; one parent protection gate intentionally remains active."
+    },
+    {
+      "id": "PF-E-026",
+      "date": "2026-10-02",
+      "identity": "DoneState dependency security closure deployed on exact main",
+      "situation": "DoneState's owned service was already live, but CI installation logs exposed a high-severity transitive dependency advisory and the parent portfolio still pinned the earlier funnel deployment rather than the current secured main.",
+      "verification": "DoneState PR #131 final head 0613214e9fc1b8db68bfbc09380b732a072d12dd passed exact-head run 37027018504 across core (22), core (24), hosted-plugin, plugin validation and the permanent Worker npm audit --audit-level=high gate. PR #131 merged as af620d2ab05bafc89c927ff030be28c3732b0adf. Post-merge CI 37027143899 passed. Production deployment 37027143173 passed and published Worker 2a570090-b8e5-4edc-97a2-0adc35fce92d with sandbox container sha256:0b9a664604d0955547386e5482e3517bfdca52370e05b92e074b2ff29d8f7965. The deployment preserves the 20-tool OpenAI-reviewed MCP surface and the OpenAI/GitHub Marketplace provider states remain separate.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Keep the DoneState source and runtime pins current and reopen only on dependency-audit, deployment, tool-inventory or provider-state drift.",
+        "waitCondition": "None.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "Proof & State now has exact evidence that the patched dependency lock and permanent high-severity audit gate are live on the owned DoneState service without changing external distribution authority.",
+      "content": "Exact DoneState main, exact-head and post-merge CI, production deployment, Worker/container identities, dependency-audit gate, unchanged 20-tool MCP contract and channel-state separation.",
+      "measurement": "One protected security PR merged; three exact-head required checks passed; one permanent high-severity audit gate passed; one post-merge CI passed; one production deployment passed; zero MCP tools added; zero external provider states mutated."
     }
   ]
 }
