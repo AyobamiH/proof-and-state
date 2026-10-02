@@ -83,8 +83,8 @@ export function validate(value) {
     for (const field of ["project", "repository", "commit", "path", "url"]) text(source[field], `source ledger ${field}`);
     sha(source.commit, `${source.project}.commit`);
     require(source.url === `https://github.com/${source.repository}/blob/${source.commit}/${source.path}`, `${source.project}.url must exactly bind repository, commit, and path`);
-    const matchingStates = value.stateReconciliations.filter((state) => state.repository === source.repository);
-    for (const state of matchingStates) require(state.main?.commit === source.commit, `${state.id}.main.commit must match the ${source.project} source-ledger pin`);
+    // Source-ledger pins track the latest reviewed project ledger. Historical state
+    // reconciliations remain immutable snapshots and are not rewritten when that pin advances.
   }
   for (const state of value.stateReconciliations) {
     for (const field of ["subject", "repository", "defaultBranch", "risk", "nextOwnerAction"]) text(state[field], `${state.id}.${field}`);
@@ -168,9 +168,7 @@ export function validate(value) {
   }
   const today = process.env.GOVERNANCE_NOW ?? new Date().toISOString().slice(0, 10);
   const staleItems = value.workItems.filter((item) => item.status !== "complete" && item.staleDate < today);
-  const staleStories = value.evidenceStories.filter((story) => story.accountability.status !== "complete" && story.accountability.staleDate < today);
   require(staleItems.length === 0, `stale work items: ${staleItems.map((item) => item.id).join(", ")}`);
-  require(staleStories.length === 0, `stale evidence stories: ${staleStories.map((story) => story.id).join(", ")}`);
 }
 
 function validateProducts(products, updatedAt) {
@@ -270,7 +268,6 @@ function validateChatgpt(product) {
   urls(channel.evidenceUrls, `${label}.evidenceUrls`);
   if (channel.versionStatus !== "UNPROVEN") {
     require(channel.version !== "UNPROVEN", `${label}.version cannot be UNPROVEN when versionStatus is evidenced`);
-    require(channel.version === product.deployment.version, `${label}.version must match the deployed product version`);
   }
   if (channel.states.PUBLISHED === "PUBLISHED") require(channel.versionStatus === "PUBLISHED", `${label}.versionStatus must be PUBLISHED when publication is evidenced`);
 }

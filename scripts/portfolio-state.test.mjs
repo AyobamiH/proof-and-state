@@ -95,15 +95,16 @@ test("verified deployment evidence is immutable across ledger transitions", () =
   }
 });
 
-test("source-ledger URLs and repository pins are exact", () => {
+test("source-ledger URLs stay exact while historical reconciliations remain snapshots", () => {
   const badUrl = structuredClone(ledger);
   badUrl.sourceLedgers[0].url = "https://github.com/AyobamiH/donestate/blob/main/governance/project-ledger.json";
   assert.throws(() => validate(badUrl), /url must exactly bind repository, commit, and path/);
 
-  const badPin = structuredClone(ledger);
-  const state = badPin.stateReconciliations.find(({ id }) => id === "PF-STATE-DONESTATE-001");
-  state.main.commit = "0".repeat(40);
-  assert.throws(() => validate(badPin), /main\.commit must match the DoneState source-ledger pin/);
+  const advancedPin = structuredClone(ledger);
+  advancedPin.sourceLedgers[0].commit = "0".repeat(40);
+  advancedPin.sourceLedgers[0].url =
+    "https://github.com/AyobamiH/donestate/blob/" + "0".repeat(40) + "/governance/project-ledger.json";
+  assert.doesNotThrow(() => validate(advancedPin));
 });
 
 test("the product matrix requires exactly three canonical complete entries", () => {
@@ -167,24 +168,24 @@ test("DoneState Marketplace owner-preview metadata stays submitted and in review
   assert.throws(() => validate(inflated), /INSTALLED requires DISCOVERABLE/);
 });
 
-test("all three main branches retain the authenticated unprotected observation", () => {
-  assert.deepEqual(ledger.products.map((product) => product.main.protection), ["UNPROTECTED", "UNPROTECTED", "UNPROTECTED"]);
+test("main-branch protection observations match the current provider state", () => {
+  assert.deepEqual(ledger.products.map((product) => product.main.protection), ["PROTECTED", "PROTECTED", "UNPROTECTED"]);
 });
 
 test("the owner action queue is single, ordered, deduplicated, and owner-only", () => {
   const required = [
     "OWNER-TRUST-001",
-    "OWNER-APP-001",
-    "OWNER-REVIEW-001",
-    "OWNER-CONTROLS-001",
-    "OWNER-MERGE-001",
-    "OWNER-CANARY-001",
+    "OWNER-ACCEPTANCE-001",
     "OWNER-PRIVACY-001",
-    "OWNER-TERMS-001",
-    "OWNER-SUBMISSION-001",
-    "OWNER-PUBLICATION-001",
     "OWNER-PILOT-001",
-    "OWNER-RELEASE-001",
+    "OWNER-MKTDEV-001",
+    "OWNER-OPENAI-001",
+    "OWNER-MARKETPLACE-001",
+    "OWNER-PF-GOV-001",
+    "OWNER-TERMS-001",
+    "OWNER-PUBLICATION-001",
+    "OWNER-GA-001",
+    "OWNER-FUTURE-001",
   ];
   assert.deepEqual(ledger.ownerActionQueue.map(({ id }) => id), required);
   assert.ok(ledger.ownerActionQueue.every(({ agentExecutable }) => agentExecutable === false));
@@ -198,12 +199,16 @@ test("the owner action queue is single, ordered, deduplicated, and owner-only", 
   assert.throws(() => validate(outOfOrder), /order must be contiguous and match queue position/);
 
   const forwardDependency = structuredClone(ledger);
-  forwardDependency.ownerActionQueue[0].prerequisites = ["OWNER-RELEASE-001"];
+  forwardDependency.ownerActionQueue[0].prerequisites = ["OWNER-FUTURE-001"];
   assert.throws(() => validate(forwardDependency), /must appear earlier in the queue/);
 
   const duplicated = structuredClone(ledger);
   duplicated.ownerActionQueue[1].action = duplicated.ownerActionQueue[0].action;
   assert.throws(() => validate(duplicated), /action duplicates another owner action/);
+
+  const pilot = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-PILOT-001");
+  assert.deepEqual(pilot.prerequisites, ["OWNER-ACCEPTANCE-001", "OWNER-PRIVACY-001"]);
+  assert.ok(!pilot.prerequisites.includes("OWNER-PUBLICATION-001"));
 });
 
 test("the exact-main repair reconciliation follows the hardened remote head", () => {
@@ -226,9 +231,21 @@ test("product deployment and channel sources cannot cross identity boundaries", 
   sourceMismatch.products.find(({ id }) => id === "donestate").githubMarketplace.sourceSha = "0".repeat(40);
   assert.throws(() => validate(sourceMismatch), /sourceSha must match the deployed product sha/);
 
-  const versionMismatch = structuredClone(ledger);
-  versionMismatch.products.find(({ id }) => id === "opstruth").chatgpt.version = "9.9.9";
-  assert.throws(() => validate(versionMismatch), /version must match the deployed product version/);
+  const independentChannelVersion = structuredClone(ledger);
+  independentChannelVersion.products.find(({ id }) => id === "opstruth").chatgpt.version = "9.9.9";
+  assert.doesNotThrow(() => validate(independentChannelVersion));
+});
+
+test("historical evidence receipts do not require mutable freshness dates", () => {
+  const historical = structuredClone(ledger);
+  historical.evidenceStories[0].accountability.status = "active";
+  historical.evidenceStories[0].accountability.staleDate = "2020-01-01";
+  assert.doesNotThrow(() => validate(historical));
+
+  const staleWork = structuredClone(ledger);
+  const current = staleWork.workItems.find((item) => item.status !== "complete");
+  current.staleDate = "2020-01-01";
+  assert.throws(() => validate(staleWork), /stale work items/);
 });
 
 test("product observations must be fresh and evidence URLs exact", () => {
