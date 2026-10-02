@@ -3,11 +3,11 @@
   "repository": "AyobamiH/proof-and-state",
   "repositoryId": 1350608000,
   "providerObservation": {
-    "observedAt": "2026-09-01T07:55:00Z",
+    "observedAt": "2026-10-02T14:00:00Z",
     "branch": "main",
-    "headSha": "2ad721357993a92dfc4d26b2b3ea4a9239ab95d6",
+    "headSha": "35dc325f425b6cda0f296ac0838979e281c89075",
     "protection": "UNPROTECTED",
-    "evidenceUrl": "https://github.com/AyobamiH/proof-and-state/settings/branches"
+    "evidenceUrl": "https://github.com/AyobamiH/proof-and-state/branches/main"
   },
   "activation": {
     "status": "BLOCKED",
@@ -23,7 +23,9 @@
     ]
   },
   "target": {
-    "include": ["refs/heads/main"],
+    "include": [
+      "refs/heads/main"
+    ],
     "exclude": []
   },
   "bypassActors": [
@@ -36,8 +38,12 @@
     }
   ],
   "rules": {
-    "deletion": { "blocked": true },
-    "nonFastForward": { "blocked": true },
+    "deletion": {
+      "blocked": true
+    },
+    "nonFastForward": {
+      "blocked": true
+    },
     "pullRequest": {
       "required": true,
       "requiredApprovingReviewCount": 1,
@@ -49,8 +55,14 @@
     "requiredStatusChecks": {
       "strictRequiredStatusChecksPolicy": true,
       "checks": [
-        { "context": "portfolio-state", "integrationId": 15368 },
-        { "context": "contract-tests", "integrationId": 15368 }
+        {
+          "context": "portfolio-state",
+          "integrationId": 15368
+        },
+        {
+          "context": "contract-tests",
+          "integrationId": 15368
+        }
       ]
     }
   },
