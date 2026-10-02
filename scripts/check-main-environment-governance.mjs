@@ -34,7 +34,7 @@ export function validateGovernanceProposal({
     || main.repositoryId !== 1350608000) fail("main identity is not exact");
   if (main.providerObservation.protection !== "UNPROTECTED"
     || main.providerObservation.branch !== "main"
-    || main.providerObservation.headSha !== "2ad721357993a92dfc4d26b2b3ea4a9239ab95d6") {
+    || main.providerObservation.headSha !== "35dc325f425b6cda0f296ac0838979e281c89075") {
     fail("main provider observation drifted");
   }
   if (main.activation.status !== "BLOCKED" || main.activation.enforcement !== "disabled"
@@ -138,13 +138,20 @@ export function validateGovernanceProposal({
   if (!product || product.main.protection !== "UNPROTECTED"
     || product.deployment.exactMainStatus !== "UNPROVEN"
     || product.deployment.publishingEnabled !== false) fail("canonical portfolio truth contradicts the proposal");
-  if (!ledger.products.every(({ main }) => main.protection === "UNPROTECTED")) {
-    fail("a portfolio main branch falsely claims protection");
-  }
+  same(
+    ledger.products.map(({ id, main }) => ({ id, protection: main.protection })),
+    [
+      { id: "donestate", protection: "PROTECTED" },
+      { id: "opstruth", protection: "PROTECTED" },
+      { id: "proof-and-state", protection: "UNPROTECTED" },
+    ],
+    "portfolio branch-protection truth drifted",
+  );
   const trustAction = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-TRUST-001")?.action ?? "";
-  const controlsAction = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-CONTROLS-001")?.action ?? "";
-  if (!trustAction.includes("write access required for CODEOWNERS")
-    || !controlsAction.includes("add the reviewer to CODEOWNERS")) {
+  const controls = ledger.ownerActionQueue.find(({ id }) => id === "OWNER-PF-GOV-001");
+  if (!trustAction.includes("second trusted human reviewer")
+    || !controls?.prerequisites.includes("OWNER-TRUST-001")
+    || !controls.action.includes("add that approved reviewer to CODEOWNERS")) {
     fail("reviewer access expansion is not an explicit owner decision");
   }
 }
