@@ -8,8 +8,8 @@ The canonical ordered portfolio backlog, source-ledger commit, owners, wait cond
 
 | Area | Status | Evidence |
 | --- | --- | --- |
-| DoneState owned service | Live controlled access | Canonical MCP endpoint `https://donestate.proofandstate.com/mcp`; runtime source `7b25b6ae288d02ab9a6354a740ec06681d3ffc49`; deploy `37012973974`; Worker `31789414-8495-479b-9950-80f890cf29b4` |
-| DoneState current main | Protected and CI-verified | `4083524b57800d196e2c82690d2d349f1fa3cc2d`; post-merge CI `37013514877` passed `core (22)`, `core (24)`, and `hosted-plugin` |
+| DoneState owned service | Live controlled access | Canonical MCP endpoint `https://donestate.proofandstate.com/mcp`; exact-main runtime source `af620d2ab05bafc89c927ff030be28c3732b0adf`; deploy `37027143173`; Worker `2a570090-b8e5-4edc-97a2-0adc35fce92d`; sandbox `sha256:0b9a664604d0955547386e5482e3517bfdca52370e05b92e074b2ff29d8f7965` |
+| DoneState current main | Protected, CI-verified and dependency-audit gated | `af620d2ab05bafc89c927ff030be28c3732b0adf`; post-merge CI `37027143899` passed `core (22)`, `core (24)`, and `hosted-plugin`; Worker CI now permanently rejects high-severity npm advisories |
 | DoneState independent verification | Fresh successor VERIFIED | Run `c4a07fa6-90b2-4597-a4c6-eae66de5a3e8`; open PR #115 at head `41f1ae3b0fed670e64bd99f1bcb1aea9c9e7e869`; exact-head CI `33806832575`; complete OpsTruth v2 response accepted |
 | DoneState account controls | Implemented and deployed, acceptance incomplete | Account console and whole-account deletion shipped without adding MCP tools; real browser readback and disposable-account destructive acceptance remain |
 | DoneState Marketplace webhook health | Deployed | PR #127; merge `6964e2118c77d35e1e2abdbc69bcdaa05fe0c997`; deploy `37011174983`; bounded 5xx operational failure receipts and hourly escalation |
