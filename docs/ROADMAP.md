@@ -14,16 +14,15 @@
 
 ## Current closeout
 
-- Monitor the OpenAI review decision; treat `Review` as neither approval nor publication.
-- Publish the directory version only after OpenAI approval and a separate owner-authorised publication action.
-- Review and merge DoneState PR #58 only under owner authority, then require green post-merge CI before treating main as repaired; PR-head run `33479525695` is green while main run `33474288066` remains red.
-- Restore OpsTruth's authenticated GitHub read lane through plugin issue #11. PRs #19 through #22 have green exact-head CI and automated policy reviews but remain unmerged, unapproved by a human, and undeployed.
-- Run the existing publishing-disabled GTM canary at exact main commit `2ad72135…`; the deployed final PR head `0cc6f720…` and identical tree do not prove an exact-main deployment.
-- Keep restored branch `feat/api-gtm-orchestrator` pinned to exact final PR head `0cc6f720…` and record later branch-lifecycle transitions without erasing the deletion history.
-- Merge the issue #14 portfolio repair only under owner authority and close PF-GOV-001 only after an exact successful post-merge Governance run.
-- Monitor the DoneState GitHub Marketplace review decision; treat `Pending for publish` as neither approval nor publication.
-- Finish the isolated Marketplace draft lifecycle by exercising the live `changed`, `pending_change`, and `pending_change_cancelled` transitions; the signed cancellation and final `CANCELLED` entitlement are recorded, and the production listing must not be used for tests.
-- Complete the genuine public operator alias, service-address, ICO assessment and offered-territory decisions without exposing private contact data.
+- Keep controlled DoneState owned-domain access live from exact secured main `af620d2ab05bafc89c927ff030be28c3732b0adf`; external directory publication is not a prerequisite.
+- Complete one real-browser readback of the production DoneState account console.
+- Prove whole-account deletion with a disposable non-founder account, including active-run refusal and post-delete fencing. Do not use the publisher account as the destructive fixture.
+- Record the genuine DoneState service address, ICO fee self-assessment, offered territories, and public support/privacy contact choices before unrestricted self-serve GA.
+- Observe natural Marketplace webhook-health and aggregate-funnel snapshots; do not manufacture production failures or customer identifiers.
+- Finish the isolated GitHub Marketplace development transitions `changed`, `pending_change`, and `pending_change_cancelled` without touching the production review listing.
+- Preserve the existing OpenAI 0.3.0 review submission and respond to provider changes independently; do not create a duplicate product.
+- Name the second trusted human reviewer and explicitly decide Proof & State repository access/CODEOWNERS before applying the prepared parent-main protection policy.
+- Keep the GTM orchestrator publishing-disabled until an exact-current-main deployment is deliberately proven or the lane is retired.
 
 ## Next
 
