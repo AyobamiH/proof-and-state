@@ -1056,7 +1056,8 @@
       "title": "Keep portfolio governance self-documenting",
       "workItemIds": [
         "PF-GOV-001",
-        "PF-PRODUCT-MATRIX-001"
+        "PF-PRODUCT-MATRIX-001",
+        "PF-DISCOVERY-001"
       ],
       "exitCriterion": "Portfolio state is generated, stale work fails, and consequential changes require the ledger."
     },
@@ -1145,6 +1146,24 @@
         "PF-E-024",
         "PF-E-025",
         "PF-E-027"
+      ]
+    },
+    {
+      "id": "PF-DISCOVERY-001",
+      "title": "Govern shared operating state and machine discovery",
+      "stream": "governance",
+      "status": "active",
+      "owner": "Proof & State maintainers",
+      "lastUpdated": "2026-10-07",
+      "staleDate": "2026-10-14",
+      "nextAction": "Merge the generated shared operating contract after governance CI, then use it to drive the separate Tail Wagging and estate-wide agent/search discoverability workstreams.",
+      "waitCondition": "The contract, generated documentation and estate audit are prepared in PR #32, but governance CI correctly requires this ledger and generated portfolio state to record the consequential change before merge.",
+      "reentryCondition": "Re-enter on shared-state contract drift, crawler or provider-policy change, credential-custody drift, temporary-bridge use, or a fresh estate discoverability observation.",
+      "dependencies": [
+        "PF-GOV-001"
+      ],
+      "evidenceIds": [
+        "PF-E-032"
       ]
     },
     {
@@ -1948,6 +1967,23 @@
       "outcome": "Customer OAuth admission and checkout now work, but implementation stopped safely before publication. The repair is tested locally and open for review; no new merge, deployment, successful customer PR, independent VERIFIED or post-result deletion is claimed. The full fresh journey and unrestricted GA remain blocked.",
       "content": "Immutable terminal run/actions/event-chain and credential-lease receipt, updated current blocked work items and exact repair-candidate subject. All historical portfolio stories through PF-E-030 and DoneState E-066 through E-069 remain unchanged; source-ledger/current-main/runtime pins retain their deployed subjects.",
       "measurement": "One fresh customer objective, one start, one successful clone, one acknowledged implementation launch, one verified exit-code-1 receipt and terminal FAILED_SAFE. One credential lease; zero customer branches/PRs, verifier requests or account deletions. One locally tested undeployed repair candidate, no App/verifier scope expansion or publication."
+    },
+    {
+      "id": "PF-E-032",
+      "date": "2026-10-07",
+      "identity": "Shared operating state and machine-discovery governance candidate",
+      "situation": "Repeated portfolio work showed the same class of failure across products: source, execution, provider acceptance, deployment, read-back and outcome were easy to conflate, while credential custody, temporary authority and crawler discovery were being solved independently in each repository.",
+      "verification": "Proof & State PR #32 at candidate head 6363eb968deb0024321baacd70d05ea43fe5473e adds governance/shared-operating-contract.json, a generated human contract, render/check wiring and tests covering seven state axes, seven acceptance layers, GREEN semantics, credential custody, temporary bridge removal proof and machine-discovery truthfulness. A fresh GSC Wizard estate audit separately observed Agent Shop, Tail Wagging, Proof & State, OpsTruth, PostSteward, OneClickPostFactory, OneClick Website Design Factory and AI Work Accountability surfaces without promoting crawlability to indexing or business-outcome evidence. GTM Orchestrator CI passed. Governance CI rejected the candidate because impactful governance files changed without the portfolio ledger, which is the intended fail-closed behaviour this evidence update now satisfies.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "active",
+        "nextAction": "Make PR #32 governance checks green, merge only the generated contract and evidence-aligned state, then apply the standard through separate product PRs beginning with Tail Wagging and the highest-risk discoverability gaps.",
+        "waitCondition": "PR #32 remains unmerged until the ledger/generated-state requirement and all governance checks pass. Product-specific implementations and provider indexing states remain separate evidence.",
+        "staleDate": "2026-10-14"
+      },
+      "outcome": "A canonical cross-product operating contract and ordered machine-discovery programme now exist as a reviewable candidate without collapsing product-specific state machines or claiming provider indexing.",
+      "content": "Shared state vector, acceptance layers, GREEN rule, credential-custody contract, temporary-bridge lifecycle, machine-discovery surfaces and acceptance rules, plus the fresh estate discovery audit and ordered rollout.",
+      "measurement": "Seven state axes, seven acceptance layers and nine invariants are machine-readable; one estate audit identified concrete work across eight product/domain surfaces plus the Agent Shop subdomain; zero provider-indexing states were inferred from crawlability or sitemap submission."
     }
   ]
 }
