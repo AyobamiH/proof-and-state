@@ -12,6 +12,13 @@ Keep execution, independent verification, consequence receipts, and portfolio go
 - Run `node scripts/render-portfolio-state.mjs`; do not edit `docs/PORTFOLIO-STATE.md` by hand.
 - Record exact commits, PR heads, CI runs, deployments, runtime observations, review states, and verifier subjects separately.
 
+## Shared operating contract
+
+- Use `governance/shared-operating-contract.json` for cross-product state, green, credential-custody, temporary-bridge and machine-discovery semantics.
+- Never promote provider acceptance to read-back or outcome verification.
+- Treat `unknown` as a first-class state.
+- Temporary authority must carry an expiry condition and removal proof.
+
 ## Authority
 
 Inspection and local documentation are ordinary work. Push, pull-request, merge, deployment, publication, secret access, and destructive actions require their consequence authority. Never expose secret or private contact values in evidence.
