@@ -14,21 +14,21 @@
 
 ## Current closeout
 
-- Keep controlled DoneState owned-domain access live from exact secured main `af620d2ab05bafc89c927ff030be28c3732b0adf`; external directory publication is not a prerequisite.
-- Complete one real-browser readback of the production DoneState account console.
-- Prove whole-account deletion with a disposable non-founder account, including active-run refusal and post-delete fencing. Do not use the publisher account as the destructive fixture.
-- Record the genuine DoneState service address, ICO fee self-assessment, offered territories, and public support/privacy contact choices before unrestricted self-serve GA.
+- Keep the current-source and deployed-runtime identities distinct: DoneState main `e24f543b58b69d861be1f2f5153903a654a9f5ea` and deployed UI source `c984744c732f598db8859b5b9d4367d1f8da2aef`. External directory publication is not a prerequisite for controlled access.
+- Preserve completed CUST-001/CUST-002 evidence: shared account pages, real disposable deletion, active-state refusal and production generation fencing.
+- Reconnect the disposable customer execution credential securely, confirm selected-repository/verifier scope, then prove one fresh complete customer outcome. Historical control/canary evidence does not complete this new journey.
+- Supply the remaining legitimate public address and branded support/privacy routes. Worldwide-where-legally-permitted availability and the current pre-trading ICO assessment are already recorded; revisit the assessment when activity begins.
 - Observe natural Marketplace webhook-health and aggregate-funnel snapshots; do not manufacture production failures or customer identifiers.
 - Finish the isolated GitHub Marketplace development transitions `changed`, `pending_change`, and `pending_change_cancelled` without touching the production review listing.
-- Preserve the existing OpenAI 0.3.0 review submission and respond to provider changes independently; do not create a duplicate product.
+- Read back the canonical OpenAI 0.3.2 draft recorded in E-061 and current Marketplace state. Preserve historical provider evidence without treating a superseded submission as current; avoid duplicate products.
 - Name the second trusted human reviewer and explicitly decide Proof & State repository access/CODEOWNERS before applying the prepared parent-main protection policy.
 - Keep the GTM orchestrator publishing-disabled until an exact-current-main deployment is deliberately proven or the lane is retired.
 
 ## Next
 
-- Define AgentProof merge, deploy, package, and release receipt profiles.
+- Keep AgentProof's candidate merge, deploy, package and release profiles gated. Current runtime supports `agentproof.repository_patch.v1` only; RC5 npm/GitHub bytes match and RC6 GitHub release is published. RC6 npm release, measured independent adoption and a production authority/signing provider remain separate gates.
 - Keep the generated portfolio ledger and stale-state CI green; add non-secret evidence-content checks after the initial closure gate.
-- Exercise one owner-approved merge-to-deploy receipt chain.
+- Select a customer-driven AgentProof integration only after measured adoption and a separately reviewed production authority, action contract, threat model and independent verification boundary.
 - Begin Cloudinary and direct-provider identity and permission preflights only after the exact-main publishing-disabled GTM canary succeeds; keep live publishing disabled.
 
 ## Later, gated by evidence

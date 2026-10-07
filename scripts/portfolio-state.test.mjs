@@ -287,7 +287,7 @@ test("generated portfolio state contains one compact six-row channel matrix", ()
   assert.equal(rendered.match(/## Product and channel matrix/g)?.length, 1);
   assert.equal(rendered.match(/\| (DoneState|OpsTruth|Proof & State) \| (ChatGPT|GitHub Marketplace)/g)?.length, 6);
   assert.match(rendered, /displayed installs=`1` \(IN_REVIEW\)/);
-  assert.match(rendered, /current=IN_REVIEW<br>SUBMITTED -> IN_REVIEW/);
+  assert.match(rendered, /recorded=IN_REVIEW<br>SUBMITTED -> IN_REVIEW/);
   assert.match(rendered, /publishingEnabled=`false`/);
   assert.doesNotMatch(rendered, new RegExp(String.fromCodePoint(0x2014)));
 });

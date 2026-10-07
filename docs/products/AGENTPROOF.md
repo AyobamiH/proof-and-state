@@ -1,27 +1,29 @@
 # AgentProof
 
-## Purpose
+## Supported capability
 
-AgentProof is the downstream evidence and receipt layer for actions that happen after a reviewable change exists: merge, deployment, package publication, release, and other externally observable consequences.
+AgentProof provides transaction-bound approval, separate execution, durable exactly-once state, independent postcondition verification and immutable signed receipts for `agentproof.repository_patch.v1`. Its local development lifecycle includes compensation as an append-only successor. Other consequence profiles are candidates, not supported runtime actions.
 
-## Boundary
+## Exact prerelease evidence
 
-AgentProof may verify receipt integrity, signer trust, subject identity, and fresh outcome evidence. It must not:
+Observed 7 October 2026:
 
-- execute or repeat the underlying action merely because a receipt exists;
-- infer deployment, release, or reachability from a commit or signature alone;
-- collapse DoneState execution records and OpsTruth observation into one self-attested claim.
+| Subject | Evidence | Limit |
+| --- | --- | --- |
+| RC5 GitHub and npm | Public `@oneclicksystems/agentproof@0.1.0-rc.5`; both tarballs have SHA-256 `a7e085a9202e88db02511309b2ee5f9c62cd4bbb69cb00c4c609b8116eee2a7a`; 81 identical entries; registry signature verifies | Existing publication, not a newly authorised release |
+| RC5 clean consumer | Fresh registry install imports public exports and completes prepare, approval, execute, offline verify, identical retry receipt and compensation | Owner-side development test; not independent adoption or production signing |
+| RC6 GitHub | Source `a0ee17a70d05bc3c339c0c15be6bb38b4517771a`; release run `37572076728`; asset SHA-256 `f9dd7eb65f5809c69584624272c0c7dc13a84209c4a2daee338dfee43f5050ca` | RC6 npm publication remains unproven; fresh registry list contains RC5 only |
 
-## Minimum indexed fields
+[AgentProof PR #7](https://github.com/AyobamiH/agentproof/pull/7) corrects the stale claim that RC5 never reached npm and records the exact artifact/consumer evidence. RC6's existing release tag remains immutable.
 
-- subject repository, ref, and exact commit;
-- pull-request number and merge commit when applicable;
-- workflow, job, deployment, package, or release identifier;
-- observation time and evidence source;
-- receipt or report digest;
-- signer identity and trust decision;
-- explicit outcome and uncertainty.
+## Trust boundary
 
-## Sequencing
+The proposer, approval authority, executor, receipt signer and offline verifier retain separate responsibilities. Receipt integrity, explicit signer trust and signed transaction claims are distinct from fresh observation of an external outcome. A signature never proves merge, deployment, registry publication or live reachability by itself.
 
-DoneState owner-side PR-only maintenance and OpsTruth verification are the first target integration. The latest canary was merged after an `uncertain` verifier decision and is not a completed round trip. AgentProof merge, deploy, and release receipts remain the next independent evidence layer; fleet automation remains later.
+OpsTruth independently observes the named evidence. DoneState reaches `VERIFIED` only through the matching complete independent verification contract. AgentProof receipts cannot certify that outcome or expand executor authority.
+
+## Candidate portfolio integration
+
+The DoneState lifecycle-adapter and merge/deploy/package/release profiles are gated documentation. Production integration requires measured independent adoption, a production approval/signing provider, explicit action and threat-model contracts, and a separately reviewed consequence authority. No portfolio runtime integration is enabled here.
+
+The DoneState-to-OpsTruth v2 successor is already independently `VERIFIED` without AgentProof. Its PR #115 remains deliberately unmerged. AgentProof is a separately selected future requirement; broader fleet authority remains later.
