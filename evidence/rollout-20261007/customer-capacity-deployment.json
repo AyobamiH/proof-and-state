@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "status": "CAPACITY_DEPLOYED_CUSTOMER_PREREQUISITES_PENDING",
+  "source": {
+    "repository": "AyobamiH/donestate",
+    "repairPr": 170,
+    "mergeSha": "fbaa060dfc6680516dfb7a1195801d1f8ab58d9d",
+    "evidencePr": 171,
+    "evidenceHeadSha": "76d821165a0cf63e345ff135f1381f0cd7b01761",
+    "canonicalReceipt": "https://github.com/AyobamiH/donestate/blob/76d821165a0cf63e345ff135f1381f0cd7b01761/evidence/clean-customer-20261007/capacity-repair-deployment.json",
+    "preparedObjective": "https://github.com/AyobamiH/donestate/blob/76d821165a0cf63e345ff135f1381f0cd7b01761/evidence/clean-customer-20261007/prepared-compact-objective-08.json"
+  },
+  "ci": {
+    "runId": 37698109881,
+    "headSha": "fbaa060dfc6680516dfb7a1195801d1f8ab58d9d",
+    "conclusion": "success"
+  },
+  "deployment": {
+    "runId": 37698109840,
+    "jobId": 113054728263,
+    "conclusion": "success",
+    "workerVersion": "10c14fb2-8536-4af3-91f2-8ecd5bae94d9",
+    "imageDigest": "sha256:8753929cf3ef46ccc160471df5addcb8d3228affa713c1df7d025c54548225c2",
+    "instanceType": "basic",
+    "memoryMib": 1024,
+    "maxInstances": 5,
+    "providerLogConfirmsLiteToBasic": true
+  },
+  "customer": {
+    "credentialConnected": false,
+    "repositoryPermission": "read",
+    "invitationPreparedNotSubmitted": true,
+    "objective08Created": false,
+    "objective08Started": false,
+    "customerPrCreated": false,
+    "independentCustomerVerified": false,
+    "browserActionTimeGrantConfirmationPending": true
+  },
+  "limits": {
+    "deploymentIsNotCustomerAcceptance": true,
+    "precisePreviousTimeoutCause": "UNPROVEN",
+    "fullIndexedAccountPurgeUnobserved": true
+  },
+  "historicalEvidencePreserved": true,
+  "secretsExcluded": true,
+  "setupTicketExcluded": true
+}
