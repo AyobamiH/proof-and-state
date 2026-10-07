@@ -11,6 +11,10 @@ Proof & State separates authority, execution, observation, and evidence custody.
 5. AgentProof indexes later merge, deployment, package, and release receipts without reclassifying execution claims as observed fact.
 6. Proof & State records the portfolio decision, product boundary, and evidence references.
 
+## Shared state semantics
+
+Cross-product state semantics are defined by `governance/shared-operating-contract.json` and rendered to `docs/SHARED-OPERATING-CONTRACT.md`. Product-specific state machines remain authoritative for their own runtime, but they must not collapse execution, consequence, read-back and outcome into one success flag.
+
 ## Invariants
 
 - No executor-produced statement can transition its own run to verified.

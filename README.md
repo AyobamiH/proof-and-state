@@ -20,6 +20,7 @@ The final PR-head GTM canary is deployed with publishing disabled. Exact-main de
 ## Canonical records
 
 - [Architecture](docs/ARCHITECTURE.md)
+- [Shared operating contract](docs/SHARED-OPERATING-CONTRACT.md)
 - [Product registry](docs/PRODUCT-REGISTRY.md)
 - [Domain registry](docs/DOMAIN-REGISTRY.md)
 - [Integration contracts](docs/INTEGRATION-CONTRACTS.md)
