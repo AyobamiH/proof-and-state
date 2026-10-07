@@ -14,7 +14,7 @@ Observed 7 October 2026:
 | RC5 clean consumer | Fresh registry install imports public exports and completes prepare, approval, execute, offline verify, identical retry receipt and compensation | Owner-side development test; not independent adoption or production signing |
 | RC6 GitHub | Source `a0ee17a70d05bc3c339c0c15be6bb38b4517771a`; release run `37572076728`; asset SHA-256 `f9dd7eb65f5809c69584624272c0c7dc13a84209c4a2daee338dfee43f5050ca` | RC6 npm publication remains unproven; fresh registry list contains RC5 only |
 
-[AgentProof PR #7](https://github.com/AyobamiH/agentproof/pull/7) corrects the stale claim that RC5 never reached npm and records the exact artifact/consumer evidence. RC6's existing release tag remains immutable.
+The owner-approved [AgentProof PR #7](https://github.com/AyobamiH/agentproof/pull/7) merged as `104b793e256c7f8f7f682891da2fa3817d3fc199`, correcting the stale RC5 npm claim and preserving the exact artifact/consumer evidence. Post-merge CI `37577387142` passed; release workflow `37577387146` skipped publication steps. Existing RC5/RC6 tags, source pins and asset digests remain unchanged; no new release or package publication is claimed.
 
 ## Trust boundary
 
