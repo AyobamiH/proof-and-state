@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
   "portfolio": "Proof & State",
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-07",
   "governanceRule": "Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.",
   "sourceLedgers": [
     {
       "project": "DoneState",
       "repository": "AyobamiH/donestate",
-      "commit": "af620d2ab05bafc89c927ff030be28c3732b0adf",
+      "commit": "e24f543b58b69d861be1f2f5153903a654a9f5ea",
       "path": "governance/project-ledger.json",
-      "url": "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/governance/project-ledger.json"
+      "url": "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json"
     }
   ],
   "products": [
@@ -20,31 +20,34 @@
       "repository": "AyobamiH/donestate",
       "main": {
         "branch": "main",
-        "sha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
+        "sha": "e24f543b58b69d861be1f2f5153903a654a9f5ea",
         "status": "CI_VERIFIED",
         "protection": "PROTECTED"
       },
       "deployment": {
         "status": "DEPLOYED",
-        "sha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
+        "sha": "c984744c732f598db8859b5b9d4367d1f8da2aef",
         "version": "0.3.0",
-        "providerVersion": "2a570090-b8e5-4edc-97a2-0adc35fce92d",
-        "exactMainStatus": "DEPLOYED",
+        "providerVersion": "c80942ed-6854-4bfb-bdd2-b800df7b1464",
+        "exactMainStatus": "UNPROVEN",
         "rollback": {
           "status": "DEPLOYED",
-          "sha": "7b25b6ae288d02ab9a6354a740ec06681d3ffc49",
+          "sha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
           "version": "0.3.0",
-          "providerVersion": "31789414-8495-479b-9950-80f890cf29b4"
+          "providerVersion": "2a570090-b8e5-4edc-97a2-0adc35fce92d"
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-02T15:31:00Z",
+      "observedAt": "2026-10-07T05:24:50Z",
       "evidenceUrls": [
-        "https://github.com/AyobamiH/donestate/commit/af620d2ab05bafc89c927ff030be28c3732b0adf",
-        "https://github.com/AyobamiH/donestate/actions/runs/37027143899",
-        "https://github.com/AyobamiH/donestate/actions/runs/37027143173",
-        "https://github.com/AyobamiH/donestate/pull/131",
-        "https://github.com/AyobamiH/donestate/pull/115"
+        "https://github.com/AyobamiH/donestate/commit/e24f543b58b69d861be1f2f5153903a654a9f5ea",
+        "https://github.com/AyobamiH/donestate/actions/runs/37152045333",
+        "https://github.com/AyobamiH/donestate/actions/runs/37143245994",
+        "https://github.com/AyobamiH/donestate/actions/runs/37143489929",
+        "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
+        "https://github.com/AyobamiH/donestate/pull/115",
+        "https://github.com/AyobamiH/donestate/pull/166",
+        "https://github.com/AyobamiH/donestate/actions/runs/37576065787"
       ],
       "chatgpt": {
         "version": "0.3.0",
@@ -61,10 +64,10 @@
           "INSTALLED": "UNPROVEN",
           "LIVE_OUTCOME_VERIFIED": "UNPROVEN"
         },
-        "portalReadbackRequired": false,
-        "reason": "DoneState 0.3.0 was last explicitly observed in OpenAI Review on 8 September 2026. That provider state is preserved as a separate distribution fact and does not block controlled owned-domain service access; approval, publication, discovery, installation and a directory-originated useful outcome remain unproven.",
+        "portalReadbackRequired": true,
+        "reason": "The matrix preserves the historical 0.3.0 In Review record, not a current provider readback. Current source evidence E-061 records the owner-authorised reset and canonical 0.3.2 draft with 20 tools; it does not prove submission or publication. Read back the canonical publisher before any channel action; do not preserve a deleted submission or create a duplicate. Owned-domain access remains separate.",
         "evidenceUrls": [
-          "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/DIRECTORY-SUBMISSION.md",
+          "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
           "https://platform.openai.com/plugins"
         ]
       },
@@ -72,7 +75,7 @@
         "artifactType": "GITHUB_APP",
         "artifactTypeStatus": "IMPLEMENTED",
         "sourceRepository": "AyobamiH/donestate",
-        "sourceSha": "af620d2ab05bafc89c927ff030be28c3732b0adf",
+        "sourceSha": "c984744c732f598db8859b5b9d4367d1f8da2aef",
         "sourceStatus": "CI_VERIFIED",
         "version": "0.3.0",
         "versionStatus": "IN_REVIEW",
@@ -94,11 +97,11 @@
           "status": "IN_REVIEW",
           "reason": "The owner preview last showed the free Public repositories plan at $0; this remains provider-review metadata rather than evidence of a public billing consequence."
         },
-        "portalReadbackRequired": false,
-        "reason": "The production GitHub App listing is bound here to the deployed DoneState 0.3.0 service source, but GitHub still controls listing publication independently. The owner control plane last showed Pending for publish and explicitly identified the listing as draft and unpublished. Owner-preview install UI and a displayed count of 1 do not prove public availability, entitlement delivery, onboarding, billing, retention or a customer outcome.",
+        "portalReadbackRequired": true,
+        "reason": "Historical owner readback showed Pending for publish and explicitly called the production listing draft and unpublished. That established review record is preserved; no fresh provider readback here proves a later approval or publication. Owner-preview install UI and the displayed count of 1 do not establish public availability or a customer outcome. The source identity is bound to the separately observed deployed service, not to an inferred new Marketplace release.",
         "evidenceUrls": [
-          "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/GITHUB-MARKETPLACE.md",
-          "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/GITHUB-MARKETPLACE-DEVELOPMENT.md",
+          "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/docs/GITHUB-MARKETPLACE.md",
+          "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/docs/GITHUB-MARKETPLACE-DEVELOPMENT.md",
           "https://github.com/marketplace/donestate"
         ]
       },
@@ -118,7 +121,8 @@
           "id": "c4a07fa6-90b2-4597-a4c6-eae66de5a3e8",
           "status": "LIVE_OUTCOME_VERIFIED",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/CURRENT-STATUS.md"
+            "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
+            "https://github.com/AyobamiH/donestate/pull/115"
           ]
         }
       },
@@ -136,23 +140,33 @@
         {
           "id": "DS-P0-GA",
           "severity": "P0",
-          "summary": "Unrestricted self-serve GA still lacks browser readback of the account console, disposable-account deletion acceptance and genuine publisher legal decisions; these owned-channel gates are separate from external directory review.",
+          "summary": "CUST-001/CUST-002 are complete. The disposable customer execution credential is now connected, but fresh objective admission rejected push access before execution. Independent GitHub readback confirms OneClickPostFactory has read-only access to AyobamiH/donestate. Temporary customer selection was removed; the unused credential is retained. Fresh complete customer outcome and remaining public address/contact decisions still gate unrestricted GA.",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/CURRENT-STATUS.md",
-            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/PRIVACY.md"
+            "https://github.com/AyobamiH/donestate/pull/166",
+            "https://github.com/AyobamiH/donestate/blob/dce8772122b50186bbdbece53bd9a3bc21d42da4/evidence/clean-customer-20261007/acceptance.json"
           ]
         },
         {
           "id": "DS-P1-CHANNELS",
           "severity": "P1",
-          "summary": "OpenAI 0.3.0 remains in Review as last observed and GitHub Marketplace remains Pending for publish and unpublished; those external states do not block controlled owned-domain access.",
+          "summary": "Current OpenAI and GitHub Marketplace provider states require fresh readback. Historical Review/Pending for publish records and the newer canonical OpenAI 0.3.2 draft are distinct; none establishes publication or a directory-originated outcome.",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/DIRECTORY-SUBMISSION.md",
-            "https://github.com/AyobamiH/donestate/blob/af620d2ab05bafc89c927ff030be28c3732b0adf/docs/GITHUB-MARKETPLACE.md"
+            "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
+            "https://github.com/marketplace/donestate"
+          ]
+        },
+        {
+          "id": "DS-P1-DEPENDENCIES",
+          "severity": "P1",
+          "summary": "The permanent Worker audit gate detected new high/critical advisory metadata in the inherited dependency tree. PR #166 pins upstream patched versions; local audit is now zero and all core/Worker/plugin checks pass. All three required exact-head CI jobs passed in run 37576065787 on dce8772122b50186bbdbece53bd9a3bc21d42da4. Owner merge and separately authorised production deployment remain required; the current deployed runtime has not changed.",
+          "evidenceUrls": [
+            "https://github.com/AyobamiH/donestate/pull/166",
+            "https://github.com/AyobamiH/donestate/actions/runs/37576065787",
+            "https://github.com/AyobamiH/donestate/blob/dce8772122b50186bbdbece53bd9a3bc21d42da4/evidence/dependency-audit-20261007.json"
           ]
         }
       ],
-      "nextOwnerAction": "Complete browser/disposable-account acceptance and the genuine publisher legal decisions for unrestricted owned-domain GA; continue OpenAI and GitHub Marketplace review work independently without making either directory the sole route to market."
+      "nextOwnerAction": "Review the narrow security refresh in PR #166 at exact head dce8772122b50186bbdbece53bd9a3bc21d42da4 with all required CI passed; merge and production deployment remain separately authorised owner actions. Decide exact temporary write access for OneClickPostFactory to AyobamiH/donestate, have the disposable identity accept it and confirm actual push permission. Then complete the bounded public OAuth objective, unmerged PR, exact-head CI, independent OpsTruth and post-result inspection/deletion without widening App/verifier scope. The execution key is already connected. Remaining legitimate public address/contact decisions still gate unrestricted GA."
     },
     {
       "id": "opstruth",
@@ -167,23 +181,23 @@
       },
       "deployment": {
         "status": "DEPLOYED",
-        "sha": "eef00ca4f242cf99d6b39e8c37ae4b84970a86e4",
-        "version": "0.4.0",
-        "providerVersion": "70759864-063a-465d-a664-b5ee2224507e",
+        "sha": "cbe833dce0646314c189568be6acc21348895ed8",
+        "version": "0.4.1",
+        "providerVersion": "100719fa-a23c-4395-aeaa-844e0a9684e1",
         "exactMainStatus": "UNPROVEN",
         "rollback": {
           "status": "DEPLOYED",
-          "sha": "186ac58c7f76da942bb1b6bfc8c9b18bd2b812d5",
+          "sha": "eef00ca4f242cf99d6b39e8c37ae4b84970a86e4",
           "version": "0.4.0",
-          "providerVersion": "811fe35d-34a2-444f-a36f-a8421931ade2"
+          "providerVersion": "70759864-063a-465d-a664-b5ee2224507e"
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-02T14:00:00Z",
+      "observedAt": "2026-10-07T04:47:10Z",
       "evidenceUrls": [
         "https://github.com/AyobamiH/opstruth-chatgpt-plugin/commit/0ff048499da218c63707de178306c4d2329dad8f",
-        "https://github.com/AyobamiH/opstruth-chatgpt-plugin/actions/runs/37007974978",
-        "https://github.com/AyobamiH/opstruth-chatgpt-plugin/actions/runs/33808853917",
+        "https://github.com/AyobamiH/opstruth-chatgpt-plugin/actions/runs/37557747143",
+        "https://github.com/AyobamiH/opstruth-chatgpt-plugin/actions/runs/33868337668",
         "https://mcp.opstruth.io/health"
       ],
       "chatgpt": {
@@ -201,8 +215,8 @@
           "INSTALLED": "UNPROVEN",
           "LIVE_OUTCOME_VERIFIED": "UNPROVEN"
         },
-        "portalReadbackRequired": false,
-        "reason": "OpsTruth 0.4.0 remains established as public and discoverable in the OpenAI Plugins Directory from the reviewed release record. The repository package is now 0.4.1, but no fresh provider readback here promotes the directory listing to 0.4.1; clean-account installation and a directory-originated useful outcome remain unproven.",
+        "portalReadbackRequired": true,
+        "reason": "Historical 0.4.0 OpenAI publication/discovery evidence is preserved separately from runtime identity. Fresh production smoke on 7 October verifies runtime 0.4.1 at cbe833dce0646314c189568be6acc21348895ed8, 21 read-only tools, signed Evidence Graph and selected-repository GitHub App reads. No fresh provider readback promotes the directory version to 0.4.1 or proves clean external activation.",
         "evidenceUrls": [
           "https://github.com/AyobamiH/opstruth-chatgpt-plugin/blob/0ff048499da218c63707de178306c4d2329dad8f/docs/CURRENT-STATUS.md",
           "https://chatgpt.com/plugins/plugins_6a8d4dc60bf081918a06094873890eb4"
@@ -276,7 +290,7 @@
         {
           "id": "OT-P0-RELEASE-DRIFT",
           "severity": "P0",
-          "summary": "Repository package version is 0.4.1 while the established OpenAI directory release and production release baseline remain 0.4.0; channel version differences must stay explicit until a separately evidenced release transition occurs.",
+          "summary": "Production runtime is verified as 0.4.1; historical OpenAI channel evidence remains 0.4.0. Current main 0ff048499da218c63707de178306c4d2329dad8f differs from deployed runtime source cbe833dce0646314c189568be6acc21348895ed8. Neither version equality nor a healthy endpoint proves exact-current-main deployment or a channel upgrade.",
           "evidenceUrls": [
             "https://github.com/AyobamiH/opstruth-chatgpt-plugin/blob/0ff048499da218c63707de178306c4d2329dad8f/package.json",
             "https://github.com/AyobamiH/opstruth-chatgpt-plugin/blob/0ff048499da218c63707de178306c4d2329dad8f/docs/CURRENT-STATUS.md"
@@ -292,7 +306,7 @@
           ]
         }
       ],
-      "nextOwnerAction": "Keep the read-only verifier and contract-drift lane healthy, reconcile package 0.4.1 versus the established 0.4.0 directory/release baseline through a separately reviewed release when desired, and collect clean external activation evidence without expanding verifier authority."
+      "nextOwnerAction": "Keep the read-only verifier and contract-drift lane healthy. Read back current external channel state and collect independent activation evidence; keep runtime, repository, channel version and exact outcome subjects separate."
     },
     {
       "id": "proof-and-state",
@@ -301,7 +315,7 @@
       "repository": "AyobamiH/proof-and-state",
       "main": {
         "branch": "main",
-        "sha": "dc88e4040599add6e8cf11974d11e71a98c8a9bd",
+        "sha": "bf5da722c7df0af781c677b685624098ba02b749",
         "status": "CI_VERIFIED",
         "protection": "UNPROTECTED"
       },
@@ -319,11 +333,11 @@
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-02T14:22:00Z",
+      "observedAt": "2026-10-07T04:47:10Z",
       "evidenceUrls": [
-        "https://github.com/AyobamiH/proof-and-state/commit/dc88e4040599add6e8cf11974d11e71a98c8a9bd",
-        "https://github.com/AyobamiH/proof-and-state/actions/runs/37019231111",
-        "https://github.com/AyobamiH/proof-and-state/actions/runs/37019231272",
+        "https://github.com/AyobamiH/proof-and-state/commit/bf5da722c7df0af781c677b685624098ba02b749",
+        "https://github.com/AyobamiH/proof-and-state/actions/runs/37028126231",
+        "https://github.com/AyobamiH/proof-and-state/actions/runs/37028125832",
         "https://github.com/AyobamiH/proof-and-state/branches/main"
       ],
       "chatgpt": {
@@ -453,15 +467,17 @@
       "id": "OWNER-ACCEPTANCE-001",
       "order": 2,
       "phase": "VALIDATE",
-      "title": "Run standalone account acceptance",
+      "title": "Complete fresh full-path customer acceptance",
       "owner": "Product owner",
-      "authorityRequired": "REAL_ACCOUNT_AND_DESTRUCTIVE_TEST",
+      "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Use a disposable non-founder account in a real browser to read back the DoneState account console and complete whole-account deletion, preserving only non-secret acceptance receipts. Do not use the primary production account for destructive proof.",
+      "action": "Decide the exact temporary write grant for OneClickPostFactory to AyobamiH/donestate and have the disposable identity accept it. Confirm actual push permission, then complete the bounded public OAuth objective, unmerged PR, exact-head CI, independent VERIFIED and post-result inspection/deletion. The execution credential is already connected; the App and verifier scopes remain unchanged.",
       "prerequisites": [],
-      "waitCondition": "The server-side environment cannot prove the interactive browser rendering or safely manufacture a disposable external identity.",
+      "waitCondition": "Fresh credential status is connected, but objective creation stopped before execution and GitHub confirms the disposable identity has only read permission on the target. Repository access expansion requires the owner decision. Fresh signup/OAuth remains separately unproven.",
       "evidenceIds": [
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027",
+        "PF-E-028"
       ]
     },
     {
@@ -472,12 +488,13 @@
       "owner": "Publisher owner",
       "authorityRequired": "PRIVACY_AND_OPERATOR_DECISION",
       "agentExecutable": false,
-      "action": "Choose a legitimate service address, offered territories and public support/privacy contact path, and complete the ICO fee self-assessment without exposing private contact data.",
+      "action": "Supply a legitimate public geographic business/service address and confirm branded support/privacy contact routes. Preserve the recorded worldwide-where-legally-permitted territory decision and current pre-trading ICO assessment; reassess when activity begins. Keep private home address and UTR out of public evidence.",
       "prerequisites": [],
-      "waitCondition": "These are genuine operator, privacy and jurisdiction decisions that an agent cannot invent.",
+      "waitCondition": "Remaining public address/contact choices require genuine operator authority. Existing territory and pre-trading assessment decisions must not be described as absent.",
       "evidenceIds": [
         "PF-E-002",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
@@ -519,16 +536,17 @@
       "id": "OWNER-OPENAI-001",
       "order": 6,
       "phase": "DISTRIBUTE",
-      "title": "Respond to DoneState OpenAI review",
+      "title": "Read back the canonical OpenAI draft",
       "owner": "Publisher owner",
       "authorityRequired": "PROVIDER_REVIEW_RESPONSE",
       "agentExecutable": false,
-      "action": "Respond to OpenAI 0.3.0 review feedback or identity-continuity clarification while preserving the existing product and avoiding duplicate submissions.",
+      "action": "Read back the canonical publisher and 0.3.2 draft recorded in DoneState E-061; respond to the actual current findings under that identity. Do not treat the historical 0.3.0 Review submission as current or create a duplicate product.",
       "prerequisites": [],
-      "waitCondition": "Review state is controlled by OpenAI and gates only that distribution channel.",
+      "waitCondition": "E-061 records the owner-authorised reset and 0.3.2 draft; fresh canonical provider review/submission/publication readback is absent.",
       "evidenceIds": [
         "PF-E-004",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
@@ -609,13 +627,14 @@
       "owner": "Portfolio owner",
       "authorityRequired": "RELEASE_DECISION",
       "agentExecutable": false,
-      "action": "After the controlled owned-domain pilot, account/deletion acceptance, legal details, support path and operational evidence are satisfactory, make a separate unrestricted GA decision and record accepted residual risks.",
+      "action": "After fresh full-path customer acceptance, the remaining legitimate address/contact decisions, support-path proof and satisfactory operational/pilot evidence, make a separate unrestricted GA decision and record accepted residual risks. Account layout, disposable deletion and production generation-fence controls are already complete.",
       "prerequisites": [
         "OWNER-PILOT-001"
       ],
-      "waitCondition": "Owned-domain controlled access is available, but unrestricted self-serve GA still needs real acceptance and operator decisions.",
+      "waitCondition": "Controlled owned-domain access is available; a fresh complete customer outcome and remaining publisher decisions still gate unrestricted self-serve GA.",
       "evidenceIds": [
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
@@ -1096,9 +1115,9 @@
       "stream": "governance",
       "status": "complete",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2026-12-01",
-      "nextAction": "Preserve channel/provider states as separate evidence dimensions and refresh only from exact repository, deployment or provider readbacks.",
+      "nextAction": "Preserve exact runtime/main/channel boundaries and refresh provider-controlled states only from live owner/provider readback; the current correction preserves historical receipts.",
       "waitCondition": "None. Portfolio reconciliation PR #26 merged through exact-head validation and both post-merge governed checks passed on main.",
       "reentryCondition": "Reopen only if the canonical ledger/generated state diverge, governance checks regress, or a fresh provider observation contradicts current product/channel truth.",
       "dependencies": [
@@ -1107,7 +1126,8 @@
       "evidenceIds": [
         "PF-E-022",
         "PF-E-024",
-        "PF-E-025"
+        "PF-E-025",
+        "PF-E-027"
       ]
     },
     {
@@ -1116,32 +1136,34 @@
       "stream": "legal",
       "status": "blocked",
       "owner": "Publisher owner",
-      "lastUpdated": "2026-10-02",
-      "staleDate": "2026-10-09",
-      "nextAction": "Record a legitimate service address, complete the ICO fee self-assessment, record offered territories, and confirm public support/privacy contact choices for unrestricted DoneState GA.",
-      "waitCondition": "Requires genuine publisher decisions; do not invent an address or publish private contact data.",
+      "lastUpdated": "2026-10-07",
+      "staleDate": "2026-10-17",
+      "nextAction": "Supply a legitimate public geographic business/service address and branded support/privacy contact routes. Preserve worldwide availability where legally permitted and the recorded pre-trading ICO self-assessment; retake that assessment when business activity begins.",
+      "waitCondition": "The territory and current pre-trading ICO decisions already exist in DoneState LEGAL-001. The remaining public address/contact decisions require the publisher and must not expose a home address or UTR.",
       "reentryCondition": "Resume as soon as the publisher decisions are available; controlled owned-domain access does not depend on external-directory approval.",
       "dependencies": [],
       "evidenceIds": [
         "PF-E-002",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
       "id": "OPENAI-REVIEW-001",
-      "title": "Track the DoneState OpenAI 0.3.0 review",
+      "title": "Reconcile the canonical DoneState OpenAI provider state",
       "stream": "distribution",
       "status": "blocked",
       "owner": "Publisher owner",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-16",
-      "nextAction": "Preserve the existing 0.3.0 review submission and respond to provider feedback or identity-continuity clarification without creating a duplicate product.",
-      "waitCondition": "OpenAI 0.3.0 remains externally controlled in Review as last observed; this gates only the OpenAI channel.",
-      "reentryCondition": "Resume on provider feedback, identity confirmation, approval, rejection or other state change.",
+      "nextAction": "Read back the canonical publisher and 0.3.2 draft recorded in DoneState E-061, then respond to actual provider findings under that identity. Preserve historical submissions as history and avoid duplicate products.",
+      "waitCondition": "The historical 0.3.0 Review record was superseded by an owner-authorised reset. E-061 records a canonical 0.3.2 draft, not current submission, approval or publication; fresh provider readback is absent.",
+      "reentryCondition": "Resume on a fresh canonical publisher readback and any provider feedback or review-state change.",
       "dependencies": [],
       "evidenceIds": [
         "PF-E-004",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
@@ -1167,22 +1189,24 @@
     },
     {
       "id": "DS-CUSTOMER-001",
-      "title": "Complete DoneState standalone customer acceptance",
+      "title": "Prove a fresh complete DoneState customer outcome",
       "stream": "customer-readiness",
-      "status": "active",
+      "status": "blocked",
       "owner": "DoneState maintainers",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Read back the production account console through a real browser and prove whole-account deletion with a disposable non-founder account, then exercise the support path.",
-      "waitCondition": "Account controls, deletion implementation, webhook health and owned-domain service are deployed; browser-only account-console readback and destructive disposable-account acceptance remain unproven.",
-      "reentryCondition": "Close customer controls after those real acceptance receipts exist; do not delete the primary production account for proof.",
+      "nextAction": "Obtain the exact owner decision on temporary repository write access for OneClickPostFactory to AyobamiH/donestate, confirm accepted push permission, then run the bounded public-repository OAuth objective through PR-only publication, exact-head CI, OpsTruth verification and post-result inspection/deletion. Record fresh signup/OAuth separately; exercise support separately.",
+      "waitCondition": "CUST-001/CUST-002 are complete. Fresh E-067 continuation confirms the execution credential is connected, but objective admission rejected repository push access before a run or model execution. GitHub independently reports permission=read for the disposable identity on the exact target. The temporary maintenance selection was removed and the key remains connected and unused.",
+      "reentryCondition": "Resume when the owner approves the exact temporary write grant, the disposable identity accepts it and actual push access is confirmed. Use the public OAuth path without App/verifier scope expansion; retain each fresh journey step and never substitute old canary evidence.",
       "dependencies": [
-        "DS-MKTDEV-001",
+        "DS-CANARY-001",
         "DS-LEGAL-001"
       ],
       "evidenceIds": [
         "PF-E-003",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027",
+        "PF-E-028"
       ]
     },
     {
@@ -1240,16 +1264,17 @@
       "stream": "verification",
       "status": "complete",
       "owner": "OpsTruth maintainers",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2026-12-01",
-      "nextAction": "Preserve the deployed authenticated selected-repository read lane and hourly contract-drift sentinel as current evidence; expand scope only through a new reviewed authority decision.",
+      "nextAction": "Preserve the verified 0.4.1 selected-repository read lane and contract-drift sentinel; fresh smoke passed on 7 October. Expand verifier scope only through a separate reviewed authority decision.",
       "waitCondition": "None. The verifier repair deployed from eef00ca4f242cf99d6b39e8c37ae4b84970a86e4 and produced the complete v2 response accepted by DoneState for the fresh successor.",
       "reentryCondition": "Reopen only on contract drift, credential/scope regression, deployment regression or an explicit scope-expansion proposal.",
       "dependencies": [],
       "evidenceIds": [
         "PF-E-005",
         "PF-E-020",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
@@ -1275,39 +1300,45 @@
     },
     {
       "id": "AP-INTEGRATION-001",
-      "title": "Complete AgentProof consequence receipts",
+      "title": "Gate AgentProof production consequence integration",
       "stream": "verification",
       "status": "deferred",
       "owner": "AgentProof and DoneState maintainers",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2027-01-15",
-      "nextAction": "Resume AgentProof consequence-receipt work only after standalone customer acceptance or when a customer requirement makes it the selected priority.",
-      "waitCondition": "The DoneState-to-OpsTruth completion boundary is already proven without AgentProof; adding another evidence layer is not an owned-domain launch blocker.",
-      "reentryCondition": "Resume through a separately reviewed consequence/evidence boundary.",
+      "nextAction": "Retain the repository-patch prerelease and candidate lifecycle adapter as separate evidence. Consider DoneState integration only after measured independent adoption, a production approval/signing provider and separately reviewed action, threat-model and verifier contracts.",
+      "waitCondition": "RC5 GitHub/npm artifacts match and a clean development consumer passed. RC6 GitHub prerelease is published from a0ee17a70d05bc3c339c0c15be6bb38b4517771a; RC6 npm publication remains unproven. Current runtime supports repository_patch.v1 only. DoneState-to-OpsTruth v2 already completes without AgentProof and no production integration is enabled.",
+      "reentryCondition": "Resume only through a separately selected customer requirement, measured adoption and reviewed production authority; receipt integrity never substitutes for OpsTruth outcome verification.",
       "dependencies": [
         "DS-CANARY-001"
       ],
       "evidenceIds": [
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
       "id": "DS-RELEASE-001",
       "title": "Gate DoneState owned-domain GA and parallel channel releases",
       "stream": "release",
-      "status": "active",
+      "status": "blocked",
       "owner": "Publisher owner",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Advance controlled owned-domain access now; promote to unrestricted self-serve GA only after customer browser/deletion acceptance and publisher legal decisions. Publish OpenAI or Marketplace separately when each provider channel is ready.",
-      "waitCondition": "Owned runtime and verifier loop are proven. Unrestricted GA still has owned-channel acceptance/legal gates; external directory review is not a prerequisite.",
-      "reentryCondition": "Close the owned GA gate when those owned-channel conditions pass; keep external channel release states separate.",
+      "nextAction": "Review and merge the patched Worker candidate at exact head dce8772122b50186bbdbece53bd9a3bc21d42da4 with required CI passed; authorise production deployment separately. Keep controlled owned-domain access available. Complete the fresh customer journey after the exact repository write-access decision and accepted disposable-account grant; the execution credential is already connected. Close remaining LEGAL-001 public address/contact requirements before unrestricted GA. Advance external channels only on their own provider evidence.",
+      "waitCondition": "New high/critical dependency advisories stopped the inherited Worker lock at its permanent audit gate. The patched candidate passes local checks and all required exact-head CI jobs; owner merge/deployment remain distinct gates. CUST-001/CUST-002 are completed prerequisites. Fresh customer admission is blocked on actual repository write access rather than an absent execution key. The complete fresh outcome, including signup/OAuth and post-result deletion, and remaining LEGAL-001 decisions are still unproven.",
+      "reentryCondition": "Advance the dependency refresh on exact-head CI and owner review, preserving the audit gate. Resume the bounded public OAuth objective after actual customer push permission is confirmed. Close owned GA only after fresh complete customer and legal evidence; keep App/verifier scope and channel publication separate.",
       "dependencies": [
-        "DS-CANARY-001"
+        "DS-CANARY-001",
+        "DS-CUSTOMER-001",
+        "DS-LEGAL-001"
       ],
       "evidenceIds": [
         "PF-E-024",
-        "PF-E-026"
+        "PF-E-026",
+        "PF-E-027",
+        "PF-E-028",
+        "PF-E-029"
       ]
     },
     {
@@ -1316,10 +1347,10 @@
       "stream": "governance",
       "status": "active",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
       "nextAction": "After the portfolio repair is green on main, protect Proof & State main with required governance checks and resolved conversations, then separately review the gtm-production environment boundary.",
-      "waitCondition": "Provider readback on 2 October shows Proof & State main unprotected; this is now the remaining parent-repository governance gap rather than a fleet-wide DoneState/OpsTruth gap.",
+      "waitCondition": "Fresh provider readback on 7 October shows Proof & State main unprotected. The second trusted human reviewer and repository-admin policy decision remain explicit owner gates.",
       "reentryCondition": "Close after provider protection is active and independently read back without weakening existing product-repository protections.",
       "dependencies": [
         "PF-GOV-001"
@@ -1327,7 +1358,8 @@
       "evidenceIds": [
         "PF-E-006",
         "PF-E-023",
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-027"
       ]
     },
     {
@@ -1809,6 +1841,57 @@
       "outcome": "Proof & State now has exact evidence that the patched dependency lock and permanent high-severity audit gate are live on the owned DoneState service without changing external distribution authority.",
       "content": "Exact DoneState main, exact-head and post-merge CI, production deployment, Worker/container identities, dependency-audit gate, unchanged 20-tool MCP contract and channel-state separation.",
       "measurement": "One protected security PR merged; three exact-head required checks passed; one permanent high-severity audit gate passed; one post-merge CI passed; one production deployment passed; zero MCP tools added; zero external provider states mutated."
+    },
+    {
+      "id": "PF-E-027",
+      "date": "2026-10-07",
+      "identity": "Fresh portfolio closeout and version-specific publication reconciliation",
+      "situation": "The screenshot referred to an older unfinished rollout. Later live and repository evidence had already completed the fresh DoneState v2 successor and account-control acceptance, while the parent still described them as blocked and pinned older runtime/source identities. AgentProof documentation also incorrectly said RC5 had never reached npm.",
+      "verification": "Fresh GitHub readback pins DoneState main e24f543b58b69d861be1f2f5153903a654a9f5ea with successful CI 37152045333 and completed CUST-001/CUST-002 in PR #164. Runtime deployment 37143245994 records c984744c732f598db8859b5b9d4367d1f8da2aef and Worker c80942ed-6854-4bfb-bdd2-b800df7b1464; corrected production fence 37143489929 passed. Fresh service readback shows disconnected execution credential, no selected repository and no active run for the disposable account, so no new customer execution is claimed. OpsTruth fresh production smoke passed at 0.4.1/cbe833dce0646314c189568be6acc21348895ed8 with 21 read-only tools and signed Evidence Graph; successful deployment 33868337668 records final Worker 100719fa-a23c-4395-aeaa-844e0a9684e1. Parent main bf5da722c7df0af781c677b685624098ba02b749 has successful Governance 37028126231 and GTM contracts 37028125832, and remains unprotected. AgentProof RC5 npm and GitHub tarballs share SHA-256 a7e085a9202e88db02511309b2ee5f9c62cd4bbb69cb00c4c609b8116eee2a7a with 81 identical entries, verified registry signature and a clean development prepare/approval/execute/verify/retry/compensate result. RC6 GitHub release at a0ee17a70d05bc3c339c0c15be6bb38b4517771a passed 37572076728 with asset SHA-256 f9dd7eb65f5809c69584624272c0c7dc13a84209c4a2daee338dfee43f5050ca; registry version readback lists RC5 only. AgentProof PR #7 contains the reviewable correction. No new package publication, customer outcome, channel promotion or runtime authority expansion is claimed. Website PR #22 merged the RC6 product record; PR #23 repaired its stale acceptance assertion. Exact merge 16b4e253a84f04847fe4afb08c1a5d673740ff0d passed CI 37572879419, integration 37572879447 and production deploy 37572879415 to Worker 0b87b482-b55d-45f4-afd5-5bfe3b5cc54d. The deployment job passed canonical live routes, branding/SSR, owned bundles and desktop/mobile browser readback with zero page errors and vendor requests.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Preserve exact current-source/runtime boundaries and the completed control evidence. Resume the fresh customer path only after secure credential reconnection and confirmed scope; keep remaining owner/provider decisions explicit.",
+        "waitCondition": "None for evidence reconciliation; customer capability, remaining public contact details and provider/admin decisions remain separately tracked.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "Current records distinguish completed account controls and development prereleases from the blocked fresh customer journey, RC6 npm publication, external provider states and production AgentProof integration.",
+      "content": "Current source-ledger pin, product runtime identities, account-control closure, fresh capability boundary, canonical OpenAI draft source, existing legal decisions, version-specific AgentProof evidence and candidate integration contract. Historical reconciliations are unchanged.",
+      "measurement": "Two completed customer-control prerequisites retained; one live OpsTruth production smoke passed; one exact RC5 artifact comparison and registry-signature verification passed; one clean development consumer passed; zero customer model runs, new npm publications, external channel promotions or authority expansions. One exact website merge passed CI, integration, deployment and live desktop/mobile readback."
+    },
+    {
+      "id": "PF-E-028",
+      "date": "2026-10-07",
+      "identity": "Customer credential connected; exact repository permission blocker identified",
+      "situation": "After PF-E-027 reconciliation, the user connected the disposable customer OpenAI execution credential and requested continuation of the fresh acceptance.",
+      "verification": "Fresh MCP status confirms connection at 2026-10-07T05:03:33.325Z, zero daily runs, no active run and null last-use time. The temporary AyobamiH/donestate selection used existing installation 157513439 in pr_only mode with schedules/automatic repair disabled. create_objective with autoStart=false, a three-file documentation budget and the pinned verifier returned authenticated GitHub user cannot push to this repository before a run was created. Independent GitHub collaborator-permission readback confirms OneClickPostFactory permission=read on AyobamiH/donestate. The newly created customer selection was removed and empty selection confirmed; the execution key remains connected and unused. DoneState PR #166 now at exact head dce8772122b50186bbdbece53bd9a3bc21d42da4 records E-067 and the sanitised step receipt; local npm run check passed 40 tests plus contract, docs/governance and package checks. This PR is reviewable evidence, not a customer-generated PR or an approved merge.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "Obtain the owner decision for the exact temporary write grant and accepted customer authority, then continue the bounded public OAuth objective within the existing verifier repository scope.",
+        "waitCondition": "OneClickPostFactory currently has only read permission on the exact repository. Fresh complete customer and LEGAL-001 gates remain; no model execution or consequence result exists.",
+        "staleDate": "2026-10-14"
+      },
+      "outcome": "The absent-credential blocker is resolved. The current blocker is repository write access, evidenced before execution. Historical PF-E-027 and DoneState E-066 keep their original observations.",
+      "content": "Fresh connection status, exact read-only repository permission, rejected pre-execution admission, reversible customer-selection cleanup and retained credential. No token, key, credential fingerprint, setup ticket or session is retained.",
+      "measurement": "One fresh credential connection, one bounded selection, one rejected objective admission, one independent read-only permission result and one selection removal. Zero customer model runs, branches, commits, PRs, verifier outcomes, account deletions or permission expansions."
+    },
+    {
+      "id": "PF-E-029",
+      "date": "2026-10-07",
+      "identity": "DoneState dependency patch passed exact-head CI after fresh audit rejection",
+      "situation": "Customer acceptance evidence PR #166 encountered new npm advisory metadata after PF-E-027. Its initial exact-head CI 37575211329 passed both core jobs but failed the permanent Worker high-severity audit gate with eight high and one critical findings across four advisory families.",
+      "verification": "DoneState PR #166 at dce8772122b50186bbdbece53bd9a3bc21d42da4 adds only exact patched transitive overrides, their npm-generated lock resolution and matching E-068/audit evidence alongside the customer-access record. MCP client 2.2.0 and nested core 2.2.0, SDK 1.31.0, proxy-addr 2.0.8, sharp 0.35.5 and source-map-js 1.2.2 resolve the reported package paths. Local clean npm ci, zero-vulnerability audit, 40 root tests, 142 Worker tests and plugin validation pass. Worker bundle dry-run passes; full container build is blocked locally because Docker is absent. Exact-head CI 37576065787 completed successfully on dce8772122b50186bbdbece53bd9a3bc21d42da4. All required jobs core (22), core (24) and hosted-plugin passed; hosted-plugin logs confirm zero vulnerabilities at the permanent high-severity gate, 142 Worker tests and plugin validation. No source merge, production deployment or customer completion is claimed.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "active",
+        "nextAction": "Obtain owner merge review for the exact green PR head and separately authorised production deployment. Preserve the permanent high-severity audit gate.",
+        "waitCondition": "Exact-head CI and local checks are green; owner merge and production deployment remain separate gates.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The permanent audit gate detected fresh risk and stopped the inherited candidate. The patched tree is clean and fully tested locally and in all required exact-head CI jobs; owner merge and production change remain pending. The E-067 repository-permission blocker is independent.",
+      "content": "Upstream advisory patch ranges, exact candidate head, npm-generated lock/audit snapshot and local validation. Historical PF-E-027/PF-E-028 and DoneState E-049/E-067 keep their separate scopes.",
+      "measurement": "Initial required CI: two core successes, one hosted audit failure. Patched local audit: zero vulnerabilities; 182 tests passed in total; no security gate weakened, MCP tool added, authority expanded or runtime deployed. Patched exact-head CI 37576065787: all three required jobs success; zero vulnerabilities at the unchanged audit gate."
     }
   ]
 }

@@ -22,19 +22,25 @@ Read Actions, issues, and metadata; read and write code and pull requests. No ad
 
 ## Completion model
 
-A successful local implementation and green CI are execution evidence, not completion proof. DoneState reaches `VERIFIED` only after a matching signed attestation from a pinned independent verifier. Uncertain observations remain retryable in `AWAITING_VERIFICATION`.
+A successful local implementation and green CI are execution evidence, not completion proof. DoneState reaches `VERIFIED` only after a complete matching `donestate.verification-contract.v2` response containing the report and signed attestation from a pinned independent verifier. Uncertain observations remain retryable in `AWAITING_VERIFICATION`.
 
-## Maintenance canary
+## Current maintenance proof
 
-The canonical owner-side canary is run `b4242932-0bc1-4876-a202-634d9c12d72a`, branch `donestate/b4242932-0bc1-4876-a202-634d9c12d72a`, head `ffec48e6c5abd9cef840ab591896613769d3e779`, and [PR #22](https://github.com/AyobamiH/donestate/pull/22). The PR was later merged by the owner as `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`; the automatic maintenance executor did not gain merge authority. The OpsTruth outcome was `uncertain`, and post-merge workflow `33474288066` failed its governance impact gate, so neither the PR head nor merge is independently verified.
+Fresh successor `c4a07fa6-90b2-4597-a4c6-eae66de5a3e8` is independently `VERIFIED`. [PR #115](https://github.com/AyobamiH/donestate/pull/115) remains intentionally open at head `41f1ae3b0fed670e64bd99f1bcb1aea9c9e7e869`, with exact-head CI `33806832575`. Preserve this PR-only evidence rather than merging it as unfinished work.
 
-## OpenAI directory review
+## Historical maintenance canary
+
+The earlier owner-side canary was run `b4242932-0bc1-4876-a202-634d9c12d72a`, branch `donestate/b4242932-0bc1-4876-a202-634d9c12d72a`, head `ffec48e6c5abd9cef840ab591896613769d3e779`, and [PR #22](https://github.com/AyobamiH/donestate/pull/22). The PR was later merged by the owner as `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`; the automatic maintenance executor did not gain merge authority. The OpsTruth outcome was `uncertain`, and post-merge workflow `33474288066` failed its governance impact gate, so neither historical subject is independently verified. This does not invalidate the separately proven successor.
+
+## OpenAI directory state
+
+Current source E-061 records an owner-authorised reset and canonical `0.3.2` draft with 20 tools. It does not prove current submission, approval or publication. Read back the canonical publisher before acting; do not retain a deleted submission as current or create a duplicate product. The following earlier submission is historical evidence.
 
 DoneState version `0.2.0` was submitted on 2026-08-30 and the OpenAI Platform reports status `Review`. The submitted surface includes the repository-hosted demo and icons, five positive cases, three non-trigger cases, 19 scanned MCP tools, 57 annotation justifications, and a dedicated server-enforced read-only reviewer account.
 
 Final review-path source is `1588c0588dfcbfcefc70cda71e8197c1b14b7fed`; post-merge CI `33297909263` and deployment `33297909318` succeeded. See the [submission evidence](../../evidence/donestate/2026-08-30-openai-review-submission.md).
 
-`Review` is not approval or publication and does not change the fresh maintenance canary's `AWAITING_VERIFICATION` state.
+`Review` is not approval or publication. The historical canary remains `AWAITING_VERIFICATION`; the fresh successor has separate `VERIFIED` evidence.
 
 ## GitHub Marketplace review
 
@@ -50,4 +56,10 @@ See the [development lifecycle and recovery evidence](../../evidence/marketplace
 
 ## Project-state source
 
-DoneState's canonical project ledger is `governance/project-ledger.json` at portfolio-pinned current-main commit `4543c4dcbc1f5f95d1d53ef0a1f8cbeafd8ead4a`. That source is currently red because workflow `33474288066` failed the governance impact gate. Proof & State records both the exact pin and its failed check rather than converting repository state into unsupported proof.
+DoneState's canonical project ledger is `governance/project-ledger.json` at current-main commit `e24f543b58b69d861be1f2f5153903a654a9f5ea`; CI `37152045333` passed. Runtime source is separately recorded as `c984744c732f598db8859b5b9d4367d1f8da2aef`, deployed by `37143245994` to Worker `c80942ed-6854-4bfb-bdd2-b800df7b1464`.
+
+CUST-001/CUST-002 are complete in PR #164: real disposable deletion, shared account layout and production generation-fence acceptance passed. RELEASE-001 remains blocked on a fresh full customer journey and remaining legitimate public address/contact details. Fresh continuation E-067 confirms the execution credential is connected, but objective admission stopped before execution; GitHub confirms the disposable account has only read access to the target. The temporary customer maintenance selection was removed and the key retained. No customer run, PR or verification is claimed. AgentProof and broader fleet authority remain deferred.
+
+## Fresh dependency security follow-up
+
+The inherited Worker lock failed the permanent high-severity audit gate in fresh PR #166 CI `37575211329` with eight high and one critical affected package records. Candidate head `dce8772122b50186bbdbece53bd9a3bc21d42da4` pins upstream patches without changing runtime packages, scopes or the gate. Local clean install/audit (zero vulnerabilities), 40 core tests, 142 Worker tests, plugin validation and Worker bundle dry-run passed. Exact-head CI `37576065787` passed all three required jobs on the same exact candidate head; hosted logs confirm zero vulnerabilities at the unchanged audit gate. The full local container build requires Docker, which is absent here; no deployment or production upgrade is claimed. Owner merge and deployment decisions remain separate.

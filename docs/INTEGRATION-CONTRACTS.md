@@ -15,7 +15,7 @@ Rules:
 
 ## DoneState to OpsTruth
 
-Contract: `donestate.verification-handoff.v2` to a pinned independent verifier, returning a signed `donestate.verification-attestation.v2`.
+Contract: `donestate.verification-handoff.v2` to a pinned independent verifier, returning the complete `donestate.verification-contract.v2` response with `contractVersion`, `report`, and signed `attestation`. The nested attestation uses `donestate.verification-attestation.v2`; returning that signed object alone is insufficient.
 
 The handoff binds the run ID, objective digest, execution snapshot digest, nonce, repository, base SHA, head SHA, PR, acceptance criteria, machine-checkable requirements, action digests, and event-chain head.
 
@@ -25,9 +25,15 @@ Decision semantics:
 - `failed`: requirement disproved; terminal fail-closed state.
 - `uncertain`: evidence is not yet conclusive; remain `AWAITING_VERIFICATION` and permit a fresh observation.
 
-## OpsTruth to AgentProof
+The fresh run `c4a07fa6-90b2-4597-a4c6-eae66de5a3e8` reached `VERIFIED` through this complete response for DoneState PR #115. That PR remains intentionally unmerged. Historical uncertain canaries retain their original state.
 
-AgentProof may index a signed verification record and later GitHub, deployment, package, or release receipts. It must preserve the distinction between signature integrity, signer trust, and fresh observation of the underlying outcome.
+## Candidate AgentProof integration
+
+Current AgentProof runtime supports `agentproof.repository_patch.v1` only. Candidate DoneState lifecycle actions and profiles are documentation, not enabled runtime authority. Production integration requires measured independent adoption, a production approval/signing provider, an explicit action contract and threat model, and a separately reviewed consequence authority.
+
+The proposer, approval authority, executor, receipt signer and offline verifier retain separate roles. A receipt establishes its signed transaction claims under explicit signer trust; OpsTruth independently observes external evidence. Signature validity never promotes a DoneState run to `VERIFIED` or proves a merge, deployment, package publication or live result.
+
+The existing DoneState-to-OpsTruth completion path does not depend on AgentProof. No automatic merge, deployment, publication or retry authority is granted by this candidate contract.
 
 ## Product repositories to Proof & State
 
