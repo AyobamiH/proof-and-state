@@ -37,3 +37,14 @@
 - Add CrabBox or ClawPatch only for isolation or recovery requirements not met by direct Codex execution and repository-native CI.
 - Pilot a second selected repository.
 - Introduce fleet scheduling only after repository-by-repository authority and verification policies are independently auditable.
+
+
+## Agent and search discoverability programme
+
+1. Keep the shared operating contract and machine-discovery standard generated and CI-checked.
+2. Land Tail Wagging's agent subcontract surface first because it has a direct revenue path: machine service catalogue, structured job handoff, existing Stripe package checkout, quote-first custom repairs and outside-in verification.
+3. Repair `oneclickwebsitedesignfactory.com` next because its root currently lacks canonical, H1, internal links and structured data.
+4. Repair `opstruth.io` canonical state, then PostSteward root structured data/alt, then OneClickPostFactory canonical/metadata/schema.
+5. Keep Agent Shop indexing under provider-state monitoring; sitemap submission and IndexNow notification are not indexing evidence.
+6. Apply the same public crawler contract across sites only where public crawling is intended. Never expose secrets, private payloads or customer data for discoverability.
+7. Advertise payment/provider capabilities only when they are actually configured and read back.
