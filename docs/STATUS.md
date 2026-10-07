@@ -9,10 +9,11 @@ The canonical ordered portfolio backlog, source-ledger commit, owners, wait cond
 | Area | Status | Evidence |
 | --- | --- | --- |
 | DoneState owned service | Deployed; controlled access | Runtime source `c984744c732f598db8859b5b9d4367d1f8da2aef`; deploy `37143245994`; Worker `c80942ed-6854-4bfb-bdd2-b800df7b1464`; sandbox `sha256:6e914052632064f8d611df8107ccb43bab2c63c4f292a97134593771fd9209c1`. Current main is a separate, later subject |
-| DoneState current main | Protected, CI-verified and dependency-audit gated | `e24f543b58b69d861be1f2f5153903a654a9f5ea`; CI `37152045333` passed; current release reconciliation is PR #165 |
+| DoneState current main | Protected; dated CI pass; new dependency follow-up | `e24f543b58b69d861be1f2f5153903a654a9f5ea`; CI `37152045333` passed; release reconciliation merged in PR #165 |
+| DoneState Worker security candidate | Local audit clean; exact-head CI passed | PR #166 head `dce8772122b50186bbdbece53bd9a3bc21d42da4`; CI `37576065787`; five patched overrides, zero local vulnerabilities, 40 core and 142 Worker tests passed. Owner merge/deployment remain separate |
 | DoneState independent verification | Fresh successor VERIFIED | Run `c4a07fa6-90b2-4597-a4c6-eae66de5a3e8`; open PR #115 at head `41f1ae3b0fed670e64bd99f1bcb1aea9c9e7e869`; exact-head CI `33806832575`; complete OpsTruth v2 response accepted |
 | DoneState account controls | Complete, scoped acceptance passed | CUST-001/CUST-002 closed in PR #164; E-064 real disposable deletion and E-065 shared-layout/production generation-fence evidence; rehearsal `37143489929` passed |
-| DoneState fresh customer outcome | Blocked at execution credential | E-066 and fresh connected-service readback show an empty disposable account without execution credential or selected repository. Fresh signup/OAuth, execution, unmerged PR, independent VERIFIED and post-result deletion remain unproven |
+| DoneState fresh customer outcome | Credential connected; repository admission blocked | Fresh E-067 continuation confirms key connection at `2026-10-07T05:03:33.325Z`. Objective admission stopped before execution; GitHub confirms `OneClickPostFactory` has only `read` access to `AyobamiH/donestate`. Temporary maintenance selection was removed and the unused key retained. Fresh complete outcome remains unproven |
 | DoneState Marketplace webhook health | Deployed | PR #127; merge `6964e2118c77d35e1e2abdbc69bcdaa05fe0c997`; deploy `37011174983`; bounded 5xx operational failure receipts and hourly escalation |
 | DoneState aggregate funnel | Deployed | PR #129; merge `7b25b6ae288d02ab9a6354a740ec06681d3ffc49`; privacy-minimal daily counters, 90-day retention, no customer identifiers |
 | DoneState OpenAI channel | Current provider readback required | The 0.3.0 Review record is historical. Current source E-061 records the owner-authorised reset and canonical 0.3.2 draft with 20 tools; it does not establish current submission, approval or publication |
@@ -37,7 +38,7 @@ The earlier owner-side DoneState run `b4242932-0bc1-4876-a202-634d9c12d72a` rema
 
 ## Remaining owner/external gates
 
-1. Reconnect the disposable customer's execution credential securely, confirm repository/verifier scope, then prove the fresh full journey through independent VERIFIED and post-result deletion. Retain completed control tests as prerequisites.
+1. Decide the exact temporary repository write grant for the disposable customer, have the account accept it and confirm actual push access, then prove the bounded public OAuth journey through independent VERIFIED and post-result deletion. The execution credential is connected. Preserve the existing App/verifier scope and completed control prerequisites.
 2. Supply the remaining legitimate public geographic business/service address and branded support/privacy routes; preserve existing territory and pre-trading assessment decisions.
 3. Exercise the three outstanding provider-controlled Marketplace development transitions without touching production review state.
 4. Read back the canonical OpenAI draft/provider state and production Marketplace state, then respond to actual findings independently.

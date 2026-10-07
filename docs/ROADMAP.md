@@ -15,8 +15,9 @@
 ## Current closeout
 
 - Keep the current-source and deployed-runtime identities distinct: DoneState main `e24f543b58b69d861be1f2f5153903a654a9f5ea` and deployed UI source `c984744c732f598db8859b5b9d4367d1f8da2aef`. External directory publication is not a prerequisite for controlled access.
+- Review the narrow DoneState Worker security refresh in PR #166 after exact-head CI, then separately authorise production deployment; keep the existing high-severity audit gate.
 - Preserve completed CUST-001/CUST-002 evidence: shared account pages, real disposable deletion, active-state refusal and production generation fencing.
-- Reconnect the disposable customer execution credential securely, confirm selected-repository/verifier scope, then prove one fresh complete customer outcome. Historical control/canary evidence does not complete this new journey.
+- The disposable execution credential is connected. Decide and confirm the exact temporary repository write grant, then prove one fresh complete public OAuth customer outcome within the existing verifier scope. Historical control/canary evidence does not complete this new journey.
 - Supply the remaining legitimate public address and branded support/privacy routes. Worldwide-where-legally-permitted availability and the current pre-trading ICO assessment are already recorded; revisit the assessment when activity begins.
 - Observe natural Marketplace webhook-health and aggregate-funnel snapshots; do not manufacture production failures or customer identifiers.
 - Finish the isolated GitHub Marketplace development transitions `changed`, `pending_change`, and `pending_change_cancelled` without touching the production review listing.

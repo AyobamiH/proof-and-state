@@ -38,14 +38,16 @@
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-07T04:47:10Z",
+      "observedAt": "2026-10-07T05:24:50Z",
       "evidenceUrls": [
         "https://github.com/AyobamiH/donestate/commit/e24f543b58b69d861be1f2f5153903a654a9f5ea",
         "https://github.com/AyobamiH/donestate/actions/runs/37152045333",
         "https://github.com/AyobamiH/donestate/actions/runs/37143245994",
         "https://github.com/AyobamiH/donestate/actions/runs/37143489929",
         "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
-        "https://github.com/AyobamiH/donestate/pull/115"
+        "https://github.com/AyobamiH/donestate/pull/115",
+        "https://github.com/AyobamiH/donestate/pull/166",
+        "https://github.com/AyobamiH/donestate/actions/runs/37576065787"
       ],
       "chatgpt": {
         "version": "0.3.0",
@@ -138,10 +140,10 @@
         {
           "id": "DS-P0-GA",
           "severity": "P0",
-          "summary": "CUST-001 and CUST-002 are complete: account layout, real disposable deletion and production generation fencing passed. Unrestricted GA remains blocked on a fresh complete customer outcome and remaining legitimate public address/contact decisions. The connected disposable account currently has no execution credential or selected repository.",
+          "summary": "CUST-001/CUST-002 are complete. The disposable customer execution credential is now connected, but fresh objective admission rejected push access before execution. Independent GitHub readback confirms OneClickPostFactory has read-only access to AyobamiH/donestate. Temporary customer selection was removed; the unused credential is retained. Fresh complete customer outcome and remaining public address/contact decisions still gate unrestricted GA.",
           "evidenceUrls": [
-            "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
-            "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/evidence/clean-customer-20261003/acceptance.json"
+            "https://github.com/AyobamiH/donestate/pull/166",
+            "https://github.com/AyobamiH/donestate/blob/dce8772122b50186bbdbece53bd9a3bc21d42da4/evidence/clean-customer-20261007/acceptance.json"
           ]
         },
         {
@@ -152,9 +154,19 @@
             "https://github.com/AyobamiH/donestate/blob/e24f543b58b69d861be1f2f5153903a654a9f5ea/governance/project-ledger.json",
             "https://github.com/marketplace/donestate"
           ]
+        },
+        {
+          "id": "DS-P1-DEPENDENCIES",
+          "severity": "P1",
+          "summary": "The permanent Worker audit gate detected new high/critical advisory metadata in the inherited dependency tree. PR #166 pins upstream patched versions; local audit is now zero and all core/Worker/plugin checks pass. All three required exact-head CI jobs passed in run 37576065787 on dce8772122b50186bbdbece53bd9a3bc21d42da4. Owner merge and separately authorised production deployment remain required; the current deployed runtime has not changed.",
+          "evidenceUrls": [
+            "https://github.com/AyobamiH/donestate/pull/166",
+            "https://github.com/AyobamiH/donestate/actions/runs/37576065787",
+            "https://github.com/AyobamiH/donestate/blob/dce8772122b50186bbdbece53bd9a3bc21d42da4/evidence/dependency-audit-20261007.json"
+          ]
         }
       ],
-      "nextOwnerAction": "Reconnect the disposable customer execution credential securely, confirm selected-repository/verifier authority, and prove one fresh complete customer journey. Supply the remaining legitimate public geographic business/service address and branded support/privacy routes before unrestricted GA. Reassess the recorded ICO position when business activity begins; worldwide availability where legally permitted is already decided."
+      "nextOwnerAction": "Review the narrow security refresh in PR #166 at exact head dce8772122b50186bbdbece53bd9a3bc21d42da4 with all required CI passed; merge and production deployment remain separately authorised owner actions. Decide exact temporary write access for OneClickPostFactory to AyobamiH/donestate, have the disposable identity accept it and confirm actual push permission. Then complete the bounded public OAuth objective, unmerged PR, exact-head CI, independent OpsTruth and post-result inspection/deletion without widening App/verifier scope. The execution key is already connected. Remaining legitimate public address/contact decisions still gate unrestricted GA."
     },
     {
       "id": "opstruth",
@@ -457,14 +469,15 @@
       "phase": "VALIDATE",
       "title": "Complete fresh full-path customer acceptance",
       "owner": "Product owner",
-      "authorityRequired": "CUSTOMER_CREDENTIAL_AND_ACCOUNT_AUTHORIZATION",
+      "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Connect the disposable customer execution credential through the secure form and confirm the selected repository and verifier authority. Then complete and record the fresh customer journey through objective, execution, unmerged PR, independent VERIFIED, account inspection and post-result deletion. Completed CUST-001/CUST-002 controls are retained as prerequisites, not repeated as unresolved work.",
+      "action": "Decide the exact temporary write grant for OneClickPostFactory to AyobamiH/donestate and have the disposable identity accept it. Confirm actual push permission, then complete the bounded public OAuth objective, unmerged PR, exact-head CI, independent VERIFIED and post-result inspection/deletion. The execution credential is already connected; the App and verifier scopes remain unchanged.",
       "prerequisites": [],
-      "waitCondition": "Fresh connected-service readback shows no customer execution credential or selected repository. An agent cannot supply a customer-owned key or manufacture signup/OAuth evidence from an existing authenticated connection.",
+      "waitCondition": "Fresh credential status is connected, but objective creation stopped before execution and GitHub confirms the disposable identity has only read permission on the target. Repository access expansion requires the owner decision. Fresh signup/OAuth remains separately unproven.",
       "evidenceIds": [
         "PF-E-024",
-        "PF-E-027"
+        "PF-E-027",
+        "PF-E-028"
       ]
     },
     {
@@ -1182,9 +1195,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Reconnect the disposable customer execution credential through the secure form, confirm selected-repository and independent-verifier authority, then record fresh signup/OAuth, connect, selection, objective, execution, unmerged PR, OpsTruth VERIFIED, account inspection and post-result deletion. Exercise the support path separately.",
-      "waitCondition": "CUST-001 and CUST-002 are complete in DoneState PR #164 (E-064/E-065). E-066 and fresh connected-service readback show an empty OneClickPostFactory baseline without an execution credential or selected repository. Historical deletion and maintenance receipts do not prove this new full-path outcome.",
-      "reentryCondition": "Resume when a usable customer-owned execution credential is connected securely and repository/verifier scope is confirmed. Preserve each fresh acceptance step; never delete the publisher account for proof.",
+      "nextAction": "Obtain the exact owner decision on temporary repository write access for OneClickPostFactory to AyobamiH/donestate, confirm accepted push permission, then run the bounded public-repository OAuth objective through PR-only publication, exact-head CI, OpsTruth verification and post-result inspection/deletion. Record fresh signup/OAuth separately; exercise support separately.",
+      "waitCondition": "CUST-001/CUST-002 are complete. Fresh E-067 continuation confirms the execution credential is connected, but objective admission rejected repository push access before a run or model execution. GitHub independently reports permission=read for the disposable identity on the exact target. The temporary maintenance selection was removed and the key remains connected and unused.",
+      "reentryCondition": "Resume when the owner approves the exact temporary write grant, the disposable identity accepts it and actual push access is confirmed. Use the public OAuth path without App/verifier scope expansion; retain each fresh journey step and never substitute old canary evidence.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1192,7 +1205,8 @@
       "evidenceIds": [
         "PF-E-003",
         "PF-E-024",
-        "PF-E-027"
+        "PF-E-027",
+        "PF-E-028"
       ]
     },
     {
@@ -1311,9 +1325,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Keep controlled owned-domain access available. Prove the fresh complete customer outcome after secure credential reconnection and close the remaining LEGAL-001 public address/contact requirements before unrestricted GA. Advance provider channels only on their own current evidence.",
-      "waitCondition": "CUST-001/CUST-002 are completed prerequisites. Remaining owned launch gates are the fresh complete customer outcome and remaining LEGAL-001 publisher decisions; the connected disposable account currently lacks execution capability. External-directory approval is independent.",
-      "reentryCondition": "Resume full-path acceptance when customer execution capability and selected-repository/verifier authority are confirmed. Close the owned GA gate only after fresh outcome and legal evidence; keep channel publication separate.",
+      "nextAction": "Review and merge the patched Worker candidate at exact head dce8772122b50186bbdbece53bd9a3bc21d42da4 with required CI passed; authorise production deployment separately. Keep controlled owned-domain access available. Complete the fresh customer journey after the exact repository write-access decision and accepted disposable-account grant; the execution credential is already connected. Close remaining LEGAL-001 public address/contact requirements before unrestricted GA. Advance external channels only on their own provider evidence.",
+      "waitCondition": "New high/critical dependency advisories stopped the inherited Worker lock at its permanent audit gate. The patched candidate passes local checks and all required exact-head CI jobs; owner merge/deployment remain distinct gates. CUST-001/CUST-002 are completed prerequisites. Fresh customer admission is blocked on actual repository write access rather than an absent execution key. The complete fresh outcome, including signup/OAuth and post-result deletion, and remaining LEGAL-001 decisions are still unproven.",
+      "reentryCondition": "Advance the dependency refresh on exact-head CI and owner review, preserving the audit gate. Resume the bounded public OAuth objective after actual customer push permission is confirmed. Close owned GA only after fresh complete customer and legal evidence; keep App/verifier scope and channel publication separate.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1322,7 +1336,9 @@
       "evidenceIds": [
         "PF-E-024",
         "PF-E-026",
-        "PF-E-027"
+        "PF-E-027",
+        "PF-E-028",
+        "PF-E-029"
       ]
     },
     {
@@ -1842,6 +1858,40 @@
       "outcome": "Current records distinguish completed account controls and development prereleases from the blocked fresh customer journey, RC6 npm publication, external provider states and production AgentProof integration.",
       "content": "Current source-ledger pin, product runtime identities, account-control closure, fresh capability boundary, canonical OpenAI draft source, existing legal decisions, version-specific AgentProof evidence and candidate integration contract. Historical reconciliations are unchanged.",
       "measurement": "Two completed customer-control prerequisites retained; one live OpsTruth production smoke passed; one exact RC5 artifact comparison and registry-signature verification passed; one clean development consumer passed; zero customer model runs, new npm publications, external channel promotions or authority expansions. One exact website merge passed CI, integration, deployment and live desktop/mobile readback."
+    },
+    {
+      "id": "PF-E-028",
+      "date": "2026-10-07",
+      "identity": "Customer credential connected; exact repository permission blocker identified",
+      "situation": "After PF-E-027 reconciliation, the user connected the disposable customer OpenAI execution credential and requested continuation of the fresh acceptance.",
+      "verification": "Fresh MCP status confirms connection at 2026-10-07T05:03:33.325Z, zero daily runs, no active run and null last-use time. The temporary AyobamiH/donestate selection used existing installation 157513439 in pr_only mode with schedules/automatic repair disabled. create_objective with autoStart=false, a three-file documentation budget and the pinned verifier returned authenticated GitHub user cannot push to this repository before a run was created. Independent GitHub collaborator-permission readback confirms OneClickPostFactory permission=read on AyobamiH/donestate. The newly created customer selection was removed and empty selection confirmed; the execution key remains connected and unused. DoneState PR #166 now at exact head dce8772122b50186bbdbece53bd9a3bc21d42da4 records E-067 and the sanitised step receipt; local npm run check passed 40 tests plus contract, docs/governance and package checks. This PR is reviewable evidence, not a customer-generated PR or an approved merge.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "Obtain the owner decision for the exact temporary write grant and accepted customer authority, then continue the bounded public OAuth objective within the existing verifier repository scope.",
+        "waitCondition": "OneClickPostFactory currently has only read permission on the exact repository. Fresh complete customer and LEGAL-001 gates remain; no model execution or consequence result exists.",
+        "staleDate": "2026-10-14"
+      },
+      "outcome": "The absent-credential blocker is resolved. The current blocker is repository write access, evidenced before execution. Historical PF-E-027 and DoneState E-066 keep their original observations.",
+      "content": "Fresh connection status, exact read-only repository permission, rejected pre-execution admission, reversible customer-selection cleanup and retained credential. No token, key, credential fingerprint, setup ticket or session is retained.",
+      "measurement": "One fresh credential connection, one bounded selection, one rejected objective admission, one independent read-only permission result and one selection removal. Zero customer model runs, branches, commits, PRs, verifier outcomes, account deletions or permission expansions."
+    },
+    {
+      "id": "PF-E-029",
+      "date": "2026-10-07",
+      "identity": "DoneState dependency patch passed exact-head CI after fresh audit rejection",
+      "situation": "Customer acceptance evidence PR #166 encountered new npm advisory metadata after PF-E-027. Its initial exact-head CI 37575211329 passed both core jobs but failed the permanent Worker high-severity audit gate with eight high and one critical findings across four advisory families.",
+      "verification": "DoneState PR #166 at dce8772122b50186bbdbece53bd9a3bc21d42da4 adds only exact patched transitive overrides, their npm-generated lock resolution and matching E-068/audit evidence alongside the customer-access record. MCP client 2.2.0 and nested core 2.2.0, SDK 1.31.0, proxy-addr 2.0.8, sharp 0.35.5 and source-map-js 1.2.2 resolve the reported package paths. Local clean npm ci, zero-vulnerability audit, 40 root tests, 142 Worker tests and plugin validation pass. Worker bundle dry-run passes; full container build is blocked locally because Docker is absent. Exact-head CI 37576065787 completed successfully on dce8772122b50186bbdbece53bd9a3bc21d42da4. All required jobs core (22), core (24) and hosted-plugin passed; hosted-plugin logs confirm zero vulnerabilities at the permanent high-severity gate, 142 Worker tests and plugin validation. No source merge, production deployment or customer completion is claimed.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "active",
+        "nextAction": "Obtain owner merge review for the exact green PR head and separately authorised production deployment. Preserve the permanent high-severity audit gate.",
+        "waitCondition": "Exact-head CI and local checks are green; owner merge and production deployment remain separate gates.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The permanent audit gate detected fresh risk and stopped the inherited candidate. The patched tree is clean and fully tested locally and in all required exact-head CI jobs; owner merge and production change remain pending. The E-067 repository-permission blocker is independent.",
+      "content": "Upstream advisory patch ranges, exact candidate head, npm-generated lock/audit snapshot and local validation. Historical PF-E-027/PF-E-028 and DoneState E-049/E-067 keep their separate scopes.",
+      "measurement": "Initial required CI: two core successes, one hosted audit failure. Patched local audit: zero vulnerabilities; 182 tests passed in total; no security gate weakened, MCP tool added, authority expanded or runtime deployed. Patched exact-head CI 37576065787: all three required jobs success; zero vulnerabilities at the unchanged audit gate."
     }
   ]
 }
