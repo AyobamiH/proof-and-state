@@ -1238,9 +1238,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Reconnect only the DoneState customer GitHub OAuth connection named oneclickpost factory as OneClickPostFactory after the explicit 401 Bad credentials admission refusal. The funded execution key is connected and unused, and exact temporary repository Write is accepted. After positive reconnection, confirm fresh idle key/Write/base, create the prepared Node-only contract autoStart false, verify every returned sealed field and approved base before at most one paid start. Await actual PR-head CI and the established pinned independent verifier before authorised result cleanup.",
-      "waitCondition": "Attempt-06 creation returned explicit GitHub 401 Bad credentials before any run ID or paid start. Post-refusal customer credential remains connected, lastUsedAt null, dailyRunsUsed 0 and activeRunId null; independent repository permission is Write and selected repositories []. There is no attempt-06 customer PR, required-CI subject or verifier decision. The saved key and accepted grant are intentionally retained while OAuth is refreshed. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
-      "reentryCondition": "Re-enter only with positively refreshed correct customer GitHub OAuth; do not substitute the owner connection, re-enter the API key unnecessarily, repeat a consumed setup ticket or blindly retry creation. Preserve the established verifier pin, semantic contract/base checks and single paid-start envelope. No historical outcomes, cleanup, deployment or GA gates are reclassified.",
+      "nextAction": "Publish the preserved terminal timeout and this locally checked compact re-entry plan with required CI. Complete authorised disposable-account and temporary-Write cleanup. Another paid customer start requires a fresh one-run budget envelope; refresh the exact base and customer access before admission. Fresh signup, selected App admission and LEGAL-001 remain separate gates.",
+      "waitCondition": "The repaired public customer OAuth admission and funded model execution worked. Run e05032c9-31d1-446a-8fe9-6e52d486d438 ended FAILED_SAFE with receipt-verified exit 124. Its untruncated model log reports all three authorised files and local checks completed, followed by a final agent message, but no turn.completed or usage summary appeared before timeout. There is no published customer branch/PR, required customer CI subject or independent decision. The precise completion stall cause and actual billed amount remain unproven.",
+      "reentryCondition": "The previous one-start envelope is consumed. Preserve every terminal result and historical story; approve a fresh bounded run before any additional API execution. Use the prepared attempt-07 contract only after fresh credential, Write and exact-base checks. Final model prose does not replace a successful terminal receipt, published PR, exact-head CI or pinned independent verification.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1259,7 +1259,10 @@
         "PF-E-036",
         "PF-E-037",
         "PF-E-038",
-        "PF-E-040"
+        "PF-E-040",
+        "PF-E-041",
+        "PF-E-042",
+        "PF-E-043"
       ]
     },
     {
@@ -1379,9 +1382,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Reconnect only the DoneState customer GitHub OAuth connection named oneclickpost factory as OneClickPostFactory after the explicit 401 Bad credentials admission refusal. The funded execution key is connected and unused, and exact temporary repository Write is accepted. After positive reconnection, confirm fresh idle key/Write/base, create the prepared Node-only contract autoStart false, verify every returned sealed field and approved base before at most one paid start. Await actual PR-head CI and the established pinned independent verifier before authorised result cleanup.",
-      "waitCondition": "Attempt-06 creation returned explicit GitHub 401 Bad credentials before any run ID or paid start. Post-refusal customer credential remains connected, lastUsedAt null, dailyRunsUsed 0 and activeRunId null; independent repository permission is Write and selected repositories []. There is no attempt-06 customer PR, required-CI subject or verifier decision. The saved key and accepted grant are intentionally retained while OAuth is refreshed. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
-      "reentryCondition": "Re-enter only with positively refreshed correct customer GitHub OAuth; do not substitute the owner connection, re-enter the API key unnecessarily, repeat a consumed setup ticket or blindly retry creation. Preserve the established verifier pin, semantic contract/base checks and single paid-start envelope. No historical outcomes, cleanup, deployment or GA gates are reclassified.",
+      "nextAction": "Publish the preserved terminal timeout and this locally checked compact re-entry plan with required CI. Complete authorised disposable-account and temporary-Write cleanup. Another paid customer start requires a fresh one-run budget envelope; refresh the exact base and customer access before admission. Fresh signup, selected App admission and LEGAL-001 remain separate gates.",
+      "waitCondition": "The repaired public customer OAuth admission and funded model execution worked. Run e05032c9-31d1-446a-8fe9-6e52d486d438 ended FAILED_SAFE with receipt-verified exit 124. Its untruncated model log reports all three authorised files and local checks completed, followed by a final agent message, but no turn.completed or usage summary appeared before timeout. There is no published customer branch/PR, required customer CI subject or independent decision. The precise completion stall cause and actual billed amount remain unproven.",
+      "reentryCondition": "The previous one-start envelope is consumed. Preserve every terminal result and historical story; approve a fresh bounded run before any additional API execution. Use the prepared attempt-07 contract only after fresh credential, Write and exact-base checks. Final model prose does not replace a successful terminal receipt, published PR, exact-head CI or pinned independent verification.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1402,7 +1405,10 @@
         "PF-E-036",
         "PF-E-037",
         "PF-E-038",
-        "PF-E-040"
+        "PF-E-040",
+        "PF-E-041",
+        "PF-E-042",
+        "PF-E-043"
       ]
     },
     {
@@ -2143,6 +2149,57 @@
       "outcome": "Both independently allocated histories remain inspectable with unique canonical IDs. The rejected customer GitHub OAuth token remains the customer re-entry blocker; the funded key is connected and unused, exact Write accepted.",
       "content": "Normal main-to-evidence-branch reconciliation, one verbatim story archive, selected evidence-ID closure and regenerated state. Incoming shared-operating source and machine-discovery records are preserved.",
       "measurement": "32 incoming stories and all unrelated incoming work items preserved; existing 12-action queue preserved; original customer story archived verbatim and substantively unchanged under PF-E-039; zero force pushes, main PR merges, runtime deployments or paid starts."
+    },
+    {
+      "id": "PF-E-041",
+      "date": "2026-10-07",
+      "identity": "Repaired customer OAuth admitted one funded Node-only run",
+      "situation": "The customer positively reported GitHub reconnection after the explicit earlier 401 before any run ID. Fresh preflight confirmed the retained idle key, exact temporary Write, no selected repositories and approved main.",
+      "verification": "evidence/rollout-20261007/customer-node-preflight-06.json records public github_oauth admission as OneClickPostFactory, sealed descriptor equality, approved base be14e35514f0ee3d78ca2c121c2b236767f80ee4 and one start for e05032c9-31d1-446a-8fe9-6e52d486d438. Admission and queue acceptance do not establish execution or verification.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Use the actual terminal receipt; preserve the prior refusal and established verifier pin.",
+        "waitCondition": "Admission is a prerequisite, not an independently verified outcome.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The customer OAuth blocker was resolved; one bounded user-funded run was admitted and started.",
+      "content": "The OpenAI key was retained, not entered again. No selected-repository App, fresh-signup or GA claim.",
+      "measurement": "One create after positive repair; autoStart false; one semantic/base guard; one 120000ms, three-file, PR-only start."
+    },
+    {
+      "id": "PF-E-042",
+      "date": "2026-10-07",
+      "identity": "Node-only customer reached final message but timed out before publication",
+      "situation": "The admitted Node-only run cloned once, launched once and produced a full model log. It reports the editor and local checks completed and exactly the three authorised changed paths.",
+      "verification": "evidence/rollout-20261007/customer-node-attempt-06.json preserves the full run, untruncated redacted log and four hash-chained events ending f1db5c5f31a796cf65bb4508377429ab0ae0cc118922c279bae3a4f1dedb5790. The integrity-matched implementation receipt reports exit 124 and FAILED_SAFE; this is not an independent verifier decision. No turn.completed or usage summary appears.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Finish durable timeout-receipt publication and required CI, inspect and delete the disposable customer account data, and remove exact temporary Write under the authorised cleanup. Prepare one compact follow-up candidate and obtain a fresh execution-budget envelope before another paid start. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "waitCondition": "The repaired public customer OAuth admission and funded model execution worked. Run e05032c9-31d1-446a-8fe9-6e52d486d438 ended FAILED_SAFE with receipt-verified exit 124. Its untruncated model log reports all three authorised files and local checks completed, followed by a final agent message, but no turn.completed or usage summary appeared before timeout. There is no published customer branch/PR, required customer CI subject or independent decision. The precise completion stall cause and actual billed amount remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "No customer branch, PR, exact-head customer CI or independent decision. The local candidate was not manually published or reclassified as successful.",
+      "content": "Credentials worked. The remaining execution completion boundary is unproven; historical unknown failure, no-credit error, prior timeout, OAuth refusal and cleanup receipts retain their exact original values.",
+      "measurement": "Clone attempt 1 succeeded; implementation launch 1; verified exit 124; receipt poll 21; one daily run used; activeRunId null; actual billed USD and remaining provider balance unknown."
+    },
+    {
+      "id": "PF-E-043",
+      "date": "2026-10-07",
+      "identity": "Compact customer re-entry locally checked without another API run",
+      "situation": "The funded attempt-06 completed its edits and checks but timed out before a terminal turn event or publication. Existing receipts and histories are preserved.",
+      "verification": "Matching DoneState PR #169 and evidence/rollout-20261007/customer-prepared-compact-objective-07.json preserve attempt-06 run e05032c9-31d1-446a-8fe9-6e52d486d438 and the offline attempt-07 contract. The compact command passed its three-file/history assertions without paid execution; published customer acceptance and independent verification remain unproven.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Publish the preserved terminal timeout and this locally checked compact re-entry plan with required CI. Complete authorised disposable-account and temporary-Write cleanup. Another paid customer start requires a fresh one-run budget envelope; refresh the exact base and customer access before admission. Fresh signup, selected App admission and LEGAL-001 remain separate gates.",
+        "waitCondition": "The repaired public customer OAuth admission and funded model execution worked. Run e05032c9-31d1-446a-8fe9-6e52d486d438 ended FAILED_SAFE with receipt-verified exit 124. Its untruncated model log reports all three authorised files and local checks completed, followed by a final agent message, but no turn.completed or usage summary appeared before timeout. There is no published customer branch/PR, required customer CI subject or independent decision. The precise completion stall cause and actual billed amount remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Prepared only. No service run was created, no paid start submitted, no runtime changed, no customer PR or independent decision exists.",
+      "content": "The exact Codex completion stall remains unproven; a single shell invocation reduces known tool-turn overhead without weakening terminal or verifier requirements.",
+      "measurement": "A fresh one-start envelope is required. Two minutes/three files are execution bounds, not a dollar cap; past billing and current provider balance are unknown."
     }
   ]
 }
