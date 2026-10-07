@@ -8,12 +8,13 @@ The canonical ordered portfolio backlog, source-ledger commit, owners, wait cond
 
 | Area | Status | Evidence |
 | --- | --- | --- |
-| DoneState owned service | Deployed; exact current-main rollout passed | Source `5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4`; deploy `37577391829`; Worker `98d66425-8a2c-4caf-a2a4-dced459bdd40`; sandbox `sha256:89239658656b1fe3cef2db45058fb8c7fa02e01ee4d5ecc04c8fa7e6ada9a74e` |
-| DoneState current main | Protected; post-merge CI passed | `5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4`; CI `37577391832` passed; approved PR #166 merged |
+| DoneState owned service | Deployed at approved rollout source; later governance-only main differs | Source `5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4`; deploy `37577391829`; Worker `98d66425-8a2c-4caf-a2a4-dced459bdd40`; sandbox `sha256:89239658656b1fe3cef2db45058fb8c7fa02e01ee4d5ecc04c8fa7e6ada9a74e` |
+| DoneState current main | Protected; governance-only AgentProof activation merged | `6fb1f4960d22d351902fe0eefa22f21d249dcd7f`; CI `37583831139` passed; PR #167 changes only ledger/generated state. Exact-current-main deployment is unproven; runtime remains `5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4` |
 | DoneState Worker security refresh | Merged and deployed after audit gates passed | Approved PR #166; exact-head CI `37576065787`, post-merge CI `37577391832` and actual deployment/container build `37577391829` succeeded; permanent audit gate retained |
 | DoneState independent verification | Fresh successor VERIFIED | Run `c4a07fa6-90b2-4597-a4c6-eae66de5a3e8`; open PR #115 at head `41f1ae3b0fed670e64bd99f1bcb1aea9c9e7e869`; exact-head CI `33806832575`; complete OpsTruth v2 response accepted |
 | DoneState account controls | Complete, scoped acceptance passed | CUST-001/CUST-002 closed in PR #164; E-064 real disposable deletion and E-065 shared-layout/production generation-fence evidence; rehearsal `37143489929` passed |
-| DoneState fresh customer outcome | Write confirmed; GitHub OAuth rejected before execution | Accepted temporary Write for `OneClickPostFactory`; new admission returns GitHub `401 Bad credentials`; connected OpenAI key unused, registry empty; fresh outcome unproven. E-069 candidate evidence PR #168 records the boundary |
+| DoneState fresh customer outcome | OAuth/checkout succeeded; implementation FAILED_SAFE | Run `257bbf51-66d2-4cd0-838d-01bbe66e2608`; one verified exit-code-1 receipt; no customer branch/PR/verifier request. E-070/PF-E-031 preserve the result; the cause is unknown because its log was discarded |
+| DoneState failure diagnostics | Tested repair candidate; open and undeployed | PR #168 at `81821640c1ef1633878553c51747e94b6ff9a913`; 40 core/149 Worker tests and zero audit locally; exact-head CI `37585518215` passed. Owner merge and deployment remain separate gates |
 | DoneState Marketplace webhook health | Deployed | PR #127; merge `6964e2118c77d35e1e2abdbc69bcdaa05fe0c997`; deploy `37011174983`; bounded 5xx operational failure receipts and hourly escalation |
 | DoneState aggregate funnel | Deployed | PR #129; merge `7b25b6ae288d02ab9a6354a740ec06681d3ffc49`; privacy-minimal daily counters, 90-day retention, no customer identifiers |
 | DoneState OpenAI channel | Current provider readback required | The 0.3.0 Review record is historical. Current source E-061 records the owner-authorised reset and canonical 0.3.2 draft with 20 tools; it does not establish current submission, approval or publication |
@@ -38,7 +39,7 @@ The earlier owner-side DoneState run `b4242932-0bc1-4876-a202-634d9c12d72a` rema
 
 ## Remaining owner/external gates
 
-1. Reconnect DoneState’s GitHub OAuth connection as `OneClickPostFactory`; temporary Write is already accepted and independently confirmed. Then prove the bounded public OAuth journey through independent VERIFIED and post-result inspection/deletion, remove the exact temporary grant, and record fresh signup/OAuth separately. The execution credential is connected and unused; preserve the existing App/verifier scope and completed control prerequisites.
+1. Review the tested failure-diagnostics repair at DoneState PR #168 after exact-head CI, then authorise merge/deployment before a fresh bounded customer objective. OAuth admission and checkout now work; implementation ended `FAILED_SAFE` without a recoverable log. Continue through unmerged PR, independent VERIFIED and post-result inspection/deletion, remove the exact temporary grant, and record fresh signup separately. The account, connected key and grant remain available for authorised recovery; preserve App/verifier scope and completed control prerequisites.
 2. Supply the remaining legitimate public geographic business/service address and branded support/privacy routes; preserve existing territory and pre-trading assessment decisions.
 3. Exercise the three outstanding provider-controlled Marketplace development transitions without touching production review state.
 4. Read back the canonical OpenAI draft/provider state and production Marketplace state, then respond to actual findings independently.

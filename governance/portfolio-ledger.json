@@ -7,9 +7,9 @@
     {
       "project": "DoneState",
       "repository": "AyobamiH/donestate",
-      "commit": "5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4",
+      "commit": "6fb1f4960d22d351902fe0eefa22f21d249dcd7f",
       "path": "governance/project-ledger.json",
-      "url": "https://github.com/AyobamiH/donestate/blob/5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4/governance/project-ledger.json"
+      "url": "https://github.com/AyobamiH/donestate/blob/6fb1f4960d22d351902fe0eefa22f21d249dcd7f/governance/project-ledger.json"
     }
   ],
   "products": [
@@ -20,7 +20,7 @@
       "repository": "AyobamiH/donestate",
       "main": {
         "branch": "main",
-        "sha": "5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4",
+        "sha": "6fb1f4960d22d351902fe0eefa22f21d249dcd7f",
         "status": "CI_VERIFIED",
         "protection": "PROTECTED"
       },
@@ -29,7 +29,7 @@
         "sha": "5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4",
         "version": "0.3.0",
         "providerVersion": "98d66425-8a2c-4caf-a2a4-dced459bdd40",
-        "exactMainStatus": "DEPLOYED",
+        "exactMainStatus": "UNPROVEN",
         "rollback": {
           "status": "DEPLOYED",
           "sha": "c984744c732f598db8859b5b9d4367d1f8da2aef",
@@ -38,7 +38,7 @@
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-07T06:30:13Z",
+      "observedAt": "2026-10-07T07:12:26Z",
       "evidenceUrls": [
         "https://github.com/AyobamiH/donestate/commit/e24f543b58b69d861be1f2f5153903a654a9f5ea",
         "https://github.com/AyobamiH/donestate/actions/runs/37152045333",
@@ -51,7 +51,11 @@
         "https://github.com/AyobamiH/donestate/actions/runs/37577391832",
         "https://github.com/AyobamiH/donestate/actions/runs/37577391829",
         "https://github.com/AyobamiH/donestate/pull/168",
-        "https://github.com/AyobamiH/donestate/blob/e27e8d8bcf88b4612c65c867212f30f053ea51b0/evidence/clean-customer-20261007/continuation-02.json"
+        "https://github.com/AyobamiH/donestate/blob/e27e8d8bcf88b4612c65c867212f30f053ea51b0/evidence/clean-customer-20261007/continuation-02.json",
+        "https://github.com/AyobamiH/donestate/commit/6fb1f4960d22d351902fe0eefa22f21d249dcd7f",
+        "https://github.com/AyobamiH/donestate/actions/runs/37583831139",
+        "https://github.com/AyobamiH/donestate/blob/81821640c1ef1633878553c51747e94b6ff9a913/evidence/clean-customer-20261007/attempt-03.json",
+        "https://github.com/AyobamiH/donestate/actions/runs/37585518215"
       ],
       "chatgpt": {
         "version": "0.3.0",
@@ -144,7 +148,7 @@
         {
           "id": "DS-P0-GA",
           "severity": "P0",
-          "summary": "CUST-001/CUST-002 are complete. The owner-approved temporary Write grant for OneClickPostFactory is accepted and independently confirmed, but the new public-OAuth objective admission returned GitHub 401 Bad credentials before any run or model execution. The stored OpenAI key remains connected and unused; the registry is empty. The fresh complete customer outcome and remaining public address/contact decisions still gate unrestricted GA.",
+          "summary": "CUST-001/CUST-002 are complete. Fresh customer GitHub OAuth admission and checkout succeeded, then a single implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before publication. The deployed failure log was discarded, leaving the cause unknown. A bounded diagnostic repair is open and undeployed. The account, key and temporary Write are retained for authorised recovery; a complete customer journey and remaining public address/contact decisions still gate unrestricted GA.",
           "evidenceUrls": [
             "https://github.com/AyobamiH/donestate/pull/166",
             "https://github.com/AyobamiH/donestate/blob/dce8772122b50186bbdbece53bd9a3bc21d42da4/evidence/clean-customer-20261007/acceptance.json",
@@ -174,7 +178,7 @@
           ]
         }
       ],
-      "nextOwnerAction": "Reconnect DoneState GitHub OAuth as OneClickPostFactory, then prove the bounded public-repository objective through unmerged PR, exact-head required CI, pinned independent OpsTruth verification, account inspection and post-result deletion. Remove the exact temporary Write grant after the result or abandonment. Keep App/verifier scope unchanged; separately prove fresh signup/OAuth and complete remaining legitimate public address/contact decisions before unrestricted GA."
+      "nextOwnerAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA."
     },
     {
       "id": "opstruth",
@@ -482,14 +486,15 @@
       "owner": "Product owner",
       "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Reconnect DoneState GitHub OAuth as OneClickPostFactory, then prove the bounded public-repository objective through unmerged PR, exact-head required CI, pinned independent OpsTruth verification, account inspection and post-result deletion. Remove the exact temporary Write grant after the result or abandonment. Keep App/verifier scope unchanged; separately prove fresh signup/OAuth and complete remaining legitimate public address/contact decisions before unrestricted GA.",
+      "action": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
       "prerequisites": [],
-      "waitCondition": "The rollout merge/deployment and temporary repository Write gates are resolved. Fresh create_objective admission is blocked by upstream GitHub 401 Bad credentials before a run/model start. The service account, unused execution key and temporary grant are retained for reconnection; the complete fresh outcome and LEGAL-001 remain unproven.",
+      "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
         "PF-E-028",
-        "PF-E-030"
+        "PF-E-030",
+        "PF-E-031"
       ]
     },
     {
@@ -1207,9 +1212,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Reconnect DoneState GitHub OAuth as OneClickPostFactory, then prove the bounded public-repository objective through unmerged PR, exact-head required CI, pinned independent OpsTruth verification, account inspection and post-result deletion. Remove the exact temporary Write grant after the result or abandonment. Keep App/verifier scope unchanged; separately prove fresh signup/OAuth and complete remaining legitimate public address/contact decisions before unrestricted GA.",
-      "waitCondition": "The rollout merge/deployment and temporary repository Write gates are resolved. Fresh create_objective admission is blocked by upstream GitHub 401 Bad credentials before a run/model start. The service account, unused execution key and temporary grant are retained for reconnection; the complete fresh outcome and LEGAL-001 remain unproven.",
-      "reentryCondition": "Resume on successful fresh DoneState GitHub OAuth for the exact disposable identity and confirmed push access. Keep PR-only publication and pinned independent verification; never substitute historical canaries or repository API publication for customer execution proof.",
+      "nextAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
+      "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
+      "reentryCondition": "Resume only after the diagnostics candidate passes exact-head required CI and owner-approved merge/deployment is independently evidenced. Preserve the failed run and historical stories. Use a fresh three-file PR-only objective without App/verifier scope expansion; no blind retry or manufactured customer execution proof.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1219,7 +1224,8 @@
         "PF-E-024",
         "PF-E-027",
         "PF-E-028",
-        "PF-E-030"
+        "PF-E-030",
+        "PF-E-031"
       ]
     },
     {
@@ -1339,9 +1345,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Reconnect DoneState GitHub OAuth as OneClickPostFactory, then prove the bounded public-repository objective through unmerged PR, exact-head required CI, pinned independent OpsTruth verification, account inspection and post-result deletion. Remove the exact temporary Write grant after the result or abandonment. Keep App/verifier scope unchanged; separately prove fresh signup/OAuth and complete remaining legitimate public address/contact decisions before unrestricted GA.",
-      "waitCondition": "The rollout merge/deployment and temporary repository Write gates are resolved. Fresh create_objective admission is blocked by upstream GitHub 401 Bad credentials before a run/model start. The service account, unused execution key and temporary grant are retained for reconnection; the complete fresh outcome and LEGAL-001 remain unproven.",
-      "reentryCondition": "Resume on successful fresh DoneState GitHub OAuth for the exact disposable identity and confirmed push access. Keep PR-only publication and pinned independent verification; never substitute historical canaries or repository API publication for customer execution proof.",
+      "nextAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
+      "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
+      "reentryCondition": "Resume only after the diagnostics candidate passes exact-head required CI and owner-approved merge/deployment is independently evidenced. Preserve the failed run and historical stories. Use a fresh three-file PR-only objective without App/verifier scope expansion; no blind retry or manufactured customer execution proof.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1353,7 +1359,8 @@
         "PF-E-027",
         "PF-E-028",
         "PF-E-029",
-        "PF-E-030"
+        "PF-E-030",
+        "PF-E-031"
       ]
     },
     {
@@ -1924,6 +1931,23 @@
       "outcome": "The three approved reviewed changes are merged and the narrow DoneState production upgrade is deployed. Temporary customer Write is confirmed. The fresh customer journey is blocked before model execution on the GitHub credential used by DoneState; no fresh customer PR, independent VERIFIED, signup/OAuth or deletion is claimed. Unrestricted GA and external provider approval remain separate gates.",
       "content": "Exact merge/check/deployment/access evidence, current-main source pin and the fresh authentication boundary. Historical PF-E-027/PF-E-028/PF-E-029 and DoneState E-066/E-067/E-068 retain their original scope.",
       "measurement": "Three approved merges and successful post-merge checks; one production deployment with actual container build; one accepted exact temporary Write grant; one schema-valid customer objective admission rejected before any run. Zero fresh customer model runs, customer publications, verifier attestations or account deletions; no new AgentProof publication or App/verifier scope expansion."
+    },
+    {
+      "id": "PF-E-031",
+      "date": "2026-10-07",
+      "identity": "Fresh customer OAuth execution failed safely; diagnostic repair prepared",
+      "situation": "After the user confirmed DoneState reconnection as OneClickPostFactory, one new public-OAuth customer objective was admitted against the already deployed protected DoneState main and started exactly once.",
+      "verification": "Run 257bbf51-66d2-4cd0-838d-01bbe66e2608 was created at 2026-10-07T06:42:29.013Z with ownerLogin/requestedBy OneClickPostFactory and credentialSource github_oauth. The three-file, 900000 ms, PR-only objective pinned AyobamiH/donestate main at 5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4. Clone attempt 1 succeeded; the single implementation launch produced an identity-verified donestate.implementation-receipt.v1 with exitCode 1, launchAcknowledged true and receiptPollAttempt 9. Terminal FAILED_SAFE at 06:43:52.736Z was read back independently through the customer connection, with branch/head/PR/verifier decision null and final event digest 1640fefe8a75b136f9b967d705de91bca0b80c9a91be725ddcd66146b8f576d5. Credential usage records one lease and no active run; successful provider response, funding and billed tokens are unproven. Source inspection identifies the separate log-capture gap: the deployed nonzero receipt path settles without its log, then destroys the sandbox. The cause of this specific run remains unknown. DoneState PR #168 now contains the bounded repair at exact head 81821640c1ef1633878553c51747e94b6ff9a913, preserving redacted 64 KiB failure output before settlement/cleanup, with null fallback and unchanged receipt identity/success/ambiguity decisions. Local checks passed: 40 core tests; 149 Worker tests across 22 files, including seven execution-path regressions; zero audit vulnerabilities; plugin/contract/governance/docs/pack checks, secret-pattern scan and Worker bundle dry-run without container rollout. Exact-head CI 37585518215 passed on 81821640c1ef1633878553c51747e94b6ff9a913; core (22), core (24) and hosted-plugin all succeeded, including the unchanged high-severity audit gate. The repair remains open and unmerged. DoneState E-070 and E-071 plus evidence/rollout-20261007/customer-attempt-03.json record the real failed run and the separate owner-authored undeployed repair. This PR is not the customer marker implementation and does not supply customer execution proof. The repair candidate incorporates subsequent governance-only main 6fb1f4960d22d351902fe0eefa22f21d249dcd7f (PR #167, CI 37583831139 success), preserving canonical AgentProof E-069 and active but gated AGENTPROOF-001 verbatim. E-072 archives the original unmerged OAuth E-069 story verbatim with its published e27e8d8bcf88b4612c65c867212f30f053ea51b0 subject; both histories are preserved without a duplicate canonical ID. The deployed service remains source 5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4; exact-6fb1f49 deployment is unproven.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
+        "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Customer OAuth admission and checkout now work, but implementation stopped safely before publication. The repair is tested locally and open for review; no new merge, deployment, successful customer PR, independent VERIFIED or post-result deletion is claimed. The full fresh journey and unrestricted GA remain blocked.",
+      "content": "Immutable terminal run/actions/event-chain and credential-lease receipt, updated current blocked work items and exact repair-candidate subject. All historical portfolio stories through PF-E-030 and DoneState E-066 through E-069 remain unchanged; source-ledger/current-main/runtime pins retain their deployed subjects.",
+      "measurement": "One fresh customer objective, one start, one successful clone, one acknowledged implementation launch, one verified exit-code-1 receipt and terminal FAILED_SAFE. One credential lease; zero customer branches/PRs, verifier requests or account deletions. One locally tested undeployed repair candidate, no App/verifier scope expansion or publication."
     }
   ]
 }
