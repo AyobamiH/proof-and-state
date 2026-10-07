@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "reason": "Concurrent main and the unmerged customer evidence branch independently allocated PF-E-032. Preserve the merged shared-operating-contract record as canonical PF-E-032, archive the original customer story verbatim and assign it PF-E-039 without changing its substantive fields.",
+  "incomingMainHead": "b1f0dd5bbce7a68c2370caae1719eccf492550cb",
+  "incomingMainCi": {
+    "governance": 37644751885,
+    "gtmOrchestrator": 37644752123,
+    "conclusion": "success"
+  },
+  "originalCustomerPublishedHead": "194cbc225e0886f5fcf0607acc7e25ae9097cf0a",
+  "originalCustomerStory": {
+    "id": "PF-E-032",
+    "date": "2026-10-07",
+    "identity": "Approved diagnostics deployed; fresh customer execution exposed exhausted API credits",
+    "situation": "The owner approved the exact tested repair and portfolio candidates and their bounded continuation. A fresh public-OAuth customer objective exercised the deployed diagnostic failure path without publication.",
+    "verification": "The user explicitly approved the two exact candidates, deployment and bounded continuation on 2026-10-07. DoneState PR #168 approved head 81821640c1ef1633878553c51747e94b6ff9a913 merged normally at be14e35514f0ee3d78ca2c121c2b236767f80ee4. Required post-merge core (22), core (24), hosted-plugin checks passed in CI 37595968023; deploy 37595968046/job 112708554641 succeeded, including actual container build, push and Cloudflare rollout. Worker ac31dbd3-2508-469a-a894-3c97b9062677 uses container sha256:eae49c40ed6b29e4a7792157ad633910aeab5fdea2130c22694e1707ab356085. The unchanged verifier fingerprint is 09544c3ede70b832a114918bb439960004655faf9d36981e1402587af9429c86. Portfolio PR #30 approved head 7f7638bc6ea541744fee52f2ccc8325e2421df5f merged normally at 96b7f8df4eb7b2447c6c2b76d664b5db23b907af; post-merge Governance 37596000963 and GTM 37596000885 passed with publishing disabled. The new OneClickPostFactory public-OAuth run c9586ced-df91-4c49-aa97-8d07c04af16b was created at 10:13:39.911Z against exact deployed be14e35514f0ee3d78ca2c121c2b236767f80ee4, started once at 10:13:57.411Z, and cloned on attempt 1. Its single acknowledged implementation launch produced an identity-verified donestate.implementation-receipt.v1, exitCode 1, poll attempt 9. The newly deployed diagnostic path preserved an untruncated redacted log reporting no OpenAI API credits remaining, then settled FAILED_SAFE at 10:15:05.148Z. Branch/head/PR/verifier decision are null; final event-chain digest ffd52e615dd8872a45ccd0b034b5cecbe581c543c424355f36d9617b614a17af. No new objective/start retry followed. The intended E-073 customer candidate and marker were never authored or published; this owner-authored E-074 records the failed service result, not a replacement implementation. The cause of prior run 257bbf51-66d2-4cd0-838d-01bbe66e2608 remains unknown because its diagnostic log was absent; this new billing error must not be projected backwards. Durable complete redacted run receipt: evidence/rollout-20261007/customer-attempt-04.json; rollout subjects: evidence/rollout-20261007/diagnostic-rollout.json.",
+    "accountability": {
+      "owner": "DoneState maintainers and repository owner",
+      "status": "blocked",
+      "nextAction": "Preserve the terminal diagnostic receipt, then inspect/delete the indexed disposable OneClickPostFactory DoneState account and remove its exact temporary repository Write grant. The owner must fund the OpenAI API organization associated with the connected execution key before a new bounded customer test; never retry this terminal run. A future fresh PR-only run needs exact-head CI and pinned independent OpsTruth verification. Fresh signup and remaining LEGAL-001 public address/contact decisions remain separate launch gates.",
+      "waitCondition": "Owner-approved DoneState PR #168 merged at be14e35514f0ee3d78ca2c121c2b236767f80ee4; exact post-merge CI 37595968023 and production deployment 37595968046 succeeded. Worker ac31dbd3-2508-469a-a894-3c97b9062677 runs the diagnostics repair. Fresh customer run c9586ced-df91-4c49-aa97-8d07c04af16b cloned successfully and made one acknowledged implementation launch; its identity-verified exit-code-1 receipt now preserves the redacted OpenAI API error: You have no credits remaining. Terminal FAILED_SAFE at 2026-10-07T10:15:05.148Z has no branch, PR or verifier subject. Cleanup is authorised and pending. Successful customer execution and LEGAL-001 remain blocked.",
+      "staleDate": "2026-10-09"
+    },
+    "outcome": "The diagnostics repair is merged and deployed with green exact-source CI. The customer execution remains FAILED_SAFE due to the API provider no-credit response, with no PR or verification request. Cleanup is authorised but not yet claimed complete. Successful fresh customer acceptance and unrestricted GA remain blocked.",
+    "content": "New immutable dated rollout and customer failure receipts; current blocked work items. Existing stories, canonical AgentProof E-069 activation and previous failed run remain unchanged.",
+    "measurement": "Two approved PR merges; one exact-source DoneState deployment; one fresh objective/start/clone/implementation launch; one preserved nonzero receipt and terminal FAILED_SAFE; zero customer branches/PRs or verifier requests; zero cleanup completion claims."
+  },
+  "canonicalCustomerStoryId": "PF-E-039",
+  "reconciliationStoryId": "PF-E-040",
+  "incomingSharedContractPreserved": true,
+  "customerOutcomesRewritten": false,
+  "runtimeDeployment": false,
+  "newPaidStart": false
+}
