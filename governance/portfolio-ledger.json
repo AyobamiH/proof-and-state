@@ -491,9 +491,9 @@
       "owner": "Product owner",
       "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Restore the customer execution key through secure setup and confirm the exact temporary OneClickPostFactory Write grant. Then create/start the prepared fresh 120000ms, three-file PR-only acceptance objective once on the independently checked deployed base. Require service publication, exact customer-head CI, pinned independent verification and result cleanup; preserve separate fresh signup, full indexed purge, App and LEGAL-001 gates.",
+      "action": "Confirm the prepared temporary OneClickPostFactory Write invitation for AyobamiH/donestate, then independently read back accepted Write, idle connected customer key and deployed base before one fresh 120000ms, three-file PR-only acceptance create/start. Require service publication, exact customer-head CI, the unchanged pinned independent decision and cleanup; preserve all separate GA and full indexed-purge gates.",
       "prerequisites": [],
-      "waitCondition": "DoneState capacity repair PR 170 is merged at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d. Post-merge CI 37698109881 and production deployment 37698109840 succeeded, with logs confirming basic capacity and Worker 10c14fb2-8536-4af3-91f2-8ecd5bae94d9. Attempt-08 is locally exercised and prepared only; customer key remains disconnected and permission is read. The exact invitation is selected but unsubmitted, awaiting browser action-time confirmation. No fresh objective or paid start exists.",
+      "waitCondition": "Repair PR 170 is merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d with successful CI and rollout. The customer key is now connected through secure setup, activeRunId null and dailyRunsUsed 2. Repository permission remains read and the exact invitation is selected but unsubmitted; browser action-time confirmation is the only remaining pre-start blocker. No fresh service objective exists.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -503,7 +503,8 @@
         "PF-E-032",
         "PF-E-033",
         "PF-E-047",
-        "PF-E-048"
+        "PF-E-048",
+        "PF-E-049"
       ]
     },
     {
@@ -1240,8 +1241,8 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Restore the customer execution key through secure setup and confirm the exact temporary OneClickPostFactory Write grant. Then create/start the prepared fresh 120000ms, three-file PR-only acceptance objective once on the independently checked deployed base. Require service publication, exact customer-head CI, pinned independent verification and result cleanup; preserve separate fresh signup, full indexed purge, App and LEGAL-001 gates.",
-      "waitCondition": "DoneState capacity repair PR 170 is merged at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d. Post-merge CI 37698109881 and production deployment 37698109840 succeeded, with logs confirming basic capacity and Worker 10c14fb2-8536-4af3-91f2-8ecd5bae94d9. Attempt-08 is locally exercised and prepared only; customer key remains disconnected and permission is read. The exact invitation is selected but unsubmitted, awaiting browser action-time confirmation. No fresh objective or paid start exists.",
+      "nextAction": "Confirm the prepared temporary OneClickPostFactory Write invitation for AyobamiH/donestate, then independently read back accepted Write, idle connected customer key and deployed base before one fresh 120000ms, three-file PR-only acceptance create/start. Require service publication, exact customer-head CI, the unchanged pinned independent decision and cleanup; preserve all separate GA and full indexed-purge gates.",
+      "waitCondition": "Repair PR 170 is merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d with successful CI and rollout. The customer key is now connected through secure setup, activeRunId null and dailyRunsUsed 2. Repository permission remains read and the exact invitation is selected but unsubmitted; browser action-time confirmation is the only remaining pre-start blocker. No fresh service objective exists.",
       "reentryCondition": "The user instructed implementation of the unblockers, authorising the reviewed repair merge/deployment and fresh bounded successor. Keep the established verifier pin, PR-only effects, 120000ms and three-file limits; no automatic retry or historical outcome rewrite. Browser Write expansion still needs action-time confirmation and key entry remains a secure user step. Independently recheck customer identity, idle key, Write and current deployed base immediately before create/start.",
       "dependencies": [
         "DS-CANARY-001",
@@ -1269,7 +1270,8 @@
         "PF-E-045",
         "PF-E-046",
         "PF-E-047",
-        "PF-E-048"
+        "PF-E-048",
+        "PF-E-049"
       ]
     },
     {
@@ -1389,8 +1391,8 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-07",
       "staleDate": "2026-10-09",
-      "nextAction": "Restore the customer execution key through secure setup and confirm the exact temporary OneClickPostFactory Write grant. Then create/start the prepared fresh 120000ms, three-file PR-only acceptance objective once on the independently checked deployed base. Require service publication, exact customer-head CI, pinned independent verification and result cleanup; preserve separate fresh signup, full indexed purge, App and LEGAL-001 gates.",
-      "waitCondition": "DoneState capacity repair PR 170 is merged at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d. Post-merge CI 37698109881 and production deployment 37698109840 succeeded, with logs confirming basic capacity and Worker 10c14fb2-8536-4af3-91f2-8ecd5bae94d9. Attempt-08 is locally exercised and prepared only; customer key remains disconnected and permission is read. The exact invitation is selected but unsubmitted, awaiting browser action-time confirmation. No fresh objective or paid start exists.",
+      "nextAction": "Confirm the prepared temporary OneClickPostFactory Write invitation for AyobamiH/donestate, then independently read back accepted Write, idle connected customer key and deployed base before one fresh 120000ms, three-file PR-only acceptance create/start. Require service publication, exact customer-head CI, the unchanged pinned independent decision and cleanup; preserve all separate GA and full indexed-purge gates.",
+      "waitCondition": "Repair PR 170 is merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d with successful CI and rollout. The customer key is now connected through secure setup, activeRunId null and dailyRunsUsed 2. Repository permission remains read and the exact invitation is selected but unsubmitted; browser action-time confirmation is the only remaining pre-start blocker. No fresh service objective exists.",
       "reentryCondition": "The user instructed implementation of the unblockers, authorising the reviewed repair merge/deployment and fresh bounded successor. Keep the established verifier pin, PR-only effects, 120000ms and three-file limits; no automatic retry or historical outcome rewrite. Browser Write expansion still needs action-time confirmation and key entry remains a secure user step. Independently recheck customer identity, idle key, Write and current deployed base immediately before create/start.",
       "dependencies": [
         "DS-CANARY-001",
@@ -1420,7 +1422,8 @@
         "PF-E-045",
         "PF-E-046",
         "PF-E-047",
-        "PF-E-048"
+        "PF-E-048",
+        "PF-E-049"
       ]
     },
     {
@@ -2297,6 +2300,23 @@
       "outcome": "Production capacity rollout is confirmed; the owner merge/deployment blocker is removed. Live customer validation/publication/independent verification remain unproven, with secure key input and browser grant confirmation pending.",
       "content": "The exact three-file successor passed its unpaid isolated editor/check exercise. No service objective was created or started. Earlier receipts and cleanup remain intact; the prepared invitation is not permission-grant evidence and no full indexed purge claim is added.",
       "measurement": "Merged source fbaa060dfc6680516dfb7a1195801d1f8ab58d9d; Worker 10c14fb2-8536-4af3-91f2-8ecd5bae94d9; image sha256:8753929cf3ef46ccc160471df5addcb8d3228affa713c1df7d025c54548225c2; basic 1024 MiB; offline successor exit 0 in 0.305s; customer permission read; connected false; zero paid starts."
+    },
+    {
+      "id": "PF-E-049",
+      "date": "2026-10-07",
+      "identity": "Customer execution key securely restored; exact Write awaits confirmation",
+      "situation": "The user supplied the customer key through the single-use secure setup flow while the deployed repair and successor contract were being recorded.",
+      "verification": "evidence/rollout-20261007/customer-key-restored-08.json references DoneState E-093 and exact connected-true idle credential metadata. The independent GitHub permission remains read and the prepared screenshot shows the unsent grant. Earlier disconnected snapshots are preserved as historical evidence.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Confirm the prepared temporary OneClickPostFactory Write invitation for AyobamiH/donestate, then independently read back accepted Write, idle connected customer key and deployed base before one fresh 120000ms, three-file PR-only acceptance create/start. Require service publication, exact customer-head CI, the unchanged pinned independent decision and cleanup; preserve all separate GA and full indexed-purge gates.",
+        "waitCondition": "Repair PR 170 is merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d with successful CI and rollout. The customer key is now connected through secure setup, activeRunId null and dailyRunsUsed 2. Repository permission remains read and the exact invitation is selected but unsubmitted; browser action-time confirmation is the only remaining pre-start blocker. No fresh service objective exists.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Secure key input is complete. Temporary repository Write still requires browser action-time confirmation, submission and accepted-permission readback before execution.",
+      "content": "No raw key, setup ticket or additional paid run. Key presence is not funding proof, execution success or independent verification. All historical outcomes and unrelated governance states remain unchanged.",
+      "measurement": "connected true; fingerprint 44c7550c978b; key created 2026-10-07T22:59:33.539Z; activeRunId null; dailyRunsUsed 2; exact customer permission read; zero fresh creates/starts."
     }
   ]
 }
