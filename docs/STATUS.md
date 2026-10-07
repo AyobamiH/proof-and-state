@@ -45,3 +45,22 @@ The earlier owner-side DoneState run `b4242932-0bc1-4876-a202-634d9c12d72a` rema
 4. Read back the canonical OpenAI draft/provider state and production Marketplace state, then respond to actual findings independently.
 5. Name the second trusted human reviewer, explicitly decide reviewer repository access/CODEOWNERS, then protect Proof & State `main` using the prepared reviewed proposal.
 6. Run a bounded owned-domain pilot and collect real cohort/support/conversion evidence without making external directory publication a prerequisite.
+
+
+## Machine-discovery estate audit
+
+Fresh live audits on 2026-10-07 establish the following public-surface state.
+
+| Surface | Current result | Next action |
+|---|---|---|
+| Agent Shop at `agents.proofandstate.com` | 21/21 HTML pages indexable; live audit 0 issues; sitemap submitted; IndexNow key-validated | Monitor provider indexing separately from crawlability |
+| `tailwaggingwebdesign.com` | Indexable; robots/llms/sitemap already present; title, image-alt and Organisation-logo cleanup identified | Land agent subcontract surface and SEO cleanup |
+| `proofandstate.com` | Indexable; one low meta-description length issue | Trim description without changing product claims |
+| `opstruth.io` | Indexable; missing root canonical | Add canonical and outside-in verify |
+| `poststeward.com` | Indexable; one image-alt issue and no root structured data | Add truthful structured data and alt text |
+| `oneclickpostfactory.com` | Indexable; redirects to www; long title/meta and Organisation-logo gap | Reconcile canonical host and metadata/schema |
+| `oneclickwebsitedesignfactory.com` | Indexable but missing canonical, H1, internal links and structured data; thin root content | Highest-priority discovery repair |
+| `aiworkaccountability.com` | Current audit path could not fetch the root | Re-observe runtime before making discoverability claims |
+| `aiaccountabilitywork.com` | Search Console property exists but is not verified | Verify or retire before using as evidence |
+
+These are discovery observations, not product-success or indexing claims. Search-provider state remains independent.
