@@ -489,11 +489,11 @@
       "phase": "VALIDATE",
       "title": "Complete fresh full-path customer acceptance",
       "owner": "Product owner",
-      "authorityRequired": "MERGE_DEPLOYMENT_AND_ACCOUNT_AUTHORIZATION",
+      "authorityRequired": "ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+      "action": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
       "prerequisites": [],
-      "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
+      "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -509,7 +509,8 @@
         "PF-E-051",
         "PF-E-052",
         "PF-E-053",
-        "PF-E-054"
+        "PF-E-054",
+        "PF-E-055"
       ]
     },
     {
@@ -1246,9 +1247,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-08",
       "staleDate": "2026-10-10",
-      "nextAction": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
-      "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
-      "reentryCondition": "Resume only after checked final-head CI, named owner merge/deployment authority, successful deployment and an authenticated account-controls inspection identifying OneClickPostFactory. Use exact login confirmation and preserve receipt/readback; stop on ambiguous destructive effects. Do not use the owner account, repeat model execution or confirmed cleanup, widen GitHub permissions or circumvent browser URL policy.",
+      "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+      "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
+      "reentryCondition": "Resume after a supported account-controls OAuth connection and inspection identify OneClickPostFactory with exact resource and effective scopes. Existing merge/deployment and customer deletion authority need no repeated approval. Preserve exact login confirmation, receipt and fresh readback; stop on ambiguous deletion effects. Do not repeat customer execution, widen GitHub Write, use the publisher account, retry the blocked browser route or evade access denials with an alternate host/user-agent.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1281,7 +1282,8 @@
         "PF-E-051",
         "PF-E-052",
         "PF-E-053",
-        "PF-E-054"
+        "PF-E-054",
+        "PF-E-055"
       ]
     },
     {
@@ -1401,9 +1403,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-08",
       "staleDate": "2026-10-10",
-      "nextAction": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
-      "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
-      "reentryCondition": "Resume only after checked final-head CI, named owner merge/deployment authority, successful deployment and an authenticated account-controls inspection identifying OneClickPostFactory. Use exact login confirmation and preserve receipt/readback; stop on ambiguous destructive effects. Do not use the owner account, repeat model execution or confirmed cleanup, widen GitHub permissions or circumvent browser URL policy.",
+      "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+      "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
+      "reentryCondition": "Resume after a supported account-controls OAuth connection and inspection identify OneClickPostFactory with exact resource and effective scopes. Existing merge/deployment and customer deletion authority need no repeated approval. Preserve exact login confirmation, receipt and fresh readback; stop on ambiguous deletion effects. Do not repeat customer execution, widen GitHub Write, use the publisher account, retry the blocked browser route or evade access denials with an alternate host/user-agent.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1438,7 +1440,8 @@
         "PF-E-051",
         "PF-E-052",
         "PF-E-053",
-        "PF-E-054"
+        "PF-E-054",
+        "PF-E-055"
       ]
     },
     {
@@ -2417,6 +2420,23 @@
       "outcome": "A checked supported API candidate is available for review, not yet deployed or connected. No new production account deletion or GA claim.",
       "content": "Preserve separate execution/CI/deployment/customer-connection/account-deletion states. The returned receipt will record service facts and a digest, not an independent signature. Existing OAuth connections, generation fences and anonymous aggregate counters remain; GitHub resources, upstream key/OAuth revocation and unindexed legacy objectives remain outside scope.",
       "measurement": "Implementation and final review-package CI each have three successful required jobs; local 163 Worker/44 core tests passed. Zero new model executions, repository Write grants, customer account deletions or blocked browser retries."
+    },
+    {
+      "id": "PF-E-055",
+      "date": "2026-10-08",
+      "identity": "DoneState account API approved, merged and deployed; customer admission remains pending",
+      "situation": "The publisher approved merging and deploying the reviewed separate account API. This removes the merge/deployment authority gate without implying customer cleanup or unrestricted GA.",
+      "verification": "DoneState PR 173 reviewed head c9c13f9046fe7142d608726408117dcb97536378 merged once as 20a249902a9646209ade5f874b50e19db8f87519; merge tree 7cddb3b4a58b9552e6f956d47f8e12a6424a8bd6 equals the reviewed tree. Exact-merge CI 37833092717 passed all three required jobs. Deployment 37833092691/job 113503166074 succeeded and reported Worker aa332bb0-239d-404a-938e-2448dc5d5ffc, existing container application a0340af7-00ec-45b5-8d60-2d8444353b89, basic instance type and image sha256:2f03c8f41604e6dd9c0c15bcefa0bf69422425aede6ea428faa5f7da570d0c82. Direct public metadata/resource probes were denied with Cloudflare 1010, and current tools do not expose the account resource. Primary append-only receipt is PR 174 at fb831d2960e3a269dc785b8f86810e8ed0bda130; portfolio copy and digest are in evidence/rollout-20261008/account-api-deployment.json.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+        "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "Merge and provider deployment are confirmed. Supported native-client customer admission, indexed-account deletion, fresh signup/App acceptance and legal gates remain separate blocked work. Historical independent-verifier evidence and source-ledger pins are preserved.",
+      "content": "Exact approval/merge/CI/deployment receipts, recorded access denials and customer-only OAuth re-entry. The service receipt digest is not an independent-verifier signature.",
+      "measurement": "One DoneState merge, three successful exact-merge CI jobs and one successful deployment. Zero new model executions, repository Write grants, indexed-account deletions or blocked browser retries."
     }
   ]
 }
