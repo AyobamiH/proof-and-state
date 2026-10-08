@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "portfolio": "Proof & State",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "governanceRule": "Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.",
   "sourceLedgers": [
     {
@@ -511,7 +511,8 @@
         "PF-E-053",
         "PF-E-054",
         "PF-E-055",
-        "PF-E-057"
+        "PF-E-057",
+        "PF-E-058"
       ]
     },
     {
@@ -1285,7 +1286,8 @@
         "PF-E-053",
         "PF-E-054",
         "PF-E-055",
-        "PF-E-057"
+        "PF-E-057",
+        "PF-E-058"
       ]
     },
     {
@@ -1444,7 +1446,8 @@
         "PF-E-053",
         "PF-E-054",
         "PF-E-055",
-        "PF-E-057"
+        "PF-E-057",
+        "PF-E-058"
       ]
     },
     {
@@ -2055,17 +2058,17 @@
       "date": "2026-10-08",
       "identity": "Agent discoverability releases verified; Google monitoring active; OneClick domain cutover blocked by registrar DNS",
       "situation": "The owner-approved portfolio discoverability rollout completed further public Cloudflare application, agent marketing and machine-readable contract repairs. The final OneClick Website Design Factory production cutover could not be achieved through the already merged Worker Route alone because the authoritative domain zone remains external.",
-      "verification": "PostSteward app production workflow 37778872240 succeeded after bounded retry on release abc23334b2c0ba01573945541513c466e72c999d. Separately hosted PostSteward showcase PRs #22 and #23 merged to 57c34b9ad93a2bc80cf1bc3259ff643bbb0c2270 and a2649e11699ee5be47673c6d87a5e40fa294af17; showcase deploys 37820814911 and 37821754702 succeeded. Apex/www outside-in readback proved JSON-LD Organization/WebSite/SoftwareApplication, 512px PNG and the full 50-operation live machine contract including four new standing-autonomy operations, with daily public drift checks. OneClick Website Design Factory candidate on workers.dev passed public Supabase anon-configured build, 10 analytics tests, discovery contract, eight crawlers and real rendered sign-in screen. Its Cloudflare route attach failed zone-not-in-account code 10083; IONOS ui-dns nameservers remain authoritative and the old production root is unchanged. PostSteward six of seven sitemap HTML routes indexed; agent-guide unknown. Agent Shop shop URL indexed while root discovered not indexed and agent-subcontracting product unknown. Six GSC Wizard trackers are active with 99 combined public URL entries; related sitemap submissions accepted and pending Google re-download.",
+      "verification": "PostSteward app production workflow 37778872240 succeeded after bounded retry on release abc23334b2c0ba01573945541513c466e72c999d. Separately hosted PostSteward showcase PRs #22 and #23 merged to 57c34b9ad93a2bc80cf1bc3259ff643bbb0c2270 and a2649e11699ee5be47673c6d87a5e40fa294af17; showcase deploys 37820814911 and 37821754702 succeeded. Apex/www outside-in readback proved JSON-LD Organization/WebSite/SoftwareApplication, 512px PNG and the full 50-operation live machine contract including four new standing-autonomy operations, with daily public drift checks. OneClick Website Design Factory candidate on workers.dev passed public Supabase anon-configured build, 10 analytics tests, discovery contract, eight crawlers and real rendered sign-in screen. Its Cloudflare route attach failed zone-not-in-account code 10083; IONOS ui-dns nameservers remain authoritative and the old production root is unchanged. PostSteward six of seven sitemap HTML routes indexed; agent-guide unknown. Agent Shop shop URL indexed while root discovered not indexed and agent-subcontracting product unknown. Six GSC Wizard trackers are active with 99 combined public URL entries; related sitemap submissions accepted and pending Google re-download. After this failure, OneClick Website Factory PR #15 merged as e6f537b1cdcf4d8a05bb478925da2485a38de9dc, removing the unusable Worker Route from current Wrangler configuration and documenting external DNS ownership; this does not represent production promotion.",
       "accountability": {
         "owner": "Product estate maintainer and original OneClick domain registrar account owner",
         "status": "blocked",
-        "nextAction": "Recover the original IONOS domain registrar login, inventory and preserve all DNS and mail records, re-add OneClick zone in Cloudflare and switch to its newly assigned nameservers. Only after zone is active apply the reviewed Worker route and run public production verifier, auth/payment boundary checks and rollback readback. Allow Google trackers to capture subsequent indexing changes without reinterpreting submitted as indexed.",
+        "nextAction": "Recover the original IONOS domain registrar login, inventory and preserve all DNS and mail records, re-add OneClick zone in Cloudflare and switch to its newly assigned nameservers. Only after zone is active restore and apply the reviewed Worker route from a new tested source change and run public production verifier, auth/payment boundary checks and rollback readback. Allow Google trackers to capture subsequent indexing changes without reinterpreting submitted as indexed.",
         "waitCondition": "No accessible IONOS DNS mutation authority and no Cloudflare zone for oneclickwebsitedesignfactory.com; Worker attachment is rejected with code 10083. Public candidate and all other reviewed machine discovery releases are separately accepted. New Google crawls for later content remain pending.",
         "staleDate": "2026-10-15"
       },
       "outcome": "PostSteward showcase is published and verified at both marketing domains with exact 50-operation parity and correct standing-authority language. OneClickPostFactory, OpsTruth, Tail Wagging and Agent Shop earlier accepted discovery work is preserved. The OneClick production apex remains on its existing origin; no DNS cutover is claimed. Google public indexing monitoring now has active trackers across six connected estate properties.",
       "content": "Versioned outside-in release evidence and Search Console baseline at evidence/rollout-20261008/AGENT-INDEXING-AND-RELEASE-WATCH.md, plus exact GitHub merge/deploy links and OneClick issue #13. No secrets or registrar customer account identifiers are recorded.",
-      "measurement": "Six active GSC Wizard indexing trackers with 99 tracked public HTML URLs. PostSteward 50 of 50 live operation contracts match in both apex/www site readbacks; 9 of 9 local showcase tests passed; deployed Worker canonical image 200 at both hosts. OneClick candidate pass, production Worker Route blocked with Cloudflare 10083; no live custom-domain cutover or paid transaction acceptance is invented."
+      "measurement": "Six active GSC Wizard indexing trackers with 99 tracked public HTML URLs. PostSteward 50 of 50 live operation contracts match in both apex/www site readbacks; 9 of 9 local showcase tests passed; deployed Worker canonical image 200 at both hosts. OneClick candidate pass, production Worker Route blocked with Cloudflare 10083; no live custom-domain cutover or paid transaction acceptance is invented. Main of OneClick Website Factory now explicitly omits the blocked zone route after PR #15."
     },
     {
       "id": "PF-E-039",
@@ -2474,6 +2477,23 @@
       "outcome": "The live account-controls admission and indexed-service cleanup blockers for the verified OneClickPostFactory successor outcome are closed. Fresh clean-account signup/App admission and legal gates keep DS-CUSTOMER-001/DS-RELEASE-001 blocked. No unrestricted GA, GitHub-account deletion, upstream key/OAuth revocation or unindexed legacy erasure claim.",
       "content": "Separate authenticated service operations, receipt integrity, fresh readback and independent verification. Preserve source-ledger pins, reconciliation snapshots and shared operating contract.",
       "measurement": "One pre-inspection, one approved deletion and one fresh post-inspection. Indexed object counts were already zero; account vault daily usage reset 1 -> 0. Zero new model executions, repository Write grants, publisher-account deletion, blocked browser retries or product redeployments."
+    },
+    {
+      "id": "PF-E-058",
+      "date": "2026-10-09",
+      "identity": "Preserve concurrent main estate updates alongside completed customer cleanup",
+      "situation": "While publishing the approved customer cleanup receipt, portfolio main advanced to 103e7559a890fe3a4bc7fbc5e012683f44ce90a6 and revised its estate-discovery PF-E-033 story and indexing-watch document. PR 31 needed a documentation-only reconciliation.",
+      "verification": "A structural three-way reconciliation against common main 218212a0a53cf1f321d1c8357a7c7a62f8f07819 preserves every unrelated incoming and branch update. Current main PF-E-033 and the updated AGENT-INDEXING-AND-RELEASE-WATCH.md are retained unchanged. The prior branch PF-E-033 snapshot from c0a06b7ed572a6a9c9a69f51d4b56f4f68c06a72 is archived verbatim together with the current-main object in evidence/rollout-20261008/main-story-update-reconciliation.json. All other previous branch evidence stories, including PF-E-057 customer deletion receipt/readback, remain unchanged. Source-ledger pins, independent verifier subjects, shared contract and unrelated work/owner changes retain their three-way source values. This integrates main into the open review branch; it is not a product merge or deployment.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Retain the reconciled review branch and its historical archives; pursue the separate remaining fresh signup/App and publisher/legal gates.",
+        "waitCondition": "None for this documentation reconciliation.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The current estate release observations and the completed DoneState service-cleanup receipt coexist without discarding either history. PR 31 remains a documentation review; unrestricted DoneState GA stays gated.",
+      "content": "Preserve the newer current-main canonical estate story, archive its previously published snapshot exactly, retain all other historical objects, and regenerate portfolio state.",
+      "measurement": "One concurrent main update integrated; one revised historical-story snapshot archived verbatim; zero additional account deletions, model executions, GitHub Write grants or product deployments."
     }
   ]
 }
