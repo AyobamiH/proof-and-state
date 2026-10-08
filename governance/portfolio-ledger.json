@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "portfolio": "Proof & State",
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "governanceRule": "Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.",
   "sourceLedgers": [
     {
@@ -1984,6 +1984,23 @@
       "outcome": "A canonical cross-product operating contract and ordered machine-discovery programme now exist as a reviewable candidate without collapsing product-specific state machines or claiming provider indexing.",
       "content": "Shared state vector, acceptance layers, GREEN rule, credential-custody contract, temporary-bridge lifecycle, machine-discovery surfaces and acceptance rules, plus the fresh estate discovery audit and ordered rollout.",
       "measurement": "Seven state axes, seven acceptance layers and nine invariants are machine-readable; one estate audit identified concrete work across eight product/domain surfaces plus the Agent Shop subdomain; zero provider-indexing states were inferred from crawlability or sitemap submission."
+    },
+    {
+      "id": "PF-E-033",
+      "date": "2026-10-08",
+      "identity": "Agent discoverability releases verified; Google monitoring active; OneClick domain cutover blocked by registrar DNS",
+      "situation": "The owner-approved portfolio discoverability rollout completed further public Cloudflare application, agent marketing and machine-readable contract repairs. The final OneClick Website Design Factory production cutover could not be achieved through the already merged Worker Route alone because the authoritative domain zone remains external.",
+      "verification": "PostSteward app production workflow 37778872240 succeeded after bounded retry on release abc23334b2c0ba01573945541513c466e72c999d. Separately hosted PostSteward showcase PRs #22 and #23 merged to 57c34b9ad93a2bc80cf1bc3259ff643bbb0c2270 and a2649e11699ee5be47673c6d87a5e40fa294af17; showcase deploys 37820814911 and 37821754702 succeeded. Apex/www outside-in readback proved JSON-LD Organization/WebSite/SoftwareApplication, 512px PNG and the full 50-operation live machine contract including four new standing-autonomy operations, with daily public drift checks. OneClick Website Design Factory candidate on workers.dev passed public Supabase anon-configured build, 10 analytics tests, discovery contract, eight crawlers and real rendered sign-in screen. Its Cloudflare route attach failed zone-not-in-account code 10083; IONOS ui-dns nameservers remain authoritative and the old production root is unchanged. PostSteward six of seven sitemap HTML routes indexed; agent-guide unknown. Agent Shop shop URL indexed while root discovered not indexed and agent-subcontracting product unknown. Six GSC Wizard trackers are active with 99 combined public URL entries; related sitemap submissions accepted and pending Google re-download.",
+      "accountability": {
+        "owner": "Product estate maintainer and original OneClick domain registrar account owner",
+        "status": "blocked",
+        "nextAction": "Recover the original IONOS domain registrar login, inventory and preserve all DNS and mail records, re-add OneClick zone in Cloudflare and switch to its newly assigned nameservers. Only after zone is active apply the reviewed Worker route and run public production verifier, auth/payment boundary checks and rollback readback. Allow Google trackers to capture subsequent indexing changes without reinterpreting submitted as indexed.",
+        "waitCondition": "No accessible IONOS DNS mutation authority and no Cloudflare zone for oneclickwebsitedesignfactory.com; Worker attachment is rejected with code 10083. Public candidate and all other reviewed machine discovery releases are separately accepted. New Google crawls for later content remain pending.",
+        "staleDate": "2026-10-15"
+      },
+      "outcome": "PostSteward showcase is published and verified at both marketing domains with exact 50-operation parity and correct standing-authority language. OneClickPostFactory, OpsTruth, Tail Wagging and Agent Shop earlier accepted discovery work is preserved. The OneClick production apex remains on its existing origin; no DNS cutover is claimed. Google public indexing monitoring now has active trackers across six connected estate properties.",
+      "content": "Versioned outside-in release evidence and Search Console baseline at evidence/rollout-20261008/AGENT-INDEXING-AND-RELEASE-WATCH.md, plus exact GitHub merge/deploy links and OneClick issue #13. No secrets or registrar customer account identifiers are recorded.",
+      "measurement": "Six active GSC Wizard indexing trackers with 99 tracked public HTML URLs. PostSteward 50 of 50 live operation contracts match in both apex/www site readbacks; 9 of 9 local showcase tests passed; deployed Worker canonical image 200 at both hosts. OneClick candidate pass, production Worker Route blocked with Cloudflare 10083; no live custom-domain cutover or paid transaction acceptance is invented."
     }
   ]
 }
