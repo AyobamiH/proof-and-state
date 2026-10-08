@@ -491,9 +491,9 @@
       "owner": "Product owner",
       "authorityRequired": "ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+      "action": "Preserve completed OneClickPostFactory customer execution and indexed-service cleanup. Complete the separate fresh clean-account signup and selected-repository GitHub App admission acceptance and DS-LEGAL-001 public business/service address and branded support/privacy contacts before unrestricted GA. Do not repeat verified PR 172, known run/key/temporary-Write cleanup, or the confirmed account purge.",
       "prerequisites": [],
-      "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
+      "waitCondition": "The supported separate DoneState account-controls connection authenticated OneClickPostFactory. Exactly one approved deletion returned service receipt 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904 at 2026-10-08T22:55:39.653Z; digest validation and fresh inspection at 22:56:06.979Z confirmed a complete empty indexed inventory, disconnected execution credential, no active run and dailyRunsUsed 0. Primary receipt PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29 preserves the redacted payloads. Fresh clean-account signup/App admission and legal publisher gates remain unproven.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -510,7 +510,8 @@
         "PF-E-052",
         "PF-E-053",
         "PF-E-054",
-        "PF-E-055"
+        "PF-E-055",
+        "PF-E-057"
       ]
     },
     {
@@ -1247,9 +1248,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-08",
       "staleDate": "2026-10-10",
-      "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
-      "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
-      "reentryCondition": "Resume after a supported account-controls OAuth connection and inspection identify OneClickPostFactory with exact resource and effective scopes. Existing merge/deployment and customer deletion authority need no repeated approval. Preserve exact login confirmation, receipt and fresh readback; stop on ambiguous deletion effects. Do not repeat customer execution, widen GitHub Write, use the publisher account, retry the blocked browser route or evade access denials with an alternate host/user-agent.",
+      "nextAction": "Preserve completed OneClickPostFactory customer execution and indexed-service cleanup. Complete the separate fresh clean-account signup and selected-repository GitHub App admission acceptance and DS-LEGAL-001 public business/service address and branded support/privacy contacts before unrestricted GA. Do not repeat verified PR 172, known run/key/temporary-Write cleanup, or the confirmed account purge.",
+      "waitCondition": "The supported separate DoneState account-controls connection authenticated OneClickPostFactory. Exactly one approved deletion returned service receipt 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904 at 2026-10-08T22:55:39.653Z; digest validation and fresh inspection at 22:56:06.979Z confirmed a complete empty indexed inventory, disconnected execution credential, no active run and dailyRunsUsed 0. Primary receipt PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29 preserves the redacted payloads. Fresh clean-account signup/App admission and legal publisher gates remain unproven.",
+      "reentryCondition": "Resume only the remaining fresh onboarding/App and publisher/legal decisions. Existing customer execution and indexed-service cleanup are complete within their recorded scope and need no repeat execution, purge or approval. Reopen cleanup only on new contradictory state or regression; original legacy/external GitHub/provider-key/OAuth exclusions and independent-verification boundary remain.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1283,7 +1284,8 @@
         "PF-E-052",
         "PF-E-053",
         "PF-E-054",
-        "PF-E-055"
+        "PF-E-055",
+        "PF-E-057"
       ]
     },
     {
@@ -1403,9 +1405,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-08",
       "staleDate": "2026-10-10",
-      "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
-      "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
-      "reentryCondition": "Resume after a supported account-controls OAuth connection and inspection identify OneClickPostFactory with exact resource and effective scopes. Existing merge/deployment and customer deletion authority need no repeated approval. Preserve exact login confirmation, receipt and fresh readback; stop on ambiguous deletion effects. Do not repeat customer execution, widen GitHub Write, use the publisher account, retry the blocked browser route or evade access denials with an alternate host/user-agent.",
+      "nextAction": "Preserve completed OneClickPostFactory customer execution and indexed-service cleanup. Complete the separate fresh clean-account signup and selected-repository GitHub App admission acceptance and DS-LEGAL-001 public business/service address and branded support/privacy contacts before unrestricted GA. Do not repeat verified PR 172, known run/key/temporary-Write cleanup, or the confirmed account purge.",
+      "waitCondition": "The supported separate DoneState account-controls connection authenticated OneClickPostFactory. Exactly one approved deletion returned service receipt 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904 at 2026-10-08T22:55:39.653Z; digest validation and fresh inspection at 22:56:06.979Z confirmed a complete empty indexed inventory, disconnected execution credential, no active run and dailyRunsUsed 0. Primary receipt PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29 preserves the redacted payloads. Fresh clean-account signup/App admission and legal publisher gates remain unproven.",
+      "reentryCondition": "Resume only the remaining fresh onboarding/App and publisher/legal decisions. Existing customer execution and indexed-service cleanup are complete within their recorded scope and need no repeat execution, purge or approval. Reopen cleanup only on new contradictory state or regression; original legacy/external GitHub/provider-key/OAuth exclusions and independent-verification boundary remain.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1441,7 +1443,8 @@
         "PF-E-052",
         "PF-E-053",
         "PF-E-054",
-        "PF-E-055"
+        "PF-E-055",
+        "PF-E-057"
       ]
     },
     {
@@ -2454,6 +2457,23 @@
       "outcome": "Both independent histories are preserved with unique canonical IDs and an exact archive of the older branch-scoped receipt. Current DoneState API deployment is confirmed; fresh account-controls admission and indexed customer deletion remain unconfirmed.",
       "content": "Archive the single colliding customer story, retain current canonical main story, preserve all other story objects and regenerate portfolio state. Historical prose that referred to branch-scoped PF-E-033 continues to describe that archived original receipt.",
       "measurement": "One colliding identifier reconciled; one original story object archived unchanged; all other stories and unrelated portfolio state preserved. Zero product merges, deployments, model executions, repository Write grants or customer account deletions."
+    },
+    {
+      "id": "PF-E-057",
+      "date": "2026-10-08",
+      "identity": "DoneState customer indexed-service cleanup closed by receipt and fresh inspection",
+      "situation": "The prepared separate DoneState account-controls connection was confirmed and became callable as OneClickPostFactory. The already-approved customer indexed-service deletion was performed once after authenticated identity and readiness inspection.",
+      "verification": "Pre-inspection at 2026-10-08T22:51:35.335Z identified OneClickPostFactory with a complete zero-count indexed inventory, no stored key or active run and dailyRunsUsed 1. One delete_account_data call with confirm true and exact confirmLogin returned a service receipt at 22:55:39.653Z, both generations 6 and canonical SHA-256 digest 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904, independently recomputed as a content-integrity check. Fresh inspection at 22:56:06.979Z confirmed complete zero-count inventory, empty repository/run lists, disconnected execution credential, no active run and dailyRunsUsed 0. The receipt has independentVerification false; this is service evidence plus fresh state observation, not an independent-verifier signature. Primary append-only receipt is PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29; the copied payload, exact source digest and reference are in evidence/rollout-20261008/customer-account-closure.json. Historical direct-probe denials, product deployment, prior OpsTruth verification and all old portfolio stories remain unchanged.",
+      "accountability": {
+        "owner": "DoneState maintainers",
+        "status": "complete",
+        "nextAction": "Retain the scoped receipt and readback; pursue separate fresh signup/App and DS-LEGAL-001 launch gates.",
+        "waitCondition": "None for the approved existing customer indexed-service cleanup.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The live account-controls admission and indexed-service cleanup blockers for the verified OneClickPostFactory successor outcome are closed. Fresh clean-account signup/App admission and legal gates keep DS-CUSTOMER-001/DS-RELEASE-001 blocked. No unrestricted GA, GitHub-account deletion, upstream key/OAuth revocation or unindexed legacy erasure claim.",
+      "content": "Separate authenticated service operations, receipt integrity, fresh readback and independent verification. Preserve source-ledger pins, reconciliation snapshots and shared operating contract.",
+      "measurement": "One pre-inspection, one approved deletion and one fresh post-inspection. Indexed object counts were already zero; account vault daily usage reset 1 -> 0. Zero new model executions, repository Write grants, publisher-account deletion, blocked browser retries or product redeployments."
     }
   ]
 }
