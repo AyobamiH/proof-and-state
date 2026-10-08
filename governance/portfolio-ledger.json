@@ -489,11 +489,11 @@
       "phase": "VALIDATE",
       "title": "Complete fresh full-path customer acceptance",
       "owner": "Product owner",
-      "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
+      "authorityRequired": "MERGE_DEPLOYMENT_AND_ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Obtain a non-secret owner-provided receipt confirming full indexed inspection and deletion of the disposable DoneState service account for OneClickPostFactory, or expose and review a supported account-bound inspection/deletion capability. Do not retry the blocked browser handoff. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Preserve separate fresh-signup, selected-repository App and LEGAL-001 gates before unrestricted GA.",
+      "action": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
       "prerequisites": [],
-      "waitCondition": "Bounded customer run aa5389f5-a4dd-400e-ba72-3e80c3190992 is independently VERIFIED on unmerged PR 172 with exact-head CI green; known run/key deletion and temporary Write removal are confirmed. Full indexed service-account inspection/purge is unconfirmed. Browser credential-protection recovery failed and the documented manual handoff was rejected by browser URL policy. Current MCP tools do not expose full indexed account inspection/purge; browser workaround attempts are prohibited.",
+      "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -508,7 +508,8 @@
         "PF-E-050",
         "PF-E-051",
         "PF-E-052",
-        "PF-E-053"
+        "PF-E-053",
+        "PF-E-054"
       ]
     },
     {
@@ -1245,9 +1246,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-08",
       "staleDate": "2026-10-10",
-      "nextAction": "Obtain a non-secret owner-provided receipt confirming full indexed inspection and deletion of the disposable DoneState service account for OneClickPostFactory, or expose and review a supported account-bound inspection/deletion capability. Do not retry the blocked browser handoff. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Preserve separate fresh-signup, selected-repository App and LEGAL-001 gates before unrestricted GA.",
-      "waitCondition": "Bounded customer run aa5389f5-a4dd-400e-ba72-3e80c3190992 is independently VERIFIED on unmerged PR 172 with exact-head CI green; known run/key deletion and temporary Write removal are confirmed. Full indexed service-account inspection/purge is unconfirmed. Browser credential-protection recovery failed and the documented manual handoff was rejected by browser URL policy. Current MCP tools do not expose full indexed account inspection/purge; browser workaround attempts are prohibited.",
-      "reentryCondition": "Continue only with a supported account-bound API capability or non-secret owner-provided service-account deletion evidence. Do not retry the blocked browser URL or substitute another browser surface, extract credentials, replay model execution, merge PR 172, repeat confirmed cleanup or infer full account erasure/provider-key/OAuth revocation.",
+      "nextAction": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+      "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
+      "reentryCondition": "Resume only after checked final-head CI, named owner merge/deployment authority, successful deployment and an authenticated account-controls inspection identifying OneClickPostFactory. Use exact login confirmation and preserve receipt/readback; stop on ambiguous destructive effects. Do not use the owner account, repeat model execution or confirmed cleanup, widen GitHub permissions or circumvent browser URL policy.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1279,7 +1280,8 @@
         "PF-E-050",
         "PF-E-051",
         "PF-E-052",
-        "PF-E-053"
+        "PF-E-053",
+        "PF-E-054"
       ]
     },
     {
@@ -1399,9 +1401,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-08",
       "staleDate": "2026-10-10",
-      "nextAction": "Obtain a non-secret owner-provided receipt confirming full indexed inspection and deletion of the disposable DoneState service account for OneClickPostFactory, or expose and review a supported account-bound inspection/deletion capability. Do not retry the blocked browser handoff. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Preserve separate fresh-signup, selected-repository App and LEGAL-001 gates before unrestricted GA.",
-      "waitCondition": "Bounded customer run aa5389f5-a4dd-400e-ba72-3e80c3190992 is independently VERIFIED on unmerged PR 172 with exact-head CI green; known run/key deletion and temporary Write removal are confirmed. Full indexed service-account inspection/purge is unconfirmed. Browser credential-protection recovery failed and the documented manual handoff was rejected by browser URL policy. Current MCP tools do not expose full indexed account inspection/purge; browser workaround attempts are prohibited.",
-      "reentryCondition": "Continue only with a supported account-bound API capability or non-secret owner-provided service-account deletion evidence. Do not retry the blocked browser URL or substitute another browser surface, extract credentials, replay model execution, merge PR 172, repeat confirmed cleanup or infer full account erasure/provider-key/OAuth revocation.",
+      "nextAction": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+      "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
+      "reentryCondition": "Resume only after checked final-head CI, named owner merge/deployment authority, successful deployment and an authenticated account-controls inspection identifying OneClickPostFactory. Use exact login confirmation and preserve receipt/readback; stop on ambiguous destructive effects. Do not use the owner account, repeat model execution or confirmed cleanup, widen GitHub permissions or circumvent browser URL policy.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1435,7 +1437,8 @@
         "PF-E-050",
         "PF-E-051",
         "PF-E-052",
-        "PF-E-053"
+        "PF-E-053",
+        "PF-E-054"
       ]
     },
     {
@@ -2397,6 +2400,23 @@
       "outcome": "Full indexed account inspection/purge remains unconfirmed. The successful customer result and exact confirmed cleanup remain preserved; no blocked browser workaround was attempted.",
       "content": "Only a supported account-bound inspection/deletion interface or a non-secret owner-provided service-account deletion receipt can re-enter this step. Do not delete the GitHub account or repeat model execution/known cleanup.",
       "measurement": "Browser observation credential_observation_restricted; canonical recovery protected_command_failed; manual handoff browser_security_restricted and next_action stop. Zero alternate-browser/workaround attempts; no indexed erasure claim."
+    },
+    {
+      "id": "PF-E-054",
+      "date": "2026-10-08",
+      "identity": "Checked separate DoneState account-controls API candidate",
+      "situation": "The publisher requested a supported alternative after browser URL policy blocked the remaining indexed service-account cleanup step.",
+      "verification": "DoneState PR 173 exposes inspect_account and delete_account_data only on a separate /mcp/account/v1 resource with effective account scopes, exact resource/owner checks and login confirmation. It reuses generation-fenced deletion, refuses active/unreadable/capped inventories and preserves ambiguity on failed final readback. Local validation passed 163 Worker tests/24 files and 44 core tests. Implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed CI 37710940385 for core (22), core (24) and hosted-plugin. Public tree 4fcfbaa205cfc602d7ebdec134a2f28952ed7638 matches the locally checked tree. Review-package head c9c13f9046fe7142d608726408117dcb97536378 adds E-099 and a CI receipt without changing implementation code; final-head CI 37711410330 passed core (22), core (24) and hosted-plugin at that exact head. The canonical 0.3.0 20-tool inventory and frozen distribution manifest are unchanged. Receipt: evidence/rollout-20261008/account-api-candidate.json.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+        "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "A checked supported API candidate is available for review, not yet deployed or connected. No new production account deletion or GA claim.",
+      "content": "Preserve separate execution/CI/deployment/customer-connection/account-deletion states. The returned receipt will record service facts and a digest, not an independent signature. Existing OAuth connections, generation fences and anonymous aggregate counters remain; GitHub resources, upstream key/OAuth revocation and unindexed legacy objectives remain outside scope.",
+      "measurement": "Implementation and final review-package CI each have three successful required jobs; local 163 Worker/44 core tests passed. Zero new model executions, repository Write grants, customer account deletions or blocked browser retries."
     }
   ]
 }
