@@ -1,0 +1,122 @@
+{
+  "schema": "proof-state.public-location-publication.v1",
+  "date": "2026-10-09",
+  "primaryRepository": "AyobamiH/donestate",
+  "primaryCommit": "b12aec71fd1738378252481b10b7a8c8d9f519a6",
+  "primaryPullRequest": 174,
+  "primaryMergeCommit": "762ac3983c65d916bb9dc091843ebb3a1fdc7a38",
+  "primaryMergeTree": "b9926b311dbc439be3e3184ee4fc05366ed644e4",
+  "primaryExactMergeCi": {
+    "runId": 37859435117,
+    "result": "success",
+    "requiredChecks": [
+      "core (22)",
+      "core (24)",
+      "hosted-plugin"
+    ]
+  },
+  "primaryPath": "evidence/account-api-20261008/public-location-decision.json",
+  "website": {
+    "repository": "AyobamiH/proof-and-state-website",
+    "pullRequest": 27,
+    "candidateCommit": "716941c74df04cd5bd479efa7cdd26a545a64708",
+    "mergeCommit": "2a74849f000e1daed834bf3d763048c2aa284506",
+    "candidateAndMergeTree": "81abb790c4ea03c92807e0a990695233d26ed899",
+    "exactMergeCi": [
+      {
+        "runId": 37859198711,
+        "name": "CI",
+        "conclusion": "success"
+      },
+      {
+        "runId": 37859198752,
+        "name": "Owned toolchain integration",
+        "conclusion": "success"
+      }
+    ],
+    "productionDeployment": {
+      "runId": 37859198742,
+      "jobId": 113590638962,
+      "conclusion": "success",
+      "startedAt": "2026-10-08T23:23:57Z",
+      "completedAt": "2026-10-08T23:25:50Z",
+      "workerVersion": "ae9d1b19-9728-464b-84a5-3c1b62200953",
+      "successfulReadbackSteps": [
+        "Verify canonical production routes",
+        "Verify production branding bytes and SSR metadata",
+        "Verify deployed owned bundles",
+        "Browser readback of the live deployment"
+      ]
+    },
+    "productionEvidenceArtifact": {
+      "id": 11585740944,
+      "name": "branding-production-2a74849f000e1daed834bf3d763048c2aa284506-1",
+      "sha256": "ef545810b6bc321db27f59052955c7edfab81cabdcc592c4be57cdc389695501",
+      "expiresAt": "2027-01-06T23:23:53Z"
+    },
+    "policyPaths": [
+      "src/routes/legal.privacy.tsx",
+      "src/routes/legal.terms.tsx"
+    ],
+    "policyUrls": [
+      "https://proofandstate.com/legal/privacy",
+      "https://proofandstate.com/legal/terms"
+    ],
+    "policyContentReadback": {
+      "state": "UNCONFIRMED_OUTSIDE_WORKFLOW",
+      "directUnauthenticatedHttpStatus": 403,
+      "probeStopped": true,
+      "searchRetrieval": "Older 3 October policy content; cannot confirm deployed wording",
+      "workflowReadbackScope": "Canonical home/status routes, branding, deployed bundles and browser navigation; legal policy text is not asserted by the existing workflow",
+      "claimBoundary": "Exact source, merge, successful provider deployment and existing production checks are confirmed. Independent live readback of the new legal-policy wording is not confirmed."
+    }
+  },
+  "fullServiceAddressProvided": false,
+  "mailDeliveryTestPerformed": false,
+  "unrestrictedGaApproved": false,
+  "doneStateRuntimeRedeployed": false,
+  "additionalCustomerExecutionOrDeletion": false,
+  "privateDetailsPublished": false,
+  "primaryFileSha256": "35ce1abd294b01b0e8db8f6f47e6f7d7628c6c0db690849dee0f19091cb2a0bf",
+  "decision": {
+    "schema": "donestate.public-location-decision.v1",
+    "date": "2026-10-09",
+    "operator": "AYOBAMI JOHN HAASTRUP trading as Proof & State",
+    "publicLocation": "Northampton, Northamptonshire, UK",
+    "granularity": "town_county_country",
+    "authority": "Explicit publisher instruction to use this location and finish the current slice",
+    "policyPaths": [
+      "docs/PRIVACY.md",
+      "docs/TERMS.md"
+    ],
+    "fullServiceAddressProvided": false,
+    "publicSupportEmailConfirmed": true,
+    "publicPrivacyEmailConfirmed": true,
+    "existingContactRoutes": [
+      "https://github.com/AyobamiH/donestate/issues",
+      "https://github.com/AyobamiH/donestate/security/advisories/new"
+    ],
+    "launchClearance": false,
+    "remainingRequirements": [
+      "Appropriate complete public business/service geographic address",
+      "Fresh clean-account signup and selected-repository GitHub App admission"
+    ],
+    "reference": "https://www.legislation.gov.uk/uksi/2002/2013/2026-05-07?view=extent",
+    "privateDetailsPublished": false,
+    "runtimeCodeChanged": false,
+    "publicSupportEmail": "hello@proofandstate.com",
+    "publicPrivacyEmail": "hello@proofandstate.com",
+    "publicSecurityEmail": "security@proofandstate.com",
+    "contactConfirmationBasis": [
+      "https://proofandstate.com/contact",
+      "https://proofandstate.com/legal/privacy"
+    ],
+    "mailDeliveryTestPerformed": false,
+    "canonicalWebsiteCandidate": "716941c74df04cd5bd479efa7cdd26a545a64708",
+    "canonicalWebsitePullRequest": 27,
+    "canonicalPolicyUrls": [
+      "https://proofandstate.com/legal/privacy",
+      "https://proofandstate.com/legal/terms"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-07T22:33:00.412269+00:00",
+  "status": "REPAIR_CHECKED_NOT_DEPLOYED",
+  "source": {
+    "repository": "AyobamiH/donestate",
+    "baseSha": "be14e35514f0ee3d78ca2c121c2b236767f80ee4",
+    "pr": 170,
+    "headSha": "4ca81f992c407f9403b44ca91821758e36cc6b6c",
+    "treeSha": "6c016575496f151a2a1ce0562706c98075a58f41",
+    "canonicalEvidence": "https://github.com/AyobamiH/donestate/blob/4ca81f992c407f9403b44ca91821758e36cc6b6c/evidence/clean-customer-20261007/validation-resource-repair.json",
+    "storyId": "E-090"
+  },
+  "ci": {
+    "runId": 37696700913,
+    "headSha": "4ca81f992c407f9403b44ca91821758e36cc6b6c",
+    "conclusion": "success",
+    "requiredJobs": [
+      {
+        "name": "core (22)",
+        "conclusion": "success"
+      },
+      {
+        "name": "core (24)",
+        "conclusion": "success"
+      },
+      {
+        "name": "hosted-plugin",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "priorEvidence": {
+    "doneStatePr": 169,
+    "headSha": "2c0e958d8327b6a1250866e219c3ec4fb718166e",
+    "failedRunId": "124f1517-c41c-4d67-bc32-016b3d0ba8e1",
+    "outcome": "FAILED_SAFE",
+    "cleanupPreserved": true
+  },
+  "capacity": {
+    "before": "lite: 256 MiB / 1/16 vCPU / 2 GB disk",
+    "prepared": "basic: 1024 MiB / 1/4 vCPU / 4 GB disk",
+    "maxInstances": 5,
+    "provisionedCostIncrease": true,
+    "minimumDeploymentMemoryMib": 512
+  },
+  "limits": {
+    "localNode24IsExactProductionNode22Reproduction": false,
+    "productionOomProven": false,
+    "exactProductionTimeoutCause": "UNPROVEN",
+    "deployed": false,
+    "customerPrCreated": false,
+    "customerVerified": false
+  },
+  "authority": {
+    "userDirectedRepairAndFreshBoundedAttempt": true,
+    "ownerMergeAndDeploymentReserved": true,
+    "freshMaxDurationMs": 120000,
+    "freshMaxChangedFiles": 3,
+    "publication": "pull_request",
+    "automaticRetry": false,
+    "verifierPin": "09544c3ede70b832a114918bb439960004655faf9d36981e1402587af9429c86"
+  },
+  "livePrerequisites": {
+    "customerKeyConnected": false,
+    "customerRepositoryPermission": "read",
+    "futureCreateSubmitted": false,
+    "futureStartSubmitted": false
+  },
+  "secretsExcluded": true
+}

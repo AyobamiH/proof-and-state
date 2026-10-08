@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
   "portfolio": "Proof & State",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "governanceRule": "Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.",
   "sourceLedgers": [
     {
       "project": "DoneState",
       "repository": "AyobamiH/donestate",
-      "commit": "6fb1f4960d22d351902fe0eefa22f21d249dcd7f",
+      "commit": "be14e35514f0ee3d78ca2c121c2b236767f80ee4",
       "path": "governance/project-ledger.json",
-      "url": "https://github.com/AyobamiH/donestate/blob/6fb1f4960d22d351902fe0eefa22f21d249dcd7f/governance/project-ledger.json"
+      "url": "https://github.com/AyobamiH/donestate/blob/be14e35514f0ee3d78ca2c121c2b236767f80ee4/governance/project-ledger.json"
     }
   ],
   "products": [
@@ -20,25 +20,25 @@
       "repository": "AyobamiH/donestate",
       "main": {
         "branch": "main",
-        "sha": "6fb1f4960d22d351902fe0eefa22f21d249dcd7f",
+        "sha": "be14e35514f0ee3d78ca2c121c2b236767f80ee4",
         "status": "CI_VERIFIED",
         "protection": "PROTECTED"
       },
       "deployment": {
         "status": "DEPLOYED",
-        "sha": "5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4",
+        "sha": "be14e35514f0ee3d78ca2c121c2b236767f80ee4",
         "version": "0.3.0",
-        "providerVersion": "98d66425-8a2c-4caf-a2a4-dced459bdd40",
-        "exactMainStatus": "UNPROVEN",
+        "providerVersion": "ac31dbd3-2508-469a-a894-3c97b9062677",
+        "exactMainStatus": "DEPLOYED",
         "rollback": {
           "status": "DEPLOYED",
-          "sha": "c984744c732f598db8859b5b9d4367d1f8da2aef",
+          "sha": "5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4",
           "version": "0.3.0",
-          "providerVersion": "c80942ed-6854-4bfb-bdd2-b800df7b1464"
+          "providerVersion": "98d66425-8a2c-4caf-a2a4-dced459bdd40"
         },
         "publishingEnabled": false
       },
-      "observedAt": "2026-10-07T07:12:26Z",
+      "observedAt": "2026-10-07T10:15:05Z",
       "evidenceUrls": [
         "https://github.com/AyobamiH/donestate/commit/e24f543b58b69d861be1f2f5153903a654a9f5ea",
         "https://github.com/AyobamiH/donestate/actions/runs/37152045333",
@@ -55,7 +55,10 @@
         "https://github.com/AyobamiH/donestate/commit/6fb1f4960d22d351902fe0eefa22f21d249dcd7f",
         "https://github.com/AyobamiH/donestate/actions/runs/37583831139",
         "https://github.com/AyobamiH/donestate/blob/81821640c1ef1633878553c51747e94b6ff9a913/evidence/clean-customer-20261007/attempt-03.json",
-        "https://github.com/AyobamiH/donestate/actions/runs/37585518215"
+        "https://github.com/AyobamiH/donestate/actions/runs/37585518215",
+        "https://github.com/AyobamiH/donestate/commit/be14e35514f0ee3d78ca2c121c2b236767f80ee4",
+        "https://github.com/AyobamiH/donestate/actions/runs/37595968023",
+        "https://github.com/AyobamiH/donestate/actions/runs/37595968046"
       ],
       "chatgpt": {
         "version": "0.3.0",
@@ -83,7 +86,7 @@
         "artifactType": "GITHUB_APP",
         "artifactTypeStatus": "IMPLEMENTED",
         "sourceRepository": "AyobamiH/donestate",
-        "sourceSha": "5b18fefcaa4c186782a2c14e5e4d16c2f93e11e4",
+        "sourceSha": "be14e35514f0ee3d78ca2c121c2b236767f80ee4",
         "sourceStatus": "CI_VERIFIED",
         "version": "0.3.0",
         "versionStatus": "IN_REVIEW",
@@ -148,12 +151,14 @@
         {
           "id": "DS-P0-GA",
           "severity": "P0",
-          "summary": "CUST-001/CUST-002 are complete. Fresh customer GitHub OAuth admission and checkout succeeded, then a single implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before publication. The deployed failure log was discarded, leaving the cause unknown. A bounded diagnostic repair is open and undeployed. The account, key and temporary Write are retained for authorised recovery; a complete customer journey and remaining public address/contact decisions still gate unrestricted GA.",
+          "summary": "CUST-001/CUST-002 implementation remains complete. Diagnostics PR #168 is merged and deployed with green exact-source CI. The fresh bounded customer run failed safely with preserved OpenAI no-credit diagnostics before publication. Approved indexed-account/key deletion and exact temporary Write removal are confirmed complete; a new funded key connection and bounded repository authority are required before fresh execution. Successful complete customer acceptance, independent verification, fresh signup and remaining public address/contact decisions still gate unrestricted GA.",
           "evidenceUrls": [
             "https://github.com/AyobamiH/donestate/pull/166",
             "https://github.com/AyobamiH/donestate/blob/dce8772122b50186bbdbece53bd9a3bc21d42da4/evidence/clean-customer-20261007/acceptance.json",
             "https://github.com/AyobamiH/donestate/pull/168",
-            "https://github.com/AyobamiH/donestate/blob/e27e8d8bcf88b4612c65c867212f30f053ea51b0/evidence/clean-customer-20261007/continuation-02.json"
+            "https://github.com/AyobamiH/donestate/blob/e27e8d8bcf88b4612c65c867212f30f053ea51b0/evidence/clean-customer-20261007/continuation-02.json",
+            "https://github.com/AyobamiH/donestate/actions/runs/37595968023",
+            "https://github.com/AyobamiH/donestate/actions/runs/37595968046"
           ]
         },
         {
@@ -178,7 +183,7 @@
           ]
         }
       ],
-      "nextOwnerAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA."
+      "nextOwnerAction": "The owner must add credits to the OpenAI API organization associated with the execution key. After this intentional cleanup, connect the funded execution key again and explicitly authorise any fresh bounded repository Write. Use a new PR-only objective, exact-head required CI and pinned OpsTruth verification; do not rerun either terminal failed objective. Fresh signup and remaining legitimate public address/branded support/privacy contacts still gate unrestricted GA."
     },
     {
       "id": "opstruth",
@@ -484,17 +489,31 @@
       "phase": "VALIDATE",
       "title": "Complete fresh full-path customer acceptance",
       "owner": "Product owner",
-      "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
+      "authorityRequired": "ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
+      "action": "Preserve completed OneClickPostFactory customer execution and indexed-service cleanup. Complete the separate fresh clean-account signup and selected-repository GitHub App admission acceptance and provide the remaining appropriate complete public business/service address before unrestricted GA. Northampton, Northamptonshire, UK and the existing hello@proofandstate.com support/privacy and security@proofandstate.com security contacts are now published in the merged policies. Do not repeat verified PR 172, known run/key/temporary-Write cleanup, or the confirmed account purge.",
       "prerequisites": [],
-      "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
+      "waitCondition": "The supported separate DoneState account-controls connection authenticated OneClickPostFactory. Exactly one approved deletion returned service receipt 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904 at 2026-10-08T22:55:39.653Z; digest validation and fresh inspection at 22:56:06.979Z confirmed a complete empty indexed inventory, disconnected execution credential, no active run and dailyRunsUsed 0. Primary receipt PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29 preserves the redacted payloads. Fresh clean-account signup/App admission and legal publisher gates remain unproven. The publisher-approved public operating location is Northampton, Northamptonshire, UK. DoneState PR 174 merged as 762ac3983c65d916bb9dc091843ebb3a1fdc7a38 with exact-merge CI 37859435117 successful. Canonical website PR 27 merged as 2a74849f000e1daed834bf3d763048c2aa284506; production deployment 37859198742 and both exact-merge checks succeeded. Existing support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are source-confirmed published contacts; email delivery was not tested. The town/county/country decision does not provide the remaining complete geographic business/service address. Independent live readback of the new legal-page wording is unconfirmed: a direct probe returned 403 and search returned older content; successful existing workflow checks cover other production routes and bundles.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
         "PF-E-028",
         "PF-E-030",
-        "PF-E-031"
+        "PF-E-031",
+        "PF-E-032",
+        "PF-E-056",
+        "PF-E-047",
+        "PF-E-048",
+        "PF-E-049",
+        "PF-E-050",
+        "PF-E-051",
+        "PF-E-052",
+        "PF-E-053",
+        "PF-E-054",
+        "PF-E-055",
+        "PF-E-057",
+        "PF-E-058",
+        "PF-E-059"
       ]
     },
     {
@@ -505,13 +524,14 @@
       "owner": "Publisher owner",
       "authorityRequired": "PRIVACY_AND_OPERATOR_DECISION",
       "agentExecutable": false,
-      "action": "Supply a legitimate public geographic business/service address and confirm branded support/privacy contact routes. Preserve the recorded worldwide-where-legally-permitted territory decision and current pre-trading ICO assessment; reassess when activity begins. Keep private home address and UTR out of public evidence.",
+      "action": "Supply the remaining appropriate complete public geographic business/service address. Northampton, Northamptonshire, UK is approved and published; support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are established published contacts. Preserve the recorded worldwide-where-legally-permitted territory decision and current pre-trading ICO assessment; reassess when activity begins. Keep the private home address and UTR out of public evidence.",
       "prerequisites": [],
-      "waitCondition": "Remaining public address/contact choices require genuine operator authority. Existing territory and pre-trading assessment decisions must not be described as absent.",
+      "waitCondition": "The publisher-approved public operating location is Northampton, Northamptonshire, UK. DoneState PR 174 merged as 762ac3983c65d916bb9dc091843ebb3a1fdc7a38 with exact-merge CI 37859435117 successful. Canonical website PR 27 merged as 2a74849f000e1daed834bf3d763048c2aa284506; production deployment 37859198742 and both exact-merge checks succeeded. Existing support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are source-confirmed published contacts; email delivery was not tested. The town/county/country decision does not provide the remaining complete geographic business/service address. Independent live readback of the new legal-page wording is unconfirmed: a direct probe returned 403 and search returned older content; successful existing workflow checks cover other production routes and bundles. The remaining appropriate complete public address requires the publisher; no new location or email-declaration approval is needed.",
       "evidenceIds": [
         "PF-E-002",
         "PF-E-024",
-        "PF-E-027"
+        "PF-E-027",
+        "PF-E-059"
       ]
     },
     {
@@ -644,14 +664,15 @@
       "owner": "Portfolio owner",
       "authorityRequired": "RELEASE_DECISION",
       "agentExecutable": false,
-      "action": "After fresh full-path customer acceptance, the remaining legitimate address/contact decisions, support-path proof and satisfactory operational/pilot evidence, make a separate unrestricted GA decision and record accepted residual risks. Account layout, disposable deletion and production generation-fence controls are already complete.",
+      "action": "After fresh full-path customer acceptance, the remaining appropriate complete public address, support-path proof and satisfactory operational/pilot evidence, make a separate unrestricted GA decision and record accepted residual risks. The approved Northampton location and existing support/privacy/security contact declarations are published; account layout, disposable deletion and production generation-fence controls are already complete.",
       "prerequisites": [
         "OWNER-PILOT-001"
       ],
-      "waitCondition": "Controlled owned-domain access is available; a fresh complete customer outcome and remaining publisher decisions still gate unrestricted self-serve GA.",
+      "waitCondition": "Controlled owned-domain access is available. Approved town/county/country location and contact declarations are published. Fresh complete customer acceptance, an appropriate complete public address, support-path proof and the separate unrestricted GA decision remain gated.",
       "evidenceIds": [
         "PF-E-024",
-        "PF-E-027"
+        "PF-E-027",
+        "PF-E-059"
       ]
     },
     {
@@ -1172,16 +1193,17 @@
       "stream": "legal",
       "status": "blocked",
       "owner": "Publisher owner",
-      "lastUpdated": "2026-10-07",
+      "lastUpdated": "2026-10-09",
       "staleDate": "2026-10-17",
-      "nextAction": "Supply a legitimate public geographic business/service address and branded support/privacy contact routes. Preserve worldwide availability where legally permitted and the recorded pre-trading ICO self-assessment; retake that assessment when business activity begins.",
-      "waitCondition": "The territory and current pre-trading ICO decisions already exist in DoneState LEGAL-001. The remaining public address/contact decisions require the publisher and must not expose a home address or UTR.",
-      "reentryCondition": "Resume as soon as the publisher decisions are available; controlled owned-domain access does not depend on external-directory approval.",
+      "nextAction": "Supply the remaining appropriate complete public geographic business/service address. Retain Northampton, Northamptonshire, UK and the established hello@proofandstate.com support/privacy and security@proofandstate.com security contacts. Preserve worldwide availability where legally permitted and the recorded pre-trading ICO self-assessment; reassess when business activity begins. Keep the private home address and UTR out of public evidence.",
+      "waitCondition": "The publisher-approved public operating location is Northampton, Northamptonshire, UK. DoneState PR 174 merged as 762ac3983c65d916bb9dc091843ebb3a1fdc7a38 with exact-merge CI 37859435117 successful. Canonical website PR 27 merged as 2a74849f000e1daed834bf3d763048c2aa284506; production deployment 37859198742 and both exact-merge checks succeeded. Existing support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are source-confirmed published contacts; email delivery was not tested. The town/county/country decision does not provide the remaining complete geographic business/service address. Independent live readback of the new legal-page wording is unconfirmed: a direct probe returned 403 and search returned older content; successful existing workflow checks cover other production routes and bundles. The territory and current pre-trading ICO decisions already exist; only the appropriate complete public address remains an unprovided operator-detail decision.",
+      "reentryCondition": "Resume the remaining address decision when the publisher supplies an appropriate complete public business/service address. Published location and contact declarations are complete; do not ask for them again. Controlled owned-domain access does not depend on external-directory approval.",
       "dependencies": [],
       "evidenceIds": [
         "PF-E-002",
         "PF-E-024",
-        "PF-E-027"
+        "PF-E-027",
+        "PF-E-059"
       ]
     },
     {
@@ -1229,11 +1251,11 @@
       "stream": "customer-readiness",
       "status": "blocked",
       "owner": "DoneState maintainers",
-      "lastUpdated": "2026-10-07",
-      "staleDate": "2026-10-09",
-      "nextAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
-      "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
-      "reentryCondition": "Resume only after the diagnostics candidate passes exact-head required CI and owner-approved merge/deployment is independently evidenced. Preserve the failed run and historical stories. Use a fresh three-file PR-only objective without App/verifier scope expansion; no blind retry or manufactured customer execution proof.",
+      "lastUpdated": "2026-10-09",
+      "staleDate": "2026-10-10",
+      "nextAction": "Preserve completed OneClickPostFactory customer execution and indexed-service cleanup. Complete the separate fresh clean-account signup and selected-repository GitHub App admission acceptance and provide the remaining appropriate complete public business/service address before unrestricted GA. Northampton, Northamptonshire, UK and the existing hello@proofandstate.com support/privacy and security@proofandstate.com security contacts are now published in the merged policies. Do not repeat verified PR 172, known run/key/temporary-Write cleanup, or the confirmed account purge.",
+      "waitCondition": "The supported separate DoneState account-controls connection authenticated OneClickPostFactory. Exactly one approved deletion returned service receipt 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904 at 2026-10-08T22:55:39.653Z; digest validation and fresh inspection at 22:56:06.979Z confirmed a complete empty indexed inventory, disconnected execution credential, no active run and dailyRunsUsed 0. Primary receipt PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29 preserves the redacted payloads. Fresh clean-account signup/App admission and legal publisher gates remain unproven. The publisher-approved public operating location is Northampton, Northamptonshire, UK. DoneState PR 174 merged as 762ac3983c65d916bb9dc091843ebb3a1fdc7a38 with exact-merge CI 37859435117 successful. Canonical website PR 27 merged as 2a74849f000e1daed834bf3d763048c2aa284506; production deployment 37859198742 and both exact-merge checks succeeded. Existing support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are source-confirmed published contacts; email delivery was not tested. The town/county/country decision does not provide the remaining complete geographic business/service address. Independent live readback of the new legal-page wording is unconfirmed: a direct probe returned 403 and search returned older content; successful existing workflow checks cover other production routes and bundles.",
+      "reentryCondition": "Resume only the remaining fresh onboarding/App and publisher/legal decisions. Existing customer execution and indexed-service cleanup are complete within their recorded scope and need no repeat execution, purge or approval. Reopen cleanup only on new contradictory state or regression; original legacy/external GitHub/provider-key/OAuth exclusions and independent-verification boundary remain.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1244,7 +1266,33 @@
         "PF-E-027",
         "PF-E-028",
         "PF-E-030",
-        "PF-E-031"
+        "PF-E-031",
+        "PF-E-039",
+        "PF-E-056",
+        "PF-E-034",
+        "PF-E-035",
+        "PF-E-036",
+        "PF-E-037",
+        "PF-E-038",
+        "PF-E-040",
+        "PF-E-041",
+        "PF-E-042",
+        "PF-E-043",
+        "PF-E-044",
+        "PF-E-045",
+        "PF-E-046",
+        "PF-E-047",
+        "PF-E-048",
+        "PF-E-049",
+        "PF-E-050",
+        "PF-E-051",
+        "PF-E-052",
+        "PF-E-053",
+        "PF-E-054",
+        "PF-E-055",
+        "PF-E-057",
+        "PF-E-058",
+        "PF-E-059"
       ]
     },
     {
@@ -1362,11 +1410,11 @@
       "stream": "release",
       "status": "blocked",
       "owner": "Publisher owner",
-      "lastUpdated": "2026-10-07",
-      "staleDate": "2026-10-09",
-      "nextAction": "Review DoneState failure-diagnostics repair PR #168 at exact head 81821640c1ef1633878553c51747e94b6ff9a913 with required CI 37585518215 green, then obtain explicit owner merge/deployment authority for this new candidate. After deployment, resume with a fresh bounded PR-only OneClickPostFactory objective through exact-head CI and pinned independent OpsTruth verification, inspect/delete its disposable account and remove the exact temporary Write grant. Record fresh signup separately and complete remaining legitimate public address/contact decisions before unrestricted GA.",
-      "waitCondition": "Fresh GitHub OAuth admission and repository checkout succeeded for customer run 257bbf51-66d2-4cd0-838d-01bbe66e2608. Its single acknowledged implementation launch returned a verified exit-code-1 receipt and terminal FAILED_SAFE before any branch/PR/verifier request. The deployed failure path discarded its log before sandbox teardown, leaving the cause and provider funding unknown. The diagnostic repair has passed local checks and exact-head CI 37585518215 but remains an open undeployed candidate; owner merge and deployment are separate gates. The account, connected execution key and exact temporary Write are retained for authorised recovery. The full customer journey and LEGAL-001 remain unproven.",
-      "reentryCondition": "Resume only after the diagnostics candidate passes exact-head required CI and owner-approved merge/deployment is independently evidenced. Preserve the failed run and historical stories. Use a fresh three-file PR-only objective without App/verifier scope expansion; no blind retry or manufactured customer execution proof.",
+      "lastUpdated": "2026-10-09",
+      "staleDate": "2026-10-10",
+      "nextAction": "Preserve completed OneClickPostFactory customer execution and indexed-service cleanup. Complete the separate fresh clean-account signup and selected-repository GitHub App admission acceptance and provide the remaining appropriate complete public business/service address before unrestricted GA. Northampton, Northamptonshire, UK and the existing hello@proofandstate.com support/privacy and security@proofandstate.com security contacts are now published in the merged policies. Do not repeat verified PR 172, known run/key/temporary-Write cleanup, or the confirmed account purge.",
+      "waitCondition": "The supported separate DoneState account-controls connection authenticated OneClickPostFactory. Exactly one approved deletion returned service receipt 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904 at 2026-10-08T22:55:39.653Z; digest validation and fresh inspection at 22:56:06.979Z confirmed a complete empty indexed inventory, disconnected execution credential, no active run and dailyRunsUsed 0. Primary receipt PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29 preserves the redacted payloads. Fresh clean-account signup/App admission and legal publisher gates remain unproven. The publisher-approved public operating location is Northampton, Northamptonshire, UK. DoneState PR 174 merged as 762ac3983c65d916bb9dc091843ebb3a1fdc7a38 with exact-merge CI 37859435117 successful. Canonical website PR 27 merged as 2a74849f000e1daed834bf3d763048c2aa284506; production deployment 37859198742 and both exact-merge checks succeeded. Existing support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are source-confirmed published contacts; email delivery was not tested. The town/county/country decision does not provide the remaining complete geographic business/service address. Independent live readback of the new legal-page wording is unconfirmed: a direct probe returned 403 and search returned older content; successful existing workflow checks cover other production routes and bundles.",
+      "reentryCondition": "Resume only the remaining fresh onboarding/App and publisher/legal decisions. Existing customer execution and indexed-service cleanup are complete within their recorded scope and need no repeat execution, purge or approval. Reopen cleanup only on new contradictory state or regression; original legacy/external GitHub/provider-key/OAuth exclusions and independent-verification boundary remain.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1379,7 +1427,33 @@
         "PF-E-028",
         "PF-E-029",
         "PF-E-030",
-        "PF-E-031"
+        "PF-E-031",
+        "PF-E-039",
+        "PF-E-056",
+        "PF-E-034",
+        "PF-E-035",
+        "PF-E-036",
+        "PF-E-037",
+        "PF-E-038",
+        "PF-E-040",
+        "PF-E-041",
+        "PF-E-042",
+        "PF-E-043",
+        "PF-E-044",
+        "PF-E-045",
+        "PF-E-046",
+        "PF-E-047",
+        "PF-E-048",
+        "PF-E-049",
+        "PF-E-050",
+        "PF-E-051",
+        "PF-E-052",
+        "PF-E-053",
+        "PF-E-054",
+        "PF-E-055",
+        "PF-E-057",
+        "PF-E-058",
+        "PF-E-059"
       ]
     },
     {
@@ -2001,6 +2075,448 @@
       "outcome": "PostSteward showcase is published and verified at both marketing domains with exact 50-operation parity and correct standing-authority language. OneClickPostFactory, OpsTruth, Tail Wagging and Agent Shop earlier accepted discovery work is preserved. The OneClick production apex remains on its existing origin; no DNS cutover is claimed. Google public indexing monitoring now has active trackers across six connected estate properties.",
       "content": "Versioned outside-in release evidence and Search Console baseline at evidence/rollout-20261008/AGENT-INDEXING-AND-RELEASE-WATCH.md, plus exact GitHub merge/deploy links and OneClick issue #13. No secrets or registrar customer account identifiers are recorded.",
       "measurement": "Six active GSC Wizard indexing trackers with 99 tracked public HTML URLs. PostSteward 50 of 50 live operation contracts match in both apex/www site readbacks; 9 of 9 local showcase tests passed; deployed Worker canonical image 200 at both hosts. OneClick candidate pass, production Worker Route blocked with Cloudflare 10083; no live custom-domain cutover or paid transaction acceptance is invented. Main of OneClick Website Factory now explicitly omits the blocked zone route after PR #15."
+    },
+    {
+      "id": "PF-E-039",
+      "date": "2026-10-07",
+      "identity": "Approved diagnostics deployed; fresh customer execution exposed exhausted API credits",
+      "situation": "The owner approved the exact tested repair and portfolio candidates and their bounded continuation. A fresh public-OAuth customer objective exercised the deployed diagnostic failure path without publication.",
+      "verification": "The user explicitly approved the two exact candidates, deployment and bounded continuation on 2026-10-07. DoneState PR #168 approved head 81821640c1ef1633878553c51747e94b6ff9a913 merged normally at be14e35514f0ee3d78ca2c121c2b236767f80ee4. Required post-merge core (22), core (24), hosted-plugin checks passed in CI 37595968023; deploy 37595968046/job 112708554641 succeeded, including actual container build, push and Cloudflare rollout. Worker ac31dbd3-2508-469a-a894-3c97b9062677 uses container sha256:eae49c40ed6b29e4a7792157ad633910aeab5fdea2130c22694e1707ab356085. The unchanged verifier fingerprint is 09544c3ede70b832a114918bb439960004655faf9d36981e1402587af9429c86. Portfolio PR #30 approved head 7f7638bc6ea541744fee52f2ccc8325e2421df5f merged normally at 96b7f8df4eb7b2447c6c2b76d664b5db23b907af; post-merge Governance 37596000963 and GTM 37596000885 passed with publishing disabled. The new OneClickPostFactory public-OAuth run c9586ced-df91-4c49-aa97-8d07c04af16b was created at 10:13:39.911Z against exact deployed be14e35514f0ee3d78ca2c121c2b236767f80ee4, started once at 10:13:57.411Z, and cloned on attempt 1. Its single acknowledged implementation launch produced an identity-verified donestate.implementation-receipt.v1, exitCode 1, poll attempt 9. The newly deployed diagnostic path preserved an untruncated redacted log reporting no OpenAI API credits remaining, then settled FAILED_SAFE at 10:15:05.148Z. Branch/head/PR/verifier decision are null; final event-chain digest ffd52e615dd8872a45ccd0b034b5cecbe581c543c424355f36d9617b614a17af. No new objective/start retry followed. The intended E-073 customer candidate and marker were never authored or published; this owner-authored E-074 records the failed service result, not a replacement implementation. The cause of prior run 257bbf51-66d2-4cd0-838d-01bbe66e2608 remains unknown because its diagnostic log was absent; this new billing error must not be projected backwards. Durable complete redacted run receipt: evidence/rollout-20261007/customer-attempt-04.json; rollout subjects: evidence/rollout-20261007/diagnostic-rollout.json.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "Preserve the terminal diagnostic receipt, then inspect/delete the indexed disposable OneClickPostFactory DoneState account and remove its exact temporary repository Write grant. The owner must fund the OpenAI API organization associated with the connected execution key before a new bounded customer test; never retry this terminal run. A future fresh PR-only run needs exact-head CI and pinned independent OpsTruth verification. Fresh signup and remaining LEGAL-001 public address/contact decisions remain separate launch gates.",
+        "waitCondition": "Owner-approved DoneState PR #168 merged at be14e35514f0ee3d78ca2c121c2b236767f80ee4; exact post-merge CI 37595968023 and production deployment 37595968046 succeeded. Worker ac31dbd3-2508-469a-a894-3c97b9062677 runs the diagnostics repair. Fresh customer run c9586ced-df91-4c49-aa97-8d07c04af16b cloned successfully and made one acknowledged implementation launch; its identity-verified exit-code-1 receipt now preserves the redacted OpenAI API error: You have no credits remaining. Terminal FAILED_SAFE at 2026-10-07T10:15:05.148Z has no branch, PR or verifier subject. Cleanup is authorised and pending. Successful customer execution and LEGAL-001 remain blocked.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The diagnostics repair is merged and deployed with green exact-source CI. The customer execution remains FAILED_SAFE due to the API provider no-credit response, with no PR or verification request. Cleanup is authorised but not yet claimed complete. Successful fresh customer acceptance and unrestricted GA remain blocked.",
+      "content": "New immutable dated rollout and customer failure receipts; current blocked work items. Existing stories, canonical AgentProof E-069 activation and previous failed run remain unchanged.",
+      "measurement": "Two approved PR merges; one exact-source DoneState deployment; one fresh objective/start/clone/implementation launch; one preserved nonzero receipt and terminal FAILED_SAFE; zero customer branches/PRs or verifier requests; zero cleanup completion claims."
+    },
+    {
+      "id": "PF-E-034",
+      "date": "2026-10-07",
+      "identity": "Owner-funded customer key and exact Write confirmed; one OAuth objective queued",
+      "situation": "The owner reported USD 5 funded, authorised the bounded test and completed credential reconnection and the exact new collaborator invitation.",
+      "verification": "Independent customer readback confirmed the key connected at 12:50:30.797Z with no active run and zero daily runs; GitHub independently confirmed OneClickPostFactory Write. The explicit selected-repository create response rejected push admission before run creation, so the newly added unscheduled registration was removed and an empty registry read back. The first normalised INVALID_ARGUMENT response did not expose a detailed cause. A raw SHA is also not accepted as a heads branch: its GitHub ref independently returned 404. The public GitHub OAuth path then created exactly one objective ed9c1146-1fe7-425b-9524-3d138af8552f as OneClickPostFactory, pinning main to be14e35514f0ee3d78ca2c121c2b236767f80ee4. All sealed fields were compared semantically before one start submission, which returned QUEUED at 12:59:10.871Z. Limits: three changed files, 120 seconds, PR-only, no paid retry and established strict-verifier pin. No hard dollar cap or actual usage figure is inferred. Dated admission descriptor: evidence/rollout-20261007/customer-funded-preflight-05.json.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "Observe the single queued run and preserve its actual outcome before authorised post-result cleanup.",
+        "waitCondition": "At admission the run is queued, with no published head, CI or independent decision yet.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Funded credential reconnection, exact customer Write and one queued public-OAuth objective are evidenced. The selected-repository App push admission remains unproven; queued admission alone is not customer execution, PR publication, verification or GA.",
+      "content": "One dated preflight receipt, one immutable new story and current blocked work-item updates. Existing stories, failure receipts, legal decisions, verifier trust and AgentProof gates remain unchanged.",
+      "measurement": "One accepted exact collaborator invitation; one key reconnection; two create requests rejected before run creation; one successful OAuth objective creation and one start submission; no paid retry."
+    },
+    {
+      "id": "PF-E-035",
+      "date": "2026-10-07",
+      "identity": "Funded customer model execution timed out safely; diagnostic receipt preserved",
+      "situation": "One compact paid customer implementation was approved against owner-reported USD 5 funding, with a two-minute execution window and no paid retry.",
+      "verification": "Customer OAuth run ed9c1146-1fe7-425b-9524-3d138af8552f was admitted as OneClickPostFactory on exact approved deployed base be14e35514f0ee3d78ca2c121c2b236767f80ee4. Clone attempt one succeeded. Exactly one acknowledged implementation launch produced an identity-verified donestate.implementation-receipt.v1 with exit code 124, receiptPollAttempt 21, and terminal FAILED_SAFE at 13:01:22.138Z. The nontruncated redacted log contains real agent/tool activity: python and python3 are unavailable, the agent switches to Node, reports one marker addition inside the sandbox, and starts the Node ledger/render command before timeout. The last command completion and validation are not observed. branchName, branchHeadSha, PR number/URL, verification snapshot and verifier decision are null; no independent-verifier request was sent. Credential readback is idle, lastUsedAt 13:01:18.945Z, dailyRunsUsed 1. The final CLI usage event is absent, so neither actual model billing nor remaining balance is asserted. Final event-chain digest d1cc8199ce447049435b0cb7f0c3221b3782e766099f0f0a4bf662a77c0fca0a. Complete dated receipt: evidence/rollout-20261007/customer-attempt-05.json. A separate exact Node editor and prepared re-entry descriptor at evidence/rollout-20261007/customer-prepared-node-objective-06.json are not a new customer execution or self-certified result. E-076 remains unpublished; E-080 is reserved for a future actual service-authored candidate.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "Publish the complete redacted terminal attempt-05 receipt, then complete the already authorised disposable-account and exact temporary-Write cleanup. The prepared Node-only attempt-06 descriptor avoids Python and broad inspection but has not been created or started. Re-enter only with a fresh bounded funded envelope, confirmed key and exact Write; selected-repository App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "waitCondition": "Funded customer run ed9c1146-1fe7-425b-9524-3d138af8552f reached model execution but terminated FAILED_SAFE at 13:01:22.138Z with verified receipt exit 124 under the 120-second timeout. Clone succeeded; untruncated redacted diagnostics report absent python/python3, Node fallback and a sandbox-only marker change. No branch, PR, independent verifier decision or final CLI usage event exists. The key is connected but idle with dailyRunsUsed 1 until authorised cleanup. No further paid run is started and unrestricted GA remains blocked.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Funding allowed real model activity, but the bounded run timed out before validation or publication. The receipt and timeout boundary are proven; a complete customer PR/VERIFIED outcome and GA are not.",
+      "content": "One immutable failed-safe receipt and exact terminal history, plus an unstarted Node-only re-entry descriptor. No owner-authored customer marker, runtime deployment, verifier rotation or scope expansion.",
+      "measurement": "One successful clone; one implementation launch; verified exit 124; untruncated diagnostic log; zero branches, PRs, CI subjects, verifier requests or paid retries; no actual USD spend assertion."
+    },
+    {
+      "id": "PF-E-036",
+      "date": "2026-10-07",
+      "identity": "Funded-run disposable account and exact temporary Write cleaned up after durable receipt",
+      "situation": "The single funded customer run reached terminal FAILED_SAFE under its two-minute timeout. The already authorised disposable test-data cleanup follows durable publication of the complete diagnostic receipt.",
+      "verification": "DoneState PR #169 head e6d92dd1ff8f981ad45b41ac363ce44449b51f31 and portfolio PR #31 head 41d43632c1ba519f776f9c072fe874ae0d4a5018 durably preserved the complete terminal receipt before deletion; exact-head DoneState CI 37631828451 passed all three required jobs, and portfolio Governance 37631840007/GTM 37631840191 succeeded. The one-time first-party console positively identified OneClickPostFactory, one indexed FAILED_SAFE run ed9c1146-1fe7-425b-9524-3d138af8552f, connected execution key, no active run, no selected repositories and no findings. Exact-login deletion was submitted once; rendered DoneState account data deleted confirmed 1 indexed objective, 0 selected repositories and 0 findings deleted. Independent readback then showed key disconnected with null metadata, dailyRunsUsed 0, no active run, selected repositories [], and the known run returned run not found/INVALID_ARGUMENT. GitHub UI removed exactly OneClickPostFactory, numeric ID 281453754, from only AyobamiH/donestate; the removal toast and zero-collaborator state were observed, and the connector independently returned permission read. No GitHub account/repository, unrelated run, App installation or verifier trust was removed; provider-key or OAuth revocation and unknown pre-index deletion are not claimed. Minimal opaque deletion-generation fencing remains. Sanitised dated receipt: evidence/rollout-20261007/customer-account-cleanup-05.json.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "The funded attempt-05 timeout and complete authorised cleanup are recorded. Review the prepared Node-only attempt-06 descriptor; it is not created or started. A future bounded customer test requires reconnecting the funded key and confirming exact temporary Write after intentional cleanup, with actual-head required CI and the established independent verifier pin. Selected-repository App admission, fresh signup and remaining LEGAL-001 public address/branded contact routes still gate unrestricted GA.",
+        "waitCondition": "The single funded run ed9c1146-1fe7-425b-9524-3d138af8552f is historically FAILED_SAFE with verified exit 124 and complete redacted diagnostics, preserved before deletion. Its indexed service state is now deleted, the execution key disconnected, selected repositories empty and GitHub customer permission independently read. No customer PR or verifier decision exists. The prepared Node-only payload passes a stubbed in-memory dry run but no second paid run has started; actual billed USD and remaining provider balance are unobserved.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The authorised disposable indexed-service-account and exact temporary-access cleanup are complete. The funded customer execution remains a preserved timeout without a published PR or independent decision; Node-only re-entry is prepared but unstarted, and GA remains blocked.",
+      "content": "One immutable cleanup receipt and new evidence story; current blocked work-item closure and generated state. Earlier admission, timeout, cleanup and rollout records remain unchanged.",
+      "measurement": "One exact-login deletion; one indexed terminal objective deleted; key disconnected; zero selected repositories/findings; one known run not found; one exact collaborator removed with independent read permission; zero further paid runs or verifier requests."
+    },
+    {
+      "id": "PF-E-037",
+      "date": "2026-10-07",
+      "identity": "Customer Node-only re-entry prepared; exact new invitation pending",
+      "situation": "The user resumes customer acceptance after the funded timeout and completed disposable cleanup. One corrected Node-only attempt is prepared under the same two-minute, three-file, PR-only envelope.",
+      "verification": "Fresh read-only preflight confirmed main be14e35514f0ee3d78ca2c121c2b236767f80ee4, disconnected customer key, idle account, selected repositories [] and OneClickPostFactory permission read. Owner GitHub UI submitted the exact new invitation once; invitation 336586833 visibly awaits OneClickPostFactory. Owner evidence PRs #169/#31 are open and unmerged at a0782eac216fec874742ec5963c1c5c2c76ff189/c648b5b4fc02e310185400bccde3425e8278eac7. The prepared Node payload was checked without actual customer repository writes. Sanitised receipt: evidence/rollout-20261007/customer-reentry-preflight-06.json. Secure credential ticket and key are excluded.",
+      "accountability": {
+        "owner": "DoneState maintainers and repository owner",
+        "status": "blocked",
+        "nextAction": "One fresh Node-only attempt-06 is authorised and prepared but uncreated. Accept the new exact OneClickPostFactory invitation to AyobamiH/donestate and reconnect the funded API key in the secure customer form. Independently confirm credential idle, exact temporary Write, live base be14e35514f0ee3d78ca2c121c2b236767f80ee4 and every sealed field before one start; then await exact customer PR-head required CI, pinned independent verification and authorised post-result cleanup.",
+        "waitCondition": "Re-entry readback showed disconnected execution key, no active run, selected repositories [] and customer GitHub permission read. New invitation 336586833 is pending; acceptance and key reconnection are not yet observed. Attempt-06 has no service run, PR or verifier result. Earlier timeout and cleanup receipts remain immutable. Actual API spend and remaining balance are unobserved; selected-repository App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Customer prerequisites are being restored. No new objective, paid start, customer PR or independent decision is claimed; remaining API balance and billed spend are unknown.",
+      "content": "One dated preflight receipt and new story, selected work-item closure and regenerated state. Earlier failure, cleanup and deployment evidence remains unchanged.",
+      "measurement": "One exact new invitation pending; zero new paid starts; maximum one start on this re-entry; 120000ms and three files are not a dollar cap. Selected App route, fresh signup and legal GA gates remain separate."
+    },
+    {
+      "id": "PF-E-038",
+      "date": "2026-10-07",
+      "identity": "Customer prerequisites restored; GitHub OAuth rejects Node-only admission before execution",
+      "situation": "The user securely reconnected the funded OpenAI key and accepted the exact renewed repository invitation. One prepared Node-only create submission follows the verified preflight.",
+      "verification": "At 15:31:24.209Z the customer key connected. Fresh readback showed OneClickPostFactory Write to AyobamiH/donestate, idle connected key, selected repositories [] and approved main be14e35514f0ee3d78ca2c121c2b236767f80ee4. One create_objective call, autoStart false, returned explicit GitHub request failed (401): Bad credentials and no run ID. Source validates customer OAuth repository access before run-ID generation/recording. Post-refusal key lastUsedAt null, dailyRunsUsed 0 and activeRunId null establish zero new execution leases. Sanitised receipt: evidence/rollout-20261007/customer-admission-06.json. A setup replacement inspected by the agent was consumed on first GET; a subsequent untouched user-only ticket succeeded. No ticket, raw key or OAuth token is retained in this public evidence. Fresh verifier identity lookup was inaccessible here; the previously approved pin remains unchanged and no verifier request occurred.",
+      "accountability": {
+        "owner": "DoneState maintainers and customer account holder",
+        "status": "blocked",
+        "nextAction": "Reconnect only the DoneState customer GitHub OAuth connection named oneclickpost factory as OneClickPostFactory after the explicit 401 Bad credentials admission refusal. The funded execution key is connected and unused, and exact temporary repository Write is accepted. After positive reconnection, confirm fresh idle key/Write/base, create the prepared Node-only contract autoStart false, verify every returned sealed field and approved base before at most one paid start. Await actual PR-head CI and the established pinned independent verifier before authorised result cleanup.",
+        "waitCondition": "Attempt-06 creation returned explicit GitHub 401 Bad credentials before any run ID or paid start. Post-refusal customer credential remains connected, lastUsedAt null, dailyRunsUsed 0 and activeRunId null; independent repository permission is Write and selected repositories []. There is no attempt-06 customer PR, required-CI subject or verifier decision. The saved key and accepted grant are intentionally retained while OAuth is refreshed. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Credential and exact temporary Write prerequisites are restored; execution remains blocked before run creation by a rejected customer GitHub OAuth token. No paid start, FAILED_SAFE run, customer PR or verifier result is claimed.",
+      "content": "One dated admission-refusal receipt, new story, selected blocked-item closure and regenerated state. The connected key and accepted Write remain in place for OAuth repair; historical failure/cleanup stories are immutable.",
+      "measurement": "One pre-run create submission rejected with explicit HTTP 401; zero run IDs/start calls/model leases/PRs/verifier requests; key connected and unused, exact Write accepted; original two-minute/three-file caps and independent verifier pin retained."
+    },
+    {
+      "id": "PF-E-040",
+      "date": "2026-10-07",
+      "identity": "Reconcile concurrent shared-operating and customer evidence histories",
+      "situation": "Portfolio main advanced during customer OAuth recovery. Its independent shared-operating/discovery work reused PF-E-032. The evidence PR became unmergeable with JSON/generated-state conflicts and no exact-head Actions run was returned.",
+      "verification": "Incoming main b1f0dd5bbce7a68c2370caae1719eccf492550cb and successful Governance 37644751885/GTM 37644752123 runs are separately observed. Every incoming story, unrelated incoming work item and shared contract is preserved. Incoming main made no owner-queue change from the common base; the already reconciled customer branch queue is retained verbatim, with all 12 ordered actions non-executable. The original customer PF-E-032 at unmerged head 194cbc225e0886f5fcf0607acc7e25ae9097cf0a is archived verbatim in evidence/rollout-20261007/customer-story-reconciliation-06.json and retains every substantive field under PF-E-039. PF-E-033 through PF-E-038 remain unchanged. A normal main-to-evidence-branch merge is prepared without force push, main PR merge, deployment, paid execution or verifier-scope change.",
+      "accountability": {
+        "owner": "DoneState maintainers and portfolio owner",
+        "status": "blocked",
+        "nextAction": "Reconnect only the DoneState customer GitHub OAuth connection named oneclickpost factory as OneClickPostFactory after the explicit 401 Bad credentials admission refusal. The funded execution key is connected and unused, and exact temporary repository Write is accepted. After positive reconnection, confirm fresh idle key/Write/base, create the prepared Node-only contract autoStart false, verify every returned sealed field and approved base before at most one paid start. Await actual PR-head CI and the established pinned independent verifier before authorised result cleanup.",
+        "waitCondition": "Attempt-06 creation returned explicit GitHub 401 Bad credentials before any run ID or paid start. Post-refusal customer credential remains connected, lastUsedAt null, dailyRunsUsed 0 and activeRunId null; independent repository permission is Write and selected repositories []. There is no attempt-06 customer PR, required-CI subject or verifier decision. The saved key and accepted grant are intentionally retained while OAuth is refreshed. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Both independently allocated histories remain inspectable with unique canonical IDs. The rejected customer GitHub OAuth token remains the customer re-entry blocker; the funded key is connected and unused, exact Write accepted.",
+      "content": "Normal main-to-evidence-branch reconciliation, one verbatim story archive, selected evidence-ID closure and regenerated state. Incoming shared-operating source and machine-discovery records are preserved.",
+      "measurement": "32 incoming stories and all unrelated incoming work items preserved; existing 12-action queue preserved; original customer story archived verbatim and substantively unchanged under PF-E-039; zero force pushes, main PR merges, runtime deployments or paid starts."
+    },
+    {
+      "id": "PF-E-041",
+      "date": "2026-10-07",
+      "identity": "Repaired customer OAuth admitted one funded Node-only run",
+      "situation": "The customer positively reported GitHub reconnection after the explicit earlier 401 before any run ID. Fresh preflight confirmed the retained idle key, exact temporary Write, no selected repositories and approved main.",
+      "verification": "evidence/rollout-20261007/customer-node-preflight-06.json records public github_oauth admission as OneClickPostFactory, sealed descriptor equality, approved base be14e35514f0ee3d78ca2c121c2b236767f80ee4 and one start for e05032c9-31d1-446a-8fe9-6e52d486d438. Admission and queue acceptance do not establish execution or verification.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Use the actual terminal receipt; preserve the prior refusal and established verifier pin.",
+        "waitCondition": "Admission is a prerequisite, not an independently verified outcome.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The customer OAuth blocker was resolved; one bounded user-funded run was admitted and started.",
+      "content": "The OpenAI key was retained, not entered again. No selected-repository App, fresh-signup or GA claim.",
+      "measurement": "One create after positive repair; autoStart false; one semantic/base guard; one 120000ms, three-file, PR-only start."
+    },
+    {
+      "id": "PF-E-042",
+      "date": "2026-10-07",
+      "identity": "Node-only customer reached final message but timed out before publication",
+      "situation": "The admitted Node-only run cloned once, launched once and produced a full model log. It reports the editor and local checks completed and exactly the three authorised changed paths.",
+      "verification": "evidence/rollout-20261007/customer-node-attempt-06.json preserves the full run, untruncated redacted log and four hash-chained events ending f1db5c5f31a796cf65bb4508377429ab0ae0cc118922c279bae3a4f1dedb5790. The integrity-matched implementation receipt reports exit 124 and FAILED_SAFE; this is not an independent verifier decision. No turn.completed or usage summary appears.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Finish durable timeout-receipt publication and required CI, inspect and delete the disposable customer account data, and remove exact temporary Write under the authorised cleanup. Prepare one compact follow-up candidate and obtain a fresh execution-budget envelope before another paid start. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "waitCondition": "The repaired public customer OAuth admission and funded model execution worked. Run e05032c9-31d1-446a-8fe9-6e52d486d438 ended FAILED_SAFE with receipt-verified exit 124. Its untruncated model log reports all three authorised files and local checks completed, followed by a final agent message, but no turn.completed or usage summary appeared before timeout. There is no published customer branch/PR, required customer CI subject or independent decision. The precise completion stall cause and actual billed amount remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "No customer branch, PR, exact-head customer CI or independent decision. The local candidate was not manually published or reclassified as successful.",
+      "content": "Credentials worked. The remaining execution completion boundary is unproven; historical unknown failure, no-credit error, prior timeout, OAuth refusal and cleanup receipts retain their exact original values.",
+      "measurement": "Clone attempt 1 succeeded; implementation launch 1; verified exit 124; receipt poll 21; one daily run used; activeRunId null; actual billed USD and remaining provider balance unknown."
+    },
+    {
+      "id": "PF-E-043",
+      "date": "2026-10-07",
+      "identity": "Compact customer re-entry locally checked without another API run",
+      "situation": "The funded attempt-06 completed its edits and checks but timed out before a terminal turn event or publication. Existing receipts and histories are preserved.",
+      "verification": "Matching DoneState PR #169 and evidence/rollout-20261007/customer-prepared-compact-objective-07.json preserve attempt-06 run e05032c9-31d1-446a-8fe9-6e52d486d438 and the offline attempt-07 contract. The compact command passed its three-file/history assertions without paid execution; published customer acceptance and independent verification remain unproven.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Publish the preserved terminal timeout and this locally checked compact re-entry plan with required CI. Complete authorised disposable-account and temporary-Write cleanup. Another paid customer start requires a fresh one-run budget envelope; refresh the exact base and customer access before admission. Fresh signup, selected App admission and LEGAL-001 remain separate gates.",
+        "waitCondition": "The repaired public customer OAuth admission and funded model execution worked. Run e05032c9-31d1-446a-8fe9-6e52d486d438 ended FAILED_SAFE with receipt-verified exit 124. Its untruncated model log reports all three authorised files and local checks completed, followed by a final agent message, but no turn.completed or usage summary appeared before timeout. There is no published customer branch/PR, required customer CI subject or independent decision. The precise completion stall cause and actual billed amount remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Prepared only. No service run was created, no paid start submitted, no runtime changed, no customer PR or independent decision exists.",
+      "content": "The exact Codex completion stall remains unproven; a single shell invocation reduces known tool-turn overhead without weakening terminal or verifier requirements.",
+      "measurement": "A fresh one-start envelope is required. Two minutes/three files are execution bounds, not a dollar cap; past billing and current provider balance are unknown."
+    },
+    {
+      "date": "2026-10-07",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Publish the preserved attempt-07 terminal receipt with required CI, then complete authorised disposable-objective/key and exact temporary-Write cleanup. Diagnose the sandbox npm ci prepare/build timeout before proposing any further paid execution. Preserve the sealed three-file/two-minute envelope and verifier pin; no additional run is authorised. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "waitCondition": "Run 124f1517-c41c-4d67-bc32-016b3d0ba8e1 ended FAILED_SAFE at install-node with exit 124. Implementation crossed the previous completion boundary with an integrity-matched exit-zero receipt, and the diff check passed. npm ci reached the repository prepare/build lifecycle before its 120000ms timeout. There is no service-created branch/PR, customer PR-head CI subject or independent verifier decision. The precise sandbox build/shutdown cause and actual billed amount remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "id": "PF-E-044",
+      "identity": "Fresh approval admitted one compact customer run",
+      "situation": "The user expressly approved one additional two-minute, three-file, PR-only customer run with the connected funded key and no automatic retry.",
+      "verification": "evidence/rollout-20261007/customer-compact-preflight-07.json records fresh idle credential, exact customer Write, selected repositories [], unchanged base be14e35514f0ee3d78ca2c121c2b236767f80ee4, public github_oauth admission as OneClickPostFactory and sealed semantic/base guards before one start of 124f1517-c41c-4d67-bc32-016b3d0ba8e1.",
+      "outcome": "One additional start was expressly authorised and submitted once. Admission and queue acceptance do not establish customer completion.",
+      "content": "The existing customer key and verifier pin were retained; merge, deployment, publication and another paid start remain outside this test authority.",
+      "measurement": "One create with autoStart false; one guarded start; 120000ms; max three changed files; pull_request publication; zero automatic retries."
+    },
+    {
+      "date": "2026-10-07",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Publish the preserved attempt-07 terminal receipt with required CI, then complete authorised disposable-objective/key and exact temporary-Write cleanup. Diagnose the sandbox npm ci prepare/build timeout before proposing any further paid execution. Preserve the sealed three-file/two-minute envelope and verifier pin; no additional run is authorised. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "waitCondition": "Run 124f1517-c41c-4d67-bc32-016b3d0ba8e1 ended FAILED_SAFE at install-node with exit 124. Implementation crossed the previous completion boundary with an integrity-matched exit-zero receipt, and the diff check passed. npm ci reached the repository prepare/build lifecycle before its 120000ms timeout. There is no service-created branch/PR, customer PR-head CI subject or independent verifier decision. The precise sandbox build/shutdown cause and actual billed amount remain unproven.",
+        "staleDate": "2026-10-09"
+      },
+      "id": "PF-E-045",
+      "identity": "Compact implementation completed; dependency validation timed out",
+      "situation": "The compact objective crossed the previous implementation completion boundary, then stopped safely at dependency validation before commit or publication.",
+      "verification": "evidence/rollout-20261007/customer-compact-attempt-07.json preserves the exact terminal run, implementation exit-zero identity-matched receipt, diff-check success and install-node exit 124. All five event digests and previous-digest links matched independently, ending e47509a52125623dd664ee08edf76f38b7d779bcd8285be543241b204d077fd1. Event/implementation receipt integrity is not independent outcome verification.",
+      "outcome": "FAILED_SAFE at npm ci prepare/build validation. No service-created customer branch, PR, exact-head customer CI or independent decision; no further paid run was started.",
+      "content": "The local build with runtime compile inputs identical to the sealed base passed in 1.522 seconds. That supports a sandbox-specific investigation but does not prove its precise cause. No runtime changed or sealed validation bypassed; every earlier outcome remains immutable.",
+      "measurement": "Clone attempt 1; implementation launch 1 and exit 0; diff-check exit 0; install-node timeout 120000ms and exit 124; two daily runs used; activeRunId null; billed USD and provider balance unknown."
+    },
+    {
+      "id": "PF-E-046",
+      "date": "2026-10-07",
+      "identity": "Known customer run/key cleanup and exact temporary Write removal verified",
+      "situation": "The authorised single compact run stopped safely before publication. Its exact receipts were preserved in both evidence PRs and their required CI passed before deletion.",
+      "verification": "evidence/rollout-20261007/customer-account-cleanup-07.json records one deletion for each terminal attempt-06/07 objective, stored credential deletion and independent not-found/connected-false readbacks. The GitHub owner completed secure re-verification; one exact OneClickPostFactory removal produced the success toast and zero collaborators, with independent permission read. DoneState proof evidence/clean-customer-20261007/access-cleanup-07.jpg has SHA-256 2638b8a252029697cc271aef2554fdf636b6d7ba185cc22cc59ed41f59d46e3b. Before deletion: DoneState #169 head 7bc59cc64629a54195f3037a4acfd9932515cb52, required CI 37692002794; Portfolio #31 head 8445653389f13a32af52d912bc78f77bd7bd28a5, Governance 37692008416 and GTM 37692008510, all succeeded.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Diagnose and repair the sandbox npm ci prepare/build timeout before any future customer execution. Any additional paid start requires a concrete reviewed contract and fresh authority, key, access and base checks. Full indexed account purge remains unobserved because the supported console is blocked in this browser. Selected App admission, fresh signup and LEGAL-001 remain separate gates.",
+        "waitCondition": "The approved compact run implemented with exit 0, then ended FAILED_SAFE at npm ci validation exit 124 before publication. Exact terminal receipts are durable in both CI-green owner evidence PRs. The two known terminal objectives and stored execution key are deleted; readback is run not found and connected false/activeRunId null. OneClickPostFactory temporary Write is removed, with zero collaborators in GitHub and independent permission read. No customer PR, exact-head customer CI or independent decision exists; complete indexed account purge is not claimed.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "The two known terminal run records, stored execution key and exact temporary repository Write are removed. Full indexed account purge remains unobserved because the console returned ERR_BLOCKED_BY_CLIENT; no provider-key or OAuth revocation is claimed.",
+      "content": "Preserved receipts and historic stories remain unchanged. This reduces temporary execution authority without converting the failed run into successful customer acceptance.",
+      "measurement": "Two exact terminal-objective deletions; one stored-key deletion; one collaborator removal; permission read; no active run; selected repositories/findings []; daily usage fence 2; zero additional paid starts."
+    },
+    {
+      "id": "PF-E-047",
+      "date": "2026-10-07",
+      "identity": "Checked Sandbox capacity repair awaits owner deployment and fresh acceptance",
+      "situation": "The user directed repair and another bounded attempt after implementation succeeded but dependency validation timed out. The failed subjects and cleanup remain immutable.",
+      "verification": "evidence/rollout-20261007/customer-capacity-repair.json records DoneState PR 170 exact head 4ca81f992c407f9403b44ca91821758e36cc6b6c, checked tree 6c016575496f151a2a1ce0562706c98075a58f41 and successful required CI 37696700913. It references canonical E-090 and preserves the local Node 24 measurement limits.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Require owner merge/deployment of DoneState capacity repair PR 170 after its exact-head required CI. Then restore the customer key and exact temporary Write for one fresh bounded acceptance run under the new user direction. Require service publication, exact customer-head CI, pinned independent verification and cleanup; keep fresh signup, full indexed purge, App admission and LEGAL-001 separate.",
+        "waitCondition": "DoneState PR 170 head 4ca81f992c407f9403b44ca91821758e36cc6b6c passed CI 37696700913 (core Node 22, core Node 24 and hosted-plugin). Its basic container and undersized-profile guard are prepared, unmerged and undeployed. Local measured build memory exceeded the configured lite capacity; the precise production timeout cause remains unproven. Customer key is disconnected and repository permission is read; no new run was created or started.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Capacity repair and regression guard passed local checks and exact-head required CI. It is a prepared repair, not a deployed fix or successful customer outcome. Owner merge/deployment remains reserved.",
+      "content": "Basic supplies 1 GiB, 1/4 vCPU and 4 GB disk instead of lite 256 MiB, 1/16 vCPU and 2 GB disk; provisioned costs increase. Customer bounds, required validation, SDK/image/RPC, maximum five containers and independent verifier pin are retained. New user direction authorises repair and a fresh bounded attempt without rewriting the earlier consumed authority.",
+      "measurement": "Offline install exited zero in 2.248s; separate build exited zero in 1.337s at 310424 KiB maximum child RSS. Root local checks passed 44 tests and Worker checks 149 tests. All three required GitHub jobs succeeded. Production timeout cause/OOM remain unproven; zero new customer creates, starts, merges or deployments."
+    },
+    {
+      "id": "PF-E-048",
+      "date": "2026-10-07",
+      "identity": "Capacity repair deployed and fresh customer successor prepared",
+      "situation": "The user instructed implementation of the unblockers after the exact checked repair and its production consequence were presented.",
+      "verification": "evidence/rollout-20261007/customer-capacity-deployment.json references DoneState repair PR 170 merged at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d, post-merge CI 37698109881, deployment 37698109840 and the log-backed Worker/container identities. DoneState evidence PR 171 head 76d821165a0cf63e345ff135f1381f0cd7b01761 preserves E-091/E-092, the prepared invitation screenshot and attempt-08 contract.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Restore the customer execution key through secure setup and confirm the exact temporary OneClickPostFactory Write grant. Then create/start the prepared fresh 120000ms, three-file PR-only acceptance objective once on the independently checked deployed base. Require service publication, exact customer-head CI, pinned independent verification and result cleanup; preserve separate fresh signup, full indexed purge, App and LEGAL-001 gates.",
+        "waitCondition": "DoneState capacity repair PR 170 is merged at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d. Post-merge CI 37698109881 and production deployment 37698109840 succeeded, with logs confirming basic capacity and Worker 10c14fb2-8536-4af3-91f2-8ecd5bae94d9. Attempt-08 is locally exercised and prepared only; customer key remains disconnected and permission is read. The exact invitation is selected but unsubmitted, awaiting browser action-time confirmation. No fresh objective or paid start exists.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Production capacity rollout is confirmed; the owner merge/deployment blocker is removed. Live customer validation/publication/independent verification remain unproven, with secure key input and browser grant confirmation pending.",
+      "content": "The exact three-file successor passed its unpaid isolated editor/check exercise. No service objective was created or started. Earlier receipts and cleanup remain intact; the prepared invitation is not permission-grant evidence and no full indexed purge claim is added.",
+      "measurement": "Merged source fbaa060dfc6680516dfb7a1195801d1f8ab58d9d; Worker 10c14fb2-8536-4af3-91f2-8ecd5bae94d9; image sha256:8753929cf3ef46ccc160471df5addcb8d3228affa713c1df7d025c54548225c2; basic 1024 MiB; offline successor exit 0 in 0.305s; customer permission read; connected false; zero paid starts."
+    },
+    {
+      "id": "PF-E-049",
+      "date": "2026-10-07",
+      "identity": "Customer execution key securely restored; exact Write awaits confirmation",
+      "situation": "The user supplied the customer key through the single-use secure setup flow while the deployed repair and successor contract were being recorded.",
+      "verification": "evidence/rollout-20261007/customer-key-restored-08.json references DoneState E-093 and exact connected-true idle credential metadata. The independent GitHub permission remains read and the prepared screenshot shows the unsent grant. Earlier disconnected snapshots are preserved as historical evidence.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Confirm the prepared temporary OneClickPostFactory Write invitation for AyobamiH/donestate, then independently read back accepted Write, idle connected customer key and deployed base before one fresh 120000ms, three-file PR-only acceptance create/start. Require service publication, exact customer-head CI, the unchanged pinned independent decision and cleanup; preserve all separate GA and full indexed-purge gates.",
+        "waitCondition": "Repair PR 170 is merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d with successful CI and rollout. The customer key is now connected through secure setup, activeRunId null and dailyRunsUsed 2. Repository permission remains read and the exact invitation is selected but unsubmitted; browser action-time confirmation is the only remaining pre-start blocker. No fresh service objective exists.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Secure key input is complete. Temporary repository Write still requires browser action-time confirmation, submission and accepted-permission readback before execution.",
+      "content": "No raw key, setup ticket or additional paid run. Key presence is not funding proof, execution success or independent verification. All historical outcomes and unrelated governance states remain unchanged.",
+      "measurement": "connected true; fingerprint 44c7550c978b; key created 2026-10-07T22:59:33.539Z; activeRunId null; dailyRunsUsed 2; exact customer permission read; zero fresh creates/starts."
+    },
+    {
+      "id": "PF-E-050",
+      "date": "2026-10-07",
+      "identity": "Customer Write approval and single pending invitation recorded",
+      "situation": "The user approved the concrete temporary repository Write invitation after secure customer-key restoration and the confirmed capacity rollout.",
+      "verification": "evidence/rollout-20261007/customer-invitation-pending-08.json references DoneState E-094, the rendered pending-invitation state and independent permission read. The owner and customer GitHub identities remain distinct; secure recipient sign-in has no confirmed result.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Accept the already-approved temporary AyobamiH/donestate invitation as OneClickPostFactory through secure GitHub sign-in. Independently read back Write, customer identity, idle connected key and unchanged deployed base before one prepared 120000ms, three-file PR-only create/start. Require service publication, exact-head required CI, the established pinned independent decision and authorised cleanup. Preserve separate signup, selected-repository App, full indexed-purge and LEGAL-001 gates.",
+        "waitCondition": "The user approved the exact temporary Write grant and its invitation was submitted once. GitHub rendered Pending Invite awaiting OneClickPostFactory; independent permission remains read. First secure sign-in returned the already-signed-in AyobamiH owner, and the second sign-in result is unknown after timeout and cancelled observation. The customer key remains connected and idle, dailyRunsUsed 2; no fresh objective has been created or started. Capacity repair is already merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d.",
+        "staleDate": "2026-10-09"
+      },
+      "outcome": "Temporary Write was approved and its invitation submitted once. Recipient acceptance and effective Write are pending, so no fresh service objective or paid start exists.",
+      "content": "All earlier receipts, failures, cleanup and source-ledger pins remain historical evidence. No invitation token, raw credential, duplicate invitation, autonomous retry, customer success or GA claim.",
+      "measurement": "Independent readback 2026-10-07T23:45:51.894Z: customer permission read; key connected and idle; dailyRunsUsed 2; zero fresh creates/starts. Earlier evidence heads passed DoneState CI 37700261343 and portfolio Governance/GTM runs 37700389535/37700389527."
+    },
+    {
+      "id": "PF-E-051",
+      "date": "2026-10-08",
+      "identity": "Bounded DoneState customer PR independently VERIFIED after capacity repair",
+      "situation": "The user accepted the already-approved temporary Write invitation and the sealed fresh customer successor ran once.",
+      "verification": "evidence/rollout-20261007/customer-run-08-verified.json references DoneState E-095 and its exact terminal handoff, admitted signer summary and independently checked digest chain. Customer PR 172 head e2067cd8905f358dadc7b9265d90728726f3c40d passed required CI 37705797840. OpsTruth returned verified under the unchanged authoritative pin and fresh DoneState readback is VERIFIED.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Preserve the exact VERIFIED customer run, handoff, CI and integrity receipts, then delete only its disposable run and stored execution key and remove OneClickPostFactory temporary Write. Full indexed account inspection/purge, fresh signup, selected-repository App admission and LEGAL-001 remain separate unproven gates. Keep customer PR 172 unmerged and the verifier pin unchanged.",
+        "waitCondition": "Customer OAuth run aa5389f5-a4dd-400e-ba72-3e80c3190992 created service PR 172 at e2067cd8905f358dadc7b9265d90728726f3c40d. Live install/build and 44 tests passed; CI 37705797840 passed all three required jobs. The configured independent OpsTruth service returned verified under the existing pin and fresh DoneState readback is VERIFIED. Cleanup is pending; this bounded existing-customer success does not prove fresh signup, App admission, full indexed erasure or unrestricted GA.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "Live install/build, test, customer publication and pinned independent outcome succeeded for this bounded existing OAuth customer. Full fresh-account acceptance, cleanup and GA are separate pending states.",
+      "content": "All previous terminal failures, cleanup, source-ledger pins, shared-contract state and unrelated portfolio work remain preserved. Customer PR stays unmerged; no model retry, wider App scope or self-verification.",
+      "measurement": "One create/start; maxDurationMs 120000; maxChangedFiles 3; install 25s; tests 44/44; three required CI jobs passed; terminal VERIFIED 2026-10-08T00:06:08.244Z. No raw signature-reverification or provider billed-amount claim."
+    },
+    {
+      "id": "PF-E-052",
+      "date": "2026-10-08",
+      "identity": "Verified customer run/key deletion and temporary Write removal confirmed",
+      "situation": "After terminal VERIFIED evidence and its integrity checks were durably preserved, the exact authorised disposable-run, stored-key and repository-access cleanup was performed once.",
+      "verification": "evidence/rollout-20261007/customer-run-08-cleanup.json records deletion responses, independent run-not-found and connected-false readback, owner zero-collaborator UI, independent GitHub permission read and unchanged unmerged customer PR/head. Screenshot bytes and hash are preserved with the DoneState evidence.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Use the documented browser handoff to inspect and delete only the disposable DoneState service account for OneClickPostFactory and preserve indexed-purge readback. No further model run or temporary Write is needed for verified PR 172. Complete the separate fresh-signup, selected-repository App and LEGAL-001 requirements before any unrestricted GA decision; keep PR 172 unmerged.",
+        "waitCondition": "The bounded public OAuth customer path is independently VERIFIED at PR 172 head e2067cd8905f358dadc7b9265d90728726f3c40d with required CI green. Terminal run/key deletion and exact temporary Write removal are independently confirmed; preserved evidence heads passed CI. Full indexed account inspection/purge is unconfirmed: browser credential protection blocked observation and its documented canonical navigation recovery failed. Fresh signup, App admission and legal gates remain separate.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "The bounded customer execution/publication/independent-verification path and exact known-run/key/temporary-access cleanup succeeded. Full indexed service-account inspection/purge and the remaining fresh-account/GA gates are unconfirmed.",
+      "content": "Credential-protected account observation and the documented canonical navigation recovery both failed, so automated account entry stopped and manual handoff is required. No additional execution, duplicate cleanup, widened authority, GitHub-account deletion, provider-key revocation or OAuth-revocation claim. The prepared marker date is 2026-10-07; actual objective sealing/creation occurred on 2026-10-08 without changing its prepared descriptor.",
+      "measurement": "Run aa5389f5-a4dd-400e-ba72-3e80c3190992 deleted and read not found; stored key connected false; activeRunId null; remaining UTC usage fence 1; OneClickPostFactory permission read; zero collaborators; customer PR 172 remains open/unmerged at e2067cd8905f358dadc7b9265d90728726f3c40d. Cleanup screenshot SHA-256 edb5464e05fa5a7b35b84fb1c859dc9316be5ca59a08c5d4bae5edede8db4d1a."
+    },
+    {
+      "id": "PF-E-053",
+      "date": "2026-10-08",
+      "identity": "Full service-account handoff rejected by browser URL policy",
+      "situation": "After independently verified customer execution and confirmed targeted cleanup, the documented full-account handoff was requested once.",
+      "verification": "evidence/rollout-20261007/customer-account-block-08.json records credential-protected observation, failed documented canonical recovery and the rejected manual handoff with browser_security_restricted. This is a browser URL policy block, not an observed service outage or bot challenge.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Obtain a non-secret owner-provided receipt confirming full indexed inspection and deletion of the disposable DoneState service account for OneClickPostFactory, or expose and review a supported account-bound inspection/deletion capability. Do not retry the blocked browser handoff. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Preserve separate fresh-signup, selected-repository App and LEGAL-001 gates before unrestricted GA.",
+        "waitCondition": "Bounded customer run aa5389f5-a4dd-400e-ba72-3e80c3190992 is independently VERIFIED on unmerged PR 172 with exact-head CI green; known run/key deletion and temporary Write removal are confirmed. Full indexed service-account inspection/purge is unconfirmed. Browser credential-protection recovery failed and the documented manual handoff was rejected by browser URL policy. Current MCP tools do not expose full indexed account inspection/purge; browser workaround attempts are prohibited.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "Full indexed account inspection/purge remains unconfirmed. The successful customer result and exact confirmed cleanup remain preserved; no blocked browser workaround was attempted.",
+      "content": "Only a supported account-bound inspection/deletion interface or a non-secret owner-provided service-account deletion receipt can re-enter this step. Do not delete the GitHub account or repeat model execution/known cleanup.",
+      "measurement": "Browser observation credential_observation_restricted; canonical recovery protected_command_failed; manual handoff browser_security_restricted and next_action stop. Zero alternate-browser/workaround attempts; no indexed erasure claim."
+    },
+    {
+      "id": "PF-E-054",
+      "date": "2026-10-08",
+      "identity": "Checked separate DoneState account-controls API candidate",
+      "situation": "The publisher requested a supported alternative after browser URL policy blocked the remaining indexed service-account cleanup step.",
+      "verification": "DoneState PR 173 exposes inspect_account and delete_account_data only on a separate /mcp/account/v1 resource with effective account scopes, exact resource/owner checks and login confirmation. It reuses generation-fenced deletion, refuses active/unreadable/capped inventories and preserves ambiguity on failed final readback. Local validation passed 163 Worker tests/24 files and 44 core tests. Implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed CI 37710940385 for core (22), core (24) and hosted-plugin. Public tree 4fcfbaa205cfc602d7ebdec134a2f28952ed7638 matches the locally checked tree. Review-package head c9c13f9046fe7142d608726408117dcb97536378 adds E-099 and a CI receipt without changing implementation code; final-head CI 37711410330 passed core (22), core (24) and hosted-plugin at that exact head. The canonical 0.3.0 20-tool inventory and frozen distribution manifest are unchanged. Receipt: evidence/rollout-20261008/account-api-candidate.json.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Review DoneState PR 173 and grant named merge/deployment authority for the checked separate account-controls API. After deployment, connect only as OneClickPostFactory, inspect, delete indexed service data once under recorded customer authority, preserve the redacted receipt and obtain fresh empty-state readback. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+        "waitCondition": "DoneState PR 173 implementation c38fb8aa6ebc6be30426548688006d02bbd14d3e passed all three CI checks in 37710940385. Review-package documentation head c9c13f9046fe7142d608726408117dcb97536378 adds the checked-source receipt without changing implementation code. Merge, deployment, separate customer connection and actual indexed-account deletion remain unconfirmed. The blocked browser route must not be retried.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "A checked supported API candidate is available for review, not yet deployed or connected. No new production account deletion or GA claim.",
+      "content": "Preserve separate execution/CI/deployment/customer-connection/account-deletion states. The returned receipt will record service facts and a digest, not an independent signature. Existing OAuth connections, generation fences and anonymous aggregate counters remain; GitHub resources, upstream key/OAuth revocation and unindexed legacy objectives remain outside scope.",
+      "measurement": "Implementation and final review-package CI each have three successful required jobs; local 163 Worker/44 core tests passed. Zero new model executions, repository Write grants, customer account deletions or blocked browser retries."
+    },
+    {
+      "id": "PF-E-055",
+      "date": "2026-10-08",
+      "identity": "DoneState account API approved, merged and deployed; customer admission remains pending",
+      "situation": "The publisher approved merging and deploying the reviewed separate account API. This removes the merge/deployment authority gate without implying customer cleanup or unrestricted GA.",
+      "verification": "DoneState PR 173 reviewed head c9c13f9046fe7142d608726408117dcb97536378 merged once as 20a249902a9646209ade5f874b50e19db8f87519; merge tree 7cddb3b4a58b9552e6f956d47f8e12a6424a8bd6 equals the reviewed tree. Exact-merge CI 37833092717 passed all three required jobs. Deployment 37833092691/job 113503166074 succeeded and reported Worker aa332bb0-239d-404a-938e-2448dc5d5ffc, existing container application a0340af7-00ec-45b5-8d60-2d8444353b89, basic instance type and image sha256:2f03c8f41604e6dd9c0c15bcefa0bf69422425aede6ea428faa5f7da570d0c82. Direct public metadata/resource probes were denied with Cloudflare 1010, and current tools do not expose the account resource. Primary append-only receipt is PR 174 at fb831d2960e3a269dc785b8f86810e8ed0bda130; portfolio copy and digest are in evidence/rollout-20261008/account-api-deployment.json.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+        "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "Merge and provider deployment are confirmed. Supported native-client customer admission, indexed-account deletion, fresh signup/App acceptance and legal gates remain separate blocked work. Historical independent-verifier evidence and source-ledger pins are preserved.",
+      "content": "Exact approval/merge/CI/deployment receipts, recorded access denials and customer-only OAuth re-entry. The service receipt digest is not an independent-verifier signature.",
+      "measurement": "One DoneState merge, three successful exact-merge CI jobs and one successful deployment. Zero new model executions, repository Write grants, indexed-account deletions or blocked browser retries."
+    },
+    {
+      "id": "PF-E-056",
+      "date": "2026-10-08",
+      "identity": "Preserve both histories after concurrent portfolio evidence-ID collision",
+      "situation": "While publishing the approved DoneState API deployment receipt, current portfolio main advanced to 218212a0a53cf1f321d1c8357a7c7a62f8f07819 and its estate-discovery receipt used the same PF-E-033 identifier as an older published unmerged customer-cleanup receipt.",
+      "verification": "Main 218212a0a53cf1f321d1c8357a7c7a62f8f07819 story PF-E-033 remains unchanged. The original unmerged PF-E-033 customer-cleanup object from branch commit d53545994946483c1a471e7606056b8edc62ede2 is preserved unchanged in evidence/rollout-20261008/customer-cleanup-story-id-reconciliation.json. Current references to that customer receipt now use this PF-E-056 archive reconciliation. Every other common and branch evidence story, including PF-E-055 account API deployment, retains its original object. The incoming estate indexing/release-watch document is retained unchanged. Source-ledger pins, shared operating contract, reconciliation snapshots and unrelated work/owner items are unchanged. The merge of current main into the review branch is a documentation reconciliation, not a merge of PR 31 or a deployment.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Connect the deployed separate DoneState account-controls resource through a supported OAuth-capable MCP client as OneClickPostFactory; verify discovery and authenticated inspection before deleting indexed service data once under recorded customer authority, preserving a redacted receipt and fresh empty-state readback. Direct custom-domain probes received Cloudflare 1010 and stopped. If the normal client also fails, the site owner must diagnose the exact denial through Cloudflare support/settings. Verified PR 172 and confirmed run/key/temporary-Write cleanup need no repetition. Fresh signup, selected-repository App and legal gates remain separate.",
+        "waitCondition": "DoneState PR 173 merged as 20a249902a9646209ade5f874b50e19db8f87519 after explicit named user approval. Exact-merge CI 37833092717 and production deployment 37833092691 succeeded, reporting Worker aa332bb0-239d-404a-938e-2448dc5d5ffc. Direct unauthenticated metadata/resource probes returned HTTP 403/Cloudflare 1010; no separate customer account-controls tools are connected. Live admission and actual indexed-account deletion remain unconfirmed.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "Both independent histories are preserved with unique canonical IDs and an exact archive of the older branch-scoped receipt. Current DoneState API deployment is confirmed; fresh account-controls admission and indexed customer deletion remain unconfirmed.",
+      "content": "Archive the single colliding customer story, retain current canonical main story, preserve all other story objects and regenerate portfolio state. Historical prose that referred to branch-scoped PF-E-033 continues to describe that archived original receipt.",
+      "measurement": "One colliding identifier reconciled; one original story object archived unchanged; all other stories and unrelated portfolio state preserved. Zero product merges, deployments, model executions, repository Write grants or customer account deletions."
+    },
+    {
+      "id": "PF-E-057",
+      "date": "2026-10-08",
+      "identity": "DoneState customer indexed-service cleanup closed by receipt and fresh inspection",
+      "situation": "The prepared separate DoneState account-controls connection was confirmed and became callable as OneClickPostFactory. The already-approved customer indexed-service deletion was performed once after authenticated identity and readiness inspection.",
+      "verification": "Pre-inspection at 2026-10-08T22:51:35.335Z identified OneClickPostFactory with a complete zero-count indexed inventory, no stored key or active run and dailyRunsUsed 1. One delete_account_data call with confirm true and exact confirmLogin returned a service receipt at 22:55:39.653Z, both generations 6 and canonical SHA-256 digest 3ce7dd8f1a3c484ba5fff6d1e05d14b3bd950019268790b5eafd4f2f11fc7904, independently recomputed as a content-integrity check. Fresh inspection at 22:56:06.979Z confirmed complete zero-count inventory, empty repository/run lists, disconnected execution credential, no active run and dailyRunsUsed 0. The receipt has independentVerification false; this is service evidence plus fresh state observation, not an independent-verifier signature. Primary append-only receipt is PR 174 at 987a75f65f7c27381fff8d30fec867b0af224d29; the copied payload, exact source digest and reference are in evidence/rollout-20261008/customer-account-closure.json. Historical direct-probe denials, product deployment, prior OpsTruth verification and all old portfolio stories remain unchanged.",
+      "accountability": {
+        "owner": "DoneState maintainers",
+        "status": "complete",
+        "nextAction": "Retain the scoped receipt and readback; pursue separate fresh signup/App and DS-LEGAL-001 launch gates.",
+        "waitCondition": "None for the approved existing customer indexed-service cleanup.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The live account-controls admission and indexed-service cleanup blockers for the verified OneClickPostFactory successor outcome are closed. Fresh clean-account signup/App admission and legal gates keep DS-CUSTOMER-001/DS-RELEASE-001 blocked. No unrestricted GA, GitHub-account deletion, upstream key/OAuth revocation or unindexed legacy erasure claim.",
+      "content": "Separate authenticated service operations, receipt integrity, fresh readback and independent verification. Preserve source-ledger pins, reconciliation snapshots and shared operating contract.",
+      "measurement": "One pre-inspection, one approved deletion and one fresh post-inspection. Indexed object counts were already zero; account vault daily usage reset 1 -> 0. Zero new model executions, repository Write grants, publisher-account deletion, blocked browser retries or product redeployments."
+    },
+    {
+      "id": "PF-E-058",
+      "date": "2026-10-09",
+      "identity": "Preserve concurrent main estate updates alongside completed customer cleanup",
+      "situation": "While publishing the approved customer cleanup receipt, portfolio main advanced to 103e7559a890fe3a4bc7fbc5e012683f44ce90a6 and revised its estate-discovery PF-E-033 story and indexing-watch document. PR 31 needed a documentation-only reconciliation.",
+      "verification": "A structural three-way reconciliation against common main 218212a0a53cf1f321d1c8357a7c7a62f8f07819 preserves every unrelated incoming and branch update. Current main PF-E-033 and the updated AGENT-INDEXING-AND-RELEASE-WATCH.md are retained unchanged. The prior branch PF-E-033 snapshot from c0a06b7ed572a6a9c9a69f51d4b56f4f68c06a72 is archived verbatim together with the current-main object in evidence/rollout-20261008/main-story-update-reconciliation.json. All other previous branch evidence stories, including PF-E-057 customer deletion receipt/readback, remain unchanged. Source-ledger pins, independent verifier subjects, shared contract and unrelated work/owner changes retain their three-way source values. This integrates main into the open review branch; it is not a product merge or deployment.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Retain the reconciled review branch and its historical archives; pursue the separate remaining fresh signup/App and publisher/legal gates.",
+        "waitCondition": "None for this documentation reconciliation.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The current estate release observations and the completed DoneState service-cleanup receipt coexist without discarding either history. PR 31 remains a documentation review; unrestricted DoneState GA stays gated.",
+      "content": "Preserve the newer current-main canonical estate story, archive its previously published snapshot exactly, retain all other historical objects, and regenerate portfolio state.",
+      "measurement": "One concurrent main update integrated; one revised historical-story snapshot archived verbatim; zero additional account deletions, model executions, GitHub Write grants or product deployments."
+    },
+    {
+      "id": "PF-E-059",
+      "date": "2026-10-09",
+      "identity": "Publish approved Northampton operating location and align existing public contacts",
+      "situation": "The publisher explicitly instructed use of Northampton, Northamptonshire, UK and completion of this public-location slice. The canonical Proof & State privacy notice already covers hosted DoneState and publishes hello@proofandstate.com for support/privacy and security@proofandstate.com for confidential security reports.",
+      "verification": "The publisher-approved public operating location is Northampton, Northamptonshire, UK. DoneState PR 174 merged as 762ac3983c65d916bb9dc091843ebb3a1fdc7a38 with exact-merge CI 37859435117 successful. Canonical website PR 27 merged as 2a74849f000e1daed834bf3d763048c2aa284506; production deployment 37859198742 and both exact-merge checks succeeded. Existing support/privacy hello@proofandstate.com and confidential security security@proofandstate.com are source-confirmed published contacts; email delivery was not tested. The town/county/country decision does not provide the remaining complete geographic business/service address. Independent live readback of the new legal-page wording is unconfirmed: a direct probe returned 403 and search returned older content; successful existing workflow checks cover other production routes and bundles. The exact primary decision at b12aec71fd1738378252481b10b7a8c8d9f519a6, its file SHA-256, confirmed merge trees, required exact-merge CI, website Worker version ae9d1b19-9728-464b-84a5-3c1b62200953, successful production steps and artifact digest are recorded separately in evidence/rollout-20261008/public-location-decision.json. Historical E101/PF-E-057 customer-cleanup receipts, independent-verifier subjects, source-ledger pins, shared operating contract, reconciliation archives and all old portfolio story objects are unchanged.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Retain the approved location/contact source and deployment receipts; pursue the separate appropriate complete public address, fresh clean-account signup/App admission and remaining release gates. Do not repeat completed customer execution or cleanup.",
+        "waitCondition": "None for the approved public-location/contact declaration and confirmed deployment. Independent legal-page content readback remains unconfirmed within its recorded scope.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The approved operating location and existing contact declarations are merged into DoneState policies and deployed through the canonical website production workflow. The operator-location/email-declaration decision is complete; full public-address and fresh signup/App gates remain blocked. The new legal-page wording has not been independently observed outside the deployment workflow. No unrestricted GA or UK-only processing claim.",
+      "content": "Keep location granularity, contact declaration, inbox delivery, source merge, provider deployment, production readback and unrestricted release authority distinct. Preserve all earlier history and source-ledger pins.",
+      "measurement": "Two DoneState policy documents and two canonical website policy routes updated. Primary PR 174 and website PR 27 merged with successful required checks; one canonical website deployment confirmed. Zero new customer model executions, repository Write grants, account deletions, private address/UTR publications, DoneState Worker redeployments or email delivery tests."
     }
   ]
 }

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "status": "CUSTOMER_PR_VERIFIED_CLEANUP_PENDING",
+  "sourceEvidence": "https://github.com/AyobamiH/donestate/pull/171",
+  "sourceStory": "E-095",
+  "runId": "aa5389f5-a4dd-400e-ba72-3e80c3190992",
+  "customer": "OneClickPostFactory",
+  "subject": {
+    "repository": "AyobamiH/donestate",
+    "baseRef": "main",
+    "baseHeadSha": "fbaa060dfc6680516dfb7a1195801d1f8ab58d9d",
+    "branchName": "donestate/aa5389f5-a4dd-400e-ba72-3e80c3190992",
+    "headSha": "e2067cd8905f358dadc7b9265d90728726f3c40d",
+    "publication": "pull_request",
+    "pullRequestNumber": 172,
+    "pullRequestUrl": "https://github.com/AyobamiH/donestate/pull/172"
+  },
+  "requiredCI": {
+    "pr": 172,
+    "head": "e2067cd8905f358dadc7b9265d90728726f3c40d",
+    "base": "fbaa060dfc6680516dfb7a1195801d1f8ab58d9d",
+    "user": "OneClickPostFactory",
+    "merged": false,
+    "ci": {
+      "id": 37705797840,
+      "head_sha": "e2067cd8905f358dadc7b9265d90728726f3c40d",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "jobs": [
+      {
+        "id": 113079733658,
+        "name": "hosted-plugin",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113079733905,
+        "name": "core (22)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113079733948,
+        "name": "core (24)",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "verifierDecisionSummary": {
+    "schema": "donestate.verification-attestation.v2",
+    "decision": "verified",
+    "issuedAt": "2026-10-08T00:06:04.634Z",
+    "issuedBy": "urn:opstruth:service:public-verifier",
+    "evidenceRefs": [
+      "https://github.com/AyobamiH/donestate/actions/runs/37705797840/job/113079733658",
+      "https://github.com/AyobamiH/donestate/actions/runs/37705797840/job/113079733905",
+      "https://github.com/AyobamiH/donestate/actions/runs/37705797840/job/113079733948",
+      "https://github.com/AyobamiH/donestate/commit/e2067cd8905f358dadc7b9265d90728726f3c40d",
+      "https://github.com/AyobamiH/donestate/compare/fbaa060dfc6680516dfb7a1195801d1f8ab58d9d...e2067cd8905f358dadc7b9265d90728726f3c40d"
+    ],
+    "verificationReportDigest": "329556b55982a342caa15500ab0ec1cdfda2ffb5677797cf53dcb3d71a160e4f",
+    "signerFingerprint": "09544c3ede70b832a114918bb439960004655faf9d36981e1402587af9429c86"
+  },
+  "executionSnapshotDigest": "2d1ad908612f9e481fcec3c105f56199e4c1481f8bae67d11702b8e7efecf858",
+  "handoffDigest": "0f5a2f0959869bb562e29141c9a37f23a205bb57c96d1f174023472b1ff19655",
+  "integrity": {
+    "schemaVersion": 1,
+    "runId": "aa5389f5-a4dd-400e-ba72-3e80c3190992",
+    "structuralAndDigestChecksPassed": true,
+    "eventCount": 9,
+    "terminalEventChainHead": "c73fef168b19380e0648cbedee573d87d1409d4047e3e64b122fc1bee18ecd39",
+    "actionResultDigestsMatched": 9,
+    "handoffDigestMatched": true,
+    "verificationNonceMatched": true,
+    "executionSnapshotDigestMatched": true,
+    "trustedSignerPolicyMatched": true,
+    "rawSignatureMaterialAvailable": false,
+    "localCryptographicSignatureReverificationPerformed": false,
+    "signatureAdmission": "DoneState accepted the signed response from the configured independent OpsTruth service under the existing pin",
+    "noSelfCertification": true
+  },
+  "limits": {
+    "freshSignupNotProven": true,
+    "selectedRepositoryAppAdmissionNotProven": true,
+    "fullIndexedAccountPurgeUnconfirmed": true,
+    "legalGateUnchanged": true,
+    "providerBilledAmountUnknown": true,
+    "hardDollarCapAvailable": false,
+    "cleanupPending": true
+  }
+}

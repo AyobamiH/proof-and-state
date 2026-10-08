@@ -1,0 +1,25 @@
+{
+  "schema": "proof-state.unmerged-evidence-story-archive.v1",
+  "sourceRepository": "AyobamiH/proof-and-state",
+  "sourceCommit": "d53545994946483c1a471e7606056b8edc62ede2",
+  "sourcePath": "governance/portfolio-ledger.json",
+  "sourceStoryId": "PF-E-033",
+  "reason": "Newly merged canonical main 218212a reserves PF-E-033 for a separate estate-discovery receipt. Preserve this published unmerged customer-cleanup story unchanged and point its current work-item references to PF-E-056.",
+  "originalStory": {
+    "id": "PF-E-033",
+    "date": "2026-10-07",
+    "identity": "Disposable customer account inspected and deleted; exact temporary Write removed",
+    "situation": "The bounded customer test had reached a known terminal failed-safe result. The user had explicitly authorised disposable-account inspection/deletion and removal of the exact temporary Write grant after the result.",
+    "verification": "After the terminal result and its complete redacted receipt were published in DoneState PR #169 at 5faf2d6335f53d8027c7770fa38f91edff994c21 and portfolio PR #31 at daae4e768f61fc61fda19ede5306d0778e54613c, the first-party account console positively identified OneClickPostFactory. It listed exactly the two terminal FAILED_SAFE objectives 257bbf51-66d2-4cd0-838d-01bbe66e2608 and c9586ced-df91-4c49-aa97-8d07c04af16b, a connected execution key, no active run, no selected maintenance repositories and 0 findings. The already authorised exact-login delete_account submission was made once. The rendered result headed DoneState account data deleted confirmed 2 indexed objectives, 0 selected repositories and 0 maintenance findings deleted. Independent customer MCP readback then reported connected false, activeRunId null, lastUsedAt null and dailyRunsUsed 0; maintenance repositories []; each known objective returned run not found with INVALID_ARGUMENT. GitHub exact recipient OneClickPostFactory, numeric ID 281453754, was removed from AyobamiH/donestate; visible toast confirmed removal, and the GitHub connector independently returned permission read. No owner, GitHub account, repository, unrelated historical canary, App installation or verifier trust scope was removed. OAuth connection revocation, unknown pre-index history and unrelated provider data deletion are not claimed. Minimal opaque deletion-generation fences remain by design. The stored key was intentionally removed, so funding alone does not reconnect execution. Sanitised dated receipt: evidence/rollout-20261007/customer-account-cleanup-04.json.",
+    "accountability": {
+      "owner": "DoneState maintainers and repository owner",
+      "status": "blocked",
+      "nextAction": "The owner must add credits to the OpenAI API organization associated with the execution key. After this intentional cleanup, connect the funded execution key again and explicitly authorise any fresh bounded repository Write. Use a new PR-only objective, exact-head required CI and pinned OpsTruth verification; do not rerun either terminal failed objective. Fresh signup and remaining legitimate public address/branded support/privacy contacts still gate unrestricted GA.",
+      "waitCondition": "Approved diagnostics are deployed at be14e35514f0ee3d78ca2c121c2b236767f80ee4 with successful exact-source CI 37595968023 and deploy 37595968046. Fresh customer run c9586ced-df91-4c49-aa97-8d07c04af16b is FAILED_SAFE with preserved OpenAI no-credit diagnostics and no branch, PR or verifier subject. The approved post-result cleanup is complete: the customer console reported 2 indexed objectives deleted, 0 selected repositories and 0 findings; the stored execution key is disconnected, both known run IDs now return run not found, maintenance selection is empty, and GitHub independently reports OneClickPostFactory permission read after exact collaborator removal. Successful customer execution, independent verification, fresh signup and remaining LEGAL-001 decisions are unproven.",
+      "staleDate": "2026-10-09"
+    },
+    "outcome": "The authorised indexed-service-account and exact repository-access cleanup are complete. The customer execution remains blocked by API credits and needs a new funded credential connection after intentional cleanup; successful fresh execution and launch readiness are not claimed.",
+    "content": "A new cleanup receipt and current blocked work-item update; all prior evidence stories, including the dated pre-cleanup rollout and failure receipts, remain unchanged.",
+    "measurement": "One exact disposable-account deletion; two indexed terminal objectives deleted; stored key disconnected; zero selected repositories or findings; both known run IDs return run not found; one exact collaborator removed and permission read independently confirmed; zero customer PRs or verifier decisions."
+  }
+}
