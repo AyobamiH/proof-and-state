@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "portfolio": "Proof & State",
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "governanceRule": "Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.",
   "sourceLedgers": [
     {
@@ -491,9 +491,9 @@
       "owner": "Product owner",
       "authorityRequired": "REPOSITORY_ACCESS_AND_ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Accept the already-approved temporary AyobamiH/donestate invitation as OneClickPostFactory through secure GitHub sign-in. Independently read back Write, customer identity, idle connected key and unchanged deployed base before one prepared 120000ms, three-file PR-only create/start. Require service publication, exact-head required CI, the established pinned independent decision and authorised cleanup. Preserve separate signup, selected-repository App, full indexed-purge and LEGAL-001 gates.",
+      "action": "Preserve the exact VERIFIED customer run, handoff, CI and integrity receipts, then delete only its disposable run and stored execution key and remove OneClickPostFactory temporary Write. Full indexed account inspection/purge, fresh signup, selected-repository App admission and LEGAL-001 remain separate unproven gates. Keep customer PR 172 unmerged and the verifier pin unchanged.",
       "prerequisites": [],
-      "waitCondition": "The user approved the exact temporary Write grant and its invitation was submitted once. GitHub rendered Pending Invite awaiting OneClickPostFactory; independent permission remains read. First secure sign-in returned the already-signed-in AyobamiH owner, and the second sign-in result is unknown after timeout and cancelled observation. The customer key remains connected and idle, dailyRunsUsed 2; no fresh objective has been created or started. Capacity repair is already merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d.",
+      "waitCondition": "Customer OAuth run aa5389f5-a4dd-400e-ba72-3e80c3190992 created service PR 172 at e2067cd8905f358dadc7b9265d90728726f3c40d. Live install/build and 44 tests passed; CI 37705797840 passed all three required jobs. The configured independent OpsTruth service returned verified under the existing pin and fresh DoneState readback is VERIFIED. Cleanup is pending; this bounded existing-customer success does not prove fresh signup, App admission, full indexed erasure or unrestricted GA.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -505,7 +505,8 @@
         "PF-E-047",
         "PF-E-048",
         "PF-E-049",
-        "PF-E-050"
+        "PF-E-050",
+        "PF-E-051"
       ]
     },
     {
@@ -1240,11 +1241,11 @@
       "stream": "customer-readiness",
       "status": "blocked",
       "owner": "DoneState maintainers",
-      "lastUpdated": "2026-10-07",
-      "staleDate": "2026-10-09",
-      "nextAction": "Accept the already-approved temporary AyobamiH/donestate invitation as OneClickPostFactory through secure GitHub sign-in. Independently read back Write, customer identity, idle connected key and unchanged deployed base before one prepared 120000ms, three-file PR-only create/start. Require service publication, exact-head required CI, the established pinned independent decision and authorised cleanup. Preserve separate signup, selected-repository App, full indexed-purge and LEGAL-001 gates.",
-      "waitCondition": "The user approved the exact temporary Write grant and its invitation was submitted once. GitHub rendered Pending Invite awaiting OneClickPostFactory; independent permission remains read. First secure sign-in returned the already-signed-in AyobamiH owner, and the second sign-in result is unknown after timeout and cancelled observation. The customer key remains connected and idle, dailyRunsUsed 2; no fresh objective has been created or started. Capacity repair is already merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d.",
-      "reentryCondition": "The exact action-time Write approval has been received; do not request it again or submit another invitation. Recipient authentication and accepted permission readback remain necessary. Retain the established verifier pin, 120000ms and three-file limits, PR-only effects and no automatic retry. Recheck all prerequisites immediately before create/start; preserve earlier failures, cleanup receipts and separate GA gates. Do not copy invitation access tokens, infer full account erasure or self-certify completion.",
+      "lastUpdated": "2026-10-08",
+      "staleDate": "2026-10-10",
+      "nextAction": "Preserve the exact VERIFIED customer run, handoff, CI and integrity receipts, then delete only its disposable run and stored execution key and remove OneClickPostFactory temporary Write. Full indexed account inspection/purge, fresh signup, selected-repository App admission and LEGAL-001 remain separate unproven gates. Keep customer PR 172 unmerged and the verifier pin unchanged.",
+      "waitCondition": "Customer OAuth run aa5389f5-a4dd-400e-ba72-3e80c3190992 created service PR 172 at e2067cd8905f358dadc7b9265d90728726f3c40d. Live install/build and 44 tests passed; CI 37705797840 passed all three required jobs. The configured independent OpsTruth service returned verified under the existing pin and fresh DoneState readback is VERIFIED. Cleanup is pending; this bounded existing-customer success does not prove fresh signup, App admission, full indexed erasure or unrestricted GA.",
+      "reentryCondition": "No further model run or grant approval is needed. Use only the preserved exact subject and terminal run for authorised cleanup; do not merge or alter PR 172, replay execution, widen verification or infer provider-key/GitHub OAuth revocation from stored-key deletion. Full-account console inspection was previously blocked in this browser and current tools do not expose indexed account purge.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1273,7 +1274,8 @@
         "PF-E-047",
         "PF-E-048",
         "PF-E-049",
-        "PF-E-050"
+        "PF-E-050",
+        "PF-E-051"
       ]
     },
     {
@@ -1391,11 +1393,11 @@
       "stream": "release",
       "status": "blocked",
       "owner": "Publisher owner",
-      "lastUpdated": "2026-10-07",
-      "staleDate": "2026-10-09",
-      "nextAction": "Accept the already-approved temporary AyobamiH/donestate invitation as OneClickPostFactory through secure GitHub sign-in. Independently read back Write, customer identity, idle connected key and unchanged deployed base before one prepared 120000ms, three-file PR-only create/start. Require service publication, exact-head required CI, the established pinned independent decision and authorised cleanup. Preserve separate signup, selected-repository App, full indexed-purge and LEGAL-001 gates.",
-      "waitCondition": "The user approved the exact temporary Write grant and its invitation was submitted once. GitHub rendered Pending Invite awaiting OneClickPostFactory; independent permission remains read. First secure sign-in returned the already-signed-in AyobamiH owner, and the second sign-in result is unknown after timeout and cancelled observation. The customer key remains connected and idle, dailyRunsUsed 2; no fresh objective has been created or started. Capacity repair is already merged/deployed at fbaa060dfc6680516dfb7a1195801d1f8ab58d9d.",
-      "reentryCondition": "The exact action-time Write approval has been received; do not request it again or submit another invitation. Recipient authentication and accepted permission readback remain necessary. Retain the established verifier pin, 120000ms and three-file limits, PR-only effects and no automatic retry. Recheck all prerequisites immediately before create/start; preserve earlier failures, cleanup receipts and separate GA gates. Do not copy invitation access tokens, infer full account erasure or self-certify completion.",
+      "lastUpdated": "2026-10-08",
+      "staleDate": "2026-10-10",
+      "nextAction": "Preserve the exact VERIFIED customer run, handoff, CI and integrity receipts, then delete only its disposable run and stored execution key and remove OneClickPostFactory temporary Write. Full indexed account inspection/purge, fresh signup, selected-repository App admission and LEGAL-001 remain separate unproven gates. Keep customer PR 172 unmerged and the verifier pin unchanged.",
+      "waitCondition": "Customer OAuth run aa5389f5-a4dd-400e-ba72-3e80c3190992 created service PR 172 at e2067cd8905f358dadc7b9265d90728726f3c40d. Live install/build and 44 tests passed; CI 37705797840 passed all three required jobs. The configured independent OpsTruth service returned verified under the existing pin and fresh DoneState readback is VERIFIED. Cleanup is pending; this bounded existing-customer success does not prove fresh signup, App admission, full indexed erasure or unrestricted GA.",
+      "reentryCondition": "No further model run or grant approval is needed. Use only the preserved exact subject and terminal run for authorised cleanup; do not merge or alter PR 172, replay execution, widen verification or infer provider-key/GitHub OAuth revocation from stored-key deletion. Full-account console inspection was previously blocked in this browser and current tools do not expose indexed account purge.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1426,7 +1428,8 @@
         "PF-E-047",
         "PF-E-048",
         "PF-E-049",
-        "PF-E-050"
+        "PF-E-050",
+        "PF-E-051"
       ]
     },
     {
@@ -2337,6 +2340,23 @@
       "outcome": "Temporary Write was approved and its invitation submitted once. Recipient acceptance and effective Write are pending, so no fresh service objective or paid start exists.",
       "content": "All earlier receipts, failures, cleanup and source-ledger pins remain historical evidence. No invitation token, raw credential, duplicate invitation, autonomous retry, customer success or GA claim.",
       "measurement": "Independent readback 2026-10-07T23:45:51.894Z: customer permission read; key connected and idle; dailyRunsUsed 2; zero fresh creates/starts. Earlier evidence heads passed DoneState CI 37700261343 and portfolio Governance/GTM runs 37700389535/37700389527."
+    },
+    {
+      "id": "PF-E-051",
+      "date": "2026-10-08",
+      "identity": "Bounded DoneState customer PR independently VERIFIED after capacity repair",
+      "situation": "The user accepted the already-approved temporary Write invitation and the sealed fresh customer successor ran once.",
+      "verification": "evidence/rollout-20261007/customer-run-08-verified.json references DoneState E-095 and its exact terminal handoff, admitted signer summary and independently checked digest chain. Customer PR 172 head e2067cd8905f358dadc7b9265d90728726f3c40d passed required CI 37705797840. OpsTruth returned verified under the unchanged authoritative pin and fresh DoneState readback is VERIFIED.",
+      "accountability": {
+        "owner": "Publisher owner",
+        "status": "blocked",
+        "nextAction": "Preserve the exact VERIFIED customer run, handoff, CI and integrity receipts, then delete only its disposable run and stored execution key and remove OneClickPostFactory temporary Write. Full indexed account inspection/purge, fresh signup, selected-repository App admission and LEGAL-001 remain separate unproven gates. Keep customer PR 172 unmerged and the verifier pin unchanged.",
+        "waitCondition": "Customer OAuth run aa5389f5-a4dd-400e-ba72-3e80c3190992 created service PR 172 at e2067cd8905f358dadc7b9265d90728726f3c40d. Live install/build and 44 tests passed; CI 37705797840 passed all three required jobs. The configured independent OpsTruth service returned verified under the existing pin and fresh DoneState readback is VERIFIED. Cleanup is pending; this bounded existing-customer success does not prove fresh signup, App admission, full indexed erasure or unrestricted GA.",
+        "staleDate": "2026-10-10"
+      },
+      "outcome": "Live install/build, test, customer publication and pinned independent outcome succeeded for this bounded existing OAuth customer. Full fresh-account acceptance, cleanup and GA are separate pending states.",
+      "content": "All previous terminal failures, cleanup, source-ledger pins, shared-contract state and unrelated portfolio work remain preserved. Customer PR stays unmerged; no model retry, wider App scope or self-verification.",
+      "measurement": "One create/start; maxDurationMs 120000; maxChangedFiles 3; install 25s; tests 44/44; three required CI jobs passed; terminal VERIFIED 2026-10-08T00:06:08.244Z. No raw signature-reverification or provider billed-amount claim."
     }
   ]
 }
