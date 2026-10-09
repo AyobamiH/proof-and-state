@@ -491,9 +491,9 @@
       "owner": "Product owner",
       "authorityRequired": "ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "When the user requests resumption, use a fresh canonical HTTPS cloud-browser session and secure GitHub account selection as OneClickPostFactory. Never send another-machine localhost links or replay the expired response. Preserve completed App, verifier and cleanup receipts.",
+      "action": "Completed: retain the actual fresh-client OneClickPostFactory OAuth receipt alongside the earlier selected-App execution, independent verification and scoped cleanup subjects.",
       "prerequisites": [],
-      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
+      "waitCondition": "None for this DoneState owned-domain slice. Actual secure GitHub account choice submitted as OneClickPostFactory. Canonical HTTPS receipt at 2026-10-09T22:25:29.744Z\u201322:25:33.617Z passes discovery, callback state/issuer, code exchange, authenticated read-only MCP, refresh and refreshed MCP. Own new grant revocation is confirmed and revoked access denied. Credential absent; zero model starts, credential setups or repository mutations. Client-ID SHA256 22ee9a4bcc2d7e5f5e145c2bbb4b457706fa81fb82d2499d870cfe724a037902. Fresh client consent does not establish first-ever identity history. Non-secret client registration metadata remains under the provider public API limit. Current-version natural health passes under PF-E-066. Existing explicit publisher launch authority is recorded as the primary E-118 owned-domain GA decision. Owned-domain GA uses explicit per-objective authority, customer-held execution credentials and independently signed outcome verification. First-ever identity history, arbitrary private-repository self-service, real customer support delivery/24-hour staffing, first-cohort metrics and external directory/Marketplace publication are not established by this acceptance. Review the first cohort within seven days of entry; apply the existing incident stop criteria.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -519,7 +519,8 @@
         "PF-E-063",
         "PF-E-064",
         "PF-E-065",
-        "PF-E-066"
+        "PF-E-066",
+        "PF-E-067"
       ]
     },
     {
@@ -549,18 +550,19 @@
       "owner": "Product and privacy owner",
       "authorityRequired": "REAL_USER_AND_DATA_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Retain the user authority and concrete owned-domain objective/support/stop criteria. Enter after fresh passing OAuth and current operational health; review the first cohort within seven days. No invitation or new model execution is authorised by acceptance tooling.",
+      "action": "Entry controls are satisfied: maintain per-objective authority, customer-held credentials, support escalation and incident stop criteria; review the first owned-domain cohort within seven days of entry.",
       "prerequisites": [
         "OWNER-ACCEPTANCE-001",
         "OWNER-PRIVACY-001"
       ],
-      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
+      "waitCondition": "None for this DoneState owned-domain slice. Actual secure GitHub account choice submitted as OneClickPostFactory. Canonical HTTPS receipt at 2026-10-09T22:25:29.744Z\u201322:25:33.617Z passes discovery, callback state/issuer, code exchange, authenticated read-only MCP, refresh and refreshed MCP. Own new grant revocation is confirmed and revoked access denied. Credential absent; zero model starts, credential setups or repository mutations. Client-ID SHA256 22ee9a4bcc2d7e5f5e145c2bbb4b457706fa81fb82d2499d870cfe724a037902. Fresh client consent does not establish first-ever identity history. Non-secret client registration metadata remains under the provider public API limit. Current-version natural health passes under PF-E-066. Existing explicit publisher launch authority is recorded as the primary E-118 owned-domain GA decision. Owned-domain GA uses explicit per-objective authority, customer-held execution credentials and independently signed outcome verification. First-ever identity history, arbitrary private-repository self-service, real customer support delivery/24-hour staffing, first-cohort metrics and external directory/Marketplace publication are not established by this acceptance. Review the first cohort within seven days of entry; apply the existing incident stop criteria.",
       "evidenceIds": [
         "PF-E-003",
         "PF-E-024",
         "PF-E-063",
         "PF-E-065",
-        "PF-E-066"
+        "PF-E-066",
+        "PF-E-067"
       ]
     },
     {
@@ -674,11 +676,11 @@
       "owner": "Portfolio owner",
       "authorityRequired": "RELEASE_DECISION",
       "agentExecutable": false,
-      "action": "Record the already authorised owned-domain GA decision once actual fresh-client OAuth and current natural-health entry gates pass. Keep first-ever identity history, independent outcome verification and external channel reviews separate; no renewed merge/deploy approval is awaited.",
+      "action": "Owned-domain GA is recorded under existing publisher authority after passing customer OAuth and current deployed-version health. Keep external channel review and cohort measurements independently tracked.",
       "prerequisites": [
         "OWNER-PILOT-001"
       ],
-      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
+      "waitCondition": "None for this DoneState owned-domain slice. Actual secure GitHub account choice submitted as OneClickPostFactory. Canonical HTTPS receipt at 2026-10-09T22:25:29.744Z\u201322:25:33.617Z passes discovery, callback state/issuer, code exchange, authenticated read-only MCP, refresh and refreshed MCP. Own new grant revocation is confirmed and revoked access denied. Credential absent; zero model starts, credential setups or repository mutations. Client-ID SHA256 22ee9a4bcc2d7e5f5e145c2bbb4b457706fa81fb82d2499d870cfe724a037902. Fresh client consent does not establish first-ever identity history. Non-secret client registration metadata remains under the provider public API limit. Current-version natural health passes under PF-E-066. Existing explicit publisher launch authority is recorded as the primary E-118 owned-domain GA decision. Owned-domain GA uses explicit per-objective authority, customer-held execution credentials and independently signed outcome verification. First-ever identity history, arbitrary private-repository self-service, real customer support delivery/24-hour staffing, first-cohort metrics and external directory/Marketplace publication are not established by this acceptance. Review the first cohort within seven days of entry; apply the existing incident stop criteria.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -688,7 +690,8 @@
         "PF-E-063",
         "PF-E-064",
         "PF-E-065",
-        "PF-E-066"
+        "PF-E-066",
+        "PF-E-067"
       ]
     },
     {
@@ -1266,13 +1269,13 @@
       "id": "DS-CUSTOMER-001",
       "title": "Prove a fresh complete DoneState customer outcome",
       "stream": "customer-readiness",
-      "status": "blocked",
+      "status": "complete",
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-09",
-      "staleDate": "2026-10-10",
-      "nextAction": "Resume a fresh secure OneClickPostFactory account selection only after the user requests it; require real MCP/refresh/revocation acceptance and then record the already authorised owned-domain GA decision. Current-version health is complete; no renewed merge/deploy approval, execution key, model run or Write grant is needed.",
-      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
-      "reentryCondition": "Respect the interrupted secure picker request and expired state. Re-enter only for a fresh user-requested customer session, actual current-version health result or separately recorded authorised GA decision. Preserve all completed App/execution/verification/deletion/removal subjects; no replay, extra coding run or customer PR merge.",
+      "staleDate": "2026-12-01",
+      "nextAction": "Maintain owned-domain GA controls and support escalation; review first-cohort outcomes within seven days of entry. External channel states remain separately tracked.",
+      "waitCondition": "None for owned-domain customer acceptance and GA. Actual secure GitHub account choice submitted as OneClickPostFactory. Canonical HTTPS receipt at 2026-10-09T22:25:29.744Z\u201322:25:33.617Z passes discovery, callback state/issuer, code exchange, authenticated read-only MCP, refresh and refreshed MCP. Own new grant revocation is confirmed and revoked access denied. Credential absent; zero model starts, credential setups or repository mutations. Client-ID SHA256 22ee9a4bcc2d7e5f5e145c2bbb4b457706fa81fb82d2499d870cfe724a037902. Fresh client consent does not establish first-ever identity history. Non-secret client registration metadata remains under the provider public API limit. Current-version natural health is complete under PF-E-066; primary E-118 records the authorised release decision.",
+      "reentryCondition": "Re-open for real OAuth, deletion, authority, verifier or production-health regressions. Preserve prior exact customer PR and cleanup subjects; future external channel releases require their own evidence.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1315,7 +1318,8 @@
         "PF-E-063",
         "PF-E-064",
         "PF-E-065",
-        "PF-E-066"
+        "PF-E-066",
+        "PF-E-067"
       ]
     },
     {
@@ -1431,13 +1435,13 @@
       "id": "DS-RELEASE-001",
       "title": "Gate DoneState owned-domain GA and parallel channel releases",
       "stream": "release",
-      "status": "blocked",
+      "status": "complete",
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-09",
-      "staleDate": "2026-10-10",
-      "nextAction": "Resume a fresh secure OneClickPostFactory account selection only after the user requests it; require real MCP/refresh/revocation acceptance and then record the already authorised owned-domain GA decision. Current-version health is complete; no renewed merge/deploy approval, execution key, model run or Write grant is needed.",
-      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
-      "reentryCondition": "Respect the interrupted secure picker request and expired state. Re-enter only for a fresh user-requested customer session, actual current-version health result or separately recorded authorised GA decision. Preserve all completed App/execution/verification/deletion/removal subjects; no replay, extra coding run or customer PR merge.",
+      "staleDate": "2026-12-01",
+      "nextAction": "Maintain owned-domain GA controls and support escalation; review first-cohort outcomes within seven days of entry. External channel states remain separately tracked.",
+      "waitCondition": "None for owned-domain customer acceptance and GA. Actual secure GitHub account choice submitted as OneClickPostFactory. Canonical HTTPS receipt at 2026-10-09T22:25:29.744Z\u201322:25:33.617Z passes discovery, callback state/issuer, code exchange, authenticated read-only MCP, refresh and refreshed MCP. Own new grant revocation is confirmed and revoked access denied. Credential absent; zero model starts, credential setups or repository mutations. Client-ID SHA256 22ee9a4bcc2d7e5f5e145c2bbb4b457706fa81fb82d2499d870cfe724a037902. Fresh client consent does not establish first-ever identity history. Non-secret client registration metadata remains under the provider public API limit. Current-version natural health is complete under PF-E-066; primary E-118 records the authorised release decision.",
+      "reentryCondition": "Re-open for real OAuth, deletion, authority, verifier or production-health regressions. Preserve prior exact customer PR and cleanup subjects; future external channel releases require their own evidence.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1482,7 +1486,8 @@
         "PF-E-063",
         "PF-E-064",
         "PF-E-065",
-        "PF-E-066"
+        "PF-E-066",
+        "PF-E-067"
       ]
     },
     {
@@ -2665,6 +2670,23 @@
       "outcome": "Current production health is complete. The only remaining owned-domain launch gate is the fresh passing OAuth journey after the interrupted secure picker. Neither provider deployment, approval nor successful operations is relabelled as customer acceptance or GA.",
       "content": "Exact current health receipt mirrored, current owner/customer/release queues refreshed, all historical stories/source pins/product archives/shared contract/channel-review states preserved.",
       "measurement": "One natural current-version sweep, five passing public probes and two confirmed temporary-tail deletions; zero production mutations, synthetic cron calls, credential setups, model starts, authority grants or sent messages."
+    },
+    {
+      "id": "PF-E-067",
+      "date": "2026-10-09",
+      "identity": "Fresh customer OAuth passes; authorised owned-domain GA recorded",
+      "situation": "The user requested a fresh secure approval prompt after expiration. OneClickPostFactory was submitted through the secure account chooser and the canonical callback produced a passing receipt.",
+      "verification": "Actual secure GitHub account choice submitted as OneClickPostFactory. Canonical HTTPS receipt at 2026-10-09T22:25:29.744Z\u201322:25:33.617Z passes discovery, callback state/issuer, code exchange, authenticated read-only MCP, refresh and refreshed MCP. Own new grant revocation is confirmed and revoked access denied. Credential absent; zero model starts, credential setups or repository mutations. Client-ID SHA256 22ee9a4bcc2d7e5f5e145c2bbb4b457706fa81fb82d2499d870cfe724a037902. Fresh client consent does not establish first-ever identity history. Non-secret client registration metadata remains under the provider public API limit. The exact primary receipt is mirrored at evidence/rollout-20261009/https-oauth-passed.json. E-117 records the actual healthy 19:00:45Z scheduled sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, unchanged deployment f609425c-8f23-48c1-a0b7-d3793da78fe3, zero unresolved failures and both owned tails removed. Latest successful hosted deployment remains workflow 37973107201/source 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a; subsequent main 4f3dd65bbb77bd548fde7aa17bea39b4812457e5 is evidence-only with successful CI 37977860318. Primary E-118 closes CUST-003/current RELEASE-001 against the separately preserved selected-App independent verification, cleanup, policy and procedural support evidence.",
+      "accountability": {
+        "owner": "Portfolio owner",
+        "status": "complete",
+        "nextAction": "Monitor bounded owned-domain GA, support escalation and stop criteria; review first-cohort outcomes within seven days of entry.",
+        "waitCondition": "None for owned-domain GA; cohort metrics and external channel reviews remain separately tracked.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "DS-CUSTOMER-001 and the current owned-domain DS-RELEASE-001 slice are complete under the existing explicit publisher launch authority. Owned-domain GA uses explicit per-objective authority, customer-held execution credentials and independently signed outcome verification. First-ever identity history, arbitrary private-repository self-service, real customer support delivery/24-hour staffing, first-cohort metrics and external directory/Marketplace publication are not established by this acceptance. Review the first cohort within seven days of entry; apply the existing incident stop criteria.",
+      "content": "Exact mirrored non-secret OAuth receipt and current customer/release/owner queue reconciliation. Historical stories, source pins, product archives, shared contract and external channel states remain preserved.",
+      "measurement": "One actual fresh-client consent, code exchange, two read-only MCP checks, refresh and scoped revocation with denied access. Zero model starts, credential setups, repository writes, customer invitations or support messages."
     }
   ]
 }
