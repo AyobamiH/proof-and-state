@@ -1328,16 +1328,17 @@
       "stream": "go-to-market",
       "status": "active",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-09",
       "staleDate": "2026-10-16",
-      "nextAction": "Use deployed privacy-minimal aggregate funnel snapshots during controlled owned-domain access and pair them with bounded manual cohort evidence for unique/repeat use, support load and conversion.",
-      "waitCondition": "Aggregate instrumentation is deployed, but real external cohort evidence has not accumulated and the counters intentionally contain no customer identifiers.",
-      "reentryCondition": "Keep active through the first external standalone cohort; keep OpenAI and Marketplace attribution separate if those channels publish.",
+      "nextAction": "Run the first consenting external bounded public-repository-fix cohort using DoneState docs/MARKET-FIT.md and its strict anonymous operator review. Record customer-accepted independently verified activation, seven-day eligible repeat use, priced-offer commitments versus actual payments, and support burden. Improve one evidenced constraint per comparable cohort.",
+      "waitCondition": "Owned-domain GA is accepted under PF-E-067. Customer learning-loop tooling is implemented and locally checked; no real external cohort, retention, payment or market-fit evidence is supplied. The mirrored empty review explicitly reports not_observed and marketFit not_established.",
+      "reentryCondition": "Keep active through external cohort entry and review within seven days. Do not count publisher canaries, pool anonymous cohorts into unique users, infer unobserved retention as zero, or treat written price acceptance as payment. External outreach needs separate send authority.",
       "dependencies": [
         "DS-CUSTOMER-001"
       ],
       "evidenceIds": [
-        "PF-E-024"
+        "PF-E-024",
+        "PF-E-068"
       ]
     },
     {
@@ -2687,6 +2688,23 @@
       "outcome": "DS-CUSTOMER-001 and the current owned-domain DS-RELEASE-001 slice are complete under the existing explicit publisher launch authority. Owned-domain GA uses explicit per-objective authority, customer-held execution credentials and independently signed outcome verification. First-ever identity history, arbitrary private-repository self-service, real customer support delivery/24-hour staffing, first-cohort metrics and external directory/Marketplace publication are not established by this acceptance. Review the first cohort within seven days of entry; apply the existing incident stop criteria.",
       "content": "Exact mirrored non-secret OAuth receipt and current customer/release/owner queue reconciliation. Historical stories, source pins, product archives, shared contract and external channel states remain preserved.",
       "measurement": "One actual fresh-client consent, code exchange, two read-only MCP checks, refresh and scoped revocation with denied access. Zero model starts, credential setups, repository writes, customer invitations or support messages."
+    },
+    {
+      "id": "PF-E-068",
+      "date": "2026-10-09",
+      "identity": "DoneState customer learning loop prepared after accepted owned-domain GA",
+      "situation": "Launch gates are complete but external demand, repeat use, payment and sustainable support burden have not been observed. Aggregate counters intentionally cannot provide unique-user retention evidence.",
+      "verification": "Primary E-119 adds scripts/review-market-fit.mjs, six semantic regression tests, an empty cohort input and docs/MARKET-FIT.md. Strict anonymous external-customer aggregates validate dates, conversion denominators and six evidence-kind hash references; private-data fields, publisher/test populations, future or immature windows, duplicate cohorts, impossible conversions and missing payment evidence are rejected. Reports separate channels and cohorts, use null for zero denominators, never pool unique-user totals and never declare market fit. The actual empty-input report is mirrored byte-for-byte in evidence/market-fit-20261009/donestate-unobserved-review.json. Full primary local check passes with 72 tests, contract/documentation/governance gates and package dry-run. The first five-customer experiment is an operating hypothesis for bounded public-repository fixes, with customer-accepted independently verified activation, eligible repeat use, a real priced-offer test and support minutes. Hashes are operator evidence references, not an independent audit.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "active",
+        "nextAction": "Enter the first consenting external cohort, preserve separately held evidence and review the largest evidenced constraint within seven days of entry.",
+        "waitCondition": "No external customer cohort or payment evidence is supplied; no invitation or message is sent by this tooling.",
+        "staleDate": "2026-10-16"
+      },
+      "outcome": "DS-GTM-001 remains active with an executable customer-learning boundary. DoneState owned-domain GA stays complete; market fit remains unproven. No production tracking, payment integration, runtime deployment, new permissions, channel-state change or external message.",
+      "content": "Mirrored actual unobserved review output and current portfolio GTM reconciliation; product archives, source pins, shared contract and historical receipts remain preserved.",
+      "measurement": "Six new primary regression tests and 72 full local primary tests pass; ten counts, nine friction categories, six evidence kinds and three separated channels. Zero supplied external cohort observations."
     }
   ]
 }
