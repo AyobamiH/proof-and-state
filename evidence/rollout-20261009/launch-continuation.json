@@ -1,0 +1,688 @@
+{
+  "schema": "proof-state.launch-continuation.v1",
+  "date": "2026-10-09",
+  "primaryRepository": "AyobamiH/donestate",
+  "primaryPullRequest": 175,
+  "primaryCandidate": "2d589d9398be9e51248ce8832cd899c0afbe5303",
+  "primaryMerge": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+  "primaryTree": "e29b768135e08f90d2918ac13829f19223eb0983",
+  "primaryCandidateCi": {
+    "runId": 37890592810,
+    "conclusion": "success"
+  },
+  "primaryDeployment": {
+    "state": "DEPLOYMENT_CONFIRMED_BY_PROVIDER_WORKFLOW",
+    "runId": 37890708490,
+    "jobId": 113690767012,
+    "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+    "conclusion": "success",
+    "completedWorkflowUpdatedAt": "2026-10-09T05:55:40Z",
+    "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708490",
+    "workerVersion": "4f9c111f-bd4c-4512-9fe8-3eca2aec06b4",
+    "containerApplicationId": "a0340af7-00ec-45b5-8d60-2d8444353b89",
+    "containerImageDigest": "sha256:dac3a8747872f46f61661d842004accff990b07bb4606cb6ec2b5a902cc8793f",
+    "runtimeUrl": "https://donestate-mcp.woeinvests.workers.dev",
+    "canonicalMcpUrl": "https://donestate.proofandstate.com/mcp",
+    "sandboxSdkVersion": "0.12.9",
+    "sandboxBaseImageVersion": "0.12.9",
+    "codexVersion": "0.150.1",
+    "instanceType": "basic",
+    "maxInstances": 5
+  },
+  "sourceFiles": {
+    "publisher-address-acceptance.json": {
+      "path": "evidence/launch-continuation-20261009/publisher-address-acceptance.json",
+      "sha256": "11f0b71416e67dc2c0cb3875dcb6a76522d31abeadd443d1bfee4f914f4296ed",
+      "payload": {
+        "schema": "donestate.publisher-address-acceptance.v1",
+        "date": "2026-10-09",
+        "publicLocation": "Northampton, Northamptonshire, UK",
+        "granularity": "town_county_country",
+        "ownerAcceptance": "Publisher explicitly accepts the already supplied location/address and instructs progress through remaining work",
+        "additionalPublicAddressRequested": false,
+        "privateHomeAddressPublished": false,
+        "utrPublished": false,
+        "fullGeographicServiceAddressProvided": false,
+        "legalComplianceCertification": false,
+        "acceptedDecisionScope": "Current public location/contact choice is accepted. This does not represent a town/county/country location as a full postal or geographic service address or certify statutory compliance.",
+        "sourcePolicies": [
+          "docs/PRIVACY.md",
+          "docs/TERMS.md"
+        ],
+        "supportPrivacyEmail": "hello@proofandstate.com",
+        "securityEmail": "security@proofandstate.com",
+        "territoryDecision": "Worldwide where legally permitted",
+        "ukOnlyProcessingPromised": false
+      },
+      "sourceCommit": "f5a00d20d70a41827911d8fb148590891bbaad42"
+    },
+    "selected-app-objective-admission.json": {
+      "path": "evidence/launch-continuation-20261009/selected-app-objective-admission.json",
+      "sha256": "33a558511616fb4a50f8f561f6f1744b7333eb3df0ebfbe4b63f9e2a98d18d8f",
+      "payload": {
+        "schema": "donestate.selected-app-objective-admission.v1",
+        "date": "2026-10-09",
+        "account": "OneClickPostFactory",
+        "repository": "AyobamiH/donestate",
+        "credentialStatus": {
+          "connected": true,
+          "fingerprint": "44c7550c978b",
+          "createdAt": "2026-10-09T05:39:39.553Z",
+          "updatedAt": "2026-10-09T05:39:39.553Z",
+          "lastUsedAt": null,
+          "dailyRunsUsed": 0,
+          "dailyRunLimit": 12,
+          "activeRunId": null,
+          "billingOwner": "authenticated_user"
+        },
+        "independentAccountInspection": {
+          "schema": "donestate.account-inspection.v1",
+          "observedAt": "2026-10-09T05:40:30.725Z",
+          "credential": {
+            "connected": true,
+            "fingerprint": "44c7550c978b",
+            "createdAt": "2026-10-09T05:39:39.553Z",
+            "updatedAt": "2026-10-09T05:39:39.553Z",
+            "lastUsedAt": null,
+            "dailyRunsUsed": 0,
+            "dailyRunLimit": 12,
+            "activeRunId": null
+          },
+          "repositories": [],
+          "runs": [],
+          "summary": {
+            "schema": "donestate.account-data-summary.v1",
+            "ownerLogin": "OneClickPostFactory",
+            "selectedRepositories": 0,
+            "findings": 0,
+            "indexedRuns": 0,
+            "marketplaceUserEntitlements": 0,
+            "marketplaceOrganizationAuthorizations": 0
+          },
+          "inventoryComplete": true
+        },
+        "selectedRepository": {
+          "schema": "donestate.selected-repository.v1",
+          "ownerLogin": "OneClickPostFactory",
+          "repository": "AyobamiH/donestate",
+          "defaultBranch": "main",
+          "installationId": 157513439,
+          "mode": "pr_only",
+          "scheduleEnabled": false,
+          "autoRepair": false,
+          "requiredCheckNames": [
+            "core (22)",
+            "core (24)",
+            "hosted-plugin"
+          ],
+          "createdAt": "2026-10-09T05:42:01.993Z",
+          "updatedAt": "2026-10-09T05:42:01.993Z"
+        },
+        "authenticatedUserRepositoryPermission": "read",
+        "attempt": {
+          "autoStart": false,
+          "result": "REJECTED_BEFORE_OBJECTIVE_CREATION",
+          "errorCode": "INVALID_ARGUMENT",
+          "message": "authenticated GitHub user cannot push to this repository",
+          "runId": null,
+          "modelExecutionStarted": false
+        },
+        "remaining": "Deploy the explicit App/customer authorisation check and obtain independently read-back temporary customer Write permission before a new PR-only acceptance attempt.",
+        "originalCompletedCustomerRunUnchanged": true,
+        "originalAccountDeletionNotRepeated": true,
+        "appInstallationScopeExpanded": false
+      },
+      "sourceCommit": "f5a00d20d70a41827911d8fb148590891bbaad42"
+    },
+    "live-policy-readback.json": {
+      "path": "evidence/launch-continuation-20261009/live-policy-readback.json",
+      "sha256": "048b308b12a729ac31cdb247b676e6e262b0ebcc0e00fea4618e1a34d05dfb19",
+      "payload": {
+        "schema": "donestate.live-policy-readback.v1",
+        "date": "2026-10-09",
+        "repository": "AyobamiH/proof-and-state-website",
+        "pullRequest": 28,
+        "candidateCommit": "7d8aa6375e837d45274b50243a9b2c84fb62ddad",
+        "mergeCommit": "e3bc6c58c6a4badd9b389ab7197a0be6c66e78fd",
+        "candidateAndMergeTree": "131bc04986e4f94f6c90f9550c0a09a1c7cf22b8",
+        "candidateCi": {
+          "verifyRun": 37889303517,
+          "integrationRun": 37889303510,
+          "conclusion": "success"
+        },
+        "exactMergeCi": {
+          "verifyRun": 37889489170,
+          "integrationRun": 37889489205,
+          "conclusion": "success"
+        },
+        "production": {
+          "runId": 37889489223,
+          "jobId": 113686934947,
+          "conclusion": "success",
+          "workerVersion": "d2cd1ddb-5ce9-4820-8f85-0ee5e127d98a",
+          "origin": "https://proofandstate.com"
+        },
+        "artifact": {
+          "id": 11597438990,
+          "name": "branding-production-e3bc6c58c6a4badd9b389ab7197a0be6c66e78fd-1",
+          "sha256": "cc474af70f28944651a18f4508c8e0dca6e269502747d56013ed905e7d544ccc",
+          "expiresAt": "2027-01-07T05:37:48Z"
+        },
+        "browserReport": {
+          "status": "passed",
+          "checks": [
+            {
+              "viewport": "desktop",
+              "hydration_navigation_theme": "passed",
+              "vendor_requests": 0,
+              "page_errors": 0,
+              "diagnostic_listener": "passed",
+              "legal_policy_readbacks": [
+                {
+                  "path": "/legal/privacy",
+                  "http_status": 200,
+                  "operating_location": "Northampton, Northamptonshire, UK",
+                  "last_updated": "9 October 2026",
+                  "support_privacy_contact": "hello@proofandstate.com",
+                  "html_sha256": "42c90c0a90ef2a0eb46c6e7147bd18662f23588b8e4acb929ce131e4f0117b35",
+                  "observed_at": "2026-10-09T05:39:32.579586+00:00"
+                },
+                {
+                  "path": "/legal/terms",
+                  "http_status": 200,
+                  "operating_location": "Northampton, Northamptonshire, UK",
+                  "last_updated": "9 October 2026",
+                  "support_privacy_contact": "hello@proofandstate.com",
+                  "html_sha256": "add369c8e15b60996e44e990db864a1d45c3ba7bb64e3999b5a9d8dde3082a81",
+                  "observed_at": "2026-10-09T05:39:33.208983+00:00"
+                }
+              ]
+            },
+            {
+              "viewport": "mobile",
+              "hydration_navigation_theme": "passed",
+              "vendor_requests": 0,
+              "page_errors": 0,
+              "diagnostic_listener": "passed",
+              "legal_policy_readbacks": [
+                {
+                  "path": "/legal/privacy",
+                  "http_status": 200,
+                  "operating_location": "Northampton, Northamptonshire, UK",
+                  "last_updated": "9 October 2026",
+                  "support_privacy_contact": "hello@proofandstate.com",
+                  "html_sha256": "42c90c0a90ef2a0eb46c6e7147bd18662f23588b8e4acb929ce131e4f0117b35",
+                  "observed_at": "2026-10-09T05:39:37.834857+00:00"
+                },
+                {
+                  "path": "/legal/terms",
+                  "http_status": 200,
+                  "operating_location": "Northampton, Northamptonshire, UK",
+                  "last_updated": "9 October 2026",
+                  "support_privacy_contact": "hello@proofandstate.com",
+                  "html_sha256": "add369c8e15b60996e44e990db864a1d45c3ba7bb64e3999b5a9d8dde3082a81",
+                  "observed_at": "2026-10-09T05:39:38.456401+00:00"
+                }
+              ]
+            }
+          ]
+        },
+        "state": "LIVE_POLICY_CONTENT_CONFIRMED_BY_PRODUCTION_WORKFLOW",
+        "readbackScope": "Canonical privacy and terms pages returned 200 and visibly matched the approved location, 9 October date and existing contact links in desktop/mobile checks. Public page HTML and SHA-256 are preserved.",
+        "directClient403HistoricalObservationPreserved": true,
+        "generalClientReachabilityFixClaimed": false,
+        "independentVerifierSignature": false
+      },
+      "sourceCommit": "f5a00d20d70a41827911d8fb148590891bbaad42"
+    },
+    "selected-app-readiness.json": {
+      "path": "evidence/launch-continuation-20261009/selected-app-readiness.json",
+      "sha256": "b86c45e1610028925f3b8d9e09d0ae6979bec70af166e30f1b4398ae90bfb8ce",
+      "payload": {
+        "schema": "donestate.selected-app-readiness.v1",
+        "date": "2026-10-09",
+        "account": "OneClickPostFactory",
+        "before": {
+          "schema": "donestate.account-inspection.v1",
+          "observedAt": "2026-10-09T05:10:23.140Z",
+          "credential": {
+            "connected": false,
+            "fingerprint": null,
+            "createdAt": null,
+            "updatedAt": null,
+            "lastUsedAt": null,
+            "dailyRunsUsed": 0,
+            "dailyRunLimit": 12,
+            "activeRunId": null
+          },
+          "repositories": [],
+          "runs": [],
+          "summary": {
+            "schema": "donestate.account-data-summary.v1",
+            "ownerLogin": "OneClickPostFactory",
+            "selectedRepositories": 0,
+            "findings": 0,
+            "indexedRuns": 0,
+            "marketplaceUserEntitlements": 0,
+            "marketplaceOrganizationAuthorizations": 0
+          },
+          "inventoryComplete": true
+        },
+        "app": {
+          "configured": true,
+          "appId": 4761698,
+          "slug": "donestate-maintenance-ayobamih",
+          "updatedAt": "2026-08-29T14:26:30.351Z"
+        },
+        "selected": {
+          "schema": "donestate.selected-repository.v1",
+          "ownerLogin": "OneClickPostFactory",
+          "repository": "AyobamiH/donestate",
+          "defaultBranch": "main",
+          "installationId": 157513439,
+          "mode": "pr_only",
+          "scheduleEnabled": false,
+          "autoRepair": false,
+          "requiredCheckNames": [
+            "core (22)",
+            "core (24)",
+            "hosted-plugin"
+          ],
+          "createdAt": "2026-10-09T05:32:10.254Z",
+          "updatedAt": "2026-10-09T05:32:10.254Z"
+        },
+        "selectionReadback": [
+          {
+            "schema": "donestate.selected-repository.v1",
+            "ownerLogin": "OneClickPostFactory",
+            "repository": "AyobamiH/donestate",
+            "defaultBranch": "main",
+            "installationId": 157513439,
+            "mode": "pr_only",
+            "scheduleEnabled": false,
+            "autoRepair": false,
+            "requiredCheckNames": [
+              "core (22)",
+              "core (24)",
+              "hosted-plugin"
+            ],
+            "createdAt": "2026-10-09T05:32:10.254Z",
+            "updatedAt": "2026-10-09T05:32:10.254Z"
+          }
+        ],
+        "discovery": {
+          "repository": "AyobamiH/donestate",
+          "observedAt": "2026-10-09T05:33:17.297Z",
+          "findings": [
+            {
+              "id": "f60e8d1e3cb303f984c97d5389564d5a72e78c67f61d223cd41fe03523210a61",
+              "source": "github_issue",
+              "sourceId": "105",
+              "repairEligible": true,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "6e7ff52dc91a2199a7dbe5d0e7aae75f0ea59b839c040009d13367b2da5aa253",
+              "source": "github_issue",
+              "sourceId": "108",
+              "repairEligible": true,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "500015eda545ba2315064385d73eed66fb1047422fd018e9d7a4aa0864e72f16",
+              "source": "github_issue",
+              "sourceId": "110",
+              "repairEligible": true,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "ee79c3c5f4e8dd82d27a0a5bd41d4be1a63c06d84e3e22fce0f437394217fbef",
+              "source": "github_issue",
+              "sourceId": "112",
+              "repairEligible": true,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "7f14bb004a8360aff8c72d123b72e9afb6ffe27c6610feaed1dde38dc35107da",
+              "source": "github_issue",
+              "sourceId": "114",
+              "repairEligible": true,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "1c21948f54a661fbd66e7cfbf1adb58abd350c580a72357355ba3a690c3fa444",
+              "source": "workflow_run",
+              "sourceId": "37111535497",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "660d5662a3d0a1c832c58305c480862ab6be7db255d0e746032367e38b59f7d7",
+              "source": "workflow_run",
+              "sourceId": "37111537644",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "1bae522434170a6ca20b5bd1790465e1b8712a3987417f7ee7ab50615e494a80",
+              "source": "workflow_run",
+              "sourceId": "37111679168",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "109a1fb042501c1be56020125756b729caa1a5c320631bbf4dd84bcf11a69785",
+              "source": "workflow_run",
+              "sourceId": "37111708083",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "a498e265da3d403d3923d8a5bc10fad322a319da41d1c29bee4906b4f5e9267b",
+              "source": "workflow_run",
+              "sourceId": "37143246110",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "c8e8a4594f2ad3f0ffa817a0f713ab7a1709f7f78fbb818abeb8a69f3376bee8",
+              "source": "workflow_run",
+              "sourceId": "37575211329",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "f079a24c1bce7bd9f00068b610cccaefe93c052a3bda9ccfb5912e76479d6c1d",
+              "source": "workflow_run",
+              "sourceId": "37626290842",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "fdd6b62abdb2c7c168e7792bef52e89c185b873a6f61eb363171d71243716ddb",
+              "source": "workflow_run",
+              "sourceId": "37706389221",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "56b1eb30e055245e6403236dbf69fc81077058a5b808e0d95ba0db14fdd355ee",
+              "source": "workflow_run",
+              "sourceId": "37732348549",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            },
+            {
+              "id": "b993fdfad319b2aaf32e73d443a3d4e4799b17b9067049cae45486b8973f0821",
+              "source": "workflow_run",
+              "sourceId": "37783654214",
+              "repairEligible": false,
+              "state": "OPEN",
+              "runId": null
+            }
+          ],
+          "readAccessConfirmed": true
+        },
+        "removal": {
+          "repository": "AyobamiH/donestate",
+          "removed": true
+        },
+        "after": {
+          "schema": "donestate.account-inspection.v1",
+          "observedAt": "2026-10-09T05:33:31.260Z",
+          "credential": {
+            "connected": false,
+            "fingerprint": null,
+            "createdAt": null,
+            "updatedAt": null,
+            "lastUsedAt": null,
+            "dailyRunsUsed": 0,
+            "dailyRunLimit": 12,
+            "activeRunId": null
+          },
+          "repositories": [],
+          "runs": [],
+          "summary": {
+            "schema": "donestate.account-data-summary.v1",
+            "ownerLogin": "OneClickPostFactory",
+            "selectedRepositories": 0,
+            "findings": 0,
+            "indexedRuns": 0,
+            "marketplaceUserEntitlements": 0,
+            "marketplaceOrganizationAuthorizations": 0
+          },
+          "inventoryComplete": true
+        },
+        "finalRepositoryReadback": [],
+        "checkpoint": {
+          "freshRegistrySelection": true,
+          "existingAppInstallationConfirmed": true,
+          "appReadDiscoveryConfirmed": true,
+          "temporarySelectionRemoved": true,
+          "completeEmptyIndexedInventoryConfirmed": true,
+          "executionCredentialConnected": false,
+          "newObjectiveCreated": false,
+          "appWriteObjectiveAdmissionProven": false,
+          "newFullCustomerJourneyProven": false,
+          "newGitHubSignupProven": false,
+          "accountDeletionRepeated": false,
+          "modelExecutionStarted": false,
+          "githubRepositoryStateChanged": false,
+          "authority": "User instruction to progress and finish remaining signup/App acceptance; existing authorised public repository; schedules and automatic repair disabled",
+          "remainingCapability": "A user-owned execution credential is required before create_objective in the current service. Do not request secrets in chat or reuse the historical customer run."
+        }
+      },
+      "sourceCommit": "f5a00d20d70a41827911d8fb148590891bbaad42"
+    },
+    "selected-app-admission-deployment.json": {
+      "path": "evidence/launch-continuation-20261009/selected-app-admission-deployment.json",
+      "sha256": "ce4938df7b85f5bcf9db3747b37d58ece3f2848ff6d1dfa3a9ea6a885807b679",
+      "payload": {
+        "schema": "donestate.selected-app-admission-deployment.v1",
+        "date": "2026-10-09",
+        "repository": "AyobamiH/donestate",
+        "pullRequest": 175,
+        "candidateCommit": "2d589d9398be9e51248ce8832cd899c0afbe5303",
+        "mergeCommit": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+        "candidateAndMergeTree": "e29b768135e08f90d2918ac13829f19223eb0983",
+        "mergeParents": [
+          "762ac3983c65d916bb9dc091843ebb3a1fdc7a38",
+          "2d589d9398be9e51248ce8832cd899c0afbe5303"
+        ],
+        "candidateCi": {
+          "runId": 37890592810,
+          "conclusion": "success",
+          "requiredChecks": [
+            "core (22)",
+            "core (24)",
+            "hosted-plugin"
+          ]
+        },
+        "exactMergeChecks": [
+          {
+            "name": "deploy",
+            "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+            "status": "completed",
+            "conclusion": "success",
+            "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708490/job/113690767012"
+          },
+          {
+            "name": "core (24)",
+            "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+            "status": "completed",
+            "conclusion": "success",
+            "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708382/job/113690766056"
+          },
+          {
+            "name": "hosted-plugin",
+            "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+            "status": "completed",
+            "conclusion": "success",
+            "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708382/job/113690766046"
+          },
+          {
+            "name": "core (22)",
+            "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+            "status": "completed",
+            "conclusion": "success",
+            "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708382/job/113690765925"
+          }
+        ],
+        "production": {
+          "state": "DEPLOYMENT_CONFIRMED_BY_PROVIDER_WORKFLOW",
+          "runId": 37890708490,
+          "jobId": 113690767012,
+          "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+          "conclusion": "success",
+          "completedWorkflowUpdatedAt": "2026-10-09T05:55:40Z",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708490",
+          "workerVersion": "4f9c111f-bd4c-4512-9fe8-3eca2aec06b4",
+          "containerApplicationId": "a0340af7-00ec-45b5-8d60-2d8444353b89",
+          "containerImageDigest": "sha256:dac3a8747872f46f61661d842004accff990b07bb4606cb6ec2b5a902cc8793f",
+          "runtimeUrl": "https://donestate-mcp.woeinvests.workers.dev",
+          "canonicalMcpUrl": "https://donestate.proofandstate.com/mcp",
+          "sandboxSdkVersion": "0.12.9",
+          "sandboxBaseImageVersion": "0.12.9",
+          "codexVersion": "0.150.1",
+          "instanceType": "basic",
+          "maxInstances": 5
+        },
+        "postDeploymentCustomerInspection": {
+          "schema": "donestate.account-inspection.v1",
+          "observedAt": "2026-10-09T06:00:16.626Z",
+          "credential": {
+            "connected": true,
+            "fingerprint": "44c7550c978b",
+            "createdAt": "2026-10-09T05:39:39.553Z",
+            "updatedAt": "2026-10-09T05:39:39.553Z",
+            "lastUsedAt": null,
+            "dailyRunsUsed": 0,
+            "dailyRunLimit": 12,
+            "activeRunId": null
+          },
+          "repositories": [
+            {
+              "schema": "donestate.selected-repository.v1",
+              "ownerLogin": "OneClickPostFactory",
+              "repository": "AyobamiH/donestate",
+              "defaultBranch": "main",
+              "installationId": 157513439,
+              "mode": "pr_only",
+              "scheduleEnabled": false,
+              "autoRepair": false,
+              "requiredCheckNames": [
+                "core (22)",
+                "core (24)",
+                "hosted-plugin"
+              ],
+              "createdAt": "2026-10-09T05:42:01.993Z",
+              "updatedAt": "2026-10-09T05:42:01.993Z"
+            }
+          ],
+          "runs": [],
+          "summary": {
+            "schema": "donestate.account-data-summary.v1",
+            "ownerLogin": "OneClickPostFactory",
+            "selectedRepositories": 1,
+            "findings": 0,
+            "indexedRuns": 0,
+            "marketplaceUserEntitlements": 0,
+            "marketplaceOrganizationAuthorizations": 0
+          },
+          "inventoryComplete": true
+        },
+        "independentGitHubPermission": {
+          "account": "OneClickPostFactory",
+          "repository": "AyobamiH/donestate",
+          "permission": "read",
+          "scope": "Separate GitHub connector collaborator-permission readback during post-deployment checkpoint"
+        },
+        "newObjectiveCreated": false,
+        "newModelExecutionStarted": false,
+        "remaining": [
+          "Independently confirm authorised temporary customer repository Write access",
+          "Create and inspect one fresh bounded selected-App draft, then execute once",
+          "Observe exact PR-head CI and pinned independent OpsTruth verification",
+          "Inspect and clean up only new acceptance state and temporary grant",
+          "Fresh first-time signup/OAuth remains unproven unless actually exercised"
+        ],
+        "historicalStoriesPreserved": true,
+        "originalCustomerPr172Unchanged": true,
+        "originalAccountDeletionNotRepeated": true,
+        "installationScopeExpanded": false,
+        "providerReceiptIsIndependentVerification": false,
+        "unrestrictedGaClaimed": false
+      },
+      "sourceCommit": "f5a00d20d70a41827911d8fb148590891bbaad42"
+    }
+  },
+  "historicalCustomerCleanupUnchanged": true,
+  "sourceLedgerPinsAdvanced": false,
+  "unrestrictedGaClaimed": false,
+  "primaryExactMergeChecks": [
+    {
+      "name": "deploy",
+      "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708490/job/113690767012"
+    },
+    {
+      "name": "core (24)",
+      "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708382/job/113690766056"
+    },
+    {
+      "name": "hosted-plugin",
+      "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708382/job/113690766046"
+    },
+    {
+      "name": "core (22)",
+      "headSha": "030251e1e0c5b840d5072c14f655695ea2cf2651",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AyobamiH/donestate/actions/runs/37890708382/job/113690765925"
+    }
+  ],
+  "primaryDeploymentEvidencePublication": {
+    "pullRequest": 176,
+    "candidateCommit": "ad6f3dc818832dd2da0e4bced6ecc661b014c1eb",
+    "mergeCommit": "f5a00d20d70a41827911d8fb148590891bbaad42",
+    "candidateAndMergeTree": "44a45b30331ae76fbc052dca0bb13e216fa34e19",
+    "candidateCi": {
+      "runId": 37891476134,
+      "conclusion": "success"
+    },
+    "exactMergeCi": {
+      "runId": 37891590414,
+      "conclusion": "success"
+    },
+    "requiredChecks": [
+      "core (22)",
+      "core (24)",
+      "hosted-plugin"
+    ],
+    "state": "MERGED_AND_EXACT_MERGE_CI_CONFIRMED",
+    "publishedDeploymentReceiptTextReadbackMatched": true,
+    "documentationOnlyNoAdditionalRuntimeDeployment": true
+  }
+}
