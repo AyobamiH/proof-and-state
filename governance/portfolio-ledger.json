@@ -491,9 +491,9 @@
       "owner": "Product owner",
       "authorityRequired": "ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Complete GitHub consent as the intended customer through the already running reviewed local OAuth helper. Keep codes and tokens out of chat. Retain completed selected-App, verifier and cleanup receipts.",
+      "action": "When the user requests resumption, use a fresh canonical HTTPS cloud-browser session and secure GitHub account selection as OneClickPostFactory. Never send another-machine localhost links or replay the expired response. Preserve completed App, verifier and cleanup receipts.",
       "prerequisites": [],
-      "waitCondition": "Natural production health is complete: workflow 37941829386 observed the actual 15:00:26 UTC sweep on Worker 164602a6-35a5-464a-ac70-1ffd00a01066, zero unresolved webhook failures, unchanged deployment and removed observer tail. The online customer device is running the reviewed helper; real browser consent and its receipt remain pending. Existing progression/merge/deploy authority persists; unrestricted GA is not yet declared.",
+      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -517,7 +517,9 @@
         "PF-E-060",
         "PF-E-062",
         "PF-E-063",
-        "PF-E-064"
+        "PF-E-064",
+        "PF-E-065",
+        "PF-E-066"
       ]
     },
     {
@@ -547,16 +549,18 @@
       "owner": "Product and privacy owner",
       "authorityRequired": "REAL_USER_AND_DATA_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Retain the user authority to proceed with owned-domain pilot/GA preparation. Apply the bounded objective, support, stop and escalation criteria in DoneState docs/GA-LAUNCH.md after actual fresh-client OAuth and operational entry evidence. Review the first cohort within seven days; channel review/publication is separate.",
+      "action": "Retain the user authority and concrete owned-domain objective/support/stop criteria. Enter after fresh passing OAuth and current operational health; review the first cohort within seven days. No invitation or new model execution is authorised by acceptance tooling.",
       "prerequisites": [
         "OWNER-ACCEPTANCE-001",
         "OWNER-PRIVACY-001"
       ],
-      "waitCondition": "Preparation authority and criteria are concrete; the fresh customer browser handoff and terminal natural-health evidence remain entry requirements. No customer invitations or new model execution are sent by the acceptance tooling.",
+      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
       "evidenceIds": [
         "PF-E-003",
         "PF-E-024",
-        "PF-E-063"
+        "PF-E-063",
+        "PF-E-065",
+        "PF-E-066"
       ]
     },
     {
@@ -670,11 +674,11 @@
       "owner": "Portfolio owner",
       "authorityRequired": "RELEASE_DECISION",
       "agentExecutable": false,
-      "action": "After passing real new-client OAuth and satisfactory operational/pilot evidence, record the broader owned-domain GA decision and accepted residual risks under the existing user instruction to proceed. The App acceptance, all cleanup, public-location/live-policy decision, deployed public prerequisites and procedural support drill are complete in their stated scope; no repeated approval for those actions is required.",
+      "action": "Record the already authorised owned-domain GA decision once actual fresh-client OAuth and current natural-health entry gates pass. Keep first-ever identity history, independent outcome verification and external channel reviews separate; no renewed merge/deploy approval is awaited.",
       "prerequisites": [
         "OWNER-PILOT-001"
       ],
-      "waitCondition": "Natural production health is complete: workflow 37941829386 observed the actual 15:00:26 UTC sweep on Worker 164602a6-35a5-464a-ac70-1ffd00a01066, zero unresolved webhook failures, unchanged deployment and removed observer tail. The online customer device is running the reviewed helper; real browser consent and its receipt remain pending. Existing progression/merge/deploy authority persists; unrestricted GA is not yet declared.",
+      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -682,7 +686,9 @@
         "PF-E-060",
         "PF-E-062",
         "PF-E-063",
-        "PF-E-064"
+        "PF-E-064",
+        "PF-E-065",
+        "PF-E-066"
       ]
     },
     {
@@ -1264,9 +1270,9 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-09",
       "staleDate": "2026-10-10",
-      "nextAction": "Complete customer GitHub consent through the reviewed loopback OAuth helper now running on the online sign-in device, then record the already authorised owned-domain GA decision against the actual receipt. Natural operational health is complete. No new key, model run, Write grant, deletion or customer PR 177 merge is needed.",
-      "waitCondition": "Fresh OneClickPostFactory selected-App run bca89cb4-f7f3-4ac4-ab98-7d59854b5135 was admitted through the existing installation at exact base f5a00d20d70a41827911d8fb148590891bbaad42 after independently confirmed temporary Write access. All nine actions and 44 isolated core tests succeeded. Customer PR 177 remains unmerged at 1bf4c2823ca95da50c053dc888703e61e68a2464 with exactly three agreed files and all three required exact-head checks green in run 37898537150. Initial automatic uncertain verification is preserved; a fresh OpsTruth decision issued 2026-10-09T07:23:09.661Z under the unchanged trusted signer pin produced VERIFIED for snapshot c442bfdb17b9b031a2c963835c0c358cbaac18c00e2077f089d26adef73e3db4. One new indexed-service cleanup at 2026-10-09T09:20:54.571Z removed the new known run/selection/key. Receipt dd110686e72cb1d902f8b1320bed214b8ce7956e1952ae4f9a014e813ffa94a8 matched local SHA-256 integrity; separate inspection confirmed complete empty state and absent key. The publisher removed the new temporary Write grant; independent permission readback confirms read, and further inspection at 09:26:48.857Z confirms the account remains empty. The existing authenticated connection did not exercise a new first-time signup/OAuth flow; wider release evidence and unrestricted GA remain separate. PF-E-063 records deployed OAuth rejection repair, live policy/support links, passing anonymous prerequisites and a completed procedural support drill. PF-E-064 records successful natural production health. A real new-client consent/code/token round trip remains the customer browser handoff; the device is online and the reviewed helper is running.",
-      "reentryCondition": "Re-enter for real new-client customer browser consent, the natural-health observation result or the already authorised wider release decision. Preserve all exact completed App/run/deletion/removal subjects and the unmerged customer PR. Do not relabel source, anonymous probes, procedural support drills or old authenticated connections as new customer consent or unrestricted GA.",
+      "nextAction": "Resume a fresh secure OneClickPostFactory account selection only after the user requests it; require real MCP/refresh/revocation acceptance and then record the already authorised owned-domain GA decision. Current-version health is complete; no renewed merge/deploy approval, execution key, model run or Write grant is needed.",
+      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
+      "reentryCondition": "Respect the interrupted secure picker request and expired state. Re-enter only for a fresh user-requested customer session, actual current-version health result or separately recorded authorised GA decision. Preserve all completed App/execution/verification/deletion/removal subjects; no replay, extra coding run or customer PR merge.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-LEGAL-001"
@@ -1307,7 +1313,9 @@
         "PF-E-060",
         "PF-E-062",
         "PF-E-063",
-        "PF-E-064"
+        "PF-E-064",
+        "PF-E-065",
+        "PF-E-066"
       ]
     },
     {
@@ -1427,9 +1435,9 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-09",
       "staleDate": "2026-10-10",
-      "nextAction": "Complete customer GitHub consent through the reviewed loopback OAuth helper now running on the online sign-in device, then record the already authorised owned-domain GA decision against the actual receipt. Natural operational health is complete. No new key, model run, Write grant, deletion or customer PR 177 merge is needed.",
-      "waitCondition": "Fresh OneClickPostFactory selected-App run bca89cb4-f7f3-4ac4-ab98-7d59854b5135 was admitted through the existing installation at exact base f5a00d20d70a41827911d8fb148590891bbaad42 after independently confirmed temporary Write access. All nine actions and 44 isolated core tests succeeded. Customer PR 177 remains unmerged at 1bf4c2823ca95da50c053dc888703e61e68a2464 with exactly three agreed files and all three required exact-head checks green in run 37898537150. Initial automatic uncertain verification is preserved; a fresh OpsTruth decision issued 2026-10-09T07:23:09.661Z under the unchanged trusted signer pin produced VERIFIED for snapshot c442bfdb17b9b031a2c963835c0c358cbaac18c00e2077f089d26adef73e3db4. One new indexed-service cleanup at 2026-10-09T09:20:54.571Z removed the new known run/selection/key. Receipt dd110686e72cb1d902f8b1320bed214b8ce7956e1952ae4f9a014e813ffa94a8 matched local SHA-256 integrity; separate inspection confirmed complete empty state and absent key. The publisher removed the new temporary Write grant; independent permission readback confirms read, and further inspection at 09:26:48.857Z confirms the account remains empty. The existing authenticated connection did not exercise a new first-time signup/OAuth flow; wider release evidence and unrestricted GA remain separate. PF-E-063 records deployed OAuth rejection repair, live policy/support links, passing anonymous prerequisites and a completed procedural support drill. PF-E-064 records successful natural production health. A real new-client consent/code/token round trip remains the customer browser handoff; the device is online and the reviewed helper is running.",
-      "reentryCondition": "Re-enter for real new-client customer browser consent, the natural-health observation result or the already authorised wider release decision. Preserve all exact completed App/run/deletion/removal subjects and the unmerged customer PR. Do not relabel source, anonymous probes, procedural support drills or old authenticated connections as new customer consent or unrestricted GA.",
+      "nextAction": "Resume a fresh secure OneClickPostFactory account selection only after the user requests it; require real MCP/refresh/revocation acceptance and then record the already authorised owned-domain GA decision. Current-version health is complete; no renewed merge/deploy approval, execution key, model run or Write grant is needed.",
+      "waitCondition": "Canonical HTTPS acceptance replaced the unreachable host loopback. PR 183 merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a passed all required candidate and merge checks and deployed Worker 3c9564a7-3800-4727-b791-b5b88c354183. A new consent session reached GitHub account selection; the secure browserAuth request was interrupted without a choice/result and expired. Repaired-runtime MCP/refresh/revocation acceptance remains unproven. Existing merge/deploy/launch authority persists; the secure account choice cannot be bypassed or silently retried. Current-version natural health is now complete: workflow 37973398818/job 113965473927 observed the actual 2026-10-09T19:00:45Z sweep on Worker 3c9564a7-3800-4727-b791-b5b88c354183, with zero unresolved failures, unchanged deployment and both owned tails removed. Earlier failed grant was revoked and revoked access rejected; earlier natural health remains valid only for its recorded older Worker.",
+      "reentryCondition": "Respect the interrupted secure picker request and expired state. Re-enter only for a fresh user-requested customer session, actual current-version health result or separately recorded authorised GA decision. Preserve all completed App/execution/verification/deletion/removal subjects; no replay, extra coding run or customer PR merge.",
       "dependencies": [
         "DS-CANARY-001",
         "DS-CUSTOMER-001",
@@ -1472,7 +1480,9 @@
         "PF-E-060",
         "PF-E-062",
         "PF-E-063",
-        "PF-E-064"
+        "PF-E-064",
+        "PF-E-065",
+        "PF-E-066"
       ]
     },
     {
@@ -2621,6 +2631,40 @@
       "outcome": "The natural operational health gate is satisfied. Customer OAuth is now a running secure handoff rather than an offline-device preparation. No customer consent, first-ever identity history, token cleanup or unrestricted GA is inferred.",
       "content": "Redacted natural-sweep receipt mirrored; current owner queue and customer/release items refreshed without mutating historical evidence, source pins, channel states or prior cleanup.",
       "measurement": "One successful natural sweep, five passing anonymous HTTP probes, zero unresolved failures, one observer tail created/removed, one reviewed OAuth helper startup; zero new model starts, keys, Write grants, repeated deletions or customer PR merges."
+    },
+    {
+      "id": "PF-E-065",
+      "date": "2026-10-09",
+      "identity": "Canonical HTTPS acceptance repair deployed; secure customer selection interrupted",
+      "situation": "The publisher reported that the Linux-host loopback was not their Windows computer and requested cloud execution. HTTPS acceptance reached real customer consent and code exchange, then exposed custom-domain MCP Origin rejection. The repair has been merged/deployed; the repaired-runtime secure picker request was interrupted without a returned result.",
+      "verification": "DoneState PR 182 deployed HTTPS acceptance at 430c195e1e8ab82aef8f345521c33141542d4b04 / Worker 77bf6431-39b6-4807-9f14-59e71ba38802. Actual 18:09Z new-client callback/code exchange succeeded, MCP failed and its own new grant was revoked with revoked-access rejection. The latest temporary-tail observer ended before a sweep; its owned tail was removed and the failure is preserved. PR 183 candidate db0aa1562093b3c52a623cf6b2e86d2b730db27d and merge 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a have exact tree 5b7183d02be35b3377dbabe0d529c470f9d5c948. All three required candidate/merge checks passed in 37972990538 / 37973107182. Deployment 37973107201/job 113964491436 succeeded with Worker 3c9564a7-3800-4727-b791-b5b88c354183. Seven real SDK origin regressions pass; full 187 Worker tests pass on serialized rerun after an existing capped-inventory timeout. Root 66 tests/checks and package dry-run pass. Observer lifecycle remains bounded with confirmed deletion before rotation and no ambiguous retries. New HTTPS consent reached the GitHub picker, but browserAuth was interrupted after 1364 seconds without a result and the 15-minute session expired. Primary E-115/E-116 and four mirrored sanitized receipts preserve exact source/deploy/failure/interruption states.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Retain deployment and actual interrupted customer boundary; finish current-version natural observation and resume secure selection only after a new user instruction.",
+        "waitCondition": "None for the confirmed repair and interruption reconciliation; OAuth acceptance and owned-domain GA remain separate.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The Origin repair is deployed and previous failures are accounted for. The connected remote host is not mislabelled as the customer sign-in computer. Fresh repaired-runtime acceptance remains blocked by the interrupted secure picker, so owned-domain GA is not declared.",
+      "content": "Mirrored canonical browser repair deployment, actual failed OAuth with successful cleanup, failed observer and interrupted new session; current owner/customer/release queues corrected. Preserve PF-E-064, all historical stories, source-ledger pins, product archive, shared operating contract and channel states.",
+      "measurement": "One approved repair deployment; six successful candidate/merge required checks; zero new model starts, execution keys, Write grants, customer PR merges, account purges, synthetic cron calls or sent messages."
+    },
+    {
+      "id": "PF-E-066",
+      "date": "2026-10-09",
+      "identity": "Current Worker natural health passes; interrupted secure OAuth is the remaining launch gate",
+      "situation": "The bounded observer ran against the deployed Origin repair. The new secure account-selection request was interrupted and expired, so OAuth acceptance remains independent of the real health result.",
+      "verification": "DoneState workflow 37973398818/job 113965473927 succeeded on source 3d56bb97c2f8bcc2d3a7e263f10b416c00eb8f7a. The mirrored evidence/rollout-20261009/current-production-health.json records actual 2026-10-09T19:00:45.000Z hourly sweep observed 19:00:55.977Z, outcome ok, exact Worker 3c9564a7-3800-4727-b791-b5b88c354183 and unchanged deployment f609425c-8f23-48c1-a0b7-d3793da78fe3 at 100 percent. All unresolved webhook counts are zero and no escalation is required. Five canonical anonymous probes pass. The first tail rotated after its bounded window and was confirmed deleted before the second; the second observed the sweep and was removed. Primary E-117 closes current OPS-002 separately from CUST-003 and RELEASE-001.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Retain exact current operational evidence; await a new instruction to resume secure customer selection and finish actual OAuth before the existing authorised GA decision.",
+        "waitCondition": "None for current natural health and confirmed observer cleanup; fresh customer acceptance remains blocked independently.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "Current production health is complete. The only remaining owned-domain launch gate is the fresh passing OAuth journey after the interrupted secure picker. Neither provider deployment, approval nor successful operations is relabelled as customer acceptance or GA.",
+      "content": "Exact current health receipt mirrored, current owner/customer/release queues refreshed, all historical stories/source pins/product archives/shared contract/channel-review states preserved.",
+      "measurement": "One natural current-version sweep, five passing public probes and two confirmed temporary-tail deletions; zero production mutations, synthetic cron calls, credential setups, model starts, authority grants or sent messages."
     }
   ]
 }
