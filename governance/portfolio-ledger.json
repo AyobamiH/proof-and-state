@@ -491,9 +491,9 @@
       "owner": "Product owner",
       "authorityRequired": "ACCOUNT_AUTHORIZATION",
       "agentExecutable": false,
-      "action": "Make the customer sign-in device online and complete GitHub consent through the reviewed fresh-client OAuth helper. The agent can launch it once the device is online; no OAuth code/token should enter chat. Retain all completed selected-App, independent-verification and cleanup proof.",
+      "action": "Complete GitHub consent as the intended customer through the already running reviewed local OAuth helper. Keep codes and tokens out of chat. Retain completed selected-App, verifier and cleanup receipts.",
       "prerequisites": [],
-      "waitCondition": "The user approved progression to fresh signup/OAuth and broader GA. The helper is merged and tested, production OAuth rejection is repaired, anonymous prerequisites and support discoverability pass. Device was offline at the last read; actual new-client customer consent is not yet observed. Natural operational health is being observed separately.",
+      "waitCondition": "Natural production health is complete: workflow 37941829386 observed the actual 15:00:26 UTC sweep on Worker 164602a6-35a5-464a-ac70-1ffd00a01066, zero unresolved webhook failures, unchanged deployment and removed observer tail. The online customer device is running the reviewed helper; real browser consent and its receipt remain pending. Existing progression/merge/deploy authority persists; unrestricted GA is not yet declared.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
@@ -516,7 +516,8 @@
         "PF-E-059",
         "PF-E-060",
         "PF-E-062",
-        "PF-E-063"
+        "PF-E-063",
+        "PF-E-064"
       ]
     },
     {
@@ -673,14 +674,15 @@
       "prerequisites": [
         "OWNER-PILOT-001"
       ],
-      "waitCondition": "New-client customer consent remains unobserved, natural-health workflow is in progress and unrestricted GA is not declared. Support routing and a procedural drill are proven; actual customer message delivery and 24/7 staffing are not claimed.",
+      "waitCondition": "Natural production health is complete: workflow 37941829386 observed the actual 15:00:26 UTC sweep on Worker 164602a6-35a5-464a-ac70-1ffd00a01066, zero unresolved webhook failures, unchanged deployment and removed observer tail. The online customer device is running the reviewed helper; real browser consent and its receipt remain pending. Existing progression/merge/deploy authority persists; unrestricted GA is not yet declared.",
       "evidenceIds": [
         "PF-E-024",
         "PF-E-027",
         "PF-E-059",
         "PF-E-060",
         "PF-E-062",
-        "PF-E-063"
+        "PF-E-063",
+        "PF-E-064"
       ]
     },
     {
@@ -1262,8 +1264,8 @@
       "owner": "DoneState maintainers",
       "lastUpdated": "2026-10-09",
       "staleDate": "2026-10-10",
-      "nextAction": "Retain the completed E-109/PF-E-062 App acceptance and all cleanup. Complete the reviewed new-client loopback OAuth handoff after the customer sign-in device is online; read the running natural-health observer result and record the separately authorised owned-domain GA decision against actual evidence. No address approval, new model run, key setup, temporary Write grant, repeated deletion or customer PR 177 merge is needed.",
-      "waitCondition": "Fresh OneClickPostFactory selected-App run bca89cb4-f7f3-4ac4-ab98-7d59854b5135 was admitted through the existing installation at exact base f5a00d20d70a41827911d8fb148590891bbaad42 after independently confirmed temporary Write access. All nine actions and 44 isolated core tests succeeded. Customer PR 177 remains unmerged at 1bf4c2823ca95da50c053dc888703e61e68a2464 with exactly three agreed files and all three required exact-head checks green in run 37898537150. Initial automatic uncertain verification is preserved; a fresh OpsTruth decision issued 2026-10-09T07:23:09.661Z under the unchanged trusted signer pin produced VERIFIED for snapshot c442bfdb17b9b031a2c963835c0c358cbaac18c00e2077f089d26adef73e3db4. One new indexed-service cleanup at 2026-10-09T09:20:54.571Z removed the new known run/selection/key. Receipt dd110686e72cb1d902f8b1320bed214b8ce7956e1952ae4f9a014e813ffa94a8 matched local SHA-256 integrity; separate inspection confirmed complete empty state and absent key. The publisher removed the new temporary Write grant; independent permission readback confirms read, and further inspection at 09:26:48.857Z confirms the account remains empty. The existing authenticated connection did not exercise a new first-time signup/OAuth flow; wider release evidence and unrestricted GA remain separate. PF-E-063 records deployed OAuth rejection repair, live policy/support links, passing anonymous prerequisites and a completed procedural support drill. A real new-client consent/code/token round trip remains a customer browser handoff; the natural-health observer is running without a terminal receipt.",
+      "nextAction": "Complete customer GitHub consent through the reviewed loopback OAuth helper now running on the online sign-in device, then record the already authorised owned-domain GA decision against the actual receipt. Natural operational health is complete. No new key, model run, Write grant, deletion or customer PR 177 merge is needed.",
+      "waitCondition": "Fresh OneClickPostFactory selected-App run bca89cb4-f7f3-4ac4-ab98-7d59854b5135 was admitted through the existing installation at exact base f5a00d20d70a41827911d8fb148590891bbaad42 after independently confirmed temporary Write access. All nine actions and 44 isolated core tests succeeded. Customer PR 177 remains unmerged at 1bf4c2823ca95da50c053dc888703e61e68a2464 with exactly three agreed files and all three required exact-head checks green in run 37898537150. Initial automatic uncertain verification is preserved; a fresh OpsTruth decision issued 2026-10-09T07:23:09.661Z under the unchanged trusted signer pin produced VERIFIED for snapshot c442bfdb17b9b031a2c963835c0c358cbaac18c00e2077f089d26adef73e3db4. One new indexed-service cleanup at 2026-10-09T09:20:54.571Z removed the new known run/selection/key. Receipt dd110686e72cb1d902f8b1320bed214b8ce7956e1952ae4f9a014e813ffa94a8 matched local SHA-256 integrity; separate inspection confirmed complete empty state and absent key. The publisher removed the new temporary Write grant; independent permission readback confirms read, and further inspection at 09:26:48.857Z confirms the account remains empty. The existing authenticated connection did not exercise a new first-time signup/OAuth flow; wider release evidence and unrestricted GA remain separate. PF-E-063 records deployed OAuth rejection repair, live policy/support links, passing anonymous prerequisites and a completed procedural support drill. PF-E-064 records successful natural production health. A real new-client consent/code/token round trip remains the customer browser handoff; the device is online and the reviewed helper is running.",
       "reentryCondition": "Re-enter for real new-client customer browser consent, the natural-health observation result or the already authorised wider release decision. Preserve all exact completed App/run/deletion/removal subjects and the unmerged customer PR. Do not relabel source, anonymous probes, procedural support drills or old authenticated connections as new customer consent or unrestricted GA.",
       "dependencies": [
         "DS-CANARY-001",
@@ -1304,7 +1306,8 @@
         "PF-E-059",
         "PF-E-060",
         "PF-E-062",
-        "PF-E-063"
+        "PF-E-063",
+        "PF-E-064"
       ]
     },
     {
@@ -1424,8 +1427,8 @@
       "owner": "Publisher owner",
       "lastUpdated": "2026-10-09",
       "staleDate": "2026-10-10",
-      "nextAction": "Retain the completed E-109/PF-E-062 App acceptance and all cleanup. Complete the reviewed new-client loopback OAuth handoff after the customer sign-in device is online; read the running natural-health observer result and record the separately authorised owned-domain GA decision against actual evidence. No address approval, new model run, key setup, temporary Write grant, repeated deletion or customer PR 177 merge is needed.",
-      "waitCondition": "Fresh OneClickPostFactory selected-App run bca89cb4-f7f3-4ac4-ab98-7d59854b5135 was admitted through the existing installation at exact base f5a00d20d70a41827911d8fb148590891bbaad42 after independently confirmed temporary Write access. All nine actions and 44 isolated core tests succeeded. Customer PR 177 remains unmerged at 1bf4c2823ca95da50c053dc888703e61e68a2464 with exactly three agreed files and all three required exact-head checks green in run 37898537150. Initial automatic uncertain verification is preserved; a fresh OpsTruth decision issued 2026-10-09T07:23:09.661Z under the unchanged trusted signer pin produced VERIFIED for snapshot c442bfdb17b9b031a2c963835c0c358cbaac18c00e2077f089d26adef73e3db4. One new indexed-service cleanup at 2026-10-09T09:20:54.571Z removed the new known run/selection/key. Receipt dd110686e72cb1d902f8b1320bed214b8ce7956e1952ae4f9a014e813ffa94a8 matched local SHA-256 integrity; separate inspection confirmed complete empty state and absent key. The publisher removed the new temporary Write grant; independent permission readback confirms read, and further inspection at 09:26:48.857Z confirms the account remains empty. The existing authenticated connection did not exercise a new first-time signup/OAuth flow; wider release evidence and unrestricted GA remain separate. PF-E-063 records deployed OAuth rejection repair, live policy/support links, passing anonymous prerequisites and a completed procedural support drill. A real new-client consent/code/token round trip remains a customer browser handoff; the natural-health observer is running without a terminal receipt.",
+      "nextAction": "Complete customer GitHub consent through the reviewed loopback OAuth helper now running on the online sign-in device, then record the already authorised owned-domain GA decision against the actual receipt. Natural operational health is complete. No new key, model run, Write grant, deletion or customer PR 177 merge is needed.",
+      "waitCondition": "Fresh OneClickPostFactory selected-App run bca89cb4-f7f3-4ac4-ab98-7d59854b5135 was admitted through the existing installation at exact base f5a00d20d70a41827911d8fb148590891bbaad42 after independently confirmed temporary Write access. All nine actions and 44 isolated core tests succeeded. Customer PR 177 remains unmerged at 1bf4c2823ca95da50c053dc888703e61e68a2464 with exactly three agreed files and all three required exact-head checks green in run 37898537150. Initial automatic uncertain verification is preserved; a fresh OpsTruth decision issued 2026-10-09T07:23:09.661Z under the unchanged trusted signer pin produced VERIFIED for snapshot c442bfdb17b9b031a2c963835c0c358cbaac18c00e2077f089d26adef73e3db4. One new indexed-service cleanup at 2026-10-09T09:20:54.571Z removed the new known run/selection/key. Receipt dd110686e72cb1d902f8b1320bed214b8ce7956e1952ae4f9a014e813ffa94a8 matched local SHA-256 integrity; separate inspection confirmed complete empty state and absent key. The publisher removed the new temporary Write grant; independent permission readback confirms read, and further inspection at 09:26:48.857Z confirms the account remains empty. The existing authenticated connection did not exercise a new first-time signup/OAuth flow; wider release evidence and unrestricted GA remain separate. PF-E-063 records deployed OAuth rejection repair, live policy/support links, passing anonymous prerequisites and a completed procedural support drill. PF-E-064 records successful natural production health. A real new-client consent/code/token round trip remains the customer browser handoff; the device is online and the reviewed helper is running.",
       "reentryCondition": "Re-enter for real new-client customer browser consent, the natural-health observation result or the already authorised wider release decision. Preserve all exact completed App/run/deletion/removal subjects and the unmerged customer PR. Do not relabel source, anonymous probes, procedural support drills or old authenticated connections as new customer consent or unrestricted GA.",
       "dependencies": [
         "DS-CANARY-001",
@@ -1468,7 +1471,8 @@
         "PF-E-059",
         "PF-E-060",
         "PF-E-062",
-        "PF-E-063"
+        "PF-E-063",
+        "PF-E-064"
       ]
     },
     {
@@ -2600,6 +2604,23 @@
       "outcome": "The concrete signup helper, real deployed OAuth rejection repair and live support/policy discoverability are ready. Customer OAuth is a remaining secure human handoff; operational observation runs in the background. No new customer consent, natural healthy sweep, message delivery or unrestricted GA is inferred.",
       "content": "Primary E-111/E-112 source, exact CI/deployment and public readback mirrored; owner queue now requests the concrete sign-in handoff without repeated approval for completed work.",
       "measurement": "Two approved primary PR merges, one functional deployment, two execution surfaces with five passing public HTTP probes each, fourteen helper tests, 58 root tests and 178 Worker tests; one procedural support drill. Zero new model starts, keys, Write grants, repeated deletions, customer PR merges, synthetic cron invocations or sent support messages."
+    },
+    {
+      "id": "PF-E-064",
+      "date": "2026-10-09",
+      "identity": "Natural production health complete; fresh customer OAuth helper running",
+      "situation": "The publisher instructed completion. The protected observer had reached a terminal result and the customer sign-in device returned online.",
+      "verification": "Workflow 37941829386/job 113857880758 succeeded on DoneState source 8be787a8cf758bc3529f046f1c54a889cb81aa38. Actual hourly cron at 2026-10-09T15:00:26.000Z completed with outcome ok on Worker 164602a6-35a5-464a-ac70-1ffd00a01066, matching unchanged deployment a5a08435-e095-4e98-b785-5667ea4e4d29. All unresolved Marketplace webhook counts are zero and escalationRequired is false. The temporary live-log session was removed; no synthetic cron or deployment was performed. Primary E-113/PR 181 records completion of OPS-002. evidence/rollout-20261009/natural-production-health.json mirrors the bounded provider receipt. Desktop Commander reports online, Node v24.18.0; the exact published helper was written to a fresh local file and launched once. It printed its loopback handoff page, with no consent or token result yet observed.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Capture the actual customer consent/access/refresh/revocation receipt and record the authorised owned-domain release decision separately.",
+        "waitCondition": "None for this natural-health observation and concrete helper startup scope.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "The natural operational health gate is satisfied. Customer OAuth is now a running secure handoff rather than an offline-device preparation. No customer consent, first-ever identity history, token cleanup or unrestricted GA is inferred.",
+      "content": "Redacted natural-sweep receipt mirrored; current owner queue and customer/release items refreshed without mutating historical evidence, source pins, channel states or prior cleanup.",
+      "measurement": "One successful natural sweep, five passing anonymous HTTP probes, zero unresolved failures, one observer tail created/removed, one reviewed OAuth helper startup; zero new model starts, keys, Write grants, repeated deletions or customer PR merges."
     }
   ]
 }
