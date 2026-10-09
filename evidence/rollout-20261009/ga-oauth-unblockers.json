@@ -1,0 +1,328 @@
+{
+  "schema": "proof-and-state.ga-oauth-unblockers.v1",
+  "ownerInstruction": "Proceed to first-time signup/OAuth and broader GA launch; prior merge/deploy authority remains in force.",
+  "scope": "Owned-domain launch preparation and actual deployed public prerequisites. New customer consent and unrestricted GA are not claimed.",
+  "primarySource": {
+    "repository": "AyobamiH/donestate",
+    "sourcePr": 179,
+    "sourceHead": "d9d0375ab558512a51f12d891780f66546cf4c9d",
+    "sourceMerge": "f7e72100781253853947a42d90737f9d0e5360f4",
+    "sourceTree": "f20a2b1e1805a13c007124ad1458d112fc37f3b4",
+    "observerPr": 180,
+    "observerHead": "498d0bfcb1ebe701a60751e2fadf938d975c34f0",
+    "observerMerge": "8be787a8cf758bc3529f046f1c54a889cb81aa38",
+    "observerTree": "7d30e819b3384b6b618e2872d0d7b7cbf813a49d",
+    "observerCandidateCi": 37941637101,
+    "observerCandidateChecks": [
+      {
+        "id": 113857217807,
+        "name": "core (22)",
+        "head": "498d0bfcb1ebe701a60751e2fadf938d975c34f0",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/AyobamiH/donestate/actions/runs/37941637101/job/113857217807",
+        "completedAt": "2026-10-09T14:06:12Z"
+      },
+      {
+        "id": 113857217716,
+        "name": "core (24)",
+        "head": "498d0bfcb1ebe701a60751e2fadf938d975c34f0",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/AyobamiH/donestate/actions/runs/37941637101/job/113857217716",
+        "completedAt": "2026-10-09T14:06:12Z"
+      },
+      {
+        "id": 113857217381,
+        "name": "hosted-plugin",
+        "head": "498d0bfcb1ebe701a60751e2fadf938d975c34f0",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/AyobamiH/donestate/actions/runs/37941637101/job/113857217381",
+        "completedAt": "2026-10-09T14:06:32Z"
+      }
+    ],
+    "observerMergeCi": 37941829371,
+    "observerMergeChecks": [
+      {
+        "id": 113857880778,
+        "name": "core (24)",
+        "status": "completed",
+        "conclusion": "success",
+        "head": "8be787a8cf758bc3529f046f1c54a889cb81aa38",
+        "url": "https://github.com/AyobamiH/donestate/actions/runs/37941829371/job/113857880778"
+      },
+      {
+        "id": 113857880730,
+        "name": "hosted-plugin",
+        "status": "completed",
+        "conclusion": "success",
+        "head": "8be787a8cf758bc3529f046f1c54a889cb81aa38",
+        "url": "https://github.com/AyobamiH/donestate/actions/runs/37941829371/job/113857880730"
+      },
+      {
+        "id": 113857880417,
+        "name": "core (22)",
+        "status": "completed",
+        "conclusion": "success",
+        "head": "8be787a8cf758bc3529f046f1c54a889cb81aa38",
+        "url": "https://github.com/AyobamiH/donestate/actions/runs/37941829371/job/113857880417"
+      }
+    ]
+  },
+  "runtime": {
+    "schema": "donestate.ga-source-runtime-readback.v1",
+    "source": {
+      "repository": "AyobamiH/donestate",
+      "pr": 179,
+      "head": "d9d0375ab558512a51f12d891780f66546cf4c9d",
+      "merge": "f7e72100781253853947a42d90737f9d0e5360f4",
+      "tree": "f20a2b1e1805a13c007124ad1458d112fc37f3b4",
+      "candidateCiRun": 37940002092,
+      "candidateChecks": [
+        {
+          "id": 113851659471,
+          "name": "core (24)",
+          "head": "d9d0375ab558512a51f12d891780f66546cf4c9d",
+          "startedAt": "2026-10-09T13:52:40Z",
+          "completedAt": "2026-10-09T13:52:54Z",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37940002092/job/113851659471"
+        },
+        {
+          "id": 113851659459,
+          "name": "core (22)",
+          "head": "d9d0375ab558512a51f12d891780f66546cf4c9d",
+          "startedAt": "2026-10-09T13:52:40Z",
+          "completedAt": "2026-10-09T13:52:59Z",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37940002092/job/113851659459"
+        },
+        {
+          "id": 113851659118,
+          "name": "hosted-plugin",
+          "head": "d9d0375ab558512a51f12d891780f66546cf4c9d",
+          "startedAt": "2026-10-09T13:52:40Z",
+          "completedAt": "2026-10-09T13:53:18Z",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37940002092/job/113851659118"
+        }
+      ],
+      "mergeCiRun": 37940171593,
+      "mergeChecks": [
+        {
+          "id": 113852234329,
+          "name": "hosted-plugin",
+          "head": "f7e72100781253853947a42d90737f9d0e5360f4",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37940171593/job/113852234329"
+        },
+        {
+          "id": 113852234193,
+          "name": "core (22)",
+          "head": "f7e72100781253853947a42d90737f9d0e5360f4",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37940171593/job/113852234193"
+        },
+        {
+          "id": 113852233861,
+          "name": "core (24)",
+          "head": "f7e72100781253853947a42d90737f9d0e5360f4",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/AyobamiH/donestate/actions/runs/37940171593/job/113852233861"
+        }
+      ]
+    },
+    "deployment": {
+      "runId": 37940171590,
+      "jobId": 113852234807,
+      "conclusion": "success",
+      "workerVersion": "164602a6-35a5-464a-ac70-1ffd00a01066",
+      "canonicalOrigin": "https://donestate.proofandstate.com",
+      "publishedAt": "2026-10-09T13:56:33.910Z",
+      "cron": "0 * * * *"
+    },
+    "initialProductionObservation": {
+      "runId": 37940499806,
+      "jobId": 113853335987,
+      "receipt": {
+        "schema": "donestate.ga-production-preflight.v1",
+        "startedAt": "2026-10-09T13:56:50.448Z",
+        "productionMutations": 0,
+        "syntheticCronInvocations": 0,
+        "credentialSetups": 0,
+        "modelStarts": 0,
+        "passed": false,
+        "publicPreflight": {
+          "observedAt": "2026-10-09T13:56:50.448Z",
+          "issuer": "https://donestate.proofandstate.com",
+          "resource": "https://donestate.proofandstate.com/mcp",
+          "probes": [
+            {
+              "name": "landing",
+              "path": "/",
+              "expectedStatus": 200,
+              "observedStatus": 200,
+              "bodySha256": "4c2a1f5e74ec4547023e1e5310a3fdbaad0527241f5c5700cd75a8a73534f7b5",
+              "observedAt": "2026-10-09T13:56:51.073Z",
+              "bodyPublished": true
+            },
+            {
+              "name": "execution_resource_without_token",
+              "path": "/mcp",
+              "expectedStatus": 401,
+              "observedStatus": 401,
+              "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "observedAt": "2026-10-09T13:56:51.138Z",
+              "canonicalChallengePresent": true
+            },
+            {
+              "name": "account_resource_without_token",
+              "path": "/mcp/account/v1",
+              "expectedStatus": 401,
+              "observedStatus": 401,
+              "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "observedAt": "2026-10-09T13:56:51.233Z",
+              "canonicalChallengePresent": true
+            },
+            {
+              "name": "unknown_oauth_client",
+              "path": "/authorize?client_id=ga-preflight-not-registered&response_type=code",
+              "expectedStatus": 400,
+              "observedStatus": 400,
+              "bodySha256": "58a4275d202d34a26a4bab74eb4846c44266f098e0cfcdac1cababb266573dd9",
+              "observedAt": "2026-10-09T13:56:51.385Z"
+            },
+            {
+              "name": "malformed_client_registration",
+              "path": "/oauth/register",
+              "expectedStatus": 400,
+              "observedStatus": 400,
+              "bodySha256": "486c9134aa34fbadd4c14bdbd0180aaa5427bc171118a22950fdfd73485ea1a5",
+              "observedAt": "2026-10-09T13:56:51.428Z"
+            }
+          ],
+          "discovery": {
+            "issuer": "https://donestate.proofandstate.com",
+            "authorizationEndpoint": "https://donestate.proofandstate.com/authorize",
+            "tokenEndpoint": "https://donestate.proofandstate.com/oauth/token",
+            "pkce": "S256",
+            "publicClient": true
+          },
+          "passed": true
+        },
+        "failure": "HOURLY_CRON_NOT_PRESENT",
+        "finishedAt": "2026-10-09T13:56:52.065Z"
+      },
+      "interpretation": "Public checks passed. Observer assumed the schedule result was an array; the provider schedule wrapper was not recognised. No missing production cron, natural health observation or escalation is inferred from this observer failure."
+    },
+    "freshCustomerOAuthObserved": false,
+    "unrestrictedGaDeclared": false
+  },
+  "publicPrerequisites": {
+    "schema": "donestate.ga-production-preflight.v1",
+    "startedAt": "2026-10-09T13:57:24.364Z",
+    "productionMutations": 0,
+    "syntheticCronInvocations": 0,
+    "credentialSetups": 0,
+    "modelStarts": 0,
+    "passed": true,
+    "publicPreflight": {
+      "observedAt": "2026-10-09T13:57:24.365Z",
+      "issuer": "https://donestate.proofandstate.com",
+      "resource": "https://donestate.proofandstate.com/mcp",
+      "probes": [
+        {
+          "name": "landing",
+          "path": "/",
+          "expectedStatus": 200,
+          "observedStatus": 200,
+          "bodySha256": "4c2a1f5e74ec4547023e1e5310a3fdbaad0527241f5c5700cd75a8a73534f7b5",
+          "observedAt": "2026-10-09T13:57:29.765Z",
+          "bodyPublished": true
+        },
+        {
+          "name": "execution_resource_without_token",
+          "path": "/mcp",
+          "expectedStatus": 401,
+          "observedStatus": 401,
+          "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "observedAt": "2026-10-09T13:57:29.842Z",
+          "canonicalChallengePresent": true
+        },
+        {
+          "name": "account_resource_without_token",
+          "path": "/mcp/account/v1",
+          "expectedStatus": 401,
+          "observedStatus": 401,
+          "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "observedAt": "2026-10-09T13:57:34.108Z",
+          "canonicalChallengePresent": true
+        },
+        {
+          "name": "unknown_oauth_client",
+          "path": "/authorize?client_id=ga-preflight-not-registered&response_type=code",
+          "expectedStatus": 400,
+          "observedStatus": 400,
+          "bodySha256": "58a4275d202d34a26a4bab74eb4846c44266f098e0cfcdac1cababb266573dd9",
+          "observedAt": "2026-10-09T13:57:38.946Z"
+        },
+        {
+          "name": "malformed_client_registration",
+          "path": "/oauth/register",
+          "expectedStatus": 400,
+          "observedStatus": 400,
+          "bodySha256": "486c9134aa34fbadd4c14bdbd0180aaa5427bc171118a22950fdfd73485ea1a5",
+          "observedAt": "2026-10-09T13:57:42.843Z"
+        }
+      ],
+      "discovery": {
+        "issuer": "https://donestate.proofandstate.com",
+        "authorizationEndpoint": "https://donestate.proofandstate.com/authorize",
+        "tokenEndpoint": "https://donestate.proofandstate.com/oauth/token",
+        "pkce": "S256",
+        "publicClient": true
+      },
+      "passed": true
+    },
+    "finishedAt": "2026-10-09T13:57:42.843Z"
+  },
+  "operationsObservation": {
+    "runId": 37941829386,
+    "jobId": 113857880758,
+    "status": "in_progress",
+    "conclusion": null,
+    "url": "https://github.com/AyobamiH/donestate/actions/runs/37941829386",
+    "meaning": "Read-only stored/live natural scheduled-health observation is running; its outcome is not yet available. No healthy sweep is inferred."
+  },
+  "customerHandoff": {
+    "helperUrl": "https://github.com/AyobamiH/donestate/blob/f7e72100781253853947a42d90737f9d0e5360f4/scripts/ga-oauth.mjs",
+    "guideUrl": "https://github.com/AyobamiH/donestate/blob/8be787a8cf758bc3529f046f1c54a889cb81aa38/docs/GA-LAUNCH.md",
+    "newClientConsentObserved": false,
+    "lastKnownDeviceStatus": "offline",
+    "needs": "Device online and actual customer GitHub consent on the sign-in computer; no code or token in chat.",
+    "newCredentialRequired": false,
+    "newRepositoryWriteGrantRequired": false,
+    "newModelRunRequired": false
+  },
+  "support": {
+    "drillSource": "https://github.com/AyobamiH/donestate/blob/f7e72100781253853947a42d90737f9d0e5360f4/evidence/ga-20261009/support-drill.json",
+    "proceduralDrillComplete": true,
+    "policyAndSupportLinksLive": true,
+    "customerMessageDeliveryObserved": false
+  },
+  "preserved": {
+    "customerPr177": "open_unmerged",
+    "selectedAppAndCleanupEvidence": "E-109 / PF-E-062 remain unchanged",
+    "sourcePinsAndPriorPortfolioStories": true,
+    "unrestrictedGaDeclared": false,
+    "externalListingsPublished": false
+  },
+  "recordedAt": "2026-10-09T14:12:04.000Z"
+}
