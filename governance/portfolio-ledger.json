@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "portfolio": "Proof & State",
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "governanceRule": "Every consequential portfolio event must update this ledger and its generated state in the same change. Product repository, CI, deployment, runtime, credential, review, publication, and independent-verification states remain separate.",
   "sourceLedgers": [
     {
@@ -1328,17 +1328,18 @@
       "stream": "go-to-market",
       "status": "active",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-10-09",
-      "staleDate": "2026-10-16",
-      "nextAction": "Run the first consenting external bounded public-repository-fix cohort using DoneState docs/MARKET-FIT.md and its strict anonymous operator review. Record customer-accepted independently verified activation, seven-day eligible repeat use, priced-offer commitments versus actual payments, and support burden. Improve one evidenced constraint per comparable cohort.",
-      "waitCondition": "Owned-domain GA is accepted under PF-E-067. Customer learning-loop tooling is implemented and locally checked; no real external cohort, retention, payment or market-fit evidence is supplied. The mirrored empty review explicitly reports not_observed and marketFit not_established.",
-      "reentryCondition": "Keep active through external cohort entry and review within seven days. Do not count publisher canaries, pool anonymous cohorts into unique users, infer unobserved retention as zero, or treat written price acceptance as payment. External outreach needs separate send authority.",
+      "lastUpdated": "2026-10-10",
+      "staleDate": "2026-10-17",
+      "nextAction": "Keep improving DoneState first use while distribution proceeds. Use the deployed public first-job guide and first-attempt recovery, then review incoming consenting external use for independently verified usefulness, eligible repeats, real payment evidence and support burden. Customer recruitment and a fixed cohort size are not development gates.",
+      "waitCondition": "Owned-domain GA remains accepted under PF-E-067. Website first-use improvements are deployed and read back under PF-E-069. No supplied external customer observation establishes demand, retention, payment or market fit; missing observations do not pause development.",
+      "reentryCondition": "Review incoming evidence within seven days of first entry while maintaining channel/cohort separation, consent and independent verification. Post-Once integration is a later reconciliation, not certified here. Do not convert publisher acceptance or documentation checks into customer demand.",
       "dependencies": [
         "DS-CUSTOMER-001"
       ],
       "evidenceIds": [
         "PF-E-024",
-        "PF-E-068"
+        "PF-E-068",
+        "PF-E-069"
       ]
     },
     {
@@ -2705,6 +2706,23 @@
       "outcome": "DS-GTM-001 remains active with an executable customer-learning boundary. DoneState owned-domain GA stays complete; market fit remains unproven. No production tracking, payment integration, runtime deployment, new permissions, channel-state change or external message.",
       "content": "Mirrored actual unobserved review output and current portfolio GTM reconciliation; product archives, source pins, shared contract and historical receipts remain preserved.",
       "measurement": "Six new primary regression tests and 72 full local primary tests pass; ten counts, nine friction categories, six evidence kinds and three separated channels. Zero supplied external cohort observations."
+    },
+    {
+      "id": "PF-E-069",
+      "date": "2026-10-10",
+      "identity": "DoneState first-use release and continuous organic learning",
+      "situation": "The publisher wants to keep building while Post-Once warms visibility and conversation. A separate recruitment programme or a five-customer threshold must not delay DoneState development. Public first-use guidance needs a bounded first job, execution funding clarity and safe recovery.",
+      "verification": "Website PR #30 changes only the public DoneState get-started and troubleshooting routes. Candidate 1b746dfc7e40d6f1b97cd6dd52803de5f78cad72 passed CI 38002928213 and owned toolchain integration 38002928130. Merge c049d83f699f5247050a8c09efe332c88d3952e3 has exact tree 7765ba05560ea9dd313f811c1b0a3805776bd0ba and parents bc803c1be8b47de27fe72d55adfcb47b492adf97 then candidate. Exact merge CI 38003153832, owned toolchain integration 38003153811 and deploy workflow 38003153792/job 114065760847 all pass. Deployment uploaded the proof-and-state-website Worker at 2026-10-09T23:12:21.8236147Z and deployed triggers at 23:12:22.7611074Z with version 24d5f046-de25-447f-84be-04b5210727be. Public browser readback at 23:12:43.360Z shows the new guide, funding/verifier boundaries, autoStart default, bounded brief and result/cleanup guidance. Its actual recovery link reaches #first-attempt with all five recovery cases at 23:13:09.140Z. Copy-button feedback is visible but clipboard contents were not independently confirmed. evidence/first-use-20261010/website-release.json retains the exact release and observation subjects. Full local npm run check passes all 72 tests, contract, documentation, governance and package dry-run checks. Primary learning-loop documentation and empty-report nextAction now continue first-use development and observe incoming consented use without a recruitment gate. Historical E-119 remains an accurate record of the earlier proposal. Primary E-120 and portfolio receipts mirror the website release and actual revised empty-review report. Historical PF-E-068 remains preserved as the earlier proposal.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "active",
+        "nextAction": "Keep improving DoneState first use while distribution proceeds. Use the deployed public first-job guide and first-attempt recovery, then review incoming consenting external use for independently verified usefulness, eligible repeats, real payment evidence and support burden. Customer recruitment and a fixed cohort size are not development gates.",
+        "waitCondition": "Owned-domain GA remains accepted under PF-E-067. Website first-use improvements are deployed and read back under PF-E-069. No supplied external customer observation establishes demand, retention, payment or market fit; missing observations do not pause development.",
+        "staleDate": "2026-10-17"
+      },
+      "outcome": "The public first-use guide and recovery are live on the deployed website. Customer learning now continues alongside development without a recruitment gate or a market-fit claim. Post-Once publishing/learning integration remains uninspected for a later slice. DoneState MCP runtime and completed launch acceptance remain unchanged.",
+      "content": "Exact website release receipt, organic-learning empty output and current DS-GTM-001 strategy. Source pins, historical records and channel review states are preserved.",
+      "measurement": "Two website routes; zero additional execution starts, customer tracking, permissions, billing integration or external messages. Empty report remains not_observed and marketFit not_established."
     }
   ]
 }
