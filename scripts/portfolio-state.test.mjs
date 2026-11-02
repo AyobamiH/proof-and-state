@@ -298,3 +298,22 @@ test("generated portfolio state contains one owner-only queue view", () => {
   assert.equal(rendered.match(/\| \d+ \| \*\*/g)?.length, ledger.ownerActionQueue.length);
   assert.match(rendered, /agentExecutable=`false`/);
 });
+
+test("evidence update is not a product reread and snapshot freshness is fail-closed", () => {
+  const updatedEvidence = structuredClone(ledger);
+  assert.equal(updatedEvidence.updatedAt, "2026-10-10");
+  assert.equal(updatedEvidence.evidenceRecordedAt, "2026-11-02");
+  assert.doesNotThrow(() => validate(updatedEvidence));
+  const falseProductRefresh = structuredClone(updatedEvidence);
+  falseProductRefresh.updatedAt = "2026-11-02";
+  assert.throws(() => validate(falseProductRefresh), /observedAt is stale by more than 7 days/);
+  const futureEvidence = structuredClone(updatedEvidence);
+  futureEvidence.evidenceRecordedAt = "2026-10-10";
+  assert.throws(() => validate(futureEvidence), /exceeds the latest evidence recording date/);
+  const falseObservation = structuredClone(updatedEvidence);
+  falseObservation.products[0].observedAt = "2026-11-02T01:00:00Z";
+  assert.throws(() => validate(falseObservation), /observedAt cannot be after updatedAt/);
+  const rendered = render(updatedEvidence);
+  assert.match(rendered, /Historical product snapshot as-of: \*\*2026-10-10\*\*/);
+  assert.match(rendered, /Latest accountability\/evidence record: \*\*2026-11-02\*\*/);
+});

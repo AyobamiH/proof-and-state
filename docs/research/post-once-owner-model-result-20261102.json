@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "result": "PASS",
+  "type": "synthetic-lock-policy-mechanism-reproduction",
+  "baseline": "Post-Once PR #380 (28 October), not the private production record",
+  "historicalObserved": {
+    "vaults_enabled": 18,
+    "actual_busy": 2,
+    "skipped_by_policy": 11,
+    "reported_lock_deferrals": 13
+  },
+  "modelFirstCycle": {
+    "totalEnabled": 18,
+    "completed": 5,
+    "actualRunnerBusyRefusals": 2,
+    "unattemptedByTwoStrikePolicy": 11,
+    "reportedLockDeferrals": 13,
+    "attemptedVaults": 7
+  },
+  "modelNextCycle": {
+    "completed": 18,
+    "lockDeferrals": 0
+  },
+  "externalEffectAttempted": false,
+  "productionAcceptanceVerified": false,
+  "limits": [
+    "Pure synthetic model; not a copy of private Post-Once code",
+    "Does not re-check October owner/observer ledger receipts",
+    "Second cycle demonstrates possible progress, not provider publication",
+    "No shared runtime or novel evidence protocol is implemented"
+  ]
+}

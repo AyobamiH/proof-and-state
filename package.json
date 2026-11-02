@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "test": "npm run test:governance && npm run test:gtm",
-    "test:governance": "node --test scripts/portfolio-state.test.mjs scripts/check-main-environment-governance.test.mjs scripts/shared-operating-contract.test.mjs",
+    "test:governance": "node --test scripts/portfolio-state.test.mjs scripts/check-main-environment-governance.test.mjs scripts/shared-operating-contract.test.mjs scripts/post-once-lock-deferral.test.mjs",
     "test:gtm": "npm run test --workspace=@proof-and-state/gtm-orchestrator",
     "governance:render": "node scripts/render-portfolio-state.mjs && node scripts/render-shared-operating-contract.mjs",
     "governance:check": "node scripts/render-portfolio-state.mjs --check && node scripts/render-shared-operating-contract.mjs --check && node scripts/check-main-environment-governance.mjs"
