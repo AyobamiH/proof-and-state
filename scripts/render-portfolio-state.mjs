@@ -59,6 +59,13 @@ export function validate(value) {
   rejectEmDash(value);
   for (const field of ["portfolio", "updatedAt", "governanceRule"]) text(value[field], field);
   date(value.updatedAt, "updatedAt");
+  // A fresh distribution/evidence record must never re-date the product matrix.
+  // Product observations remain bound to updatedAt until each is genuinely re-read.
+  if (value.evidenceRecordedAt !== undefined) {
+    date(value.evidenceRecordedAt, "evidenceRecordedAt");
+    require(value.evidenceRecordedAt >= value.updatedAt,
+      "evidenceRecordedAt cannot predate the historical product snapshot");
+  }
   require(Array.isArray(value.sourceLedgers), "sourceLedgers must be an array");
   require(Array.isArray(value.products), "products must be an array");
   require(Array.isArray(value.ownerActionQueue) && value.ownerActionQueue.length, "ownerActionQueue is required");
@@ -165,6 +172,16 @@ export function validate(value) {
     for (const field of ["owner", "status", "nextAction", "waitCondition", "staleDate"]) text(story.accountability?.[field], `${story.id}.accountability.${field}`);
     require(allowed.has(story.accountability.status), `${story.id}.accountability.status is invalid`);
     date(story.accountability.staleDate, `${story.id}.accountability.staleDate`);
+  }
+  if (value.evidenceRecordedAt !== undefined) {
+    for (const story of value.evidenceStories) {
+      require(story.date <= value.evidenceRecordedAt,
+        `${story.id}.date exceeds the latest evidence recording date`);
+    }
+    for (const item of value.workItems) {
+      require(item.lastUpdated <= value.evidenceRecordedAt,
+        `${item.id}.lastUpdated exceeds the latest evidence recording date`);
+    }
   }
   const today = process.env.GOVERNANCE_NOW ?? new Date().toISOString().slice(0, 10);
   const staleItems = value.workItems.filter((item) => item.status !== "complete" && item.staleDate < today);
@@ -430,7 +447,7 @@ export function validateTransition(previous, current) {
 
 export function render(value) {
   const byId = new Map(value.workItems.map((item) => [item.id, item]));
-  const lines = ["# Portfolio state", "", "<!-- Generated from governance/portfolio-ledger.json. Do not edit by hand. -->", "", `Canonical state date: **${value.updatedAt}**`, "", value.governanceRule, "", "## Exact source ledgers", "", "| Project | Repository | Commit | Ledger |", "|---|---|---|---|"];
+  const lines = ["# Portfolio state", "", "<!-- Generated from governance/portfolio-ledger.json. Do not edit by hand. -->", "", `Historical product snapshot as-of: **${value.updatedAt}** (not a fresh current-state provider readback). Latest accountability/evidence record: **${value.evidenceRecordedAt ?? value.updatedAt}**`, "", value.governanceRule, "", "## Exact source ledgers", "", "| Project | Repository | Commit | Ledger |", "|---|---|---|---|"];
   for (const source of value.sourceLedgers) lines.push(`| ${source.project} | ${source.repository} | [\`${source.commit}\`](https://github.com/${source.repository}/commit/${source.commit}) | [${source.path}](${source.url}) |`);
   lines.push("", "## Product and channel matrix", "", "Provider-only and authenticated portal facts are `UNPROVEN` unless tied to an exact read-back. Main-branch protection values are same-session authenticated provider observations. The runtime `publishingEnabled=false` gate remains distinct from provider listing publication.", "", "| Product and role | Repository and main | Deployment and rollback | Maintenance and operations | Risks and next owner action |", "|---|---|---|---|---|");
   for (const product of value.products) {

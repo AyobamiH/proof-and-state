@@ -2,6 +2,16 @@
 
 Proof & State is the governance layer for a family of narrowly separated products that execute authorised work, observe outcomes independently, and preserve evidence without allowing any product to certify itself.
 
+## Public evidence and independent review
+
+The four standalone historical case studies are linked from the published [AI Work Accountability writing archive](https://aiworkaccountability.com/writing/). Their scope is preserved: Post-Once collector recovery, AgentProof's bounded 17-check repository-patch canary, OpsTruth independent evidence verification and DoneState PR-only execution.
+
+- [Proof & State Discussion #44 - can existing standards prove agent outcomes?](https://github.com/AyobamiH/proof-and-state/discussions/44) welcomes falsifiable counterexamples and evidence that existing standards already suffice.
+- [AgentProof's eight-case lost-acknowledgement reproduction](https://github.com/AyobamiH/agentproof/blob/main/docs/research/repro-outcome-uncertainty/README.md) and [independent challenge #30](https://github.com/AyobamiH/agentproof/issues/30) use source-only fixtures, **not** a production release replay.
+- [Post-Once two-busy-strike deferral model](docs/research/post-once-lock-deferral.md) provides a public synthetic explanation of two actual lock refusals versus eleven not-attempted vaults. Historical operational receipts remain private.
+
+These are research and scrutiny links, not authority to merge the products, introduce a shared runtime, claim third-party adoption, or retry an ambiguous external effect.
+
 ## Product boundary
 
 | Product | Responsibility | Must not do |
