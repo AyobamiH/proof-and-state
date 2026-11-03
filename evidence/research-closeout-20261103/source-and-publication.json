@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-03T13:31:10.451972+00:00",
+  "scope": "Owner-controlled source portability and already-published research closure",
+  "website": {
+    "url": "https://aiworkaccountability.com",
+    "sourceRepository": "https://github.com/AyobamiH/ai-work-accountability",
+    "sourceVisibility": "private",
+    "branch": "main",
+    "localHead": "c00742f73b96985cf1aa868d4940f3a2a841ed06",
+    "remoteHead": "c00742f73b96985cf1aa868d4940f3a2a841ed06",
+    "localWorktreeClean": true,
+    "historicalSourceArchive": {
+      "branch": "archive/sites-2026-10-26",
+      "commit": "2dbdd4680b633df7ead212e26cfd8e4385113f58"
+    },
+    "ownerDecision": {
+      "date": "2026-11-02",
+      "decision": "Maintain the website locally and on GitHub without requiring ChatGPT or Sites access",
+      "sourceOfTruth": "SOURCE-OF-TRUTH.md"
+    },
+    "historicalSitesWorkspaceSynced": false,
+    "historicalSitesWorkspaceRequired": false,
+    "sourceRestoreReceipt": {
+      "kind": "clean-GitHub-clone-release-recovery",
+      "verifiedAt": "2026-11-02T09:56:26.301816+00:00",
+      "remote": "https://github.com/AyobamiH/ai-work-accountability",
+      "visibility": "private",
+      "branch": "main",
+      "commit": "c00742f73b96985cf1aa868d4940f3a2a841ed06",
+      "archive": "2dbdd4680b633df7ead212e26cfd8e4385113f58",
+      "freshInstall": true,
+      "host": "author-owned Linux machine",
+      "node": "v24.18.0",
+      "siteTests": 13,
+      "matchingReleaseFiles": 135,
+      "catalogueSha256": "b05479e2347d5e7fdd30c4f29b2be3e0d693cb52eb45637fcf3cbd6cdda41260",
+      "articles": 14,
+      "projects": 5,
+      "sitemapRoutes": 28,
+      "discussionLinks": 4,
+      "sitesAuthenticationRequired": false,
+      "deploymentPerformed": false
+    },
+    "sourceRestoreReceiptSha256": "b0ac2f40c90e2a5cfec687a3c84d72ab248fd613bd258cc90448bcfe5c47f260",
+    "portableBundleSha256": "61214ceac027ee00ec2c9b83bbf4b3257ce0dcbc1924d01dcffffe8ca459a252",
+    "freshPublicReadback": [
+      {
+        "observedAt": "2026-11-03T13:31:10.359Z",
+        "url": "https://aiworkaccountability.com/content.json",
+        "httpStatus": 200,
+        "bytes": 13712,
+        "sha256": "b05479e2347d5e7fdd30c4f29b2be3e0d693cb52eb45637fcf3cbd6cdda41260",
+        "matchesOwnerCheckout": true
+      },
+      {
+        "observedAt": "2026-11-03T13:31:10.444Z",
+        "url": "https://aiworkaccountability.com/sitemap.xml",
+        "httpStatus": 200,
+        "bytes": 3325,
+        "sha256": "b58bb3f743fa3814eeb9a76ab84d13538cc6292fd92684ec00dbf23ddf0f976e",
+        "matchesOwnerCheckout": true
+      }
+    ],
+    "sourcePointerReconciliation": {
+      "observedAt": "2026-11-03T13:33:06.743783+00:00",
+      "currentPublicSourceResolvesTo": "/home/johnh/ai-work-accountability",
+      "previousTargetPreservedAs": "last-deployed-source-snapshot",
+      "historicalSnapshot": "discussion-links-release-20261101",
+      "currentPointerSourceSha": "c00742f73b96985cf1aa868d4940f3a2a841ed06",
+      "currentPointerHasGitRemoteAndRecoveryReadme": true
+    }
+  },
+  "researchPublication": {
+    "repository": "AyobamiH/proof-and-state",
+    "pullRequest": 45,
+    "url": "https://github.com/AyobamiH/proof-and-state/pull/45",
+    "merged": true,
+    "mergedAt": "2026-11-02T06:29:34Z",
+    "mergeCommit": "89ccb2b0c1a2789a845b77ebfea966cfd5a4d3b4",
+    "readmeDiscussionAndReproductionLinksPresent": true,
+    "reproductionPath": "docs/research/post-once-lock-deferral.md",
+    "publicModelIsProductionReplay": false
+  },
+  "evidenceBoundaries": {
+    "verificationBy": "Owner-controlled tools and machines",
+    "independentExternalReproductionEstablished": false,
+    "newWebsiteDeploymentPerformed": false,
+    "providerSideEffectsPerformed": false,
+    "gitHubHostedCiRestored": false
+  }
+}

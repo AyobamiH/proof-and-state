@@ -1519,18 +1519,19 @@
       "id": "AIWA-RUNTIME-001",
       "title": "Bind AI Work Accountability to an identified runtime",
       "stream": "infrastructure",
-      "status": "active",
+      "status": "complete",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-11-02",
-      "staleDate": "2026-11-09",
-      "nextAction": "Synchronise the verified Cloudflare site source at local Git commit eefee1850db270361c693f67a7903885f0c1324f with the historical ChatGPT Sites Git workspace when it is accessible, preserving all newer edits. Current public website is already live; never redeploy merely to sync a Git checkout.",
-      "waitCondition": "Live Worker version 69bef306-d23a-4de9-bc6a-804e34e1f7d9 and 19 catalogue entries/135 generated assets are verified. The owner web host now has a tracked rebuildable source and Git bundle; the previous historical Sites Git workspace at /workspace/sites/ai-work-accountability is not mounted and its exact canonical Git SHA has not been reconciled.",
-      "reentryCondition": "Resume immediately when historical Sites Git is accessible; compare with exact verified local source, run a build and prove all five case studies, four discussion links and existing pages preserved.",
+      "lastUpdated": "2026-11-03",
+      "staleDate": "2026-12-01",
+      "nextAction": "Maintain the owner-controlled local/GitHub main at c00742f73b96985cf1aa868d4940f3a2a841ed06 under SOURCE-OF-TRUTH.md; preserve the archival Sites branch. Historical Sites synchronisation is superseded by the owner portability decision, not claimed as performed.",
+      "waitCondition": "None for the source-recovery deliverable. Clean GitHub restore reproduced all 135 release files and 13 tests on 2 November; fresh 3 November public catalogue and sitemap match the clean local/GitHub source. Existing live deployment was not repeated.",
+      "reentryCondition": "Reopen on source loss, local/remote divergence, failed clean restore or public output drift; use the maintained owner Git repository rather than waiting for a Sites workspace.",
       "dependencies": [],
       "evidenceIds": [
         "PF-E-006",
         "PF-E-024",
-        "PF-E-071"
+        "PF-E-071",
+        "PF-E-073"
       ]
     },
     {
@@ -1558,30 +1559,32 @@
       "stream": "distribution",
       "status": "active",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-11-02",
+      "lastUpdated": "2026-11-03",
       "staleDate": "2026-11-30",
       "nextAction": "Review independent challenges on Discussion #44, AgentProof issue #30, in-toto PR #588; distinguish owner tests from third-party results and decide if existing standards suffice. Do not build a shared runtime without a reproducible gap.",
       "waitCondition": "No independent reproduction or concrete external interoperability gap has yet been established. Daily checks are bounded and scheduled through 30 Nov; they monitor, not implement.",
       "reentryCondition": "Review on new independently attributable engineering evidence or on 30 Nov; absence of replies is not a negative proof.",
       "dependencies": [],
       "evidenceIds": [
-        "PF-E-070"
+        "PF-E-070",
+        "PF-E-074"
       ]
     },
     {
       "id": "PF-POSTONCE-REPRO-001",
       "title": "Provide public-safe Post-Once collector-deferral reproduction and solicit critique",
       "stream": "distribution",
-      "status": "active",
+      "status": "complete",
       "owner": "Proof & State maintainers",
-      "lastUpdated": "2026-11-02",
-      "staleDate": "2026-11-16",
-      "nextAction": "Publish the standalone, credential-free two-busy-strike model with eight negative/positive tests, invite independent review and report the private October provider evidence as historical rather than publicly re-executed.",
-      "waitCondition": "Synthetic fixture passes locally. A separate external engineer has not reproduced the private real production incident and the historic Post-Once repository receipts remain private.",
-      "reentryCondition": "Review on PR publication, independent fixture critique or 16 Nov; never expose production credentials or retry a recorded provider effect.",
+      "lastUpdated": "2026-11-03",
+      "staleDate": "2026-12-01",
+      "nextAction": "The credential-free model and review invitation are published through merged PR #45 and Discussion #44. Record any genuine external critique under PF-TECHDISC-001; do not repeat publication or production effects.",
+      "waitCondition": "None for publication. The model remains synthetic, with private historical production evidence separate and no independent external reproduction credited.",
+      "reentryCondition": "Reopen if the published source becomes inaccessible or a reproducible defect is reported. External engineering feedback remains open under PF-TECHDISC-001.",
       "dependencies": [],
       "evidenceIds": [
-        "PF-E-072"
+        "PF-E-072",
+        "PF-E-074"
       ]
     }
   ],
@@ -2784,12 +2787,12 @@
       "verification": "The 2 November rebuild produced 135 assets matching the deployed release byte-for-byte, including 19 catalogue items, 14 posts and 28 sitemap routes. Canonical local pointer now resolves to discussion-links-release-20261101 at local Git eefee1850db270361c693f67a7903885f0c1324f; Git bundle SHA-256 19a697f03485107718348dc83576499b7c40d94267ce6ea06de2a8d7d3153e2f. Cloudflare Worker version 69bef306-d23a-4de9-bc6a-804e34e1f7d9 remains unchanged. Historical Sites Git workspace not mounted.",
       "accountability": {
         "owner": "Proof & State maintainers",
-        "status": "active",
-        "nextAction": "Sync into the historical Sites Git workspace with a three-way comparison once actual canonical access exists.",
-        "waitCondition": "No historical Sites Git checkout is mounted; new local Git is not evidence of remote Git sync.",
-        "staleDate": "2026-11-16"
+        "status": "complete",
+        "nextAction": "Resolved by the owner-approved independent Git source migration verified in PF-E-073. Maintain that source and the preserved archive branch.",
+        "waitCondition": "No Sites-access wait remains. The historical Sites workspace itself was not synchronised.",
+        "staleDate": "2026-12-01"
       },
-      "outcome": "Local published source is recoverable, byte-equivalent and protected from stale pointer re-entry; historical ChatGPT Sites Git sync remains open.",
+      "outcome": "Local published source is recoverable, byte-equivalent and protected from stale pointer re-entry; historical ChatGPT Sites Git sync remains open. Resolution recorded 3 November in PF-E-073: the later owner decision supersedes the Sites-sync requirement with verified independent local/GitHub ownership; the original historical observation remains preserved.",
       "content": "Owner-device source: /home/johnh/.config/ai-work-accountability/current-public-source; local Git bundle: /home/johnh/.config/ai-work-accountability/aiwa-current-live-source-20261102.bundle.",
       "measurement": "135/135 generated output files byte-exact with live release snapshot; 19 catalogue records, 14 posts; zero production redeploys."
     },
@@ -2801,15 +2804,49 @@
       "verification": "The owner-controlled source explanation in private PR #380 identifies two real RunnerBusy lock refusals and 11 unattempted policy backoffs. The public source-only JavaScript model selected 18 anonymous vault identifiers; eight local tests pass: 5 complete, 2 genuine busy attempts, 11 skipped due to two-strike yielding, subsequent synthetic cycle 18 complete, budget/lock classification separate, malformed/duplicate inputs refused. This is a behavioural model, not a private code export or production provider replay.",
       "accountability": {
         "owner": "Proof & State maintainers",
-        "status": "active",
-        "nextAction": "Publish the research model on the public Proof & State GitHub branch/PR, run current-head tests and solicit technical counterexamples.",
-        "waitCondition": "Original D1, Threads and Google Docs receipts remain private; model cannot prove real provider effect.",
-        "staleDate": "2026-11-16"
+        "status": "complete",
+        "nextAction": "Publication completed by PR #45 at 89ccb2b0c1a2789a845b77ebfea966cfd5a4d3b4, verified in PF-E-074. Continue independent critique under PF-TECHDISC-001.",
+        "waitCondition": "No publication wait remains; private historical receipts and external reproduction remain separate.",
+        "staleDate": "2026-12-01"
       },
-      "outcome": "Reproducible pure model prepared; no external adoption, new runtime authority or production side effect.",
+      "outcome": "Reproducible pure model prepared; no external adoption, new runtime authority or production side effect. Publication resolution: the model, tests and README discovery links are on public main through merged PR #45; PF-E-074 records the current observation.",
       "content": "docs/research/post-once-lock-deferral.md; scripts/research/post-once-lock-deferral.mjs; scripts/post-once-lock-deferral.test.mjs",
       "measurement": "Eight out of eight synthetic tests passed locally; no provider requests."
+    },
+    {
+      "id": "PF-E-073",
+      "date": "2026-11-03",
+      "identity": "Website source portability complete under owner-controlled local and GitHub ownership",
+      "situation": "The original source-sync issue still required historical Sites access after the owner had moved the canonical source to an independent private GitHub repository.",
+      "verification": "Fresh local and GitHub main both equal c00742f73b96985cf1aa868d4940f3a2a841ed06 with a clean owner checkout. The archival Sites branch preserves 2dbdd4680b633df7ead212e26cfd8e4385113f58. The 2 November clean-clone receipt records 13 tests and 135/135 matching files. Fresh public content.json and sitemap.xml both return HTTP 200 and match the owner checkout; catalogue SHA-256 b05479e2347d5e7fdd30c4f29b2be3e0d693cb52eb45637fcf3cbd6cdda41260. The standard current-public-source pointer now resolves to that maintained owner checkout; its former target is preserved as last-deployed-source-snapshot and the owner-host source index documents the distinction.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Maintain ordinary Git recovery and explicit owner-authorised releases; preserve historical source as an archive.",
+        "waitCondition": "None for the portability deliverable. Historical Sites synchronisation is superseded and remains unperformed.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "AIWA-RUNTIME-001 is complete. Issue #47 can close by supersession with the owner-approved independent-source solution; no paid ChatGPT access is a maintenance prerequisite.",
+      "content": "evidence/research-closeout-20261103/source-and-publication.json and docs/research/aiwa-source-closure.md; private source https://github.com/AyobamiH/ai-work-accountability.",
+      "measurement": "Local/remote exact SHA match; 13 historical clean-restore tests; 135 historical release-file matches; two fresh public HTTP/hash matches; zero website redeploys."
+    },
+    {
+      "id": "PF-E-074",
+      "date": "2026-11-03",
+      "identity": "Public README discovery and Post-Once reproduction publication reconciled with merged source",
+      "situation": "The ledger still instructed publication although PR #45 had already merged the README links and public-safe model.",
+      "verification": "Fresh GitHub readback confirms PR #45 merged at 89ccb2b0c1a2789a845b77ebfea966cfd5a4d3b4 and its README contains Discussion #44 and the Post-Once model link. The public model remains credential-free with eight synthetic cases; AgentProof reproduction and standards PRs #28/#29 remain merged. No new external reproduction or standards reply is credited.",
+      "accountability": {
+        "owner": "Proof & State maintainers",
+        "status": "complete",
+        "nextAction": "Keep the published fixture available; use PF-TECHDISC-001 for independently attributable critique and counterexamples.",
+        "waitCondition": "None for publication. Independent technical validation remains unobserved and is tracked separately.",
+        "staleDate": "2026-12-01"
+      },
+      "outcome": "PF-POSTONCE-REPRO-001 is complete for public model and review invitation. PF-TECHDISC-001 remains active. The separate GitHub-hosted CI provider failure tracked by issue #46 is not recast as a passing check.",
+      "content": "https://github.com/AyobamiH/proof-and-state/pull/45; docs/research/post-once-lock-deferral.md; evidence/research-closeout-20261103/source-and-publication.json.",
+      "measurement": "One merged publication PR verified; two README discovery links verified; zero duplicate publications, provider replays or independent acceptance claims."
     }
   ],
-  "evidenceRecordedAt": "2026-11-02"
+  "evidenceRecordedAt": "2026-11-03"
 }
