@@ -301,19 +301,23 @@ test("generated portfolio state contains one owner-only queue view", () => {
 
 test("evidence update is not a product reread and snapshot freshness is fail-closed", () => {
   const updatedEvidence = structuredClone(ledger);
-  assert.equal(updatedEvidence.updatedAt, "2026-10-10");
-  assert.equal(updatedEvidence.evidenceRecordedAt, "2026-11-02");
+  const snapshotDate = ledger.updatedAt;
+  const previousEvidenceDate = ledger.evidenceRecordedAt ?? snapshotDate;
+  const laterEvidenceDate = new Date(Date.parse(`${previousEvidenceDate}T00:00:00Z`) + 30 * 86400000).toISOString().slice(0, 10);
+  updatedEvidence.evidenceRecordedAt = laterEvidenceDate;
+  assert.equal(updatedEvidence.updatedAt, snapshotDate);
   assert.doesNotThrow(() => validate(updatedEvidence));
   const falseProductRefresh = structuredClone(updatedEvidence);
-  falseProductRefresh.updatedAt = "2026-11-02";
+  falseProductRefresh.updatedAt = laterEvidenceDate;
   assert.throws(() => validate(falseProductRefresh), /observedAt is stale by more than 7 days/);
   const futureEvidence = structuredClone(updatedEvidence);
-  futureEvidence.evidenceRecordedAt = "2026-10-10";
+  futureEvidence.evidenceStories.push({ ...futureEvidence.evidenceStories.at(-1), id: "TEST-FUTURE-EVIDENCE", date: laterEvidenceDate });
+  futureEvidence.evidenceRecordedAt = previousEvidenceDate;
   assert.throws(() => validate(futureEvidence), /exceeds the latest evidence recording date/);
   const falseObservation = structuredClone(updatedEvidence);
-  falseObservation.products[0].observedAt = "2026-11-02T01:00:00Z";
+  falseObservation.products[0].observedAt = `${laterEvidenceDate}T01:00:00Z`;
   assert.throws(() => validate(falseObservation), /observedAt cannot be after updatedAt/);
   const rendered = render(updatedEvidence);
-  assert.match(rendered, /Historical product snapshot as-of: \*\*2026-10-10\*\*/);
-  assert.match(rendered, /Latest accountability\/evidence record: \*\*2026-11-02\*\*/);
+  assert.ok(rendered.includes(`Historical product snapshot as-of: **${snapshotDate}**`));
+  assert.ok(rendered.includes(`Latest accountability/evidence record: **${laterEvidenceDate}**`));
 });
