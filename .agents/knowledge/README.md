@@ -12,7 +12,7 @@ The [GTM orchestrator](../../apps/gtm-orchestrator/README.md) is a separately bo
 
 ## Setup and validation
 
-[package.json](../../package.json) declares Node.js 24+, an npm workspace for the orchestrator, `npm test`, `npm run test:governance`, and `npm run governance:check`. Install locked dependencies with `npm ci` when needed. `npm run governance:render` regenerates governed documents; only run it after an intentional source-ledger change. Foundation-only validation is `python3 .agents/validate_foundations.py` (Python 3 standard library).
+[package.json](../../package.json) declares Node.js 24+, an npm workspace for the orchestrator, `npm test`, `npm run test:governance`, and `npm run governance:check`. Install locked dependencies with `npm ci` when needed. `npm run governance:render` regenerates governed documents; only run it after an intentional source-ledger change. Foundation-only validation is `python3 .agents/validate_foundations.py` (Python 3.9+ standard library).
 
 ## Lessons and maintenance
 
