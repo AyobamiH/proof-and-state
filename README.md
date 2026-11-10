@@ -56,3 +56,7 @@ The final PR-head GTM canary is deployed with publishing disabled. Exact-main de
 7. Every consequential portfolio event updates `governance/portfolio-ledger.json`; `docs/PORTFOLIO-STATE.md` is generated, and CI rejects drift or stale accountability.
 
 This repository is the canonical governance source. Product repositories remain the canonical implementation sources.
+
+## Agent contributors
+
+Start with [AGENTS.md](AGENTS.md) for repository-owned skills, knowledge and required scope review.
